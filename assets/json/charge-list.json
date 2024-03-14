@@ -1,0 +1,38 @@
+[
+    {
+        "stockName": "寶成",
+        "stockNo": "9904",
+        "status":"Success",
+        "chargeAmount": ["4000", "3910"],
+        "order_date": "2022/10/01",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大中型100",
+        "stockNo": "0051",
+        "status":"Failed",
+        "chargeAmount": ["4000", "N/A"],
+        "order_date": "2022/10/01",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大歐洲50",
+        "stockNo": "00660",
+        "status":"Success",
+        "chargeAmount": ["4000", "3910"],
+        "order_date": "2022/10/01",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "兆豐藍籌30",
+        "stockNo": "00690",
+        "status":"Failed",
+        "chargeAmount": ["4000", "N/A"],
+        "order_date": "2022/10/01",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "玉山金",
+        "stockNo": "00701",
+        "status":"Success",
+        "chargeAmount": ["4000", "3910"],
+        "order_date": "2022/10/01",
+        "orderFrom": "WEB"
+    }
+]

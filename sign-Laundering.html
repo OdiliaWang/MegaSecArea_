@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html   lang="zh-TW" 
+        data-layout="semibox" 
+        data-sidebar-visibility="show" 
+        data-sidebar="light" 
+        data-sidebar-size="lg" 
+        data-sidebar-image="none" 
+        data-preloader="disable">
+<head>
+    <meta charset="UTF-8" />
+    <title>客戶身份盡職審查 | 簽署中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="17">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-light position-relative p-1 btn-ghost-secondary rounded-circle" id="header-notice-dpn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-24'></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span>                                
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="header-notice-dpn">
+                                <div class="notice-popup">
+                                    <div class="title">
+                                        <span class="h2">通知訊息</span>
+                                        <span class="text-end">
+                                            <a class="data-today">2023/01/03 星期五</a>
+                                        </span>
+                                    </div>
+                                    <div class="notice-data-list">
+                                        <div class="data-area">
+                                            <div class="data-cont no-data">
+                                                <i class="bx bx-message-alt-detail"></i>
+                                                <p>無最新通知</p>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>交割款通知：帳戶將在02/03交割款項1,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>今日</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>期貨追繳保證金通知：帳戶將在03/04交割款項30,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>2023/02/21</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ms-xl-3 ms-lg-3 ms-md-3 ms-sm-1 header-item topbar-user">
+                            <button type="button" class="btn" id="header-member-dpn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user" src="assets/img/user-profolio.jpg" alt="用戶">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1"><b>個人服務</b><i class="bx bxs-chevron-down-circle ms-1"></i></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="header-member-dpn">
+                                <div class="member-popup">
+                                    <span class="dropdown-header"><b>趙豐仁</b>，您好！
+                                      <p class="h5">歡迎進入兆豐專區</p>
+                                    </span>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-user-circle"></i><span>整戶維持率</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-edit"></i><span>個資修改</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-lock"></i><span>密碼變更</span></a>
+                                    <a class="mb-dropdown-item" href="index.html#oService"><i class="bx bx-customize"></i><span>更多服務</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-log-in"></i><span>登出</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== Sidebar ==== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/img/Megasec.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/img/svg/MegaArea.svg" alt="" height="30">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <section class="user-data">
+                            <div class="sidebar-username">
+                                <span>趙豐仁</span>
+                            </div>
+                            <div class="sidebar-account">天母分公司 7000-1234567</div>
+                        </section>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarInvest" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvest">
+                                <i class='bx bx-pie-chart'></i><span data-key="t-invest">定期定額買台股</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarInvest">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="investock-dashboard.html" class="nav-link" data-key="t-all">總覽</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-products.html" class="nav-link" data-key="t-product">約定商品</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-valid-list.html" class="nav-link" data-key="t-valid">委託清單</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-charge-list.html" class="nav-link" data-key="t-charge">扣款清單</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="exchange-center.html">
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarSign" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSign">
+                                <i class="bx bx-pen"></i> <span data-key="t-sign">簽署中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarSign">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="sign-Contract.html" class="nav-link" data-key="t-oSign">同意書簽署</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-W8ben.html" class="nav-link" data-key="t-w8ben">W-8BEN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-Laundering.html" class="nav-link" data-key="t-customer">客戶身份盡職審查</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-KYC.html" class="nav-link" data-key="t-kyc">投資適性評估(KYC)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Sign Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="adv-collection-dashboard.html">
+                                <i class='bx bx-bar-chart-alt-2'></i> <span data-key="t-advcollection">預收款券</span>
+                            </a>
+                        </li>
+                        <!-- <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class='bx bx-archive-in'></i> <span data-key="t-dividend">配股配息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class="bx bx-money"></i> <span data-key="t-ledger">分戶帳</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebareOpen" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebareOpen">
+                                <i class="bx bx-user-circle"></i> <span data-key="t-eOpen">開戶</span>
+                                <!-- <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span> -->
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebareOpen">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen1">複委託線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen2">財富管理線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen3">信用線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end eOpen Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMore" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMore">
+                                <i class="bx bx-customize"></i> <span data-key="t-more">更多服務</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMore">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="apply-epassbook.html" class="nav-link" data-key="t-epass">集保e存摺</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="takeover-bid.html" class="nav-link" data-key="t-takeoverBid">公開收購</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-subsc">訂閱中心</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-news">理財電子報</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-option">期權拆組</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end more Menu -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLink" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLink">
+                                <i class='bx bx-share-alt'></i> <span data-key="t-link">相關連結</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLink">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/index.do" class="nav-link">
+                                            兆豐證券理財網
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megafutures.com.tw/index.do" class="nav-link">
+                                            兆豐期貨
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megasia.com.tw/index.do" class="nav-link">
+                                            兆豐國際投顧
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h1 class="mb-2 mb-sm-0">客戶身份盡職審查</h1>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="index.html"><i class="fa-solid fa-house me-1"></i>兆豐專區</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="sign-center.html">簽署中心</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            客戶身份盡職審查
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-lg-12 p-4">
+                                <p class="mb-3">親愛的客戶 您好：</p>
+                                <p>因應洗錢防制法第七條及金融機構防治洗錢辦法第五條規定，本公司應持續執行「客戶身分盡職審查」程序，並更新客戶基本資料，以確保所進行之交易與客戶及其業務相符，並瞭解其資金來源。</p>
+                                <p>惠請您協助提供下列資料，包含：服務單位行業別、職稱、個人年收入、預期每月平均交易金額。<br>
+                                <!-- Warning Alert -->
+                                <div class="alert alert-secondary" role="alert">
+                                    <i class='bx bx-error-circle fs-20 align-middle me-1'></i> <span class="align-middle fs-16">若您未能配合提供上述相關資料，本公司得依相關法令或往來契約 <a class="text-secondary"><b>將台端帳戶列入限制帳戶控管</b></a>，至您完成資料更新後始重新開放。</span>
+                                </div>
+                                <!-- Warning Alert -->
+                                <div class="alert alert-info alert-label-icon rounded-label fade show fs-16" role="alert">
+                                    <i class="ri-chat-smile-2-line label-icon fs-20"></i><strong>提醒您：</strong>1.非本國自然人及非自然人請洽本公司辦理。  2.所提供身分證資訊如經內政部查驗不符將無法送出。
+                                </div>
+                                <form class="row g-3 needs-validation" novalidate>
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="idinput" class="form-label">身分證字號</label>
+                                            <input type="text" class="form-control" value="A12336****" id="idinput" disabled>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-6">
+                                        <div class="mb-3">
+                                            <label for="customerNameinput" class="form-label">姓名</label>
+                                            <input type="text" class="form-control" value="錢多多" id="lcustomerNameinput" disabled>
+                                        </div>
+                                    </div><!--end col-->
+                                    <hr>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="countryinput" class="form-label">國籍</label>
+                                            <select class="form-control" id="countryinput" data-choices data-choices-groups name="countryinput" required>
+                                                <option selected disabled value="">請選擇國籍</option>
+                                                <optgroup label="A">
+                                                    <option value="London">London</option>
+                                                    <option value="Manchester">Manchester</option>
+                                                    <option value="Liverpool">Liverpool</option>
+                                                </optgroup>
+                                                <optgroup label="B">
+                                                    <option value="Paris">Paris</option>
+                                                    <option value="Lyon">Lyon</option>
+                                                    <option value="Marseille">Marseille</option>
+                                                </optgroup>
+                                                <optgroup label="C">
+                                                    <option value="Hamburg">Hamburg</option>
+                                                    <option value="Munich">Munich</option>
+                                                    <option value="Berlin">Berlin</option>
+                                                </optgroup>
+                                                <optgroup label="D">
+                                                    <option value="New York">New York</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="Michigan">Michigan</option>
+                                                </optgroup>
+                                                <optgroup label="E">
+                                                    <option value="Madrid">Madrid</option>
+                                                    <option value="Barcelona">Barcelona</option>
+                                                    <option value="Malaga">Malaga</option>
+                                                </optgroup>
+                                                <optgroup label="F">
+                                                    <option value="Montreal">Montreal</option>
+                                                    <option value="Toronto">Toronto</option>
+                                                    <option value="Vancouver">Vancouver</option>
+                                                </optgroup>
+                                                <optgroup label="T">
+                                                    <option value="Taiwan">TW - 臺灣</option>
+                                                    <option value="Toronto">Toronto</option>
+                                                    <option value="Vancouver">Vancouver</option>
+                                                </optgroup> 
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇國籍
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="otherNameinput" class="form-label">別名</label>
+                                            <input type="text" class="form-control" value="" id="otherNameinput">
+                                            <div id="emailInput" class="form-text">曾使用或更名前姓名</div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="professioninput" class="form-label">服務單位</label>
+                                            <input type="text" class="form-control" value="柚花里辦公室" id="professioninput" required>
+                                            <div class="invalid-feedback">
+                                                請填寫服務單位
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="tellinput" class="form-label">公司電話</label>
+                                            <input type="text" class="form-control" value="02-23278988" id="tellinput" required>
+                                            <div class="invalid-feedback">
+                                                請填寫公司電話
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="extensionNumberinput" class="form-label">分機</label>
+                                            <input type="text" class="form-control" value="8888" placeholder="無則填入0" id="extensionNumberinput" required>
+                                            <div class="invalid-feedback">
+                                                請填寫公司電話，無則填入0
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12">
+                                        <div class="mt-3 mb-3 fs-16 fw-bold">
+                                            身分證資訊
+                                        </div><!--end col-->
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="issueDateinput" class="form-label">發證日</label>
+                                            <input type="number" class="form-control" value="880130" id="issueDateinput" required>
+                                            <div class="invalid-feedback">
+                                                請填寫身分證發證日
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-2 col-md-2 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="issueCityinput" class="form-label">發證地</label>
+                                            <select id="issueCityinput" class="form-select" required>
+                                                <option selected disabled value="">請選擇發證地</option>
+                                                <option value="issueCity-1">北市</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇身分證發證地
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-2 col-md-2 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="issueTypeinput" class="form-label">類別</label>
+                                            <select id="issueTypeinput" class="form-select" required>
+                                                <option selected disabled value="">請選擇類別</option>
+                                                <option value="issueType-1">初發</option>
+                                                <option value="issueType-2">換發</option>
+                                                <option value="issueType-3">補發</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇類別
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <label for="form-check-input" class="form-label">身分</label><br>
+                                        <div class="form-check form-check-inline mb-3">
+                                            <input class="form-check-input" type="radio" name="identityOptions" id="NoOccupation" value="自由業/家管/退休人士" required>
+                                            <label class="form-check-label" for="NoOccupation">自由業/家管/退休人士</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mb-3">
+                                            <input class="form-check-input" type="radio" name="identityOptions" id="Students" value="學生" required>
+                                            <label class="form-check-label" for="Students">學生</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mb-3">
+                                            <input class="form-check-input" type="radio" name="identityOptions" id="noneOfAbove" value="以上皆非" required>
+                                            <label class="form-check-label" for="noneOfAbove">以上皆非</label>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            請選擇身分
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="industry" class="form-label">行業別</label>
+                                            <select id="industry" class="mb-1 form-select" required>
+                                                <option selected disabled value="">請選擇「主項」</option>
+                                                <option>農、林、漁、牧業</option>
+                                            </select>
+                                            <select id="industry" class="mb-1 form-select" required>
+                                                <option selected disabled value="">請選擇「次項」</option>
+                                                <option>農、牧業</option>
+                                            </select>
+                                            <select id="industry" class="mb-1 form-select" required>
+                                                <option selected disabled value="">請選擇「子項」</option>
+                                                <option>農作物栽培業</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇行業別
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="jobTitle" class="form-label">職稱</label>
+                                            <select id="jobTitle" class="mb-1 form-select" data-placeholder="請選擇" required>
+                                                <option selected disabled value="">請選擇</option>
+                                                <option>負責人</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇職稱
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="sourceOfincome" class="form-label">個人收入來源(可複選)</label><br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox1" value="salary">
+                                                <label class="form-check-label" for="incomeCheckbox1">薪資</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox2" value="estate">
+                                                <label class="form-check-label" for="incomeCheckbox2">自有不動產</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox3" value="saving">
+                                                <label class="form-check-label" for="incomeCheckbox3">銀行存款</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox4" value="inherit">
+                                                <label class="form-check-label" for="incomeCheckbox4">贈與或繼承</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox5" value="invest">
+                                                <label class="form-check-label" for="incomeCheckbox5">投資</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" name="income" id="incomeCheckbox6" value="other">
+                                                <label class="form-check-label" for="incomeCheckbox6">其他</label>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="amountinput" class="form-label">預期每月平均交易金額</label>
+                                            <select id="amountinput" class="form-select" data-placeholder="請選擇" required>
+                                                <option selected disabled value="">請選擇</option>
+                                                <option value="">100萬以下</option>
+                                                <option value="">100~200萬</option>
+                                                <option value="">200~300萬</option>
+                                                <option value="">300~500萬</option>
+                                                <option value="">500萬以上</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                請選擇預期每月平均交易金額
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="mb-3">
+                                            <label for="purposeinput" class="form-label">交易目的(可複選)</label><br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="purposeCheckbox1" value="purpose1">
+                                                <label class="form-check-label" for="purposeCheckbox1">短期資金運用</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="purposeCheckbox2" value="purpose2">
+                                                <label class="form-check-label" for="purposeCheckbox2">長期股權投資</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="purposeCheckbox3" value="purpose3">
+                                                <label class="form-check-label" for="purposeCheckbox3">自有資金投資</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="purposeCheckbox4" value="purpose4">
+                                                <label class="form-check-label" for="purposeCheckbox4">退休規劃</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="purposeCheckbox5" value="purpose5">
+                                                <label class="form-check-label" for="purposeCheckbox5">理財規劃</label>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="fs-12 mb-3 text-muted d-flex justify-content-end">
+                                            最後修改日：2023/01/15 下午 04:45:58
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-0 text-center">
+                                        <button class="btn btn-secondary" type="submit">送出</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="d-block text-center" style="font-weight: 400; font-size: 14px;">兆豐證券股份有限公司 客服專線(02)2351-7017</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-icon border-0" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/pages/form-validation.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

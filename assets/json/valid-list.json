@@ -1,0 +1,115 @@
+[   
+    {
+        "stockName": "元大中型100",
+        "stockNo": "0051",
+        "chargeDate": ["每月8日","每月18日"],
+        "chargeAmount": "4000",
+        "orderDate": "2022/10/01",
+        "orderTime": "04:21AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大電子",
+        "stockNo": "0053",
+        "chargeDate": ["每月8日","每月18日","每月28日"],
+        "chargeAmount": "4000",
+        "orderDate": "2022/12/01",
+        "orderTime": "11:55AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大MSCI金融",
+        "stockNo": "0055",
+        "chargeDate": ["每月8日","每月18日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/09/01",
+        "orderTime": "03:21AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大寶滬深",
+        "stockNo": "0061",
+        "chargeDate": ["每月8日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/09/01",
+        "orderTime": "03:21AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "期元大S&P黃金",
+        "stockNo": "00635U",
+        "chargeDate": ["每月8日"],
+        "chargeAmount": "4000",
+        "orderDate": "2022/08/12",
+        "orderTime": "10:21PM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "國泰中國A50",
+        "stockNo": "00636",
+        "chargeDate": ["每月8日"],
+        "chargeAmount": "4000",
+        "orderDate": "2022/08/12",
+        "orderTime": "10:21PM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "期元大S&P石油",
+        "stockNo": "00642U",
+        "chargeDate": ["每月8日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/08/01",
+        "orderTime": "01:55AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大S&P500",
+        "stockNo": "00646",
+        "chargeDate": ["每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/08/01",
+        "orderTime": "01:55AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大歐洲50",
+        "stockNo": "00660",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/08/01",
+        "orderTime": "01:55AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大日經225",
+        "stockNo": "00661",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/07/08",
+        "orderTime": "08:15AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大美債20年",
+        "stockNo": "00679B",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/07/08",
+        "orderTime": "08:15AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "期元大美元指數",
+        "stockNo": "00682U",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/07/08",
+        "orderTime": "08:15AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "元大美債7-10",
+        "stockNo": "00697B",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "3000",
+        "orderDate": "2022/07/08",
+        "orderTime": "08:15AM",
+        "orderFrom": "WEB"
+    },{
+        "stockName": "國泰股利精選30",
+        "stockNo": "00701",
+        "chargeDate": ["每月8日","每月28日"],
+        "chargeAmount": "4000",
+        "orderDate": "2022/07/08",
+        "orderTime": "08:15AM",
+        "orderFrom": "WEB"
+    }
+]

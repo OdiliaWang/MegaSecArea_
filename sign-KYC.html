@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html   lang="zh-TW" 
+        data-layout="semibox" 
+        data-sidebar-visibility="show" 
+        data-sidebar="light" 
+        data-sidebar-size="lg" 
+        data-sidebar-image="none" 
+        data-preloader="disable">
+<head>
+    <meta charset="UTF-8" />
+    <title>投資適性評估 | 簽署中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="17">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-light position-relative p-1 btn-ghost-secondary rounded-circle" id="header-notice-dpn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-24'></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span>                                
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="header-notice-dpn">
+                                <div class="notice-popup">
+                                    <div class="title">
+                                        <span class="h2">通知訊息</span>
+                                        <span class="text-end">
+                                            <a class="data-today">2023/01/03 星期五</a>
+                                        </span>
+                                    </div>
+                                    <div class="notice-data-list">
+                                        <div class="data-area">
+                                            <div class="data-cont no-data">
+                                                <i class="bx bx-message-alt-detail"></i>
+                                                <p>無最新通知</p>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>交割款通知：帳戶將在02/03交割款項1,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>今日</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>期貨追繳保證金通知：帳戶將在03/04交割款項30,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>2023/02/21</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ms-xl-3 ms-lg-3 ms-md-3 ms-sm-1 header-item topbar-user">
+                            <button type="button" class="btn" id="header-member-dpn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user" src="assets/img/user-profolio.jpg" alt="用戶">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1"><b>個人服務</b><i class="bx bxs-chevron-down-circle ms-1"></i></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="header-member-dpn">
+                                <div class="member-popup">
+                                    <span class="dropdown-header"><b>趙豐仁</b>，您好！
+                                      <p class="h5">歡迎進入兆豐專區</p>
+                                    </span>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-user-circle"></i><span>整戶維持率</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-edit"></i><span>個資修改</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-lock"></i><span>密碼變更</span></a>
+                                    <a class="mb-dropdown-item" href="index.html#oService"><i class="bx bx-customize"></i><span>更多服務</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-log-in"></i><span>登出</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== Sidebar ==== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/img/Megasec.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/img/svg/MegaArea.svg" alt="" height="30">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <section class="user-data">
+                            <div class="sidebar-username">
+                                <span>趙豐仁</span>
+                            </div>
+                            <div class="sidebar-account">天母分公司 7000-1234567</div>
+                        </section>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarInvest" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvest">
+                                <i class='bx bx-pie-chart'></i><span data-key="t-invest">定期定額買台股</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarInvest">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="investock-dashboard.html" class="nav-link" data-key="t-all">總覽</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-products.html" class="nav-link" data-key="t-product">約定商品</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-valid-list.html" class="nav-link" data-key="t-valid">委託清單</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-charge-list.html" class="nav-link" data-key="t-charge">扣款清單</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="exchange-center.html">
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarSign" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSign">
+                                <i class="bx bx-pen"></i> <span data-key="t-sign">簽署中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarSign">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="sign-Contract.html" class="nav-link" data-key="t-oSign">同意書簽署</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-W8ben.html" class="nav-link" data-key="t-w8ben">W-8BEN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-Laundering.html" class="nav-link" data-key="t-customer">客戶身份盡職審查</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-KYC.html" class="nav-link" data-key="t-kyc">投資適性評估(KYC)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Sign Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="adv-collection-dashboard.html">
+                                <i class='bx bx-bar-chart-alt-2'></i> <span data-key="t-advcollection">預收款券</span>
+                            </a>
+                        </li>
+                        <!-- <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class='bx bx-archive-in'></i> <span data-key="t-dividend">配股配息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class="bx bx-money"></i> <span data-key="t-ledger">分戶帳</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebareOpen" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebareOpen">
+                                <i class="bx bx-user-circle"></i> <span data-key="t-eOpen">開戶</span>
+                                <!-- <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span> -->
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebareOpen">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen1">複委託線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen2">財富管理線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen3">信用線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end eOpen Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMore" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMore">
+                                <i class="bx bx-customize"></i> <span data-key="t-more">更多服務</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMore">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="apply-epassbook.html" class="nav-link" data-key="t-epass">集保e存摺</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="takeover-bid.html" class="nav-link" data-key="t-takeoverBid">公開收購</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-subsc">訂閱中心</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-news">理財電子報</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-option">期權拆組</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end more Menu -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLink" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLink">
+                                <i class='bx bx-share-alt'></i> <span data-key="t-link">相關連結</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLink">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/index.do" class="nav-link">
+                                            兆豐證券理財網
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megafutures.com.tw/index.do" class="nav-link">
+                                            兆豐期貨
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megasia.com.tw/index.do" class="nav-link">
+                                            兆豐國際投顧
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h1 class="mb-2 mb-sm-0">委託人(自然人)投資屬性評量表</h1>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="index.html"><i class="fa-solid fa-house me-1"></i>兆豐專區</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="sign-center.html">簽署中心</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            投資適性評估
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- start page title -->
+                            <div class="row justify-content-center">
+                                    <div class="text-end">
+                                        <span class="badge bg-soft-warning text-warning fs-14 p-3">填表日期 <a class="text-body">112年8月8日</a></span>
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3 fs-18 fw-bold">
+                                                    第一部分、個人基本資料及財務狀況
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="customerNameinput" class="form-label">姓名</label>
+                                                    <input type="text" class="form-control" value="錢多多" id="lcustomerNameinput" disabled>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="idinput" class="form-label">身分證字號</label>
+                                                    <input type="text" class="form-control" value="A12336****" id="idinput" disabled>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="gender" class="form-label">性別</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-gender" id="genderMale" checked>
+                                                        <label class="btn btn-outline-warning" for="genderMale">男</label>
+
+                                                        <input type="radio" class="btn-check" name="options-gender" id="genderFemale">
+                                                        <label class="btn btn-outline-warning" for="genderFemale">女</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="countryinput" class="form-label">國籍</label>
+                                                    <select class="form-select mb-3" aria-label="countryinput">
+                                                        <option value="">請選擇國籍</option>
+                                                        <option value="Choice 1">Choice 1</option>
+                                                        <option value="Choice 2">Choice 2</option>
+                                                        <option value="Choice 3">Choice 3</option>
+                                                    </select>    
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="placeBthinput" class="form-label">出生地</label>
+                                                    <input type="text" class="form-control" value="" id="placeBthinput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="bthInputdate" class="form-label">出生日期</label>
+                                                    <input type="date" class="form-control"  value="yyyy-mm-dd"  id="bthInputdate">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="phoneinput" class="form-label">聯絡電話</label>
+                                                    <input type="text" class="form-control" value="" id="phoneinput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="marital" class="form-label">婚姻狀態</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-marital" id="single" checked>
+                                                        <label class="btn btn-outline-warning" for="single">單身</label>
+
+                                                        <input type="radio" class="btn-check" name="options-marital" id="married">
+                                                        <label class="btn btn-outline-warning" for="married">已婚</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="children" class="form-label">子女人數</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-children" id="zero" checked>
+                                                        <label class="btn btn-outline-warning" for="zero">0</label>
+
+                                                        <input type="radio" class="btn-check" name="options-children" id="one">
+                                                        <label class="btn btn-outline-warning" for="one">1</label>
+
+                                                        <input type="radio" class="btn-check" name="options-children" id="two">
+                                                        <label class="btn btn-outline-warning" for="two">2</label>
+
+                                                        <input type="radio" class="btn-check" name="options-children" id="threeMore">
+                                                        <label class="btn btn-outline-warning" for="threeMore">3人以上</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-8 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="education" class="form-label">教育程度</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-edu" id="ma">
+                                                        <label class="btn btn-outline-warning" for="ma">研究所(含)以上</label>
+
+                                                        <input type="radio" class="btn-check" name="options-edu" id="uni">
+                                                        <label class="btn btn-outline-warning" for="uni">大學／專科</label>
+
+                                                        <input type="radio" class="btn-check" name="options-edu" id="highsch">
+                                                        <label class="btn btn-outline-warning" for="highsch">高中</label>
+
+                                                        <input type="radio" class="btn-check" name="options-edu" id="juniorsch">
+                                                        <label class="btn btn-outline-warning" for="juniorsch">國中(含)以下</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="schoolNameinput" class="form-label">學校名稱</label>
+                                                    <input type="text" class="form-control" value="" id="schoolNameinput">
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="injuryCard" class="form-label">領有全民健保重大傷病證明</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-card" id="yes1">
+                                                        <label class="btn btn-outline-warning" for="yes1">是</label>
+
+                                                        <input type="radio" class="btn-check" name="options-card" id="no1">
+                                                        <label class="btn btn-outline-warning" for="no1">否</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="low-incomeCard" class="form-label">領有中低收入戶證明(最近一年度)</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-card2" id="yes2">
+                                                        <label class="btn btn-outline-warning" for="yes2">是</label>
+
+                                                        <input type="radio" class="btn-check" name="options-card2" id="no2">
+                                                        <label class="btn btn-outline-warning" for="no2">否</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-12 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="monthIncome" class="form-label">個人月收入</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-inc" id="inc-1">
+                                                        <label class="btn btn-outline-warning" for="inc-1">2萬以下</label>
+
+                                                        <input type="radio" class="btn-check" name="options-inc" id="inc-2">
+                                                        <label class="btn btn-outline-warning" for="inc-2">2~4萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-inc" id="inc-3">
+                                                        <label class="btn btn-outline-warning" for="inc-3">4~6萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-inc" id="inc-4">
+                                                        <label class="btn btn-outline-warning" for="inc-4">6~10萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-inc" id="inc-5">
+                                                        <label class="btn btn-outline-warning" for="inc-5">10萬以上</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="col-lg-12 col-md-6 col-sm-12">
+                                                <div class="mb-3">
+                                                    <label for="yearIncome" class="form-label">個人年收入</label>
+                                                    <div class="hstack gap-2 flex-wrap">
+                                                        <input type="radio" class="btn-check" name="options-y" id="y-1">
+                                                        <label class="btn btn-outline-warning" for="y-1">100萬以下</label>
+
+                                                        <input type="radio" class="btn-check" name="options-y" id="y-2">
+                                                        <label class="btn btn-outline-warning" for="y-2">100~200萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-y" id="y-3">
+                                                        <label class="btn btn-outline-warning" for="y-3">200~300萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-y" id="y-4">
+                                                        <label class="btn btn-outline-warning" for="y-4">300~500萬</label>
+
+                                                        <input type="radio" class="btn-check" name="options-y" id="y-5">
+                                                        <label class="btn btn-outline-warning" for="y-5">500萬以上</label>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!-- end row part1 -->
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mt-3 mb-3 fs-18 fw-bold">
+                                                    第二部分、個人資金/財富來源
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="row">
+                                                <div class="col-xl-10 col-lg-12 col-md-12">
+                                                    <div class="col-lg-5 col-md-5 col-sm-12">
+                                                        <div class="mb-3">
+                                                            <label for="sourceOfinvest" class="form-label">投資資金來源(可複選)</label><br>
+                                                            <div class="hstack gap-2 flex-wrap">
+                                                                <input type="checkbox" class="btn-check" id="investCheck-1" value="salary" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-1">薪資/固定收入</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-2" value="self-inc" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-2">自營事業收入</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-3" value="rent" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-3">租金收入</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-4" value="heritage" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-4">遺產繼承</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-5" value="retire" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-5">退休資金</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-6" value="invest" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-6">投資收益</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="investCheck-7" value="estate" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-7">出售房地產所得</label>
+                                                                
+                                                                <input type="checkbox" class="btn-check" id="investCheck-8" value="other" required>
+                                                                <label class="btn btn-outline-warning" for="investCheck-8">其他 (請於下方說明)：</label>
+                                                                <input type="text" class="form-control" placeholder="請輸入說明文字">
+                                                            </div>
+                                                        </div>
+                                                    </div><!--end col-->
+                                                    <div class="col-lg-5 col-md-5 col-sm-12">
+                                                        <div class="mb-3">
+                                                            <label for="sourceOfincome" class="form-label">個人財富來源(可複選)</label><br>
+                                                            <div class="hstack gap-2 flex-wrap">
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-1" value="salary" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-1">收入累積</label>
+                                                                
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-2" value="saving" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-2">儲蓄</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-3" value="retire" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-3">退休金</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-4" value="heritage" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-4">繼承遺產</label>
+                            
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-5" value="estate" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-5">出售資產</label>
+                                                                
+                                                                <input type="checkbox" class="btn-check" id="incomeCheck-6" value="other" required>
+                                                                <label class="btn btn-outline-warning" for="incomeCheck-6">其他 (請於下方說明)：</label>
+                                                                <input type="text" class="form-control" placeholder="請輸入說明文字">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div><!--end col-->
+                                                </div>
+                                            </div>
+                                        </div><!-- end row part2 -->
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mt-3 mb-2 fs-18 fw-bold">
+                                                    第三部分、個人理財性向分析
+                                                </div>
+                                                <div class="text-primary fs-14 mb-3" role="alert">
+                                                （請由客戶親自填寫，未成年子女之法定代理人填寫下列評估項目時，應以「未成年子女」之立場答覆。）
+                                                </div>
+                                            </div><!--end col-->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">一、金融商品的投資經驗？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q1" id="radio-qa1-1">
+                                                    <label class="form-check-label" for="radio-qa1-1">
+                                                        我過往沒有任何金融商品的交易經驗。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q1" id="radio-qa1-2">
+                                                    <label class="form-check-label" for="radio-qa1-2">
+                                                        我僅做過銀行定存或是儲蓄型保險商品。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q1" id="radio-qa1-3">
+                                                    <label class="form-check-label" for="radio-qa1-3">
+                                                        我曾經交易過國內外的股票或是基金，有一年以上的交易經驗。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q1" id="radio-qa1-4">
+                                                    <label class="form-check-label" for="radio-qa1-4">
+                                                        我目前仍交易國內外的股票、基金、債券或期貨，並有三年以上的交易經驗。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q1" id="radio-qa1-5">
+                                                    <label class="form-check-label" for="radio-qa1-5">
+                                                        我有多年豐富的金融商品交易經驗，包括股票、基金、期貨或其他衍生性金融產品。
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q1 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">二、您對金融市場和投資的認識？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q2" id="radio-qa2-1">
+                                                    <label class="form-check-label" for="radio-qa2-1">
+                                                        我對金融市場有興趣但不甚了解。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q2" id="radio-qa2-2">
+                                                    <label class="form-check-label" for="radio-qa2-2">
+                                                        我對金融市場只有一些基本知識，例如股票與基金的分別。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q2" id="radio-qa2-3">
+                                                    <label class="form-check-label" for="radio-qa2-3">
+                                                        我瞭解基本知識，並明白分散投資及資產配置的重要性，並做出分散投資。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q2" id="radio-qa2-4">
+                                                    <label class="form-check-label" for="radio-qa2-4">
+                                                        我對金融商品及其投資風險有進一步的認識，並明白影響股票和債券價格的因素。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q2" id="radio-qa2-5">
+                                                    <label class="form-check-label" for="radio-qa2-5">
+                                                        我非常熟悉大部分的金融商品，並明白各項商品風險因素。
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q2 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">三、若非預期的事件發生時，請問您的備用金相當於您幾個月的家庭開銷？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q3" id="radio-qa3-1">
+                                                    <label class="form-check-label" for="radio-qa3-1">
+                                                        無備用金儲蓄
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q3" id="radio-qa3-2">
+                                                    <label class="form-check-label" for="radio-qa3-2">
+                                                        6個月以下
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q3" id="radio-qa3-3">
+                                                    <label class="form-check-label" for="radio-qa3-3">
+                                                        介於6個月到9個月
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q3" id="radio-qa3-4">
+                                                    <label class="form-check-label" for="radio-qa3-4">
+                                                        介於9個月到12個月
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q3" id="radio-qa3-5">
+                                                    <label class="form-check-label" for="radio-qa3-5">
+                                                        超過一年以上
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q3 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">四、就長期投資而言，您所能承受每年最大投資損失是多少？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q4" id="radio-qa4-1">
+                                                    <label class="form-check-label" for="radio-qa4-1">
+                                                        12%以上
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q4" id="radio-qa4-2">
+                                                    <label class="form-check-label" for="radio-qa4-2">
+                                                        9% - 12%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q4" id="radio-qa4-3">
+                                                    <label class="form-check-label" for="radio-qa4-3">
+                                                        6% - 8%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q4" id="radio-qa4-4">
+                                                    <label class="form-check-label" for="radio-qa4-4">
+                                                        3% - 5%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q4" id="radio-qa4-5">
+                                                    <label class="form-check-label" for="radio-qa4-5">
+                                                        1% - 2%
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q4 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">五、就長期投資而言，您所期望每年平均投資報酬率是多少？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q5" id="radio-qa5-1">
+                                                    <label class="form-check-label" for="radio-qa5-1">
+                                                        12%以上
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q5" id="radio-qa5-2">
+                                                    <label class="form-check-label" for="radio-qa5-2">
+                                                        9% - 12%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q5" id="radio-qa5-3">
+                                                    <label class="form-check-label" for="radio-qa5-3">
+                                                        6% - 8%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q5" id="radio-qa5-4">
+                                                    <label class="form-check-label" for="radio-qa5-4">
+                                                        3% - 5%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q5" id="radio-qa5-5">
+                                                    <label class="form-check-label" for="radio-qa5-5">
+                                                        1% - 2%
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q5 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">六、您投資理財之主要目的？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q6" id="radio-qa6-1">
+                                                    <label class="form-check-label" for="radio-qa6-1">
+                                                        追求較高投資報酬，願意承擔較高程度之風險。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q6" id="radio-qa6-2">
+                                                    <label class="form-check-label" for="radio-qa6-2">
+                                                        追求資產增值，願意承擔相當程度之風險。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q6" id="radio-qa6-3">
+                                                    <label class="form-check-label" for="radio-qa6-3">
+                                                        追求資產穩健增值，願意承擔少量風險以換取合理之報酬。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q6" id="radio-qa6-4">
+                                                    <label class="form-check-label" for="radio-qa6-4">
+                                                        追求降低投資報酬波動，盡可能不要承擔太多的風險。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q6" id="radio-qa6-5">
+                                                    <label class="form-check-label" for="radio-qa6-5">
+                                                        追求資產保值，不願意承擔任何風險。
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q6 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">七、投資之收益或虧損對基本生活需求之影響程度？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q7" id="radio-qa7-1">
+                                                    <label class="form-check-label" for="radio-qa7-1">
+                                                        影響甚微。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q7" id="radio-qa7-2">
+                                                    <label class="form-check-label" for="radio-qa7-2">
+                                                        有小程度之影響。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q7" id="radio-qa7-3">
+                                                    <label class="form-check-label" for="radio-qa7-3">
+                                                        有中等程度之影響。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q7" id="radio-qa7-4">
+                                                    <label class="form-check-label" for="radio-qa7-4">
+                                                        有大程度之影響。
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q7" id="radio-qa7-5">
+                                                    <label class="form-check-label" for="radio-qa7-5">
+                                                        影響甚鉅。
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q7 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">八、您在金融投資商品上的交易頻率？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q8" id="radio-qa8-1">
+                                                    <label class="form-check-label" for="radio-qa8-1">
+                                                        一年以上
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q8" id="radio-qa8-2">
+                                                    <label class="form-check-label" for="radio-qa8-2">
+                                                        半年
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q8" id="radio-qa8-3">
+                                                    <label class="form-check-label" for="radio-qa8-3">
+                                                        每季
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q8" id="radio-qa8-4">
+                                                    <label class="form-check-label" for="radio-qa8-4">
+                                                        每月
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q8" id="radio-qa8-5">
+                                                    <label class="form-check-label" for="radio-qa8-5">
+                                                        每周
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q8 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">九、風險與報酬是相對的，您了解並願意為了獲得較高的報酬而承擔較多的風險嗎？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q9" id="radio-qa9-1">
+                                                    <label class="form-check-label" for="radio-qa9-1">
+                                                        非常願意
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q9" id="radio-qa9-2">
+                                                    <label class="form-check-label" for="radio-qa9-2">
+                                                        願意
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q9" id="radio-qa9-3">
+                                                    <label class="form-check-label" for="radio-qa9-3">
+                                                        普通
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q9" id="radio-qa9-4">
+                                                    <label class="form-check-label" for="radio-qa9-4">
+                                                        不太願意
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q9" id="radio-qa9-5">
+                                                    <label class="form-check-label" for="radio-qa9-5">
+                                                        非常不願意
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q9 -->
+                                            <div class="mb-3">
+                                                <span class="badge bg-soft-secondary text-secondary fs-16 p-3 mb-2 text-start text-wrap lh-base">十、可投資之資金來自於所得的比重？</span>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q10" id="radio-qa10-1">
+                                                    <label class="form-check-label" for="radio-qa10-1">
+                                                        40%(含)以上
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q10" id="radio-qa10-2">
+                                                    <label class="form-check-label" for="radio-qa10-2">
+                                                        30% - 40%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q10" id="radio-qa10-3">
+                                                    <label class="form-check-label" for="radio-qa10-3">
+                                                        20% - 30%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q10" id="radio-qa10-4">
+                                                    <label class="form-check-label" for="radio-qa10-4">
+                                                        10% - 20%
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="radio-q10" id="radio-qa10-5">
+                                                    <label class="form-check-label" for="radio-qa10-5">
+                                                        10%(含)以下
+                                                    </label>
+                                                </div>
+                                            </div><!-- end q10 -->
+                                        </div><!-- end row part3 -->
+                                        <div class="alert alert-primary" role="alert">
+                                            <ul class="mb-0">
+                                                <li>
+                                                    以上各項問題係依不同權重計分，得分由本公司計算之。
+                                                </li>
+                                                <li>
+                                                    若客戶誤勾選成複選，本公司將以分數較低者計算之。
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row text-center">
+                                        <div class="col-xl-12 mb-3">
+                                            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#resultModals">送出，進行風險屬性評估</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 欄位漏填 -->
+                                <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-body text-center p-5">
+                                                <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                                <lord-icon
+                                                    src="https://cdn.lordicon.com/tdrtiskw.json"
+                                                    trigger="hover"
+                                                    colors="primary:#C23656,secondary:#F69BA0"
+                                                    style="width: 150px;height:150px">
+                                                </lord-icon>
+                                                
+                                                <div class="mt-4">
+                                                    <h4 class="mb-3">所有欄位皆為必填 <br>請檢查資料是否有遺漏</h4>
+                                                    <div class="hstack gap-2 justify-content-center">
+                                                        <a href="javascript:void(0);" class="btn btn-primary fw-medium" data-bs-dismiss="modal">關閉</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end 欄位漏填 -->
+
+                                <!-- 評量結果 -->
+                                <div id="resultModals" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content border-0 overflow-hidden">
+                                            <div class="modal-header p-3">
+                                                <h3 class="modal-title text-center mb-0">風險屬性評估結果</h3>
+                                            </div>
+                                            <div class="alert alert-primary rounded-0 mb-0">
+                                                <p class="fs-16 mb-0">經計算後您的投資屬性為<span class="fw-semibold fs-20">等級三 穩健型</span></p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
+                                                    <table class="table align-middle table-nowrap mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">投資屬性</th>
+                                                                <th scope="col">說明</th>
+                                                                <th scope="col">適配之產品屬性</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="text-muted" scope="row">等級一 保本型</th>
+                                                                <td class="text-muted">風險承受最低，追求資產保值為目標</td>
+                                                                <td class="text-muted">RR1</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-muted" scope="row">等級二 保守型</th>
+                                                                <td class="text-muted">風險承受較低，追求穩定收益為目標</td>
+                                                                <td class="text-muted">RR1、RR2</td>
+                                                            </tr>
+                                                            <tr class="table-active">
+                                                                <th scope="row">等級三 穩健型</th>
+                                                                <td>風險承受中等，追求穩健增值為目標</td>
+                                                                <td>RR1、RR2、RR3、RR4</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-muted" scope="row">等級四 成長型</th>
+                                                                <td class="text-muted">風險承受較高，追求資本利得為目標</td>
+                                                                <td class="text-muted">RR1、RR2、RR3、RR4、RR5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-muted" scope="row">等級五 積極型</th>
+                                                                <td class="text-muted">願意承受高風險，以高投資報酬為目標</td>
+                                                                <td class="text-muted">RR1、RR2、RR3、RR4、RR5、RR6</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><!-- end table content -->
+                                                </div>
+                                                <div class="form-check form-check-primary mt-2 mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="iCheck">
+                                                    本人同意上述之風險屬性評估結果及適合投資之商品類型建議，並確認填表內容係出自本意。
+                                                </div>
+                                            
+                                                <div class="d-flex gap-3 justify-content-center mt-4 mb-2">
+                                                    <a href="javascript:void(0);" class="btn btn-outline-info btn-md" data-bs-dismiss="modal">重新評估</a>
+                                                    <button class="btn btn-secondary btn-md" id="confirmButton" onclick="location.href='sign-KYC-2.html'" disabled>確定提交</button>
+                                                </div>
+                                                <div class="text-end">
+                                                    <p>（填表平台：e網通） 版號：2017/12/01</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="d-block text-center" style="font-weight: 400; font-size: 14px;">兆豐證券股份有限公司 客服專線(02)2351-7017</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-icon border-0" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/iCheck.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>    
+
+</body>
+</html>

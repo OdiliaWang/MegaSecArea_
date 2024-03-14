@@ -1,0 +1,91 @@
+[
+    {
+        "stockName": "寶成",
+        "stockNo": "9904",
+        "type":"目前暫停",
+        "chargeDate": ["每月18日", "每月28日"],
+        "chargeAmount": "4000",
+        "edit":"恢復",
+        "orderDate": "2022/10/01",
+        "orderTime": "04:21AM",
+        "orderFrom": "WEB",
+        "status": "Pause"
+    },{
+        "stockName": "元大中型100",
+        "stockNo": "0051",
+        "type":"已終止",
+        "chargeDate": ["每月18日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2022/10/01",
+        "orderTime": "04:21AM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    },{
+        "stockName": "元大歐洲50",
+        "stockNo": "00660",
+        "type":"目前暫停",
+        "chargeDate": ["每月18日"],
+        "chargeAmount": "3000",
+        "edit":"恢復",
+        "orderDate": "2022/09/01",
+        "orderTime": "04:21AM",
+        "orderFrom": "WEB",
+        "status": "Pause"
+    },{
+        "stockName": "兆豐藍籌30",
+        "stockNo": "00690",
+        "type":"已終止",
+        "chargeDate": ["每月18日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2022/09/11",
+        "orderTime": "10:55PM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    },{
+        "stockName": "玉山金",
+        "stockNo": "00701",
+        "type":"已終止",
+        "chargeDate": ["每月18日","每月28日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2021/05/22",
+        "orderTime": "11:15AM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    },{
+        "stockName": "玉山金",
+        "stockNo": "00701",
+        "type":"已終止",
+        "chargeDate": ["每月18日","每月28日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2021/05/22",
+        "orderTime": "11:15AM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    },{
+        "stockName": "玉山金",
+        "stockNo": "00701",
+        "type":"已終止",
+        "chargeDate": ["每月18日","每月28日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2021/05/22",
+        "orderTime": "11:15AM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    },{
+        "stockName": "玉山金",
+        "stockNo": "00701",
+        "type":"已終止",
+        "chargeDate": ["每月18日","每月28日"],
+        "chargeAmount": "4000",
+        "edit":"",
+        "orderDate": "2021/05/22",
+        "orderTime": "11:15AM",
+        "orderFrom": "WEB",
+        "status": "Cancelled"
+    }
+]

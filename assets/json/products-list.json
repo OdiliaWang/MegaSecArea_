@@ -1,0 +1,303 @@
+[   
+    {
+        "id": 1,
+        "stockType": "ETF",
+        "stockName": "元大台灣50",
+        "stockNo": "0050"
+    },{
+        "id": 2,
+        "stockType": "ETF",
+        "stockName": "元大中型100",
+        "stockNo": "0051"
+    },{
+        "id": 3,
+        "stockType": "ETF",
+        "stockName": "元大電子",
+        "stockNo": "0053"
+    },{
+        "id": 4,
+        "stockType": "ETF",
+        "stockName": "元大MSCI金融",
+        "stockNo": "0055"
+    },{
+        "id": 5,
+        "stockType": "ETF",
+        "stockName": "元大高股息",
+        "stockNo": "0056"
+    },{
+        "id": 6,
+        "stockType": "ETF",
+        "stockName": "元大寶滬深",
+        "stockNo": "0061"
+    },{
+        "id": 7,
+        "stockType": "ETF",
+        "stockName": "元大富櫃50",
+        "stockNo": "006201"
+    },{
+        "id": 8,
+        "stockType": "ETF",
+        "stockName": "元大MSCI台灣",
+        "stockNo": "006203"
+    },{
+        "id": 9,
+        "stockType": "ETF",
+        "stockName": "元大上證50",
+        "stockNo": "006206"
+    },{
+        "id": 10,
+        "stockType": "ETF",
+        "stockName": "期元大S&P黃金",
+        "stockNo": "00635U"
+    },{
+        "id": 11,
+        "stockType": "ETF",
+        "stockName": "國泰中國A50",
+        "stockNo": "00636"
+    },{
+        "id": 12,
+        "stockType": "ETF",
+        "stockName": "期元大S&P石油",
+        "stockNo": "00642U"
+    },{
+        "id": 13,
+        "stockType": "ETF",
+        "stockName": "元大S&P500",
+        "stockNo": "00646"
+    },{
+        "id": 14,
+        "stockType": "ETF",
+        "stockName": "元大歐洲50",
+        "stockNo": "00660"
+    },{
+        "id": 15,
+        "stockType": "ETF",
+        "stockName": "元大日經225",
+        "stockNo": "00661"
+    },{
+        "id": 16,
+        "stockType": "ETF",
+        "stockName": "元大美債20年",
+        "stockNo": "00679B"
+    },{
+        "id": 17,
+        "stockType": "ETF",
+        "stockName": "期元大美元指數",
+        "stockNo": "00682U"
+    },{
+        "id": 18,
+        "stockType": "ETF",
+        "stockName": "兆豐藍籌30",
+        "stockNo": "00690"
+    },{
+        "id": 19,
+        "stockType": "ETF",
+        "stockName": "元大美債7-10",
+        "stockNo": "00697B"
+    },{
+        "id": 20,
+        "stockType": "ETF",
+        "stockName": "國泰股利精選30",
+        "stockNo": "00701"
+    },{
+        "id": 21,
+        "stockType": "ETF",
+        "stockName": "元大台灣高息低波",
+        "stockNo": "00713"
+    },{
+        "id": 22,
+        "stockType": "ETF",
+        "stockName": "元大美債1-3",
+        "stockNo": "00719B"
+    },{
+        "id": 23,
+        "stockType": "ETF",
+        "stockName": "元大投資級公司債",
+        "stockNo": "00720B"
+    },{
+        "id": 24,
+        "stockType": "ETF",
+        "stockName": "元大中國債3-5",
+        "stockNo": "00721B"
+    },{
+        "id": 25,
+        "stockType": "ETF",
+        "stockName": "國泰AI + Robo",
+        "stockNo": "00737"
+    },{
+        "id": 26,
+        "stockType": "ETF",
+        "stockName": "期元大道瓊白銀",
+        "stockNo": "00738U"
+    },{
+        "id": 27,
+        "stockType": "ETF",
+        "stockName": "元大MSCI A股",
+        "stockNo": "00739"
+    },{
+        "id": 28,
+        "stockType": "ETF",
+        "stockName": "元大AAA至A公司債",
+        "stockNo": "00751B"
+    },{
+        "id": 29,
+        "stockType": "ETF",
+        "stockName": "統一FANG +",
+        "stockNo": "00757"
+    },{
+        "id": 30,
+        "stockType": "ETF",
+        "stockName": "元大全球AI",
+        "stockNo": "00762"
+    },{
+        "id": 31,
+        "stockType": "ETF",
+        "stockName": "元大US高息特別股",
+        "stockNo": "00771"
+    },{
+        "id": 32,
+        "stockType": "ETF",
+        "stockName": "元大10年IG銀行債",
+        "stockNo": "00786B"
+    },{
+        "id": 33,
+        "stockType": "ETF",
+        "stockName": "元大10年IG醫療債",
+        "stockNo": "00787B"
+    },{
+        "id": 34,
+        "stockType": "ETF",
+        "stockName": "元大10年IG電能債",
+        "stockNo": "00788B"
+    },{
+        "id": 35,
+        "stockType": "ETF",
+        "stockName": "國泰費城半導體",
+        "stockNo": "00830"
+    },{
+        "id": 36,
+        "stockType": "ETF",
+        "stockName": "元大臺灣ESG永續",
+        "stockNo": "00850"
+    },{
+        "id": 37,
+        "stockType": "ETF",
+        "stockName": "統一美債10年Aa-A",
+        "stockNo": "00853B"
+    },{
+        "id": 38,
+        "stockType": "ETF",
+        "stockName": "元大全球未來通訊",
+        "stockNo": "00861"
+    },{
+        "id": 39,
+        "stockType": "ETF",
+        "stockName": "元大15年EM主權債",
+        "stockNo": "00870B"
+    },{
+        "id": 40,
+        "stockType": "ETF",
+        "stockName": "國泰網路資安",
+        "stockNo": "00875"
+    },{
+        "id": 41,
+        "stockType": "ETF",
+        "stockName": "元大全球5G",
+        "stockNo": "00876"
+    },{
+        "id": 42,
+        "stockType": "ETF",
+        "stockName": "國泰永續高股息",
+        "stockNo": "00878"
+    },{
+        "id": 43,
+        "stockType": "ETF",
+        "stockName": "國泰台灣5G +",
+        "stockNo": "00881"
+    },{
+        "id": 44,
+        "stockType": "ETF",
+        "stockName": "兆豐台灣產業龍頭存股等權重",
+        "stockNo": "00921"
+    },{
+        "id": 45,
+        "stockType": "ETF",
+        "stockName": "國泰領袖50 ETF",
+        "stockNo": "00922"
+    },{
+        "id": 46,
+        "stockType": "ETF",
+        "stockName": "復華台灣科技優息",
+        "stockNo": "00929"
+    },{
+        "id": 47,
+        "stockType": "ETF",
+        "stockName": "統一美債20年",
+        "stockNo": "00931B"
+    },{
+        "id": 48,
+        "stockType": "ETF",
+        "stockName": "兆豐台灣ESG永續高股息等權重",
+        "stockNo": "00932"
+    },{
+        "id": 49,
+        "stockType": "ETF",
+        "stockName": "國泰10Y+金融債",
+        "stockNo": "00933B"
+    },{
+        "id": 50,
+        "stockType": "個股",
+        "stockName": "台泥",
+        "stockNo": "1101"
+    },{
+        "id": 51,
+        "stockType": "個股",
+        "stockName": "台塑",
+        "stockNo": "1301"
+    },{
+        "id": 52,
+        "stockType": "個股",
+        "stockName": "南亞",
+        "stockNo": "1303"
+    },{
+        "id": 53,
+        "stockType": "個股",
+        "stockName": "台化",
+        "stockNo": "1326"
+    },{
+        "id": 54,
+        "stockType": "個股",
+        "stockName": "中鋼",
+        "stockNo": "2002"
+    },{
+        "id": 55,
+        "stockType": "個股",
+        "stockName": "台達電",
+        "stockNo": "2308"
+    },{
+        "id": 56,
+        "stockType": "個股",
+        "stockName": "鴻海",
+        "stockNo": "2317"
+    },{
+        "id": 57,
+        "stockType": "個股",
+        "stockName": "台積電",
+        "stockNo": "2330"
+    },{
+        "id": 58,
+        "stockType": "個股",
+        "stockName": "中華電",
+        "stockNo": "2412"
+    },{
+        "id": 59,
+        "stockType": "個股",
+        "stockName": "玉山金",
+        "stockNo": "2884"
+    },{
+        "id": 60,
+        "stockType": "個股",
+        "stockName": "寶成",
+        "stockNo": "9904"
+    }
+]
