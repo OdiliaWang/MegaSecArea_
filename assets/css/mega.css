@@ -904,7 +904,7 @@
 .nav-secondary .nav-link.active {
   color: #fff;
   background-color: #d49c4f;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 .nav-secondary.nav-tabs-custom .nav-link.active {

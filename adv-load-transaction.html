@@ -59,7 +59,7 @@
                         <div class="dropdown ms-1 header-item" id="notificationDropdown">
                             <button type="button" class="btn btn-light position-relative p-1 btn-ghost-secondary rounded-circle" id="header-notice-dpn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
                                 <i class='bx bx-bell fs-24'></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span class="visually-hidden">unread messages</span></span>                                
+                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-primary p-1"><span class="visually-hidden">unread messages</span></span>                                
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="header-notice-dpn">
                                 <div class="notice-popup">
@@ -338,8 +338,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- Danger Alert -->
-                            <div class="alert alert-success alert-dismissible alert-label-icon rounded-label fade show fs-18" role="alert">
-                                <i class="ri-error-warning-line label-icon"></i><strong>提醒您</strong> - 申請時間：台股交易日 08:00~15:00
+                            <div class="alert alert-warning alert-dismissible alert-label-icon rounded-label fade show fs-18" role="alert">
+                                <i class="ri-error-warning-line label-icon"></i><strong>提醒您</strong> 申請時間：台股交易日 08:00~15:00
                             </div>
 
                             <div class="card p-4">
@@ -351,61 +351,70 @@
 
                         <div class="col-xl-12">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-header">
                                     <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs nav-tabs-custom nav-primary nav-justified mb-3" role="tablist">
+                                    <ul class="nav nav-tabs-custom card-header-tabs border-bottom-0 nav-secondary" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active fs-16" data-bs-toggle="tab" href="#advance" role="tab" aria-selected="false">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#advance" role="tab">
                                                 預收款項申請
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link fs-16" data-bs-toggle="tab" href="#reserveStock" role="tab" aria-selected="false">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#reserveStock" role="tab">
                                                 股票圈存申請
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link fs-16" data-bs-toggle="tab" href="#loadTradeList" role="tab" aria-selected="true">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#loadTradeList" role="tab">
                                                 圈存查詢
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="tab-content text-muted">
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
                                         <div class="tab-pane active" id="advance" role="tabpanel">
                                             <div class="row justify-content-center">
                                                 <div class="col-xl-8">
-                                                    <div class="row mt-4 text-center">
-                                                        <label for="stockNo" class="col-xl-3 col-form-label fs-18">股票代號</label>
-                                                        <div class="col-xl-7">
-                                                            <input type="text" class="form-control" id="stockNo" placeholder="請輸入股票代號">
+                                                    <div class="row mb-3 mt-4">
+                                                        <label for="inputNo" class="col-sm-2 col-form-label">股票代號</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="number" class="form-control" id="inputNo" placeholder="請輸入股票代號">
                                                         </div>
                                                     </div>
-                                                    <div class="row mt-3 text-center">
-                                                        <label for="stockNo" class="col-xl-3 col-form-label fs-18">預收金額</label>
-                                                        <div class="col-xl-7">
-                                                            <input type="text" class="form-control" id="stockNo" placeholder="請輸入預收金額">
+                                                    <div class="row">
+                                                        <label for="inputAmount" class="col-sm-2 col-form-label">預收金額</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="number" class="form-control" id="inputAmount" placeholder="請輸入預收金額">
                                                         </div>
                                                     </div>
                                                     <div class="row mt-4 mb-4 justify-content-center">
-                                                        <div class="col-xl-6 text-center">
-                                                            <button type="button" class="btn btn-primary w-lg waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#submitmodal-1">確定</button>
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-secondary w-lg" data-bs-toggle="modal" data-bs-target="#submitmodal-1">確定</button>
                                                         </div>
                                                     </div>
                                                     <!-- .modal -->
                                                     <div class="modal fade" id="submitmodal-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
-                                                                <div class="modal-body text-center p-5">
-                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                    <div class="mt-4">
-                                                                        <h3 class="mb-3">圈存已送出</h3>
-                                                                        <p class="text-muted mb-4"> 請至【 圈存查詢 】確認圈存結果</p>
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body text-center">
+                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json"
+                                                                        trigger="in"
+                                                                        delay="0"
+                                                                        colors="primary:#cb954b,secondary:#ffe0e0"
+                                                                        style="width:80px;height:80px">
+                                                                    </lord-icon>
+                                                                    <div class="mt-1">
+                                                                        <h3 class="mb-1">圈存已送出</h3>
+                                                                        <p class="text-muted"> 請至【 圈存查詢 】確認圈存結果</p>
                                                                         <hr>
-                                                                        <h5>證券帳號：營業部 - 1234567</h5><br>
+                                                                        <h5>證券帳號：營業部 - 1234567</h5>
                                                                         <h5 class="mb-3">預收款項： 1000 元</h5>
                                                                         <div class="hstack gap-2 justify-content-center">
-                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                            <a href="javascript:void(0);" class="btn btn-primary">圈存查詢</a>
+                                                                            <a href="javascript:void(0);" class="btn btn-secondary">圈存查詢</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -414,17 +423,14 @@
                                                     </div><!-- end Modal-->
                                                     <!-- nomarket .modal -->
                                                     <div class="modal fade" style="display: none" id="nomarket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-dialog modal-dialog-centered">
                                                             <div class="modal-content">
-                                                                <div class="modal-body text-center p-5">
-                                                                    <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                    <div class="mt-4">
-                                                                        <h3 class="mb-3">非申請時間</h3>
-                                                                        <p class="text-muted mb-4">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
-                                                                        <div class="hstack gap-2 justify-content-center">
-                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                        </div>
-                                                                    </div>
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body text-center">
+                                                                    <h3 class="">非申請時間</h3>
+                                                                    <p class="text-muted">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -441,13 +447,13 @@
                                                     <div class="row mt-4 text-center">
                                                         <div class="col-xl-12">
                                                             <!-- Nav tabs -->
-                                                            <ul class="nav nav-success nav-pills nav-justified fs-16 mb-3" role="tablist">
-                                                                <li class="nav-item waves-effect">
+                                                            <ul class="nav nav-secondary nav-justified arrow-navtabs bg-light fs-16 mb-3" role="tablist">
+                                                                <li class="nav-item">
                                                                     <a class="nav-link active" data-bs-toggle="tab" href="#reservedAll" role="tab">
                                                                         全部圈存股票
                                                                     </a>
                                                                 </li>
-                                                                <li class="nav-item waves-effect">
+                                                                <li class="nav-item">
                                                                     <a class="nav-link" data-bs-toggle="tab" href="#normalReserved" role="tab">
                                                                         預收股票
                                                                     </a>
@@ -462,24 +468,31 @@
                                                                     </div>
                                                                     <div class="row mt-4 mb-4 justify-content-center">
                                                                         <div class="col-xl-6 text-center">
-                                                                            <button type="button" class="btn btn-primary w-lg waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#submitmodal-2">確定</button>
+                                                                            <button type="button" class="btn btn-secondary w-lg" data-bs-toggle="modal" data-bs-target="#submitmodal-2">確定</button>
                                                                         </div>
                                                                     </div>
                                                                     <!-- .modal -->
                                                                     <div class="modal fade" id="submitmodal-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-dialog modal-dialog-centered">
                                                                             <div class="modal-content">
-                                                                                <div class="modal-body text-center p-5">
-                                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                                    <div class="mt-4">
-                                                                                        <h3 class="mb-3">圈存已送出</h3>
-                                                                                        <p class="text-muted mb-4"> 請至【 圈存查詢 】確認圈存結果</p>
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body text-center">
+                                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json"
+                                                                                        trigger="in"
+                                                                                        delay="0"
+                                                                                        colors="primary:#cb954b,secondary:#ffe0e0"
+                                                                                        style="width:80px;height:80px">
+                                                                                    </lord-icon>
+                                                                                    <div class="mt-1">
+                                                                                        <h3 class="mb-1">圈存已送出</h3>
+                                                                                        <p class="text-muted"> 請至【 圈存查詢 】確認圈存結果</p>
                                                                                         <hr>
-                                                                                        <h5>證券帳號：營業部 - 1234567</h5><br>
+                                                                                        <h5>證券帳號：營業部 - 1234567</h5>
                                                                                         <h5 class="mb-3">圈存方式：全部圈存(股票)</h5>
                                                                                         <div class="hstack gap-2 justify-content-center">
-                                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                                            <a href="javascript:void(0);" class="btn btn-primary">圈存查詢</a>
+                                                                                            <a href="javascript:void(0);" class="btn btn-secondary">圈存查詢</a>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -488,17 +501,14 @@
                                                                     </div><!-- end Modal-->
                                                                     <!-- nomarket .modal -->
                                                                     <div class="modal fade" style="display: none" id="nomarket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-dialog modal-dialog-centered">
                                                                             <div class="modal-content">
-                                                                                <div class="modal-body text-center p-5">
-                                                                                    <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                                    <div class="mt-4">
-                                                                                        <h3 class="mb-3">非申請時間</h3>
-                                                                                        <p class="text-muted mb-4">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
-                                                                                        <div class="hstack gap-2 justify-content-center">
-                                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body text-center">
+                                                                                    <h3 class="">非申請時間</h3>
+                                                                                    <p class="text-muted">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -519,25 +529,31 @@
                                                                     </div>
                                                                     <div class="row mt-4 mb-4 justify-content-center">
                                                                         <div class="col-xl-6 text-center">
-                                                                            <button type="button" class="btn btn-primary w-lg waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#submitmodal-3">確定</button>
+                                                                            <button type="button" class="btn btn-secondary w-lg " data-bs-toggle="modal" data-bs-target="#submitmodal-3">確定</button>
                                                                         </div>
                                                                     </div>
                                                                     <!-- .modal -->
                                                                     <div class="modal fade" id="submitmodal-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-dialog modal-dialog-centered">
                                                                             <div class="modal-content">
-                                                                                <div class="modal-body text-center p-5">
-                                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                                    <div class="mt-4">
-                                                                                        <h3 class="mb-3">圈存已送出</h3>
-                                                                                        <p class="text-muted mb-4"> 請至【 圈存查詢 】確認圈存結果</p>
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body text-center">
+                                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json"
+                                                                                        trigger="in"
+                                                                                        delay="0"
+                                                                                        colors="primary:#cb954b,secondary:#ffe0e0"
+                                                                                        style="width:80px;height:80px">
+                                                                                    </lord-icon>
+                                                                                    <div class="mt-1">
+                                                                                        <h3 class="mb-1">圈存已送出</h3>
+                                                                                        <p class="text-muted"> 請至【 圈存查詢 】確認圈存結果</p>
                                                                                         <hr>
-                                                                                        <h5>證券帳號：營業部 - 1234567</h5><br>
-                                                                                        <h5>預收股票代號： 2330 </h5><br>
-                                                                                        <h5 class="mb-3">預收股數： 1000 股</h5>
+                                                                                        <h5>證券帳號：營業部 - 1234567</h5>
+                                                                                        <h5 class="mb-3">預收股票代號： 2330 </h5>
                                                                                         <div class="hstack gap-2 justify-content-center">
-                                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                                            <a href="#" class="btn btn-primary">圈存查詢</a>
+                                                                                            <a href="javascript:void(0);" class="btn btn-secondary">圈存查詢</a>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -546,17 +562,14 @@
                                                                     </div><!-- end Modal-->
                                                                     <!-- nomarket .modal -->
                                                                     <div class="modal fade" style="display: none" id="nomarket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-dialog modal-dialog-centered">
                                                                             <div class="modal-content">
-                                                                                <div class="modal-body text-center p-5">
-                                                                                    <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:80px;height:80px"></lord-icon>
-                                                                                    <div class="mt-4">
-                                                                                        <h3 class="mb-3">非申請時間</h3>
-                                                                                        <p class="text-muted mb-4">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
-                                                                                        <div class="hstack gap-2 justify-content-center">
-                                                                                            <a href="#" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> 關閉</a>
-                                                                                        </div>
-                                                                                    </div>
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body text-center">
+                                                                                    <h3 class="">非申請時間</h3>
+                                                                                    <p class="text-muted">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -607,7 +620,7 @@
                                                         </div>
                                                         <!--end col-->
                                                         <div class="col-md col-sm-6">
-                                                            <button type="button" class="btn btn-primary w-100" onclick="SearchData();"> <i class="ri-equalizer-fill me-1 align-bottom"></i>
+                                                            <button type="button" class="btn btn-secondary w-100" onclick="SearchData();"> <i class="ri-equalizer-fill me-1 align-bottom"></i>
                                                                 查詢
                                                             </button>
                                                         </div>
@@ -688,7 +701,7 @@
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/libs/@lordicon/element/release/lordicon.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/backtotop.js"></script>
 
