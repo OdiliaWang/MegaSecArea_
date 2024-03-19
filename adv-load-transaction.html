@@ -587,37 +587,33 @@
                                                     <div class="row g-3">
                                                         <div class="col-md-6 col-sm-6">
                                                             <div class="search-box">
-                                                                <input type="text" class="form-control search" id="searchTransList" placeholder="輸入預收股票代號">
-                                                                <i class="ri-search-line search-icon"></i>
+                                                                <input type="text" class="form-control" id="searchHistoryList" placeholder="輸入預收股票代號">
+                                                                <i class='bx bx-search-alt search-icon'></i>
                                                             </div>
                                                         </div>
                                                         <!--end col-->
                                                         <div class="col-md-6 col-sm-6">
                                                             <div class="input-group">
-                                                                <div class="input-group-text bg-primary border-primary text-white">
-                                                                    <i class="ri-calendar-2-line"></i>
+                                                                <div class="input-group-text bg-secondary border-secondary text-white">
+                                                                    <i class='bx bx-calendar'></i>
                                                                 </div>
-                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="Y-M-d" data-range-date="true" placeholder="輸入預收日期區間" id="range-datepicker" aria-describedby="basic-addon1">
+                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="Y/M/d" data-range-date="true" placeholder="選擇日期區間" id="rage-date">
                                                             </div>
                                                         </div>
                                                         <!--end col-->
                                                         <!-- 類型篩選器 -->
                                                         <div class="col-md col-sm-6">
-                                                            <div>
-                                                                <select class="form-control" data-choices data-choices-search-false name="choices-single-default" id="idStatus">
-                                                                    <option value="">預收類型</option>
-                                                                    <option value="all" selected>所有類型</option>
-                                                                    <option value="type1">預收款項</option>
-                                                                    <option value="type2">預收股票</option>
-                                                                    <option value="type3">全部圈存</option>
-                                                                </select>
-                                                            </div>
+                                                            <select class="form-control" data-choices data-choices-search-false id="status-select">
+                                                                <option value="">預收類型</option>
+                                                                <option value="all" selected>所有類型</option>
+                                                                <option value="type1">預收款項</option>
+                                                                <option value="type2">預收股票</option>
+                                                                <option value="type3">全部圈存</option>
+                                                            </select>
                                                         </div>
                                                         <!--end col-->
                                                         <div class="col-md col-sm-6">
-                                                            <button type="button" class="btn btn-secondary w-100" onclick="SearchData();"> <i class="ri-equalizer-fill me-1 align-bottom"></i>
-                                                                查詢
-                                                            </button>
+                                                            <button class="btn btn-secondary w-100" onclick="filterData();">查詢</button>
                                                         </div>
                                                         <!--end col-->
                                                     </div>
@@ -626,7 +622,7 @@
                                                 <div class="card-body pt-0">
                                                     <div class="table-responsive mb-1">
                                                         <table class="table table-nowrap align-middle">
-                                                            <thead class="text-muted table-light">
+                                                            <thead>
                                                                 <tr class="text-uppercase"> 
                                                                     <th class="sort" data-sort="date">預收日期</th>
                                                                     <th class="sort" data-sort="type">預收類型</th>
@@ -703,9 +699,19 @@
     <!-- adv receipt js -->
     <script src="assets/js/load-transaction-list.js"></script>
     
-
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- flatpickr -->
+    <script src="assets/js/flatpicker-custom.js"></script>
+
+    <script>
+        config = {
+            mode: "range"
+        }
+
+        flatpickr("input[id=rage-date]", config);
+    </script>
     </body>
 
 </html>
