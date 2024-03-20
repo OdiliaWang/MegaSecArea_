@@ -942,6 +942,13 @@ table [data-qtvalue]::before,
   margin: 1.55rem 0;
 }
 
+.gridjs-wrapper {
+  padding: 0 !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
 .dateArea {
   padding: 15px 0px;
   border: 1px solid #ececec;

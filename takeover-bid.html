@@ -360,21 +360,23 @@
                                 <div class="card-body p-0">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="take-over-bid" role="tabpanel">
-                                            <div class="table-responsive">
-                                                <table class="table table-nowrap align-middle mb-0">
-                                                    <thead class="table-light">
-                                                        <tr>                                                       
-                                                            <th class="col" data-sort="stockNo">收購股票</th>
-                                                            <th class="col" data-sort="value">對價</th>
-                                                            <th class="col" data-sort="date">收購期間</th>
-                                                            <th class="col" data-sort="inventory">有效庫存(股)</th>
-                                                            <th class="col" data-sort="account">收購專戶</th>
-                                                            <th class="col" data-sort="sellout">收購股數</th>
-                                                            <th class="col" data-sort="submit"></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="takeBidTable"></tbody>
-                                                </table>
+                                            <div class="table-responsive" id="scroll-mask">
+                                                <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
+                                                    <table class="table table-nowrap align-middle">
+                                                        <thead class="table-light">
+                                                            <tr>                                                       
+                                                                <th class="col" data-sort="stockNo">收購股票</th>
+                                                                <th class="col" data-sort="value">對價</th>
+                                                                <th class="col" data-sort="date">收購期間</th>
+                                                                <th class="col" data-sort="inventory">有效庫存(股)</th>
+                                                                <th class="col" data-sort="account">收購專戶</th>
+                                                                <th class="col" data-sort="sellout">收購股數</th>
+                                                                <th class="col" data-sort="submit"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="takeBidTable"></tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                             <div class="row m-3 justify-content-end" id="pagination-element">
                                                 <!-- end col -->
@@ -428,9 +430,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card-body">
-                                                <div id="table-card" class="table-card"></div>
-                                            </div><!-- end card-body -->
+                                            <div class="table-responsive mb-3" id="scroll-mask">
+                                                <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
+                                                    <table class="table table-nowrap align-middle">
+                                                        <tbody id="table-card"></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
 
                                             <div class="card m-0">
                                                 <div class="crad-header">
