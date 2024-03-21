@@ -942,6 +942,10 @@ table [data-qtvalue]::before,
   margin: 1.55rem 0;
 }
 
+.table-footer-cta {
+  padding: 1rem;
+}
+
 .gridjs-wrapper {
   padding: 0 !important;
   border-top: 0;
