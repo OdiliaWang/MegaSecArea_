@@ -1,0 +1,43 @@
+[
+    {
+        "stockName": "中鋼構",
+        "stockNo": "2310",
+        "nowStock":["05/01","20"]
+    },{
+        "stockName": "普安",
+        "stockNo": "2495",
+        "nowStock":["05/01","45"]
+    },{
+        "stockName": "寶成",
+        "stockNo": "9904",
+        "nowStock":["05/01","10"]
+    },{
+        "stockName": "台積電",
+        "stockNo": "2330",
+        "nowStock":["05/01","2"]
+    },{
+        "stockName": "普安",
+        "stockNo": "2495",
+        "nowStock":["05/01","45"]
+    },{
+        "stockName": "寶成",
+        "stockNo": "9904",
+        "nowStock":["05/01","10"]
+    },{
+        "stockName": "台積電",
+        "stockNo": "2330",
+        "nowStock":["05/01","2"]
+    },{
+        "stockName": "普安",
+        "stockNo": "2495",
+        "nowStock":["05/01","45"]
+    },{
+        "stockName": "寶成",
+        "stockNo": "9904",
+        "nowStock":["05/01","10"]
+    },{
+        "stockName": "台積電",
+        "stockNo": "2330",
+        "nowStock":["05/01","2"]
+    }
+]
