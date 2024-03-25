@@ -42,29 +42,21 @@ function loadApplyListData(datas, page) {
     document.querySelector("#apply-list").innerHTML = '';
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#apply-list").innerHTML += '<div class="col-lg-12">\
-            <div class="apply-list list-view-filter">\
-                <div class="card apply-box">\
-                    <div class="card-body px-4">\
-                        <div class="row align-items-center apply-row">\
-                            <div class="col-lg-4 col">\
-                                <div class="apply-content">\
-                                    <h5 class="mb-1">'+ datas[i].stockName + '</h5>\
-                                    <p class="text-muted mb-0 fs-14">'+ datas[i].stockNo + '</p>\
-                                </div>\
+            document.querySelector("#apply-list").innerHTML += '<div class="col-lg-12 col-md-6">\
+            <div class="card">\
+                <div class="card-body">\
+                    <div class="d-lg-flex justify-content-between align-items-center">\
+                        <div class="flex-shrink-0">\
+                            <h3 class="mb-1">'+ datas[i].stockName + '</h3>\
+                            <p class="text-muted mb-0">'+ datas[i].stockNo + '</p>\
+                        </div>\
+                        <div class="d-lg-flex align-items-center">\
+                            <div class="ms-lg-3 my-3 my-lg-0">\
+                                <h5 class="mb-2">'+ datas[i].nowStock[0] + '庫存 </h5></a>\
+                                <p class="text-warning mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
                             </div>\
-                            <div class="col-lg-8 col">\
-                                <div class="row text-muted text-center align-items-center">\
-                                    <div class="col-6 border-end border-end-dashed">\
-                                        <h5 class="mb-2 text-muted">'+ datas[i].nowStock[0] + '庫存 '+ datas[i].nowStock[1] + '(張)</h5>\
-                                        <h5 class="mb-0">45</h5>\
-                                    </div>\
-                                    <div class="col-6">\
-                                        <div class="text-center">\
-                                        <a href="MegaArea-stockexchange-apply-setup.html" class="btn btn-primary">申請設定</a>\
-                                        </div>\
-                                    </div>\
-                                </div>\
+                            <div class="ms-lg-3 my-3 my-lg-0">\
+                                <a href="stockexchange-apply-setup.html" class="btn btn-secondary w-100">申請設定</a>\
                             </div>\
                         </div>\
                     </div>\
