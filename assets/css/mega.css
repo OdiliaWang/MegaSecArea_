@@ -127,7 +127,7 @@
 }
 
 .text-warning {
-  color: #52689f !important;
+  color: #3c61aa !important;
 }
 
 .chartjs-chart {
@@ -773,10 +773,10 @@
 
 .accordion-mega .accordion-button {
   background-color: #f7f8fc;
-  color: #52689f;
+  color: #3c61aa;
 }
 .accordion-mega .accordion-button::after {
-  color: #52689f;
+  color: #3c61aa;
 }
 
 .stock-in-ani span {
@@ -816,7 +816,7 @@
   font-size: 1.25rem;
 }
 .banner-index i {
-  color: #52689f;
+  color: #3c61aa;
   font-size: 1.675rem;
 }
 
@@ -974,15 +974,18 @@ table [data-qtvalue]::before,
   border: 1px solid #c23656;
 }
 
-.entrust-title {
+.entrust-title,
+.exchange-title {
   padding: 10px;
 }
 
 @media (max-width: 767px) {
-  .entrust-title {
+  .entrust-title,
+  .exchange-title {
     padding: 0px;
   }
-  .user-num {
+  .user-num,
+  .stock-num {
     margin-top: 0.5rem;
   }
 }
@@ -1001,15 +1004,15 @@ table [data-qtvalue]::before,
   border-color: transparent;
 }
 .ribbon-box.right .ribbon-warning {
-  background: #52689f;
+  background: #3c61aa;
 }
 .ribbon-box.right .ribbon-warning.ribbon-shape::before {
-  border-right-color: #52689f;
-  border-top-color: #52689f;
+  border-right-color: #3c61aa;
+  border-top-color: #3c61aa;
 }
 .ribbon-box.right .ribbon-warning.ribbon-shape::before {
-  border-right-color: #52689f;
-  border-top-color: #52689f;
+  border-right-color: #3c61aa;
+  border-top-color: #3c61aa;
 }
 .ribbon-box.right .ribbon-warning::before {
   border-color: transparent;

@@ -44,9 +44,10 @@ $info-800: #755e98;
 $info-600: #cfc1ff;
 $danger-800: #9a61ba;
 $danger-600: #f0ddfd;
-$warning-800: #52689f;
+$warning-800: #3c61aa;
 $warning-600: #829EE3;
 $table-muted: #8392abca;
+$border-color: #ced4da;
 
 
 #myBtn {
@@ -1098,14 +1099,17 @@ table [data-qtvalue],
     border: 1px solid #c23656;
 }
 
-.entrust-title {
+.entrust-title, 
+.exchange-title {
     padding: 10px;
 }
 @media (max-width: 767px) {
-    .entrust-title {
+    .entrust-title, 
+    .exchange-title {
         padding: 0px;
     }
-    .user-num {
+    .user-num,
+    .stock-num {
         margin-top: 0.5rem;
     }
 }
