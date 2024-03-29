@@ -11,7 +11,7 @@
 	<polyline class="st0" points="7.8,20.6 4.3,20.6 4.3,3.2 17.7,3.2 17.7,8.9 	"/>
 	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.293" y1="11.9186" x2="14.735" y2="11.9186">
 		<stop  offset="0" style="stop-color:#FDF3E4"/>
-		<stop  offset="1" style="stop-color:#D1A466"/>
+		<stop  offset="1" style="stop-color:#cb954b"/>
 	</linearGradient>
 	<rect x="7.3" y="6.8" class="st1" width="7.4" height="10.1"/>
 	<line class="st0" x1="7.8" y1="7.3" x2="14.3" y2="7.3"/>

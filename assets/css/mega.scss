@@ -6,7 +6,7 @@ $info: #765E98;
 $danger: #763999;
 $warning: #4761A0;
 $primary-light: #f69ba0;
-$secondary-light: #D1A466;
+$secondary-light: #cb954b;
 $success-light: #a6f4dc;
 $info-light: #ab93e5;
 $danger-light: #ac70ca;
@@ -47,6 +47,7 @@ $danger-600: #f0ddfd;
 $warning-800: #3c61aa;
 $warning-600: #829EE3;
 $table-muted: #8392abca;
+$secondary-color: #a3a3a3;
 $border-color: #ced4da;
 
 
@@ -877,6 +878,13 @@ $border-color: #ced4da;
 }
 
 
+//investock page
+
+.text-table-m {
+    font-size: 14px;
+    color: $secondary-color;
+}
+
 .accordion-mega {
     .accordion-button {
         background-color: $dropdown-bg;
@@ -1031,11 +1039,11 @@ $border-color: #ced4da;
 
 .nav-secondary.nav-tabs-custom {
     .nav-link.active {
-        color: #D1A466;
+        color: #cb954b;
         background-color: var(--vz-secondary-bg);
 
         &::after {
-            background-color: #D1A466;
+            background-color: #cb954b;
         }
     }
 }

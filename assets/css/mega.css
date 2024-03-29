@@ -581,7 +581,7 @@
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #D1A466;
+  background-color: #cb954b;
   border-radius: 10px;
 }
 .advCard .btn {
@@ -609,7 +609,7 @@
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #D1A466;
+    background-color: #cb954b;
     border-radius: 13px;
     flex: none;
   }
@@ -634,7 +634,7 @@
 .nameCard .employImg {
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: #D1A466;
+  background-color: #cb954b;
   border-radius: 50%;
 }
 .nameCard .employ-Name {
@@ -769,6 +769,11 @@
 .adv-alert {
   color: #c23656;
   background-color: #ffe0e0;
+}
+
+.text-table-m {
+  font-size: 14px;
+  color: #a3a3a3;
 }
 
 .accordion-mega .accordion-button {
@@ -908,11 +913,11 @@
 }
 
 .nav-secondary.nav-tabs-custom .nav-link.active {
-  color: #D1A466;
+  color: #cb954b;
   background-color: var(--vz-secondary-bg);
 }
 .nav-secondary.nav-tabs-custom .nav-link.active::after {
-  background-color: #D1A466;
+  background-color: #cb954b;
 }
 
 .table-nowrap th,
