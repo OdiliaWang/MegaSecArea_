@@ -211,6 +211,12 @@ $border-color: #ced4da;
     background-color: #e4e8ed;
 }
 
+button[mega_act] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 1px;
+}
+
 .btn-icon-primary {
     position: relative;
     display: -webkit-inline-box;
