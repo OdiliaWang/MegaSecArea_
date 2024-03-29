@@ -55,9 +55,9 @@ function loadProductsListData(datas, page) {
                             <p class="mb-0 text-muted">'+ datas[i].stockNo + '</p>\
                         </div>\
                         <div class="flex-shrink-0 ms-3">\
-                            <a class="btn btn-secondary w-100 stock-in-ani" href="investock-entrust-setup.html">\
-                                <span>新增</span>\
+                            <a class="btn btn-primary w-100 stock-in-ani" href="investock-entrust-setup.html">\
                                 <i class="fa-solid fa-cart-plus"></i>\
+                                <i cartadded class="fa-solid fa-cart-shopping"></i>\
                             </a>\
                         </div>\
                     </div>\

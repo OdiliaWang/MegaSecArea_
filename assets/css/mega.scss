@@ -26,7 +26,7 @@ $navbar-bg: #f4e7cf;
 $dropdown-bg: #f7f8fc;
 $dropdown-hover: #e2ebff;
 $btn-primary: #ed787e;
-$btn-secondary: #e3b26d;
+$btn-secondary: #cb954b;
 $btn-success: #62ddb9;
 $btn-info: #ab93e5;
 $btn-danger: #8648aa;
@@ -897,24 +897,33 @@ $border-color: #ced4da;
 }
 
 .stock-in-ani {
-    span {
-        display: flex;
-        transition: all 1s ease-in-out;
-    }
+    width: 40px;
     i {
+        display: inline;
+        font-size: 16px;
+        line-height: 1.35;
+        text-align: center;
+    }
+    
+    i[cartadded] {
         display: none;
     }
+
     &:hover {
-        transition: all 0.5s ease-in-out;
-        padding: 0.5rem 1.5rem;
-        span {
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+        border: 1px solid $btn-primary;
+
+        i {
             display: none;
         }
-        i {
+
+        i[cartadded] {
             display: inline;
             font-size: 16px;
             line-height: 1.35;
             text-align: center;
+            color: $btn-primary;
         }
     }
 }

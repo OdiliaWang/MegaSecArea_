@@ -784,25 +784,32 @@
   color: #3c61aa;
 }
 
-.stock-in-ani span {
-  display: flex;
-  transition: all 1s ease-in-out;
+.stock-in-ani {
+  width: 40px;
 }
 .stock-in-ani i {
-  display: none;
-}
-.stock-in-ani:hover {
-  transition: all 0.5s ease-in-out;
-  padding: 0.5rem 1.5rem;
-}
-.stock-in-ani:hover span {
-  display: none;
-}
-.stock-in-ani:hover i {
   display: inline;
   font-size: 16px;
   line-height: 1.35;
   text-align: center;
+}
+.stock-in-ani i[cartadded] {
+  display: none;
+}
+.stock-in-ani:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border: 1px solid #ed787e;
+}
+.stock-in-ani:hover i {
+  display: none;
+}
+.stock-in-ani:hover i[cartadded] {
+  display: inline;
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+  color: #ed787e;
 }
 
 .banner-index {
