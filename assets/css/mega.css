@@ -180,6 +180,12 @@ button[mega_act] {
   line-height: 1px;
 }
 
+.btn.mega-act {
+  height: 40px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
 .btn-icon-primary {
   position: relative;
   display: inline-flex;
