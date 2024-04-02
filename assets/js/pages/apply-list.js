@@ -53,7 +53,7 @@ function loadApplyListData(datas, page) {
                         <div class="d-lg-flex align-items-center">\
                             <div class="ms-lg-3 my-3 my-lg-0">\
                                 <h5 class="mb-2">'+ datas[i].nowStock[0] + '庫存 </h5></a>\
-                                <p class="text-warning mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
+                                <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
                             </div>\
                             <div class="ms-lg-3 my-3 my-lg-0">\
                                 <a href="stockexchange-apply-setup.html" class="btn btn-secondary w-100">申請設定</a>\

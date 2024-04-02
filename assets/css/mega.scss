@@ -6,7 +6,7 @@ $info: #5a4180;
 $warning: #7f4573;
 $danger: #3c61aa;
 $primary-light: #f69ba0;
-$secondary-light: #d8ac7c;
+$secondary-light: #CC9A56;
 $success-light: #a6f4dc;
 $info-light: #ab93e5;
 $warning-light: #ce84c7;
@@ -26,7 +26,7 @@ $navbar-bg: #f4e7cf;
 $dropdown-bg: #f7f8fc;
 $dropdown-hover: #e2ebff;
 $btn-primary: #ed787e;
-$btn-secondary: #cb954b;
+$btn-secondary: #cc9a56;
 $btn-success: #62ddb9;
 $btn-info: #785bbb;
 $btn-warning: #a265c6;
@@ -669,7 +669,7 @@ button[mega_act] {
         margin-left: auto !important;
         margin-right: auto !important;
         padding: 10px 10px 0px 10px;
-        background-color: $warning-600;
+        background-color: $danger-light;
         border-radius: 10px;
         vertical-align: text-bottom;
     }
@@ -936,10 +936,10 @@ button[mega_act] {
 .accordion-mega {
     .accordion-button {
         background-color: $dropdown-bg;
-        color: $warning-800;
+        color: $danger-800;
 
         &::after {
-            color: $warning-800;
+            color: $danger-800;
         }
     }
 }
@@ -994,8 +994,9 @@ button[mega_act] {
         font-size: 1.25rem;
     }
     i {
-        color: $warning-800;
+        color: $btn-danger;
         font-size: 1.675rem;
+        margin-top: 0.1em;
     }
 }
 
@@ -1045,7 +1046,6 @@ button[mega_act] {
 }
 
 //Nav Tabs
-
 .nav-tabs {
     border: 0px;
 
@@ -1224,7 +1224,6 @@ table [data-qtvalue],
 }
 
 //GridJS Pagenation
-
 @media (max-width: 430px) {
     .gridjs-footer {
         display: flex;
@@ -1243,7 +1242,6 @@ table [data-qtvalue],
 }
 
 //progress
-
 .progress {
     height: 2rem;
     border-radius: 10rem;
@@ -1251,3 +1249,7 @@ table [data-qtvalue],
     font-size: 14px;
 }
 
+//form-check
+.form-check-input {
+    margin-top: 0 !important;
+}

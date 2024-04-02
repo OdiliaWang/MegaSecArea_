@@ -570,7 +570,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #934f84;
+  background-color: #829ee3;
   border-radius: 10px;
   vertical-align: text-bottom;
 }
@@ -622,7 +622,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #d8ac7c;
+  background-color: #CC9A56;
   border-radius: 10px;
 }
 .advCard .btn {
@@ -650,7 +650,7 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #d8ac7c;
+    background-color: #CC9A56;
     border-radius: 13px;
     flex: none;
   }
@@ -675,7 +675,7 @@ button[mega_act] {
 .nameCard .employImg {
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: #d8ac7c;
+  background-color: #CC9A56;
   border-radius: 50%;
 }
 .nameCard .employ-Name {
@@ -819,10 +819,10 @@ button[mega_act] {
 
 .accordion-mega .accordion-button {
   background-color: #f7f8fc;
-  color: #79416d;
+  color: #485d93;
 }
 .accordion-mega .accordion-button::after {
-  color: #79416d;
+  color: #485d93;
 }
 
 .stock-in-ani {
@@ -869,8 +869,9 @@ button[mega_act] {
   font-size: 1.25rem;
 }
 .banner-index i {
-  color: #79416d;
+  color: #829EE3;
   font-size: 1.675rem;
+  margin-top: 0.1em;
 }
 
 @media (min-width: 1800.98px) {
@@ -1100,4 +1101,8 @@ table [data-qtvalue]::before,
   border-radius: 10rem;
   background-color: #eff2f7;
   font-size: 14px;
+}
+
+.form-check-input {
+  margin-top: 0 !important;
 }/*# sourceMappingURL=mega.css.map */
