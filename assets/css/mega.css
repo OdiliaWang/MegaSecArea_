@@ -45,7 +45,7 @@
 }
 
 .bg-soft-warning {
-  background-color: #e2ebff;
+  background-color: #fff0fe;
 }
 
 .bg-soft-light {
@@ -53,7 +53,7 @@
 }
 
 .primary {
-  background-color: #ffe0e0;
+  background-color: #fff2f2;
 }
 .primary a {
   color: #495057;
@@ -63,23 +63,13 @@
 }
 
 .secondary {
-  background-color: #fff5e2;
+  background-color: #fff6e6;
 }
 .secondary a {
   color: #495057;
 }
 .secondary i {
-  color: #d8ac7c;
-}
-
-.info {
-  background-color: #f6f3fe;
-}
-.info a {
-  color: #495057;
-}
-.info i {
-  color: #ab93e5;
+  color: #d49c4f;
 }
 
 .success {
@@ -92,14 +82,34 @@
   color: #42cca4;
 }
 
+.info {
+  background-color: #efebfe;
+}
+.info a {
+  color: #495057;
+}
+.info i {
+  color: #5a4180;
+}
+
 .warning {
-  background-color: #e2ebff;
+  background-color: #fff0fe;
 }
 .warning a {
   color: #495057;
 }
 .warning i {
-  color: #4761A0;
+  color: #934f84;
+}
+
+.danger {
+  background-color: #f7f8fc;
+}
+.danger a {
+  color: #495057;
+}
+.danger i {
+  color: #6a80b7;
 }
 
 .chart-first,
@@ -119,15 +129,15 @@
 
 .chart-forth,
 .text-info {
-  color: #765E98 !important;
+  color: #5a4180 !important;
 }
 
 .chart-fifth {
-  color: #cfc1ff !important;
+  color: #614a8e !important;
 }
 
 .text-warning {
-  color: #3c61aa !important;
+  color: #79416d !important;
 }
 
 .chartjs-chart {
@@ -429,25 +439,6 @@ button[mega_act] {
   color: #fff;
 }
 
-.card-warning {
-  position: relative;
-  background-color: #e2ebff;
-  display: flex;
-  border-radius: 0.75rem;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-}
-.card-warning .card-header {
-  color: #495057;
-}
-.card-warning a, .card-warning:link {
-  color: #fff;
-}
-
 .card-info {
   position: relative;
   background-color: #f6f3fe;
@@ -464,6 +455,44 @@ button[mega_act] {
   color: #495057;
 }
 .card-info a, .card-info:link {
+  color: #fff;
+}
+
+.card-warning {
+  position: relative;
+  background-color: #ffe6ff;
+  display: flex;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+}
+.card-warning .card-header {
+  color: #495057;
+}
+.card-warning a, .card-warning:link {
+  color: #fff;
+}
+
+.card-danger {
+  position: relative;
+  background-color: #f7f8fc;
+  display: flex;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+}
+.card-danger .card-header {
+  color: #495057;
+}
+.card-danger a, .card-danger:link {
   color: #fff;
 }
 
@@ -541,7 +570,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #829EE3;
+  background-color: #934f84;
   border-radius: 10px;
   vertical-align: text-bottom;
 }
@@ -570,7 +599,7 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #829EE3;
+    background-color: #934f84;
     border-radius: 13px;
     flex: none;
   }
@@ -593,7 +622,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #cb954b;
+  background-color: #d8ac7c;
   border-radius: 10px;
 }
 .advCard .btn {
@@ -621,7 +650,7 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #cb954b;
+    background-color: #d8ac7c;
     border-radius: 13px;
     flex: none;
   }
@@ -646,7 +675,7 @@ button[mega_act] {
 .nameCard .employImg {
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: #cb954b;
+  background-color: #d8ac7c;
   border-radius: 50%;
 }
 .nameCard .employ-Name {
@@ -770,7 +799,7 @@ button[mega_act] {
 }
 
 .adv-card_status {
-  background-color: #765E98;
+  background-color: #5a4180;
 }
 
 .bg-transaction {
@@ -790,10 +819,10 @@ button[mega_act] {
 
 .accordion-mega .accordion-button {
   background-color: #f7f8fc;
-  color: #3c61aa;
+  color: #79416d;
 }
 .accordion-mega .accordion-button::after {
-  color: #3c61aa;
+  color: #79416d;
 }
 
 .stock-in-ani {
@@ -840,7 +869,7 @@ button[mega_act] {
   font-size: 1.25rem;
 }
 .banner-index i {
-  color: #3c61aa;
+  color: #79416d;
   font-size: 1.675rem;
 }
 
@@ -1028,15 +1057,15 @@ table [data-qtvalue]::before,
   border-color: transparent;
 }
 .ribbon-box.right .ribbon-warning {
-  background: #3c61aa;
+  background: #79416d;
 }
 .ribbon-box.right .ribbon-warning.ribbon-shape::before {
-  border-right-color: #3c61aa;
-  border-top-color: #3c61aa;
+  border-right-color: #79416d;
+  border-top-color: #79416d;
 }
 .ribbon-box.right .ribbon-warning.ribbon-shape::before {
-  border-right-color: #3c61aa;
-  border-top-color: #3c61aa;
+  border-right-color: #79416d;
+  border-top-color: #79416d;
 }
 .ribbon-box.right .ribbon-warning::before {
   border-color: transparent;
