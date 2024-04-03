@@ -487,6 +487,7 @@ button[mega_act] {
     
     .card-header {
         color: #495057;
+        background-color: transparent;
     }
     a,
     &:link {
@@ -512,6 +513,7 @@ button[mega_act] {
     
     .card-header {
         color: #495057;
+        background-color: transparent;
     }
     a,
     &:link {
@@ -536,6 +538,7 @@ button[mega_act] {
 
     .card-header {
         color: #495057;
+        background-color: transparent;
     }
     a,
     &:link {
@@ -560,6 +563,7 @@ button[mega_act] {
     
     .card-header {
         color: #495057;
+        background-color: transparent;
     }
     a,
     &:link {
@@ -584,6 +588,7 @@ button[mega_act] {
     
     .card-header {
         color: #495057;
+        background-color: transparent;
     }
     a,
     &:link {
@@ -699,7 +704,7 @@ button[mega_act] {
             margin-top: 7px;
             margin-bottom: 7px;
             flex-shrink: 0 !important;
-            background-color: $warning-600;
+            background-color: $danger-light;
             border-radius: 13px;
             flex: none;
         }
@@ -994,7 +999,7 @@ button[mega_act] {
         font-size: 1.25rem;
     }
     i {
-        color: $btn-danger;
+        color: $danger;
         font-size: 1.675rem;
         margin-top: 0.1em;
     }

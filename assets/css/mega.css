@@ -415,6 +415,7 @@ button[mega_act] {
 }
 .card-primary .card-header {
   color: #495057;
+  background-color: transparent;
 }
 .card-primary a, .card-primary:link {
   color: #fff;
@@ -434,6 +435,7 @@ button[mega_act] {
 }
 .card-secondary .card-header {
   color: #495057;
+  background-color: transparent;
 }
 .card-secondary a, .card-secondary:link {
   color: #fff;
@@ -453,6 +455,7 @@ button[mega_act] {
 }
 .card-info .card-header {
   color: #495057;
+  background-color: transparent;
 }
 .card-info a, .card-info:link {
   color: #fff;
@@ -472,6 +475,7 @@ button[mega_act] {
 }
 .card-warning .card-header {
   color: #495057;
+  background-color: transparent;
 }
 .card-warning a, .card-warning:link {
   color: #fff;
@@ -491,6 +495,7 @@ button[mega_act] {
 }
 .card-danger .card-header {
   color: #495057;
+  background-color: transparent;
 }
 .card-danger a, .card-danger:link {
   color: #fff;
@@ -599,7 +604,7 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #934f84;
+    background-color: #829ee3;
     border-radius: 13px;
     flex: none;
   }
@@ -869,7 +874,7 @@ button[mega_act] {
   font-size: 1.25rem;
 }
 .banner-index i {
-  color: #829EE3;
+  color: #3c61aa;
   font-size: 1.675rem;
   margin-top: 0.1em;
 }
