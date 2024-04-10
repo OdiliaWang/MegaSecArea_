@@ -42,13 +42,13 @@ function loadAdvReceiptData(datas, page) {
     document.querySelector("#advList").innerHTML = '';
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#advList").innerHTML += '<tr>\
+            document.querySelector("#advList").innerHTML += '<tr class="align-middle">\
             <td>'+ datas[i].advDate + '<small class="text-muted"> '+ datas[i].dataTime + '</small></td>\
             <td>'+ datas[i].stockNo[1] + '<small class="text-muted"> '+ datas[i].stockNo[0] + '</small></td>\
             <td>'+ datas[i].type + '</td>\
             <td>'+ datas[i].charge + '</td>\
             <td>'+ datas[i].amount + '</td>\
-            <td>' + isStatus(datas[i].status) + '</td>\
+            <td>' + isStatus(datas[i].Zh) + '</td>\
             </tr>';
         }
     }
@@ -60,11 +60,11 @@ function loadAdvReceiptData(datas, page) {
 function isStatus(val) {
     switch (val) {
         case "成功":
-            return ('<span class="badge badge-soft-primary fs-16">' + val + "</span>");
+            return ('<span class="badge badge-success">' + val + "</span>");
         case "取消":
-            return ('<span class="badge badge-soft-light fs-16">' + val + "</span>");
+            return ('<span class="badge badge-warning">' + val + "</span>");
         case "失敗":
-            return ('<span class="badge badge-soft-secondary fs-16">' + val + "</span>");
+            return ('<span class="badge badge-primary">' + val + "</span>");
     }
 }
 
@@ -164,4 +164,66 @@ searchElementList.addEventListener("keyup", function () {
 });
 
 
+// Choices status input
+var statusInput = new Choices(document.getElementById('idStatus'), {
+    searchEnabled: false,
+});
 
+statusInput.passedElement.element.addEventListener('change', function (event) {
+    var statusInputValue = event.detail.value;
+    if (event.detail.value != "All") {
+        var filterData = allAdvReceiptList.filter(listdata => listdata.status == statusInputValue);
+    } else {
+        var filterData = allAdvReceiptList;
+    }
+    loadAdvReceiptData(filterData, currentPage);
+}, false);
+
+
+
+
+// var statusVal = new Choices(statusField, {
+//     searchEnabled: false,
+// });
+
+// function SearchData() {
+//     var isstatus = document.getElementById("idStatus").value;
+//     var pickerVal = document.getElementById("rage-date").value;
+
+//     var date1 = pickerVal.split(" 至 ")[0];
+//     var date2 = pickerVal.split(" 至 ")[1];
+
+//     tasksList.filter(function (data) {
+//         matchData = new DOMParser().parseFromString(
+//             data.values().status,
+//             "text/html"
+//         );
+//         var status = matchData.body.firstElementChild.innerHTML;
+//         var statusFilter = false;
+//         var dateFilter = false;
+
+//         if (status == "all" || isstatus == "all") {
+//             statusFilter = true;
+//         } else {
+//             statusFilter = status == isstatus;
+//         }
+
+//         if (
+//             new Date(data.values().due_date.slice(0, 12)) >= new Date(date1) &&
+//             new Date(data.values().due_date.slice(0, 12)) <= new Date(date2)
+//         ) {
+//             dateFilter = true;
+//         } else {
+//             dateFilter = false;
+//         }
+
+//         if (statusFilter && dateFilter) {
+//             return statusFilter && dateFilter;
+//         } else if (statusFilter && pickerVal == "") {
+//             return statusFilter;
+//         } else if (dateFilter && pickerVal == "") {
+//             return dateFilter;
+//         }
+//     });
+//     tasksList.update();
+// }

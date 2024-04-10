@@ -444,18 +444,18 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card">
+                            <div class="card" id="tasksList">
                                 <div class="card-header">
                                     <form>
                                         <div class="row g-2">
-                                            <div class="col-xl-3 col-lg-5 col-md-12">
+                                            <div class="col-xl-4 col-lg-3 col-md-12">
                                                 <div class="search-box">
                                                     <input type="text" class="form-control" id="searchAdvReceiptList" placeholder="輸入預收股票代號">
                                                     <i class='bx bx-search-alt search-icon'></i>
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xl-3 col-lg-5 col-md-12">
+                                            <div class="col-xl-4 col-lg-4 col-md-12">
                                                 <div class="input-group">
                                                     <div class="input-group-text bg-secondary border-secondary text-white">
                                                         <i class='bx bx-calendar'></i>
@@ -464,7 +464,16 @@
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xl-2 col-lg-2 col-md-12">
+                                            <div class="col-xl-3 col-lg-3 col-md-12">
+                                                <select class="form-control" data-choices data-choices-search-false id="idStatus">
+                                                    <option value="">選擇狀態</option>
+                                                    <option value="All">全部</option>
+                                                    <option value="Success">成功</option>
+                                                    <option value="Fail">失敗</option>
+                                                    <option value="Cancelled">取消</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-1 col-lg-2 col-md-12">
                                                 <button class="btn btn-secondary w-100 mega-act" onclick="SearchData();">查詢</button>
                                             </div>
                                         </div>
@@ -496,7 +505,7 @@
                                             <p class="text-muted mb-0">查無公開收購申請</p>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Pagination -->
                                     <div class="d-flex justify-content-end mt-2" id="pagination-element">
                                         <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
