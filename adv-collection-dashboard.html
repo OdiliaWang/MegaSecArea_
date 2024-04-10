@@ -15,6 +15,10 @@
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+
+    <!-- gridjs css -->
+    <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -441,17 +445,17 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
-                                <div class="card-body border border-dashed border-end-0 border-start-0 border-top-0">
+                                <div class="card-header">
                                     <form>
                                         <div class="row g-2">
-                                            <div class="col-xl-5 col-lg-12 col-md-12">
+                                            <div class="col-xl-3 col-lg-5 col-md-12">
                                                 <div class="search-box">
-                                                    <input type="text" class="form-control" id="searchAdvClctList" placeholder="輸入預收股票代號">
+                                                    <input type="text" class="form-control" id="searchAdvReceiptList" placeholder="輸入預收股票代號">
                                                     <i class='bx bx-search-alt search-icon'></i>
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xl-5 col-lg-12 col-md-12">
+                                            <div class="col-xl-3 col-lg-5 col-md-12">
                                                 <div class="input-group">
                                                     <div class="input-group-text bg-secondary border-secondary text-white">
                                                         <i class='bx bx-calendar'></i>
@@ -460,44 +464,41 @@
                                                 </div>
                                             </div>
                                             <!--end col-->
-                                            <div class="col-xl-2 col-lg-12 col-md-12">
-                                                <button class="btn btn-secondary w-100" onclick="SearchData();">查詢</button>
+                                            <div class="col-xl-2 col-lg-2 col-md-12">
+                                                <button class="btn btn-secondary w-100 mega-act" onclick="SearchData();">查詢</button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 
                                 <div class="card-body">
-                                    <div>
-                                        <div class="table-responsive table-card mb-1">
-                                            <table class="table table-nowrap align-middle" id="AdvClctTable">
-                                                <thead class="table-light">
-                                                    <tr> 
-                                                        <th class="sort" data-sort="date">預收日期</th>
-                                                        <th class="sort" data-sort="stockNo">預收股票</th>
-                                                        <th class="sort" data-sort="type">預收類型</th>
-                                                        <th class="sort" data-sort="charge">預收金額</th>
-                                                        <th class="sort" data-sort="amount">預收股數(股)</th>
-                                                        <th class="sort" data-sort="status">預收狀態</th>
-                                                    </tr>
-                                                </thead>
-                                            </table>
+                                    <div class="table-responsive table-card mb-1">
+                                        <table class="table table-nowrap align-middle">
+                                            <thead class="table-light">
+                                                <tr> 
+                                                    <th class="sort" data-sort="date">預收日期</th>
+                                                    <th class="sort" data-sort="stockNo">預收股票</th>
+                                                    <th class="sort" data-sort="type">預收類型</th>
+                                                    <th class="sort" data-sort="charge">預收金額</th>
+                                                    <th class="sort" data-sort="amount">預收股數(股)</th>
+                                                    <th class="sort" data-sort="status">預收狀態</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="advList"></tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- NoResult -->
+                                    <div class="noresult" style="display: none">
+                                        <div class="text-center">
+                                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                            <h5 class="mt-2">無資料</h5>
+                                            <p class="text-muted mb-0">查無公開收購申請</p>
                                         </div>
                                     </div>
-                                </div><!--end card-body-->
-
-                                <!-- NoResult -->
-                                <div class="noresult" style="display: none">
-                                    <div class="text-center">
-                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
-                                        <h5 class="mt-2">無資料</h5>
-                                        <p class="text-muted mb-0">查無公開收購申請</p>
-                                    </div>
-                                </div>
-
-                                <div class="row g-0 justify-content-end mb-4" id="pagination-element">
-                                    <!-- end col -->
-                                    <div class="col-sm-6">
+                                    
+                                    <!-- Pagination -->
+                                    <div class="d-flex justify-content-end mt-2" id="pagination-element">
                                         <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
                                             <div class="page-item">
                                                 <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
@@ -507,9 +508,9 @@
                                                 <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
                                             </div>
                                         </div>
-                                    </div><!-- end col -->
+                                    </div>
                                 </div>
-                                <!--end row pagination-->
+                                <!--end card-body-->
                             </div>
                         </div>
                         <!--end col-->
@@ -533,12 +534,6 @@
         <!-- end main content-->
     </div>
     <!-- END layout-wrapper -->
-    
-    <!--start back-to-top-->
-    <button onclick="topFunction()" class="btn btn-icon border-0" id="back-to-top">
-        <i class="ri-arrow-up-line"></i>
-    </button>
-    <!--end back-to-top-->
 
 
 
@@ -549,14 +544,17 @@
 <script src="assets/libs/feather-icons/feather.min.js"></script>
 <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
 <script src="assets/js/plugins.js"></script>
-<script src="assets/js/backtotop.js"></script>
 
+
+<!-- gridjs js -->
+<script src="assets/libs/gridjs/gridjs.umd.js"></script>
+<!-- adv collection js -->
+<script src="assets/js/pages/adv-receipt-list.js"></script>
 <!-- App js -->
 <script src="assets/js/app.js"></script>
 
 <!-- flatpickr -->
 <script src="assets/js/flatpicker-custom.js"></script>
-
 <script>
     config = {
         mode: "range"

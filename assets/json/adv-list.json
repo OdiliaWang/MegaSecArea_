@@ -1,0 +1,91 @@
+[
+    {
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收款項",
+        "charge": "4000",
+        "amount": "",
+        "status": "成功"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "1",
+        "status": "失敗"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "45",
+        "status": "取消"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收款項",
+        "charge": "3000",
+        "amount": "",
+        "status": "成功"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "全部圈存",
+        "charge": "",
+        "amount": "",
+        "status": "成功"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "全部圈存",
+        "charge": "",
+        "amount": "",
+        "status": "成功"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收款項",
+        "charge": "3000",
+        "amount": "",
+        "status": "成功"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "1",
+        "status": "失敗"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "1",
+        "status": "失敗"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "1",
+        "status": "失敗"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type": "預收股票",
+        "charge": "",
+        "amount": "1",
+        "status": "失敗"
+    }
+]
