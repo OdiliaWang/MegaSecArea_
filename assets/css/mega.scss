@@ -41,7 +41,7 @@ $secondary-600: #e3b26d;
 $success-800: #7bd9c4;
 $success-600: #a6f4dc;
 $info-800: #49376d;
-$info-600: #8768c6;
+$info-600: #755E98;
 $warning-800: #79416d;
 $warning-600: #934f84;
 $danger-800: #485d93;
@@ -135,7 +135,7 @@ $border-color: #ced4da;
         color: #495057;
     }
     i {
-        color: $info;
+        color: $info-600;
     }
 }
 .warning {
@@ -172,7 +172,7 @@ $border-color: #ced4da;
 }
 .chart-forth,
 .text-info {
-    color: $info !important;
+    color: $info-600 !important;
 }
 .chart-fifth {
     color: $info-light !important;
