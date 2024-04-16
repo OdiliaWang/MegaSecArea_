@@ -974,6 +974,11 @@ button[mega_act] {
   background-color: #cb954b;
 }
 
+@media (max-width: 576px) {
+  .m-flex-column {
+    flex-direction: column !important;
+  }
+}
 .table-nowrap th,
 .table-nowrap td {
   white-space: nowrap;

@@ -1110,6 +1110,15 @@ button[mega_act] {
     }
 }
 
+@media (max-width: 576px) {
+    .m-flex-column {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
+    }
+}
+
 //Table
 .table-nowrap th,
 .table-nowrap td {
