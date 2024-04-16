@@ -1110,4 +1110,8 @@ table [data-qtvalue]::before,
 
 .form-check-input {
   margin-top: 0 !important;
+}
+
+.adv-card-bg {
+  background-color: #fff5e2;
 }/*# sourceMappingURL=mega.css.map */
