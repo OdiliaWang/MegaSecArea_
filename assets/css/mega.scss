@@ -1110,6 +1110,24 @@ button[mega_act] {
     }
 }
 
+.nav-tabs-custom {
+    .nav-item {
+        .nav-link {
+            &::after {
+                height: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .nav {
+        .nav-link {
+            font-size: 18px;
+        }
+    }
+}
+
 @media (max-width: 576px) {
     .m-flex-column {
         -webkit-box-orient: vertical !important;

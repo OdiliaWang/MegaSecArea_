@@ -16,6 +16,9 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/img/megafavicon.ico">
 
+    <!-- gridjs css -->
+    <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -411,77 +414,90 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="advance" role="tabpanel">
                                             <div class="row justify-content-center">
-                                                <h4 class="text-center">預收款項</h4>
-                                                <div class="col-xl-6 col-md-8">
-                                                    <div class="row align-items-center mb-3">
-                                                        <label class="col-sm-3 col-form-label">身分證字號</label>
-                                                        <div class="col-sm-9">
-                                                            <span class="">A12345****</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <label for="account" class="col-sm-3 col-form-label">申請帳號</label>
-                                                        <div class="col-sm-9">
-                                                            <select class="form-select" id="account">
-                                                                <option selected>請選擇「證券帳號」</option>
-                                                                <option value="1">天母-1234567</option>
-                                                                <option value="2">Two</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label for="inputAmount" class="col-sm-3 col-form-label">預收金額</label>
-                                                        <div class="col-sm-9">
-                                                            <input type="number" class="form-control" id="inputAmount" placeholder="請輸入「預收金額」">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-4 justify-content-center">
-                                                        <div class="text-center">
-                                                            <button type="button" class="btn btn-secondary w-lg" data-bs-toggle="modal" data-bs-target="#submitmodal-1">確定</button>
-                                                        </div>
-                                                    </div>
-                                                    <!-- .modal -->
-                                                    <div class="modal fade" id="submitmodal-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body text-center">
-                                                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json"
-                                                                        trigger="in"
-                                                                        delay="0"
-                                                                        colors="primary:#cb954b,secondary:#ffe0e0"
-                                                                        style="width:80px;height:80px">
-                                                                    </lord-icon>
-                                                                    <div class="mt-1">
-                                                                        <h3 class="mb-1">圈存已送出</h3>
-                                                                        <p class="text-muted"> 請至【 圈存查詢 】確認圈存結果</p>
-                                                                        <hr>
-                                                                        <h5>證券帳號：營業部 - 1234567</h5>
-                                                                        <h5 class="mb-3">預收款項： 1000 元</h5>
-                                                                        <div class="hstack gap-2 justify-content-center">
-                                                                            <a href="javascript:void(0);" class="btn btn-secondary">圈存查詢</a>
+                                                <h2 class="text-center mb-3">預收款項</h2>
+
+                                                <div class="col-xl-7 col-md-8">
+                                                    <ul class="nav nav-tabs nav-tabs-custom nav-secondary nav-justified mb-3" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link active" data-bs-toggle="tab" href="#adv-1" role="tab" aria-selected="false" tabindex="-1">
+                                                                預收款項申請
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#adv-2" role="tab" aria-selected="true">
+                                                                預收款項查詢
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="col-xl-12">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="adv-1">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-xl-7">
+                                                                    <div class="row align-items-center mb-3">
+                                                                        <label class="col-sm-3 col-form-label">身分證字號</label>
+                                                                        <div class="col-sm-9">
+                                                                            <span class="idText">A12345****</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row mb-3">
+                                                                        <label for="account" class="col-sm-3 col-form-label">申請帳號</label>
+                                                                        <div class="col-sm-9">
+                                                                            <select class="form-select" id="account">
+                                                                                <option selected>請選擇「證券帳號」</option>
+                                                                                <option value="1">天母-1234567</option>
+                                                                                <option value="2">Two</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <label for="inputAmount" class="col-sm-3 col-form-label">預收金額</label>
+                                                                        <div class="col-sm-9">
+                                                                            <input type="number" class="form-control" id="inputAmount" placeholder="請輸入「預收金額」">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row mt-4 justify-content-center">
+                                                                        <div class="text-center">
+                                                                            <button type="button" class="btn btn-secondary w-lg" data-bs-toggle="modal" data-bs-target="#submitmodal-1">確定</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div><!-- end Modal-->
-                                                    <!-- nomarket .modal -->
-                                                    <div class="modal fade" style="display: none" id="nomarket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body text-center">
-                                                                    <h3 class="">非申請時間</h3>
-                                                                    <p class="text-muted">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
+                                                        <!-- end tab adv-1 -->
+
+                                                        <div class="tab-pane" id="adv-2">
+                                                            <!-- start advance Cards-->
+                                                            <div class="col-xl-12" id="advance-card"></div>
+
+                                                            <!-- NoResult -->
+                                                            <div class="noresult" style="display: none">
+                                                                <div class="text-center">
+                                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                                                    <h5 class="mt-2">無圈存資料</h5>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="row g-0 justify-content-end mb-4" id="pagination-element">
+                                                                <!-- end col -->
+                                                                <div class="col-sm-6">
+                                                                    <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                                                        <div class="page-item">
+                                                                            <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
+                                                                        </div>
+                                                                        <span id="page-num" class="pagination"></span>
+                                                                        <div class="page-item">
+                                                                            <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><!-- end col -->
+                                                            </div>
+                                                            <!--end row pagination-->
                                                         </div>
-                                                    </div><!-- end Modal-->
+                                                        <!-- end tab adv-2 -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -497,7 +513,7 @@
                                                     <div class="row align-items-center mb-3">
                                                         <label class="col-sm-3 col-form-label">身分證字號</label>
                                                         <div class="col-sm-9">
-                                                            <span class="">A12345****</span>
+                                                            <span class="idText">A12345****</span>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
@@ -583,7 +599,7 @@
                                                     <div class="row align-items-center mb-3">
                                                         <label class="col-sm-3 col-form-label">身分證字號</label>
                                                         <div class="col-sm-9">
-                                                            <span class="">A12345****</span>
+                                                            <span class="idText">A12345****</span>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-3">
@@ -741,6 +757,45 @@
                         </div>
                     </div>
 
+                    <!-- .modal -->
+                    <div class="modal fade" id="submitmodal-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <lord-icon src="https://cdn.lordicon.com/nocovwne.json"
+                                        trigger="in"
+                                        delay="0"
+                                        colors="primary:#cb954b,secondary:#ffe0e0"
+                                        style="width:80px;height:80px">
+                                    </lord-icon>
+                                    <div class="mt-1">
+                                        <h3 class="mb-1">圈存已送出</h3>
+                                        <p class="text-muted"> 請至【 圈存查詢 】確認圈存結果</p>
+                                        <hr>
+                                        <h5>證券帳號：營業部 - 1234567</h5>
+                                        <h5 class="mb-3">預收款項： 1000 元</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end Modal-->
+                    <!-- nomarket .modal -->
+                    <div class="modal fade" style="display: none" id="nomarket" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h3 class="">非申請時間</h3>
+                                    <p class="text-muted">申請時間為<a class="text-primary"><b>台股交易日8:00~15:00</b></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end Modal-->
                     
                     
                 </div>
@@ -785,9 +840,10 @@
     flatpickr("input[id=rage-date]", config);
 </script>
 
-<!-- list.js min js -->
-<script src="assets/libs/list.js/list.min.js"></script>
-<script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
+<!-- gridjs js -->
+<script src="assets/libs/gridjs/gridjs.umd.js"></script>
+<!-- gridjs init -->
+<script src="assets/js/pages/adv-collection-list.js"></script>
 
 <!--crypto-orders init-->
 <script src="assets/js/pages/crypto-orders.init.js"></script>
