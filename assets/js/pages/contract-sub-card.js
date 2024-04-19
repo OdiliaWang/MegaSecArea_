@@ -61,7 +61,7 @@ function loadsubContractListData(datas, page) {
 function isStatus(val) {
     switch (val) {
         case "已簽署":
-            return ('<div class="ribbon ribbon-warning round-shape">' + val + "</div>");
+            return ('<div class="ribbon ribbon-danger round-shape">' + val + "</div>");
         case "未簽署":
             return ('<div class="ribbon ribbon-primary round-shape">' + val + "</div>");
     }
@@ -121,36 +121,6 @@ function paginationEvents() {
     clickPage();
     selectedPage();
 }
-
-
-// Search list
-var searchElementList = document.getElementById("searchValidList");
-searchElementList.addEventListener("keyup", function () {
-    var inputVal = searchElementList.value.toLowerCase();
-
-    function filterItems(arr, query) {
-        return arr.filter(function (el) {
-            return el.stockName.toLowerCase().indexOf(query.toLowerCase()) !== -1 || el.stockNo.toLowerCase().indexOf(query.toLowerCase()) !== -1
-        })
-    }
-
-    var filterData = filterItems(allsubContractList, inputVal);
-
-    if (filterData.length == 0) {
-        document.getElementById("pagination-element").style.display = "none";
-    } else {
-        document.getElementById("pagination-element").style.display = "flex";
-    }
-
-    var pageNumber = document.getElementById('page-num');
-    pageNumber.innerHTML = "";
-    var dataPageNum = Math.ceil(filterData.length / itemsPerPage)
-    // for each page
-    for (var i = 1; i < dataPageNum + 1; i++) {
-        pageNumber.innerHTML += "<div class='page-item'><a class='page-link clickPageNumber' href='javascript:void(0);'>" + i + "</a></div>";
-    }
-    loadsubContractListData(filterData, currentPage);
-});
 
 
 

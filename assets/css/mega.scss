@@ -1242,6 +1242,21 @@ table [data-qtvalue],
     .ribbon-warning::before {
         border-color: transparent;
     }
+
+    .ribbon-danger {
+        background: $danger-800;
+    }
+    .ribbon-danger.ribbon-shape::before {
+        border-right-color: $danger-800;
+        border-top-color: $danger-800;
+    }
+    .ribbon-danger.ribbon-shape::before {
+        border-right-color: $danger-800;
+        border-top-color: $danger-800;
+    }
+    .ribbon-danger::before {
+        border-color: transparent;
+    }
 }
 
 

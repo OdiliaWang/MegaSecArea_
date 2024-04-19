@@ -1090,6 +1090,20 @@ table [data-qtvalue]::before,
 .ribbon-box.right .ribbon-warning::before {
   border-color: transparent;
 }
+.ribbon-box.right .ribbon-danger {
+  background: #485d93;
+}
+.ribbon-box.right .ribbon-danger.ribbon-shape::before {
+  border-right-color: #485d93;
+  border-top-color: #485d93;
+}
+.ribbon-box.right .ribbon-danger.ribbon-shape::before {
+  border-right-color: #485d93;
+  border-top-color: #485d93;
+}
+.ribbon-box.right .ribbon-danger::before {
+  border-color: transparent;
+}
 
 .item {
   font-size: 1rem;

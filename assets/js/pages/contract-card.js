@@ -61,7 +61,7 @@ function loadContractListData(datas, page) {
 function isStatus(val) {
     switch (val) {
         case "已簽署":
-            return ('<div class="ribbon ribbon-warning round-shape">' + val + "</div>");
+            return ('<div class="ribbon ribbon-danger round-shape">' + val + "</div>");
         case "未簽署":
             return ('<div class="ribbon ribbon-primary round-shape">' + val + "</div>");
     }
