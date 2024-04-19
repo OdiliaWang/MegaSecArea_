@@ -141,12 +141,14 @@ var searchElementList = document.getElementById("searchProductsList");
 searchElementList.addEventListener("keyup", function () {
     var inputVal = searchElementList.value.toLowerCase();
 
+    // 搜尋範圍
     function filterItems(arr, query) {
         return arr.filter(function (el) {
             return el.stockName.toLowerCase().indexOf(query.toLowerCase()) !== -1 || el.stockNo.toLowerCase().indexOf(query.toLowerCase()) !== -1
         })
     }
 
+    // 宣告搜尋結果
     var filterData = filterItems(allProductsList, inputVal);
 
     if (filterData.length == 0) {
@@ -155,6 +157,14 @@ searchElementList.addEventListener("keyup", function () {
         document.getElementById("pagination-element").style.display = "flex";
     }
 
+    // 檢查搜尋結果是否為空
+    if (filterData.length > 0) {
+        document.getElementsByClassName("noresult")[0].style.display = "none";
+    } else {
+        document.getElementsByClassName("noresult")[0].style.display = "block";
+    }
+
+    // 分頁帶出頁數
     var pageNumber = document.getElementById('page-num');
     pageNumber.innerHTML = "";
     var dataPageNum = Math.ceil(filterData.length / itemsPerPage)
