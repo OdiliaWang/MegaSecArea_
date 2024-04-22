@@ -1,12 +1,12 @@
 var url = "assets/json/";
 var allrestockList = '';
 
-var prevButton = document.getElementById('page-prev');
-var nextButton = document.getElementById('page-next');
+var prevButtonB = document.getElementById('page-prevB');
+var nextButtonB = document.getElementById('page-nextB');
 
 // configuration variables
-var currentPage = 1;
-var itemsPerPage = 5;
+var currentPageB = 1;
+var itemsPerPageB = 5;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
@@ -30,17 +30,17 @@ getJSON("adv-restock-list.json", function (err, data) {
         console.log("Something went wrong: " + err);
     } else {
         allrestockList = data;
-        loadreStockData(allrestockList, currentPage);
-        paginationEvents();
+        loadreStockData(allrestockList, currentPageB);
+        paginationEventsB();
     }
 });
 
 function loadreStockData(datas, page) {
-    var pages = Math.ceil(datas.length / itemsPerPage)
+    var pages = Math.ceil(datas.length / itemsPerPageB)
     if (page < 1) page = 1
     if (page > pages) page = pages
     document.querySelector("#restock-card").innerHTML = '';
-    for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
+    for (var i = (page - 1) * itemsPerPageB; i < (page * itemsPerPageB) && i < datas.length; i++) {
         if (datas[i]) {
             document.querySelector("#restock-card").innerHTML += '<div class="card p-0">\
             <div class="card-body p-3">\
@@ -66,9 +66,9 @@ function loadreStockData(datas, page) {
         </div>';
         }
     }
-    selectedPage();
-    currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
-    currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+    selectedPageB();
+    currentPageB == 1 ? prevButtonB.parentNode.classList.add('disabled') : prevButtonB.parentNode.classList.remove('disabled');
+    currentPageB == pages ? nextButtonB.parentNode.classList.add('disabled') : nextButtonB.parentNode.classList.remove('disabled');
 }
 
 
@@ -84,10 +84,10 @@ function isStatus(val) {
 }
 
 
-function selectedPage() {
-    var pagenumLink = document.getElementById('page-num').getElementsByClassName('clickPageNumber');
+function selectedPageB() {
+    var pagenumLink = document.getElementById('page-numB').getElementsByClassName('clickPageNumber');
     for (var i = 0; i < pagenumLink.length; i++) {
-        if (i == currentPage - 1) {
+        if (i == currentPageB - 1) {
             pagenumLink[i].parentNode.classList.add("active");
         } else {
             pagenumLink[i].parentNode.classList.remove("active");
@@ -97,22 +97,22 @@ function selectedPage() {
 
 
 // paginationEvents
-function paginationEvents() {
+function paginationEventsB() {
     var numPages = function numPages() {
-        return Math.ceil(allrestockList.length / itemsPerPage);
+        return Math.ceil(allrestockList.length / itemsPerPageB);
     };
 
-    function clickPage() {
+    function clickPageB() {
         document.addEventListener('click', function (e) {
             if (e.target.nodeName == "A" && e.target.classList.contains("clickPageNumber")) {
-                currentPage = e.target.textContent;
-                loadreStockData(allrestockList, currentPage);
+                currentPageB = e.target.textContent;
+                loadreStockData(allrestockList, currentPageB);
             }
         });
     };
 
-    function pageNumbers() {
-        var pageNumber = document.getElementById('page-num');
+    function pageNumbersB() {
+        var pageNumber = document.getElementById('page-numB');
         pageNumber.innerHTML = "";
         // for each page
         for (var i = 1; i < numPages() + 1; i++) {
@@ -120,21 +120,21 @@ function paginationEvents() {
         }
     }
 
-    prevButton.addEventListener('click', function () {
-        if (currentPage > 1) {
-            currentPage--;
-            loadreStockData(allrestockList, currentPage);
+    prevButtonB.addEventListener('click', function () {
+        if (currentPageB > 1) {
+            currentPageB--;
+            loadreStockData(allrestockList, currentPageB);
         }
     });
 
-    nextButton.addEventListener('click', function () {
-        if (currentPage < numPages()) {
-            currentPage++;
-            loadreStockData(allrestockList, currentPage);
+    nextButtonB.addEventListener('click', function () {
+        if (currentPageB < numPages()) {
+            currentPageB++;
+            loadreStockData(allrestockList, currentPageB);
         }
     });
 
-    pageNumbers();
-    clickPage();
-    selectedPage();
+    pageNumbersB();
+    clickPageB();
+    selectedPageB();
 }

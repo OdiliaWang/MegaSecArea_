@@ -9,13 +9,31 @@
         "advDate": "2022/10/02",
         "stockNo": ["9904","寶成"],
         "dataTime": "02:35 PM",
-        "type":"Failed",
+        "type":"Success",
         "amount": "1"
     },{
         "advDate": "2022/10/02",
         "stockNo": ["9904","寶成"],
         "dataTime": "02:35 PM",
-        "type":"Upload",
-        "amount": "45"
+        "type":"Success",
+        "amount": "1"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type":"Success",
+        "amount": "1"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type":"Success",
+        "amount": "1"
+    },{
+        "advDate": "2022/10/02",
+        "stockNo": ["9904","寶成"],
+        "dataTime": "02:35 PM",
+        "type":"Success",
+        "amount": "1"
     }
 ]

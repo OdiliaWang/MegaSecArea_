@@ -1,12 +1,12 @@
 var url = "assets/json/";
 var alllendingList = '';
 
-var prevButton = document.getElementById('page-prev');
-var nextButton = document.getElementById('page-next');
+var prevButtonD = document.getElementById('page-prevD');
+var nextButtonD = document.getElementById('page-nextD');
 
 // configuration variables
-var currentPage = 1;
-var itemsPerPage = 5;
+var currentPageD = 1;
+var itemsPerPageD = 5;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
@@ -30,17 +30,17 @@ getJSON("adv-lending-list.json", function (err, data) {
         console.log("Something went wrong: " + err);
     } else {
         alllendingList = data;
-        loadlendingData(alllendingList, currentPage);
-        paginationEvents();
+        loadlendingData(alllendingList, currentPageD);
+        paginationEventsD();
     }
 });
 
 function loadlendingData(datas, page) {
-    var pages = Math.ceil(datas.length / itemsPerPage)
+    var pagesD = Math.ceil(datas.length / itemsPerPageD)
     if (page < 1) page = 1
-    if (page > pages) page = pages
+    if (page > pagesD) page = pagesD
     document.querySelector("#lending-card").innerHTML = '';
-    for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
+    for (var i = (page - 1) * itemsPerPageD; i < (page * itemsPerPageD) && i < datas.length; i++) {
         if (datas[i]) {
             document.querySelector("#lending-card").innerHTML += '<div class="card p-0">\
             <div class="card-body p-3">\
@@ -66,9 +66,9 @@ function loadlendingData(datas, page) {
         </div>';
         }
     }
-    selectedPage();
-    currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
-    currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+    selectedPageD();
+    currentPageD == 1 ? prevButtonD.parentNode.classList.add('disabled') : prevButtonD.parentNode.classList.remove('disabled');
+    currentPageD == pagesD ? nextButtonD.parentNode.classList.add('disabled') : nextButtonD.parentNode.classList.remove('disabled');
 }
 
 
@@ -84,35 +84,35 @@ function isStatus(val) {
 }
 
 
-function selectedPage() {
-    var pagenumLink = document.getElementById('page-num').getElementsByClassName('clickPageNumber');
-    for (var i = 0; i < pagenumLink.length; i++) {
-        if (i == currentPage - 1) {
-            pagenumLink[i].parentNode.classList.add("active");
+function selectedPageD() {
+    var pagenumLinkD = document.getElementById('page-numD').getElementsByClassName('clickPageNumber');
+    for (var i = 0; i < pagenumLinkD.length; i++) {
+        if (i == currentPageD - 1) {
+            pagenumLinkD[i].parentNode.classList.add("active");
         } else {
-            pagenumLink[i].parentNode.classList.remove("active");
+            pagenumLinkD[i].parentNode.classList.remove("active");
         }
     }
 };
 
 
 // paginationEvents
-function paginationEvents() {
+function paginationEventsD() {
     var numPages = function numPages() {
-        return Math.ceil(alllendingList.length / itemsPerPage);
+        return Math.ceil(alllendingList.length / itemsPerPageD);
     };
 
-    function clickPage() {
+    function clickPageD() {
         document.addEventListener('click', function (e) {
             if (e.target.nodeName == "A" && e.target.classList.contains("clickPageNumber")) {
-                currentPage = e.target.textContent;
-                loadlendingData(alllendingList, currentPage);
+                currentPageD = e.target.textContent;
+                loadlendingData(alllendingList, currentPageD);
             }
         });
     };
 
-    function pageNumbers() {
-        var pageNumber = document.getElementById('page-num');
+    function pageNumbersD() {
+        var pageNumber = document.getElementById('page-numD');
         pageNumber.innerHTML = "";
         // for each page
         for (var i = 1; i < numPages() + 1; i++) {
@@ -120,21 +120,21 @@ function paginationEvents() {
         }
     }
 
-    prevButton.addEventListener('click', function () {
-        if (currentPage > 1) {
-            currentPage--;
-            loadlendingData(alllendingList, currentPage);
+    prevButtonD.addEventListener('click', function () {
+        if (currentPageD > 1) {
+            currentPageD--;
+            loadlendingData(alllendingList, currentPageD);
         }
     });
 
-    nextButton.addEventListener('click', function () {
-        if (currentPage < numPages()) {
-            currentPage++;
-            loadlendingData(alllendingList, currentPage);
+    nextButtonD.addEventListener('click', function () {
+        if (currentPageD < numPages()) {
+            currentPageD++;
+            loadlendingData(alllendingList, currentPageD);
         }
     });
 
-    pageNumbers();
-    clickPage();
-    selectedPage();
+    pageNumbersD();
+    clickPageD();
+    selectedPageD();
 }

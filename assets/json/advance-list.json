@@ -20,5 +20,26 @@
         "chargeAmount": "1000",
         "orderDate": "2024/10/01",
         "orderTime": "13:42:59"
+    },{
+        "stockName": "預收款項",
+        "stockNo": "",
+        "type":"Failed",
+        "chargeAmount": "1000",
+        "orderDate": "2024/10/01",
+        "orderTime": "13:42:59"
+    },{
+        "stockName": "預收款項",
+        "stockNo": "",
+        "type":"Success",
+        "chargeAmount": "1000",
+        "orderDate": "2023/10/01",
+        "orderTime": "13:42:59"
+    },{
+        "stockName": "預收款項",
+        "stockNo": "",
+        "type":"Upload",
+        "chargeAmount": "1000",
+        "orderDate": "2024/11/01",
+        "orderTime": "13:42:59"
     }
 ]
