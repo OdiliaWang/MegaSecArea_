@@ -16,7 +16,7 @@ $secondary-bg-fresh: #fff6e6;
 $success-bg-fresh: #e3fff2;
 $info-bg-fresh: #efebfe;
 $warning-bg-fresh: #fff0fe;
-$danger-bg-fresh: #f7f8fc;
+$danger-bg-fresh: #E6EFFF;
 $body-bg: #fbfaf7;
 $body-color: #495057;
 $body-bg-gray: #f0efefb6;
@@ -573,7 +573,7 @@ button[mega_act] {
 
 .card-danger {
     position: relative;
-    background-color: #f7f8fc;
+    background-color: $danger-bg-fresh;
     display: flex;
     border-radius: 0.75rem;
     padding: 1rem;
