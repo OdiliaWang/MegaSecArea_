@@ -372,8 +372,8 @@
                                             </div>
                                         </div>  
                                     </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive table-card">
+                                    <div class="card-body p-0 pb-1">
+                                        <div class="table-responsive" id="scroll-mask">
                                             <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="primary">
                                                 <table class="table table-nowrap mb-0">
                                                     <thead class="table-light">
@@ -432,7 +432,6 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            
                                             <!-- sign -->
                                             <div class="d-flex justify-content-center mt-2 mb-3">
                                                 <div class="form-check mt-4">
@@ -448,20 +447,20 @@
                             </div>
                             <div class="col-xl-12">
                                 <div class="card">
-                                    <div class="card-body p-0">
+                                    <div class="card-header p-0 border-0">
                                         <div class="alert alert-secondary border-0 rounded-3 m-0 d-flex align-items-center" role="alert">
                                             <div class="flex-grow-1 text-truncate">
                                                 <b>備註</b>
                                             </div>
                                         </div>
-                                        <div class="row px-3 g-1">                                       
-                                            <ol class="row px-4 g-2 lh-1">
-                                                <li>請由手機下載集保e存摺APP，並完成註冊。</li>
-                                                <li>投資人完成手機存摺申請後，若未完成註冊啟用，自申請時間起72小時內，集保結算所將每日E-mail與簡訊提醒。</li>
-                                                <li>集保e存摺不受理國外手機號碼，請使用國內手機號碼申請。</li>
-                                                <li><b><a class="text-warning">茲因本公司斗南分公司訂於111年10月1日與來福分公司合併。敬請您撥冗至本公司臨櫃辦理相關作業，不便之處，敬請見諒。</a></b></li>
-                                            </ol>    
-                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <ol class="mb-0 text-wrap">
+                                            <li>請由手機下載集保e存摺APP，並完成註冊。</li>
+                                            <li>投資人完成手機存摺申請後，若未完成註冊啟用，自申請時間起72小時內，集保結算所將每日E-mail與簡訊提醒。</li>
+                                            <li>集保e存摺不受理國外手機號碼，請使用國內手機號碼申請。</li>
+                                            <li><b><a class="text-secondary">茲因本公司斗南分公司訂於111年10月1日與來福分公司合併。敬請您撥冗至本公司臨櫃辦理相關作業，不便之處，敬請見諒。</a></b></li>
+                                        </ol>
                                     </div>
                                 </div>
                                 <!-- danger Alert -->
@@ -486,14 +485,6 @@
     </div><!-- END layout-wrapper -->
 
 
-
-    <!--start back-to-top-->
-    <button onclick="topFunction()" class="pt-0" id="myBtn">
-        <i class="ri-arrow-up-s-line fs-24"></i>
-        <br>TOP
-    </button>
-    <!--end back-to-top-->
-
     <!--checkbox & button-->
     <script>
             $(function () {
@@ -512,7 +503,6 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/backtotop.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
