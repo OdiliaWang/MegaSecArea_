@@ -26,6 +26,24 @@
     <!-- custom Css-->
     <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
 
+    <style>
+        /* 遮罩層 */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        /* 新聞內容 */
+        #newsContent {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -338,20 +356,42 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row gx-3 mt-4 mb-3">
-                        <div class="col-lg-4 col-md-6">
-                            <select class="form-select mb-2" aria-label="select Account">
-                                <option selected value="1">證-營業部0108496 錢多多</option>
-                                <option value="2">複-天母分公司051923 錢多多</option>
-                                <option value="3">複-松德分公司0309456 郝有錢</option>
-                            </select>
-                        </div>
-                        <div class="d-grid d-md-block col-xl-3 col-lg-2 col-md-6">
-                            <button type="button" class="btn btn-secondary" mega_act>查詢</button>
-                        </div>
-                    </div>
                     <!-- end page title -->
                     <!--頁首 Cards-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card adv-card-bg">
+                                <div class="card-body pb-0 px-3">
+                                    <div class="row align-items-center g-3 mb-3">
+                                        <div class="col-md-auto">
+                                            <div class="position-relative d-inline-block">
+                                                <img src="assets/img/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail">
+                                                <span class="contact-active position-absolute rounded-circle bg-success">
+                                                    <span class="visually-hidden"></span>
+                                                </span>
+                                            </div>
+                                            <div class="hstack flex-wrap mt-2">
+                                                <a class="btn btn-outline-secondary d-grid" href="sign-Contract.html" target="_blank">前往簽署</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-12">
+                                            <h4 class="mb-3">我的定期定額買台股</h4>
+                                            <div class="hstack gap-2 flex-wrap">
+                                                <div><i class="ri-user-3-line align-bottom me-1"></i>郝大偉</div>
+                                                <div class="vr"></div>
+                                                <div><i class="ri-home-smile-line align-bottom me-1"></i> 7000-1234567 天母分公司</div>
+                                            </div>
+                                            <div class="hstack gap-2 flex-wrap mt-2">
+                                                <div><i class="ri-building-line align-bottom me-1"></i> 契約狀態
+                                                    <span class="badge badge-success fs-14">已簽署</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row row-cols-1">
                         <div class="col-xl-3 col-sm-12">
                             <div class="col">
@@ -369,7 +409,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card card-animate m-card secondary">
+                                <div class="card card-animate m-card info">
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-light rounded-circle fs-3">
@@ -383,7 +423,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card card-animate m-card success">
+                                <div class="card card-animate m-card info">
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0">
                                             <span class="avatar-title bg-soft-light rounded-circle fs-3">
@@ -391,316 +431,39 @@
                                             </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <a class="fs-18 stretched-link ms-3" href="investock-charge-list.html" >扣款查詢</a>
+                                            <a class="fs-18 stretched-link ms-3" href="investock-charge-list.html">扣款查詢</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col">
-                                <div class="card card-animate m-card primary">
-                                    <div class="d-flex align-items-center">
-                                        <div class="avatar-sm flex-shrink-0">
-                                            <span class="avatar-title bg-soft-light rounded-circle fs-3">
-                                                <i class="fa-solid fa-pen-nib"></i>
-                                            </span>
-                                        </div>
-                                            <div class="flex-grow-1">
-                                            <a class="fs-18 stretched-link ms-3" href="MegaArea-online-signin.html">簽署中心</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>     -->
                         </div>
                         <div class="col-xl-9 col-sm-12">
-                            <div class="card">
-                                <div class="card-header d-flex align-items-center">
-                                    <h4 class="mb-0 flex-grow-1 text-start">
-                                        約定庫存總覽
-                                    </h4>
-                                    <div class="flex-shrink-0">
-                                        <a href="investock-valid-list.html" class="btn btn-outline-secondary mega-act" id="d-layout">查看明細</a>
-                                        <a href="investock-valid-list.html" class="btn btn-outline-secondary btn-icon" id="m-layout"><i class="fa-solid fa-up-right-from-square"></i></a>
-                                    </div>
+                            <div class="card h-100" id="cardContent">
+                                <div class="card-body text-center p-5">
+                                    <h4 class="mt-2">未簽署契約書</h4>
+                                    <p class="text-muted fs-14">請簽署「兆豐證券股份有限公司受託辦理定期定額買賣有價證券交契約書(以經紀業務方式辦理)」</p>
+                                    <button class="btn btn-secondary" id="unlockBtn">前往簽署</button>
                                 </div>
-                                <!-- end card header -->
-                                <div class="card-body p-0">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-5 col-md-12 text-center mt-3 mb-3">
-                                            <canvas id="doughnut" class="chartjs-chart" data-colors='["#DE6269", "#CB954B", "#FFE0E0", "#755E98", "#CFC1FF"]'></canvas>
-                                        </div>
-                                        <div class="col-xl-7 col-md-12 text-start mt-3">
-                                            <ul class="list list-group list-group-flush mb-0">
-                                                <li class="list-group-item">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 ms-2">
-                                                            <p class="h6">
-                                                                <i class="bx bxs-circle me-2 chart-first"></i>0061元大寶滬深
-                                                            </p>
-                                                        </div>
-                                                        <div class="flex-shrink-0 text-end">
-                                                            <h6 class="mb-1">庫存股數 200張</h6>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- end -->
-                                                <li class="list-group-item">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 ms-2">
-                                                            <p class="h6">
-                                                                <i class="bx bxs-circle me-2 chart-second"></i>2330台積電
-                                                            </p>
-                                                        </div>
-                                                        <div class="flex-shrink-0 text-end">
-                                                            <h6 class="mb-1">庫存股數 100張</h6>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- end -->
-                                                <li class="list-group-item">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 ms-2">
-                                                            <p class="h6">
-                                                                <i class="bx bxs-circle me-2 chart-third"></i>0056元大高股息
-                                                            </p>
-                                                        </div>
-                                                        <div class="flex-shrink-0 text-end">
-                                                            <h6 class="mb-1">庫存股數 30張</h6>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- end -->
-                                                <li class="list-group-item">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 ms-2">
-                                                            <p class="h6">
-                                                                <i class="bx bxs-circle me-2 chart-forth"></i>00679B元大美債20年
-                                                            </p>
-                                                        </div>
-                                                        <div class="flex-shrink-0 text-end">
-                                                            <h6 class="mb-1">庫存股數 15張</h6>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- end -->
-                                                <li class="list-group-item">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1 ms-2">
-                                                            <p class="h6">
-                                                                <i class="bx bxs-circle me-2 chart-fifth"></i>9904寶成
-                                                            </p>
-                                                        </div>
-                                                        <div class="flex-shrink-0 text-end">
-                                                            <h6 class="mb-1">庫存股數 2張</h6>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <!-- end -->
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end card body -->
                             </div>
-                            <!-- end card -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                    <!-- end 前段 row -->
-        
-                    <!--中段 Cards-->
-                    <div class="row">
-                        <div class="col-12">
-                            <div id="table-in-card">
-                                <div class="d-xxl-flex d-sm-grid flex-row align-items-center mt-2">
-                                    <h3 class="mb-2 text-primary">
-                                        有效委託項目
-                                    </h3>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body p-0 pb-1">
-                                        <div class="table-responsive" id="scroll-mask2">
-                                            <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="primary">
-                                                <table class="table table-nowrap mb-0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="col" data-sort="stock_name" scope="col">股票名稱</th>
-                                                            <th class="col" data-sort="chargeDate" scope="col">扣款日</th>
-                                                            <th class="col text-center" data-sort="quantity_value" scope="col">申購金額</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <!--end thead-->
-                                                    <tbody>
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                台積電
-                                                                <p class="text-table-m">2308</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月18日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue >3000</td>
-                                                        </tr>
-                                                        <!--end tr 1-->
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                台泥
-                                                                <p class="text-table-m">1101</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月18日</span><br>
-                                                                <span>每月28日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue>4000</td>
-                                                        </tr>
-                                                        <!--end tr 2-->
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                元大投資級公司債
-                                                                <p class="text-table-m">00720B</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月18日</span><br>
-                                                                <span>每月28日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue>6000</td>
-                                                        </tr>
-                                                        <!--end tr 2-->
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                鴻海
-                                                                <p class="text-table-m">2317</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月18日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue>6000</td>
-                                                        </tr>
-                                                        <!--end tr 3-->
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                元大台灣50
-                                                                <p class="text-table-m">0050</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月18日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue>3000</td>
-                                                        </tr>
-                                                        <!--end tr 4-->
-                                                        <tr class="h5">
-                                                            <td class="stock_name">
-                                                                元大台灣50
-                                                                <p class="text-table-m">0050</p>
-                                                            </td>
-                                                            <td class="chargeDate" data-chargedate >
-                                                                <span>每月8日</span><br>
-                                                                <span>每月28日</span><br>
-                                                            </td>
-                                                            <td class="quantity_value text-center" data-qtvalue>3000</td>
-                                                        </tr>
-                                                        <!--end tr 5-->
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <!--end table card-->
-                                        <div class="d-flex justify-content-center p-3">
-                                            <a href="investock-valid-list.html" class="btn btn-outline-secondary mega-act">查看更多</a>
-                                        </div>
-                                    </div>
-                                </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                            <div id="table-in-card">
-                                <div class="d-xxl-flex d-lg-flex align-items-center mt-1">
-                                    <h3 class="mb-2 text-primary">
-                                        <strong>最近扣款狀態</strong>
-                                    </h3>
-                                    <div class="lastday">
-                                        <span class="text-muted">近30天扣款狀態</span>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body p-0 pb-1">
-                                        <div class="table-responsive" id="scroll-mask2">
-                                            <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
-                                                <table class="table table-nowrap mb-0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="col" data-sort="chargeDate" scope="col">扣款日</th>
-                                                            <th class="col" data-sort="stock_name" scope="col">股票名稱</th>
-                                                            <th class="col"data-sort="chargeAmount"scope="col">申購金額/實際扣款</th>
-                                                            <th class="col" data-sort="extrafee" scope="col">手續費</th>
-                                                            <th class="col text-center" data-sort="status" scope="col">扣款結果</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <!--end thead-->
-                                                    <tbody>
-                                                        <tr class="h5">
-                                                            <td class="chargeDate">11/08</td>
-                                                            <td class="stock_name">
-                                                                台積電
-                                                                <p class="text-muted mb-0 fs-14">2308</p>
-                                                            </td>
-                                                            <td class="chargeAmount" data-qtvalue>3,000 <span>/</span>
-                                                                <a class="text-info mb-0" data-charge>2,988</a>
-                                                            </td>
-                                                            <td class="extrafee" data-extrafee>4</td>
-                                                            <td class="status text-center">
-                                                                <span class="badge badge-success">成功</span>
-                                                            </td>
-                                                        </tr>
-                                                        <!--end tr 1-->
-                                                        <tr class="h5">
-                                                            <td class="chargeDate">11/18</td>
-                                                            <td class="stock_name">台泥
-                                                                <p class="text-muted mb-0 fs-14">1101</p>
-                                                            </td>
-                                                            <td class="quantity_value" data-qtvalue>3000 <span>/</span>
-                                                                <a class="text-info mb-0" data-charge>2,988</a>
-                                                            </td>
-                                                            <td class="extrafee" data-extrafee>8</td>
-                                                            <td class="status text-center">
-                                                                <span class="badge badge-warning">取消</span>
-                                                            </td>
-                                                        </tr>
-                                                        <!--end tr 2-->
-                                                        <tr class="h5">
-                                                            <td class="chargeDate">10/28</td>
-                                                            <td class="stock_name">元大投資級公司債
-                                                                <p class="text-muted mb-0 fs-14">00720B</p>
-                                                            </td>
-                                                            <td class="quantity_value" data-qtvalue>3000 <span>/</span>
-                                                                <a class="text-info mb-0" data-charge>2,988</a>
-                                                            </td>
-                                                            <td class="extrafee" data-extrafee>8</td>
-                                                            <td class="status text-center">
-                                                                <span class="badge badge-primary">失敗</span>
-                                                            </td>
-                                                        </tr>
-                                                        <!--end tr 2-->
-                                                    </tbody>
-                                                </table>
-                                                <!--end table-->
-                                            </div>
-                                            <!--end table card-->
-                                            <div class="d-flex justify-content-center p-3">
-                                                <a href="investock-charge-list.html" class="btn btn-outline-secondary mega-act">查看更多</a>
+                            
+                            <div id="overlay">
+                                <div id="contract">
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-xl-8">
+                                            <div class="card">
+                                                <div class="card-body text-center">
+                                                    <h2>定期定額買台股契約書</h2>
+                                                    <p>請簽署契約書始得開啟定期定額買台股業務</p>
+                                                    <button id="signBtn">簽署契約</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end card body -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end  中段 row -->    
+                    <!-- end 前段 row --> 
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -735,10 +498,16 @@
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
 
+    <script>
+        
+    </script>
+
     <!-- Chart JS -->
     <script src="assets/libs/chart.js/chart.min.js"></script>
-    <!-- chartjs init -->
     <script src="assets/js/pages/dashboard-pie.js"></script>
+    
+    <!-- investock JS -->
+    <script src="assets/js/pages/investock-dashboard.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>

@@ -9,8 +9,7 @@ const unlockBtn = document.getElementById('unlockBtn');
 
     signBtn.addEventListener('click', () => {
         // 在這裡處理簽署契約的相關邏輯，可以是彈出對話框、顯示表單等
-        // 這裡只是一個示例，您需要根據實際情況來實現相關功能
-        alert('契約已簽署，卡片已解鎖！');
+        alert('契約已簽署');
         overlay.style.display = 'none';
         cardContent.innerHTML = `
         <div class="card-header d-flex align-items-center">\
@@ -87,7 +86,7 @@ const unlockBtn = document.getElementById('unlockBtn');
                 </div>\
             </div>\
         </div>`;
-        
+
         // get colors array from the string
         function getChartColorsArray(chartId) {
             if (document.getElementById(chartId) !== null) {
