@@ -22,79 +22,41 @@ function getChartColorsArray(chartId) {
     }
 }
 
-// pie chart -index
-
-var isdoughnutchart = document.getElementById('doughnut-index');
-doughnutChartColors =  getChartColorsArray('doughnut-index');
-if(doughnutChartColors){
-var lineChart = new Chart(isdoughnutchart, {
-    type: 'doughnut',
-    data: {
-        labels: [
-            "0061",
-            "2330",
-            "0056",
-            "00679B",
-            "9904"
-        ],
-        datasets: [
-            {
-                data: [42, 20, 18, 8 , 4],
-                backgroundColor: doughnutChartColors,
-                hoverBackgroundColor: doughnutChartColors,
-                hoverBorderColor: doughnutChartColors
-            }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                position: 'right',
-                labels: {
-                    font: {
-                        family: 'Poppins',
-                    },
-                }
-            },
-        }
-    }
-});
-}
-
 
 
 // pie chart -dashboard
 var isdoughnutchart = document.getElementById('doughnut');
 doughnutChartColors =  getChartColorsArray('doughnut');
-if(doughnutChartColors){
-var lineChart = new Chart(isdoughnutchart, {
-    type: 'doughnut',
-    data: {
-        labels: [
-            "0061",
-            "2330",
-            "0056",
-            "00679B",
-            "9904"
-        ],
-        datasets: [
-            {
-                data: [42, 20, 18, 8 , 4],
-                backgroundColor: doughnutChartColors,
-                hoverBackgroundColor: doughnutChartColors,
-                hoverBorderColor: doughnutChartColors
-            }]
-    },
-    options: {
-        plugins: {
-            legend: {
-                position: 'none',
-                labels: {
-                    font: {
-                        family: 'Poppins',
-                    },
-                }
-            },
+    if(doughnutChartColors){
+    var lineChart = new Chart(isdoughnutchart, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                "0061",
+                "2330",
+                "0056",
+                "00679B",
+                "9904"
+            ],
+            datasets: [
+                {
+                    data: [42, 20, 18, 8 , 4],
+                    backgroundColor: doughnutChartColors,
+                    hoverBackgroundColor: doughnutChartColors,
+                    hoverBorderColor: doughnutChartColors
+                }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: 'none',
+                    labels: {
+                        font: {
+                            family: 'Poppins',
+                        },
+                    }
+                },
+            }
         }
-    }
-});
+    });
 }
