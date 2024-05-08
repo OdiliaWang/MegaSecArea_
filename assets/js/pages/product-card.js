@@ -43,7 +43,7 @@ function loadProductsListData(datas, page) {
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         // Array.from(datas).forEach(function (listData, index) {
         if (datas[i]) {
-            document.querySelector("#product-card").innerHTML += '<div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-12">\
+            document.querySelector("#product-card").innerHTML += '<div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12">\
             <div class="card">\
                 <div class="card-body">\
                     <div class="d-flex align-items-center">\

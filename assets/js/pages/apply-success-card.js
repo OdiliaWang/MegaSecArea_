@@ -163,45 +163,45 @@ function loadSuccessListData(datas, page) {
 function isRequire1(val) {
     switch (val) {
         case "是":
-            return ('<span class="badge badge-outline-primary fs-16 mb-2">股東會' + "</span>");
+            return ('<span class="badge badge-primary fs-16 mb-2">股東會' + "</span>");
         case "否":
-            return ('<span class="badge badge-outline-light fs-16 mb-2">股東會' + "</span>");
+            return ('<span class="badge badge-cancelled fs-16 mb-2">股東會' + "</span>");
     }
 }
 
 function isRequire2(val) {
     switch (val) {
         case "是":
-            return ('<span class="badge badge-outline-primary fs-16">臨時股東會' + "</span>");
+            return ('<span class="badge badge-primary fs-16">臨時股東會' + "</span>");
         case "否":
-            return ('<span class="badge badge-outline-light fs-16">臨時股東會' + "</span>");
+            return ('<span class="badge badge-cancelled fs-16">臨時股東會' + "</span>");
     }
 }
 
 function isRequire3(val) {
     switch (val) {
         case "是":
-            return ('<span class="badge badge-outline-primary fs-16">現金增資' + "</span>");
+            return ('<span class="badge badge-primary fs-16">現金增資' + "</span>");
         case "否":
-            return ('<span class="badge badge-outline-light fs-16">現金增資' + "</span>");
+            return ('<span class="badge badge-cancelled fs-16">現金增資' + "</span>");
     }
 }
 
 function isRequire4(val) {
     switch (val) {
         case "是":
-            return ('<span class="badge badge-outline-primary fs-16">除權' + "</span>");
+            return ('<span class="badge badge-primary fs-16">除權' + "</span>");
         case "否":
-            return ('<span class="badge badge-outline-light fs-16">除權' + "</span>");
+            return ('<span class="badge badge-cancelled fs-16">除權' + "</span>");
     }
 }
 
 function isRequire5(val) {
     switch (val) {
         case "是":
-            return ('<span class="badge badge-outline-primary fs-16">除息' + "</span>");
+            return ('<span class="badge badge-primary fs-16">除息' + "</span>");
         case "否":
-            return ('<span class="badge badge-outline-light fs-16">除息' + "</span>");
+            return ('<span class="badge badge-cancelled fs-16">除息' + "</span>");
     }
 }
 
