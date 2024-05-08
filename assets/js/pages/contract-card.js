@@ -42,7 +42,7 @@ function loadContractListData(datas, page) {
     document.querySelector("#contractList").innerHTML = '';
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#contractList").innerHTML += '<div class="col-xxl-12 col-lg-12 col-md-12">\
+            document.querySelector("#contractList").innerHTML += '<div class="col-xl-12 col-lg-12 col-md-12">\
             <div class="card ribbon-box border shadow-none right mb-lg-0">\
                 <div class="card-body">\
                     <div>'+ isStatus(datas[i].status) + '</div>\
