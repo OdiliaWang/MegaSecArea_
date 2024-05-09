@@ -353,6 +353,15 @@
                                 </div><!-- end card-body -->
                                 <!--ApplySuccess Cards-->
                                 <div class="row" id="success-card"></div>
+
+                                <!-- NoResult -->
+                                <div class="noresult" style="display: none">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                        <h5 class="mt-2">無資料</h5>
+                                        <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
+                                    </div>
+                                </div>
                                 <!-- end Content -->
                             </div>
                         </div>
@@ -490,40 +499,42 @@
                         </div>
                         <!--end row pagination-->
 
-                        <div class="card">
-                            <div class="card-header p-0 border-0">
-                                <div class="alert alert-secondary border-0 rounded-3 m-0 d-flex align-items-center" role="alert">
-                                    <div class="flex-grow-1 text-truncate">
-                                        <b>備註</b>
+                        <div class="mt-4">
+                            <div class="card">
+                                <div class="card-header p-0 border-0">
+                                    <div class="alert alert-secondary border-0 rounded-3 m-0 d-flex align-items-center" role="alert">
+                                        <div class="flex-grow-1 text-truncate">
+                                            <b>備註</b>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <ol class="mb-0 text-wrap">
-                                    <li>
-                                        <a>勾選<b class="text-secondary">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
-                                            <br>勾選<b class="text-secondary">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
-                                            <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</a>
-                                    </li>
-                                    <li>
-                                        <a>出借條件：預定提前還券日<b class="text-secondary">3個營業日前提出</b>提前還券。</a>
-                                    </li>
-                                    <li>
-                                        <a>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</a>
-                                    </li>
-                                    <li>
-                                        <a>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</a>
-                                    </li>
-                                    <li>
-                                        <a>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</a>
-                                    </li>
-                                    <li>
-                                        <a>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</a>
-                                    </li>
-                                    <li>
-                                        <a>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</a>
-                                    </li>
-                                </ol>
+                                <div class="card-body">
+                                    <ol class="mb-0 text-wrap">
+                                        <li>
+                                            <a>勾選<b class="text-secondary">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
+                                                <br>勾選<b class="text-secondary">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
+                                                <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</a>
+                                        </li>
+                                        <li>
+                                            <a>出借條件：預定提前還券日<b class="text-secondary">3個營業日前提出</b>提前還券。</a>
+                                        </li>
+                                        <li>
+                                            <a>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</a>
+                                        </li>
+                                        <li>
+                                            <a>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</a>
+                                        </li>
+                                        <li>
+                                            <a>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</a>
+                                        </li>
+                                        <li>
+                                            <a>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</a>
+                                        </li>
+                                        <li>
+                                            <a>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</a>
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                         <!-- Alert -->
