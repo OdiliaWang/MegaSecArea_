@@ -47,7 +47,7 @@ function loadChargeData(datas, page) {
             <div class="card-body p-3">\
                 <div class="d-flex">\
                     <div class="flex-shrink-0 avatar-xs">\
-                        <div class="avatar-title bg-secondary rounded-circle align-bottom fs-4">\
+                        <div class="avatar-title bg-danger rounded-circle align-bottom fs-4">\
                         <i class="bx bx-dollar-circle"></i>\
                         </div>\
                     </div>\
