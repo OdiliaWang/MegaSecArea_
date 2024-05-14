@@ -1,12 +1,12 @@
 var url = "assets/json/";
 var allApplyList = '';
 
-var prevButton = document.getElementById('page-prev');
-var nextButton = document.getElementById('page-next');
+var prevButtonA = document.getElementById('page-prevA');
+var nextButtonA = document.getElementById('page-nextA');
 
 // configuration variables
-var currentPage = 1;
-var itemsPerPage = 5;
+var currentPageA = 1;
+var itemsPerPageA = 5;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
@@ -30,19 +30,19 @@ getJSON("apply-list.json", function (err, data) {
         console.log("Something went wrong: " + err);
     } else {
         allApplyList = data;
-        loadApplyListData(allApplyList, currentPage);
-        paginationEvents();
+        loadApplyListData(allApplyList, currentPageA);
+        paginationEventsA();
     }
 });
 
 function loadApplyListData(datas, page) {
-    var pages = Math.ceil(datas.length / itemsPerPage)
+    var pagesA = Math.ceil(datas.length / itemsPerPageA)
     if (page < 1) page = 1
-    if (page > pages) page = pages
+    if (page > pagesA) page = pagesA
     document.querySelector("#apply-list").innerHTML = '';
-    for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
+    for (var i = (page - 1) * itemsPerPageA; i < (page * itemsPerPageA) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#apply-list").innerHTML += '<div class="col-lg-12 col-md-6">\
+            document.querySelector("#apply-list").innerHTML += '<div class="col-xl-12 col-md-12">\
             <div class="card">\
                 <div class="card-body">\
                     <div class="d-lg-flex justify-content-between align-items-center">\
@@ -65,42 +65,42 @@ function loadApplyListData(datas, page) {
         </div>';
         }
     }
-    selectedPage();
-    currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
-    currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+    selectedPageA();
+    currentPageA == 1 ? prevButtonA.parentNode.classList.add('disabled') : prevButtonA.parentNode.classList.remove('disabled');
+    currentPageA == pagesA ? nextButtonA.parentNode.classList.add('disabled') : nextButtonA.parentNode.classList.remove('disabled');
 }
 
 
 
-function selectedPage() {
-    var pagenumLink = document.getElementById('page-num').getElementsByClassName('clickPageNumber');
-    for (var i = 0; i < pagenumLink.length; i++) {
-        if (i == currentPage - 1) {
-            pagenumLink[i].parentNode.classList.add("active");
+function selectedPageA() {
+    var pagenumLinkA = document.getElementById('page-numA').getElementsByClassName('clickPageNumber');
+    for (var i = 0; i < pagenumLinkA.length; i++) {
+        if (i == currentPageA - 1) {
+            pagenumLinkA[i].parentNode.classList.add("active");
         } else {
-            pagenumLink[i].parentNode.classList.remove("active");
+            pagenumLinkA[i].parentNode.classList.remove("active");
         }
     }
 };
 
 
 // paginationEvents
-function paginationEvents() {
+function paginationEventsA() {
     var numPages = function numPages() {
-        return Math.ceil(allApplyList.length / itemsPerPage);
+        return Math.ceil(allApplyList.length / itemsPerPageA);
     };
 
-    function clickPage() {
+    function clickPageA() {
         document.addEventListener('click', function (e) {
             if (e.target.nodeName == "A" && e.target.classList.contains("clickPageNumber")) {
-                currentPage = e.target.textContent;
-                loadApplyListData(allApplyList, currentPage);
+                currentPageA = e.target.textContent;
+                loadApplyListData(allApplyList, currentPageA);
             }
         });
     };
 
-    function pageNumbers() {
-        var pageNumber = document.getElementById('page-num');
+    function pageNumbersA() {
+        var pageNumber = document.getElementById('page-numA');
         pageNumber.innerHTML = "";
         // for each page
         for (var i = 1; i < numPages() + 1; i++) {
@@ -108,25 +108,21 @@ function paginationEvents() {
         }
     }
 
-    prevButton.addEventListener('click', function () {
-        if (currentPage > 1) {
-            currentPage--;
-            loadApplyListData(allApplyList, currentPage);
+    prevButtonA.addEventListener('click', function () {
+        if (currentPageA > 1) {
+            currentPageA--;
+            loadApplyListData(allApplyList, currentPageA);
         }
     });
 
-    nextButton.addEventListener('click', function () {
-        if (currentPage < numPages()) {
-            currentPage++;
-            loadApplyListData(allApplyList, currentPage);
+    nextButtonA.addEventListener('click', function () {
+        if (currentPageA < numPages()) {
+            currentPageA++;
+            loadApplyListData(allApplyList, currentPageA);
         }
     });
 
-    pageNumbers();
-    clickPage();
-    selectedPage();
+    pageNumbersA();
+    clickPageA();
+    selectedPageA();
 }
-
-
-
-// Filiter Search /* unsuccessful */
