@@ -407,33 +407,47 @@
 
                                         <!-- progress-->
                                         <div class="col-xl-7 mb-3">
-                                            <div class="position-relative m-4">
+                                            <div id="custom-progress-bar" class="progress-nav mb-4">
                                                 <div class="progress" style="height: 1px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-                                                <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-danger rounded-pill" style="width: 2rem; height:2rem;">1</button>
-                                                <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-danger rounded-pill" style="width: 2rem; height:2rem;">2</button>
-                                                <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-light rounded-pill" style="width: 2rem; height:2rem;">3</button>
+    
+                                                <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link rounded-pill active" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-gen-info-tab" data-bs-toggle="pill" data-bs-target="#pills-gen-info" type="button" role="tab" aria-controls="pills-gen-info" aria-selected="true">1</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-info-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-info-desc" type="button" role="tab" aria-controls="pills-info-desc" aria-selected="false">2</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-success-tab" data-bs-toggle="pill" data-bs-target="#pills-success" type="button" role="tab" aria-controls="pills-success" aria-selected="false">3</button>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <!-- end progress-->
-                                        <div class="row justify-content-center" id="apply-list"></div>
 
-                                        <div class="row justify-content-end mb-4" id="pagination-element">
-                                            <!-- end col -->
-                                            <div class="col-sm-6">
-                                                <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                                    <div class="page-item">
-                                                        <a href="javascript:void(0);" class="page-link" id="page-prevA">前一頁</a>
-                                                    </div>
-                                                    <span id="page-numA" class="pagination"></span>
-                                                    <div class="page-item">
-                                                        <a href="javascript:void(0);" class="page-link" id="page-nextA">下一頁</a>
-                                                    </div>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel" aria-labelledby="pills-gen-info-tab">
+                                                <div class="row justify-content-center" id="apply-list"></div>
+
+                                                <div class="row justify-content-end mb-4" id="pagination-element">
+                                                    <!-- end col -->
+                                                    <div class="col-sm-6">
+                                                        <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                                            <div class="page-item">
+                                                                <a href="javascript:void(0);" class="page-link" id="page-prevA">前一頁</a>
+                                                            </div>
+                                                            <span id="page-numA" class="pagination"></span>
+                                                            <div class="page-item">
+                                                                <a href="javascript:void(0);" class="page-link" id="page-nextA">下一頁</a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col -->
                                                 </div>
-                                            </div><!-- end col -->
+                                                <!--end row pagination-->
+                                            </div>
                                         </div>
-                                        <!--end row pagination-->
                                     </div>
                                 </div>
                             </div>
@@ -521,6 +535,7 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/libs/@lordicon/element/release/lordicon.js"></script>
     <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/pages/form-wizard.init.js"></script>
 
     <!-- apply List js -->
     <script src="assets/js/pages/apply-list.js"></script>

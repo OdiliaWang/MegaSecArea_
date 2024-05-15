@@ -1141,6 +1141,12 @@ table [data-qtvalue]::before,
   font-size: 14px;
 }
 
+.progress-nav .nav .nav-link.active,
+.progress-nav .nav .nav-link.done {
+  background-color: #829EE3;
+  color: #ffffff;
+}
+
 .form-check-input {
   margin-top: 0 !important;
 }

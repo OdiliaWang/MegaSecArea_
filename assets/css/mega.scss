@@ -1300,6 +1300,16 @@ table [data-qtvalue],
     font-size: 14px;
 }
 
+.progress-nav {
+    .nav {
+        .nav-link.active,
+        .nav-link.done {
+            background-color: $btn-danger;
+            color: #ffffff;
+        }
+    }
+}
+
 //form-check
 .form-check-input {
     margin-top: 0 !important;

@@ -56,7 +56,7 @@ function loadApplyListData(datas, page) {
                                 <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
                             </div>\
                             <div class="ms-lg-3 my-3 my-lg-0">\
-                                <a href="stockexchange-apply-setup.html" class="btn btn-secondary w-100">申請設定</a>\
+                                <button type="button" class="btn btn-secondary w-100 nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
                             </div>\
                         </div>\
                     </div>\
