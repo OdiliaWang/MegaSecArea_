@@ -42,27 +42,27 @@ function loadApplyListData(datas, page) {
     document.querySelector("#apply-list").innerHTML = '';
     for (var i = (page - 1) * itemsPerPageA; i < (page * itemsPerPageA) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#apply-list").innerHTML += '<div class="col-xl-12 col-md-12">\
-            <div class="card">\
-                <div class="card-body">\
-                    <div class="d-lg-flex justify-content-between align-items-center">\
-                        <div class="flex-shrink-0">\
-                            <h3 class="mb-1">'+ datas[i].stockName + '</h3>\
-                            <p class="text-muted mb-0">'+ datas[i].stockNo + '</p>\
-                        </div>\
-                        <div class="d-lg-flex align-items-center">\
-                            <div class="ms-lg-3 my-3 my-lg-0">\
-                                <h5 class="mb-2">'+ datas[i].nowStock[0] + '庫存 </h5></a>\
-                                <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
+                document.querySelector("#apply-list").innerHTML += '<div class="col-xl-12 col-md-12">\
+                <div class="card">\
+                    <div class="card-body">\
+                        <div class="d-lg-flex justify-content-between align-items-center">\
+                            <div class="flex-shrink-0">\
+                                <h3 class="mb-1">'+ datas[i].stockName + '</h3>\
+                                <p class="text-muted mb-0">'+ datas[i].stockNo + '</p>\
                             </div>\
-                            <div class="ms-lg-3 my-3 my-lg-0">\
-                                <button type="button" class="btn btn-secondary w-100 nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
+                            <div class="d-lg-flex align-items-center">\
+                                <div class="ms-lg-3 my-3 my-lg-0">\
+                                    <h5 class="mb-2">'+ datas[i].nowStock[0] + '庫存 </h5></a>\
+                                    <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
+                                </div>\
+                                <div class="ms-lg-3 my-3 my-lg-0">\
+                                    <button type="button" class="btn btn-secondary w-100 nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
+                                </div>\
                             </div>\
                         </div>\
                     </div>\
                 </div>\
-            </div>\
-        </div>';
+            </div>';
         }
     }
     selectedPageA();
