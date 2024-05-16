@@ -42,7 +42,7 @@ function loadApplyListData(datas, page) {
     document.querySelector("#apply-list").innerHTML = '';
     for (var i = (page - 1) * itemsPerPageA; i < (page * itemsPerPageA) && i < datas.length; i++) {
         if (datas[i]) {
-                document.querySelector("#apply-list").innerHTML += '<div class="col-xl-12 col-md-12">\
+            document.querySelector("#apply-list").innerHTML += '<div class="col-xl-12 col-md-12">\
                 <div class="card">\
                     <div class="card-body">\
                         <div class="d-lg-flex justify-content-between align-items-center">\
@@ -56,7 +56,7 @@ function loadApplyListData(datas, page) {
                                     <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
                                 </div>\
                                 <div class="ms-lg-3 my-3 my-lg-0">\
-                                    <button type="button" class="btn btn-secondary w-100 nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
+                                    <button type="button" class="btn btn-secondary w-100 nexttab nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
                                 </div>\
                             </div>\
                         </div>\
@@ -68,7 +68,11 @@ function loadApplyListData(datas, page) {
     selectedPageA();
     currentPageA == 1 ? prevButtonA.parentNode.classList.add('disabled') : prevButtonA.parentNode.classList.remove('disabled');
     currentPageA == pagesA ? nextButtonA.parentNode.classList.add('disabled') : nextButtonA.parentNode.classList.remove('disabled');
-}
+};
+
+
+
+
 
 
 

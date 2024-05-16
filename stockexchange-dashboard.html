@@ -399,311 +399,539 @@
                             </ul>
                         </div>
                         <div class="card-body">
-                            <!-- tab 預收款項 -->
                             <div class="tab-content">
+                                <!-- 出借申請 -->
                                 <div class="tab-pane active" id="applyList" role="tabpanel">
-                                    
-                                    <h2 class="text-center mb-3">出借約定申請</h2>
-
-                                    <div class="row justify-content-center">
-                                        <!-- progress-->
-                                        <div class="col-xl-7 mb-3">
-                                            <div id="custom-progress-bar" class="progress-nav mb-4">
-                                                <div class="progress" style="height: 1px;">
-                                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <h2 class="text-center mb-4">出借約定申請</h2>
+                                    <form action="#" class="form-steps" autocomplete="off">
+                                        <div class="row justify-content-center">
+                                            <!-- progress-->
+                                            <div class="col-xl-7 mb-3">
+                                                <div id="custom-progress-bar" class="progress-nav mb-4">
+                                                    <div class="progress" style="height: 1px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+        
+                                                    <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link rounded-pill active" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-gen-info-tab" data-bs-toggle="pill" data-bs-target="#pills-gen-info" type="button" role="tab" aria-controls="pills-gen-info" aria-selected="true">1</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" data-progressbar="custom-progress-bar" id="pills-info-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-info-desc" type="button" role="tab" aria-controls="pills-info-desc" aria-selected="false">2</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-success-tab" data-bs-toggle="pill" data-bs-target="#pills-success" type="button" role="tab" aria-controls="pills-success" aria-selected="false">3</button>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-    
-                                                <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
-                                                    <li class="nav-item" role="presentation">
-                                                        <button class="nav-link rounded-pill active" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-gen-info-tab" data-bs-toggle="pill" data-bs-target="#pills-gen-info" type="button" role="tab" aria-controls="pills-gen-info" aria-selected="true">1</button>
-                                                    </li>
-                                                    <li class="nav-item" role="presentation">
-                                                        <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-info-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-info-desc" type="button" role="tab" aria-controls="pills-info-desc" aria-selected="false">2</button>
-                                                    </li>
-                                                    <li class="nav-item" role="presentation">
-                                                        <button class="nav-link rounded-pill" style="width: 2rem; height:2rem;" data-progressbar="custom-progress-bar" id="pills-success-tab" data-bs-toggle="pill" data-bs-target="#pills-success" type="button" role="tab" aria-controls="pills-success" aria-selected="false">3</button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end progress-->
-
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel" aria-labelledby="pills-gen-info-tab">
-                                                <div class="row justify-content-center" id="apply-list"></div>
-
-                                                <div class="row justify-content-end mb-4" id="pagination-element">
-                                                    <div class="col-sm-6">
-                                                        <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                                            <div class="page-item">
-                                                                <a href="javascript:void(0);" class="page-link" id="page-prevA">前一頁</a>
-                                                            </div>
-                                                            <span id="page-numA" class="pagination"></span>
-                                                            <div class="page-item">
-                                                                <a href="javascript:void(0);" class="page-link" id="page-nextA">下一頁</a>
+                                            </div> 
+                                            <!-- end progress-->
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel" aria-labelledby="pills-gen-info-tab">
+                                                    <div class="row justify-content-center" id="apply-list"></div>
+                                                    <div class="row justify-content-end mb-4" id="pagination-element">
+                                                        <div class="col-sm-6">
+                                                            <div class="pagination-block pagination pagination-separated justify-content-end justify-content-sm-end mb-sm-0">
+                                                                <div class="page-item">
+                                                                    <a href="javascript:void(0);" class="page-link" id="page-prevA">前一頁</a>
+                                                                </div>
+                                                                <span id="page-numA" class="pagination"></span>
+                                                                <div class="page-item">
+                                                                    <a href="javascript:void(0);" class="page-link" id="page-nextA">下一頁</a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--end row pagination-->
-                                            </div>
-                                            <!--end tab STEP.1-->
+                                                <!--end tab STEP.1-->
 
-                                            <div class="tab-pane fade" id="pills-info-desc" role="tabpanel" aria-labelledby="pills-info-desc-tab">
-                                                <div class="col-lg-12">
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-lg-8">
-                                                                    <div class="exchange-title d-xxl-flex d-lg-flex align-items-center">
-                                                                        <h3 class="mb-0 flex-grow-1">2316 中鋼構</h3>
-                                                                        <div class="d-flex align-items-center stock-num">
-                                                                            <div class="avatar-sm">
-                                                                                <span class="avatar-title bg-info-subtle text-info rounded-circle fs-20">
-                                                                                    <i class="fa-solid fa-chart-pie"></i>
-                                                                                </span>
-                                                                            </div>
-                                                                            <div class="flex-grow-1 ms-2">
-                                                                                <h5>05/01 庫存 45張</h5>
-                                                                            </div> <!-- 庫存數 -->
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                                       
-                                                        </div>
-                                                        <!-- end card header -->
-                                                        <!-- card boby-->
-                                                        <div class="card-body">
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-lg-8">
-                                                                    <div class="mt-2 px-1">
-                                                                        <h5 class="mb-4"><i class="fa-solid fa-quote-right text-secondary me-2"></i>約定出借(張)</h5>
-                                                                    </div>
-                                                                    <div class="row justify-content-center">
-                                                                        <div class="col-md-12 col-sm-12 mb-2">
-                                                                            <div class="input-step full-width step-secondary">
-                                                                                <button type="button" id="jian" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
-                                                                                <input type="number" class="product-quantity" value="" min="1" max="">
-                                                                                <button type="button" id="jia" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
+                                                <div class="tab-pane fade" id="pills-info-desc" role="tabpanel" aria-labelledby="pills-info-desc-tab">
+                                                    <div class="col-lg-12">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-lg-8">
+                                                                        <div class="exchange-title d-xxl-flex d-lg-flex align-items-center">
+                                                                            <h3 class="mb-0 flex-grow-1">2316 中鋼構</h3>
+                                                                            <div class="d-flex align-items-center stock-num">
+                                                                                <div class="avatar-sm">
+                                                                                    <span class="avatar-title bg-info-subtle text-info rounded-circle fs-20">
+                                                                                        <i class="fa-solid fa-chart-pie"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="flex-grow-1 ms-2">
+                                                                                    <h5>05/01 庫存 45張</h5>
+                                                                                </div> <!-- 庫存數 -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div>                                                                       
                                                             </div>
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-lg-8">
-                                                                    <div class="mt-3 px-1">
-                                                                        <h5 class="mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>出借費率</h5>
-                                                                        <p class="text-muted mb-4 fs-6 fw-normal">請選擇自行輸入或由兆豐證券代為決定</p>
-                                                                        <div class="dateArea">
-                                                                            <div class="row align-items-center p-2">
-                                                                                <div class="col-lg-12 col-md-12 mb-2">
-                                                                                    <label for="Input-1" class="form-label">
-                                                                                        <input class="form-check-input align-text-top" type="radio" id="checkSelf" name="rate-setup" checked>
-                                                                                        <label class="form-check-label" for="checkSelf">自行輸入</label>
-                                                                                    </label>
-                                                                                    <input type="number" class="form-control form-control-sm" id="Input-1" placeholder="請輸入0.01%-16%之間費率">
-                                                                                </div>
-                                                                                <div class="col-lg-12 col-md-12 mt-3">
-                                                                                    <input class="form-check-input align-text-top" type="radio" id="checkForMega" name="rate-setup">
-                                                                                    <label class="form-check-label" for="checkForMega">由兆豐證券代為決定費率</label>
+                                                            <!-- end card header -->
+                                                            <!-- card boby-->
+                                                            <div class="card-body">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-lg-8">
+                                                                        <div class="mt-2 px-1">
+                                                                            <h5 class="mb-4"><i class="fa-solid fa-quote-right text-secondary me-2"></i>約定出借(張)</h5>
+                                                                        </div>
+                                                                        <div class="row justify-content-center">
+                                                                            <div class="col-md-12 col-sm-12 mb-2">
+                                                                                <div class="input-step full-width step-secondary">
+                                                                                    <button type="button" id="jian" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
+                                                                                    <input type="number" class="product-quantity" value="" min="1" max="">
+                                                                                    <button type="button" id="jia" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div><!-- end 出借費率 -->
-                    
-                                                            <div class="row justify-content-center">
-                                                                <div class="col-lg-8">
-                                                                    <div class="mt-3 px-1">
-                                                                        <h5 class="mb-4 mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>要求提前還券條件</h5>
-                                                                        <!-- 還券條件 -->
-                                                                        <div class="col-lg-12">
-                                                                            <div class="card overflow-hidden shadow-none mb-2">
-                                                                                <div class="card-body bg-light p-3">
-                                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                                        <div class="flex-shrink-0 me-3">
-                                                                                            <h5 class="mb-0">股東會</h5>
-                                                                                        </div>
-                                                                                        <div class="hstack gap-2">
-                                                                                            <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-1-outlined" checked>
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-1-outlined">是</label>
-                                                                                            <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-2-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-2-outlined">否</label>
-                                                                                        </div>
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-lg-8">
+                                                                        <div class="mt-3 px-1">
+                                                                            <h5 class="mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>出借費率</h5>
+                                                                            <p class="text-muted mb-4 fs-6 fw-normal">請選擇自行輸入或由兆豐證券代為決定</p>
+                                                                            <div class="dateArea">
+                                                                                <div class="row align-items-center p-2">
+                                                                                    <div class="col-lg-12 col-md-12 mb-2">
+                                                                                        <label for="Input-1" class="form-label">
+                                                                                            <input class="form-check-input align-text-top" type="radio" id="checkSelf" name="rate-setup" checked>
+                                                                                            <label class="form-check-label" for="checkSelf">自行輸入</label>
+                                                                                        </label>
+                                                                                        <input type="number" class="form-control form-control-sm" id="Input-1" placeholder="請輸入0.01%-16%之間費率">
+                                                                                    </div>
+                                                                                    <div class="col-lg-12 col-md-12 mt-3">
+                                                                                        <input class="form-check-input align-text-top" type="radio" id="checkForMega" name="rate-setup">
+                                                                                        <label class="form-check-label" for="checkForMega">由兆豐證券代為決定費率</label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="card overflow-hidden shadow-none mb-2">
-                                                                                <div class="card-body bg-light p-3">
-                                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                                        <div class="flex-shrink-0 me-3">
-                                                                                            <h5 class="mb-0">臨時股東會</h5>
-                                                                                        </div>
-                                                                                        <div class="hstack gap-2">
-                                                                                            <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-3-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-3-outlined">是</label>
-                                                                                            <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-4-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-4-outlined">否</label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="card overflow-hidden shadow-none mb-2">
-                                                                                <div class="card-body bg-light p-3">
-                                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                                        <div class="flex-shrink-0 me-3">
-                                                                                            <h5 class="mb-0">現金增資</h5>
-                                                                                        </div>
-                                                                                        <div class="hstack gap-2">
-                                                                                            <input type="radio" class="btn-check" name="FPO" id="btn-check-5-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-5-outlined">是</label>
-                                                                                            <input type="radio" class="btn-check" name="FPO" id="btn-check-6-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-6-outlined">否</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><!-- end 出借費率 -->
+                        
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-lg-8">
+                                                                        <div class="mt-3 px-1">
+                                                                            <h5 class="mb-4 mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>要求提前還券條件</h5>
+                                                                            <!-- 還券條件 -->
+                                                                            <div class="col-lg-12">
+                                                                                <div class="card overflow-hidden shadow-none mb-2">
+                                                                                    <div class="card-body bg-light p-3">
+                                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                                            <div class="flex-shrink-0 me-3">
+                                                                                                <h5 class="mb-0">股東會</h5>
+                                                                                            </div>
+                                                                                            <div class="hstack gap-2">
+                                                                                                <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-1-outlined" checked>
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-1-outlined">是</label>
+                                                                                                <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-2-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-2-outlined">否</label>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="card overflow-hidden shadow-none mb-2">
-                                                                                <div class="card-body bg-light p-3">
-                                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                                        <div class="flex-shrink-0 me-3">
-                                                                                            <h5 class="mb-0">除權</h5>
-                                                                                        </div>
-                                                                                        <div class="hstack gap-2">
-                                                                                            <input type="radio" class="btn-check" name="XR" id="btn-check-7-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-7-outlined">是</label>
-                                                                                            <input type="radio" class="btn-check" name="XR" id="btn-check-8-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-8-outlined">否</label>
+                                                                                <div class="card overflow-hidden shadow-none mb-2">
+                                                                                    <div class="card-body bg-light p-3">
+                                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                                            <div class="flex-shrink-0 me-3">
+                                                                                                <h5 class="mb-0">臨時股東會</h5>
+                                                                                            </div>
+                                                                                            <div class="hstack gap-2">
+                                                                                                <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-3-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-3-outlined">是</label>
+                                                                                                <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-4-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-4-outlined">否</label>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="card overflow-hidden shadow-none mb-1">
-                                                                                <div class="card-body bg-light p-3">
-                                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                                        <div class="flex-shrink-0 me-3">
-                                                                                            <h5 class="mb-0">除息</h5>
+                                                                                <div class="card overflow-hidden shadow-none mb-2">
+                                                                                    <div class="card-body bg-light p-3">
+                                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                                            <div class="flex-shrink-0 me-3">
+                                                                                                <h5 class="mb-0">現金增資</h5>
+                                                                                            </div>
+                                                                                            <div class="hstack gap-2">
+                                                                                                <input type="radio" class="btn-check" name="FPO" id="btn-check-5-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-5-outlined">是</label>
+                                                                                                <input type="radio" class="btn-check" name="FPO" id="btn-check-6-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-6-outlined">否</label>
+                                                                                            </div>
                                                                                         </div>
-                                                                                        <div class="hstack gap-2">
-                                                                                            <input type="radio" class="btn-check" name="XD" id="btn-check-9-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-9-outlined">是</label>
-                                                                                            <input type="radio" class="btn-check" name="XD" id="btn-check-10-outlined">
-                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-10-outlined">否</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card overflow-hidden shadow-none mb-2">
+                                                                                    <div class="card-body bg-light p-3">
+                                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                                            <div class="flex-shrink-0 me-3">
+                                                                                                <h5 class="mb-0">除權</h5>
+                                                                                            </div>
+                                                                                            <div class="hstack gap-2">
+                                                                                                <input type="radio" class="btn-check" name="XR" id="btn-check-7-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-7-outlined">是</label>
+                                                                                                <input type="radio" class="btn-check" name="XR" id="btn-check-8-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-8-outlined">否</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card overflow-hidden shadow-none mb-1">
+                                                                                    <div class="card-body bg-light p-3">
+                                                                                        <div class="d-flex align-items-center justify-content-between">
+                                                                                            <div class="flex-shrink-0 me-3">
+                                                                                                <h5 class="mb-0">除息</h5>
+                                                                                            </div>
+                                                                                            <div class="hstack gap-2">
+                                                                                                <input type="radio" class="btn-check" name="XD" id="btn-check-9-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-9-outlined">是</label>
+                                                                                                <input type="radio" class="btn-check" name="XD" id="btn-check-10-outlined">
+                                                                                                <label class="btn btn-outline-primary mb-0" for="btn-check-10-outlined">否</label>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            </div><!-- end 還券條件 -->
-                                                        </div><!-- end card-body -->
-                                                        
-                                                        <div class="card-footer text-center">
-                                                            <div class="form-check mt-4">
-                                                                <input class="form-check-input me-2" type="checkbox" id="iamCheck">
-                                                                台端已確認非擔任出借股票公司(公開發行公司)之董事、監察人、經理人及持有公司股份超過10%之股票(包含其配偶、未成年子女、利用他人名義持有及交付信託之股票)
-                                                            </div>
-                                                            <div class="d-flex justify-content-center mt-4 mb-2">
-                                                                <button type="button" id="goApply" class="btn btn-secondary" onclick="" data-bs-toggle="modal" data-bs-target="#topmodal" disabled>送出</button>
-                                                            </div>
+                                                                </div><!-- end 還券條件 -->
+                                                            </div><!-- end card-body -->
                                                             
-                                                            <!-- .modal -->
-                                                            <div id="topmodal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-body text-center p-5">
-                                                                            <div class="mt-4">
-                                                                                <h4 class="mb-3">有價證券出借申請<br>設定成功</h4>
-                                                                                <lord-icon src="https://cdn.lordicon.com/cjieiyzp.json"  trigger="loop" colors="primary:#cc9a56,secondary:#ffe6e6" style="width:100px;height:100px"></lord-icon>
-                                                                                </lord-icon>                                          
-                                                                                <p class="text-muted mb-3">您可以至出借中股票清單<br>查詢出借商品與變更設定</p>
-                                                                                <div class="hstack gap-2 justify-content-center">
-                                                                                    <a href="MegaArea-stockexchange-apply-success.html" class="btn btn-primary">前往清單</a>
+                                                            <div class="card-footer text-center">
+                                                                <div class="form-check mt-4">
+                                                                    <input class="form-check-input me-2" type="checkbox" id="iamCheck">
+                                                                    台端已確認非擔任出借股票公司(公開發行公司)之董事、監察人、經理人及持有公司股份超過10%之股票(包含其配偶、未成年子女、利用他人名義持有及交付信託之股票)
+                                                                </div>
+                                                                <div class="d-flex justify-content-center mt-4 mb-2">
+                                                                    <button type="button" id="goApply" class="btn btn-secondary" onclick="" data-bs-toggle="modal" data-bs-target="#topmodal" disabled>送出</button>
+                                                                </div>
+                                                                
+                                                                <!-- .modal -->
+                                                                <div id="topmodal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+                                                                    <div class="modal-dialog">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-body text-center p-5">
+                                                                                <div class="mt-4">
+                                                                                    <h4 class="mb-3">有價證券出借申請<br>設定成功</h4>
+                                                                                    <lord-icon src="https://cdn.lordicon.com/cjieiyzp.json"  trigger="loop" colors="primary:#cc9a56,secondary:#ffe6e6" style="width:100px;height:100px"></lord-icon>
+                                                                                    </lord-icon>                                          
+                                                                                    <p class="text-muted mb-3">您可以至出借中股票清單<br>查詢出借商品與變更設定</p>
+                                                                                    <div class="hstack gap-2 justify-content-center">
+                                                                                        <a href="MegaArea-stockexchange-apply-success.html" class="btn btn-primary">前往清單</a>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
+                                                                        </div><!-- /.modal-content -->
+                                                                    </div><!-- /.modal-dialog -->
+                                                                </div><!-- /.modal -->
+                                                            </div><!-- end card-footer -->
+                                                        </div><!-- end card -->
+                                                        <!-- Warning Alert -->
+                                                        <div class="alert alert-primary alert-dismissible alert-label-icon rounded-label fade show" role="alert">
+                                                            <i class="ri-alert-line label-icon"></i>上市櫃公司內部人不得自行或利用直接、間接設立之境內外公司等他人名義進行標的證券借貸交易
+                                                        </div>
+                        
+                                                        <!-- 注意事項 -->                            
+                                                        <div class="accordion accordion-flush accordion-mega mb-3" id="accordionFlushExample">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="flush-headingOne">
+                                                                    <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                        注意事項
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                                    <div class="accordion-body">
+                                                                        <div class="m-2">                                       
+                                                                            <ol class="mb-0 text-wrap" style="list-style:cjk-ideographic">
+                                                                                <li>
+                                                                                    <span>勾選<b class="text-danger">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
+                                                                                    <br>勾選<b class="text-danger">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
+                                                                                    <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</span>
+                                                                                </li>
+                                                                                <li>出借條件：預定提前還券日<b class="text-danger">3個營業日前提出</b>提前還券。</li>
+                                                                                <li>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</li>
+                                                                                <li>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</li>
+                                                                                <li>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</li>
+                                                                                <li>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</li>
+                                                                                <li>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</li>
+                                                                            </ol>
                                                                         </div>
-                                                                    </div><!-- /.modal-content -->
-                                                                </div><!-- /.modal-dialog -->
-                                                            </div><!-- /.modal -->
-                                                        </div><!-- end card-footer -->
-                                                    </div><!-- end card -->
-                                                    <!-- Warning Alert -->
-                                                    <div class="alert alert-primary alert-dismissible alert-label-icon rounded-label fade show" role="alert">
-                                                        <i class="ri-alert-line label-icon"></i>上市櫃公司內部人不得自行或利用直接、間接設立之境內外公司等他人名義進行標的證券借貸交易
-                                                    </div>
-                    
-                                                    <!-- 注意事項 -->                            
-                                                    <div class="accordion accordion-flush accordion-mega mb-3" id="accordionFlushExample">
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header" id="flush-headingOne">
-                                                                <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                                    注意事項
-                                                                </button>
-                                                            </h2>
-                                                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                                <div class="accordion-body">
-                                                                    <div class="m-2">                                       
-                                                                        <ol class="mb-0 text-wrap" style="list-style:cjk-ideographic">
-                                                                            <li>
-                                                                                <span>勾選<b class="text-danger">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
-                                                                                <br>勾選<b class="text-danger">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
-                                                                                <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</span>
-                                                                            </li>
-                                                                            <li>出借條件：預定提前還券日<b class="text-danger">3個營業日前提出</b>提前還券。</li>
-                                                                            <li>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</li>
-                                                                            <li>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</li>
-                                                                            <li>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</li>
-                                                                            <li>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</li>
-                                                                            <li>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</li>
-                                                                        </ol>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- end tab STEP.2 -->
+
                                             </div>
-                                            <!-- end tab STEP.2 -->
                                         </div>
-                                        
-                                    </div>
+                                    </form>
                                 </div>
+
+                                <!-- 出借查詢 -->
+                                <div class="tab-pane" id="reserveStock" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-header align-items-center border-0">
+                                                    <div class="row g-2">
+                                                        <div class="col-xl-4 col-lg-4 col-md-5">
+                                                            <div class="search-box">
+                                                                <input type="text" class="form-control" id="searchSuccessCard" placeholder="輸入有價證券代號/名稱">
+                                                                <i class="ri-search-line search-icon"></i>
+                                                            </div>
+                                                        </div>
+                                                        <!--end col-->
+                                                        <!-- <div class="d-grid gap-2 col-xl-2 col-lg-2 col-md-2">
+                                                            <button type="button" class="btn btn-secondary">查詢</button>
+                                                        </div> -->
+                                                    </div>
+                                                </div><!-- end card-header -->
+                                            </div><!-- end card-body -->
+                                            <!--ApplySuccess Cards-->
+                                            <div class="row" id="success-card"></div>
+            
+                                            <!-- NoResult -->
+                                            <div class="noresult" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                                    <h5 class="mt-2">無資料</h5>
+                                                    <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
+                                                </div>
+                                            </div>
+                                            <!-- end Content -->
+                                        </div>
+                                    </div>
+                                    <!--end row-->                               
+                                    <!-- .modal -->
+                                    <div id="topmodal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-body text-center p-5">
+                                                    <div class="mt-4">
+                                                        <h4 class="mb-3">確定要撤銷約定？</h4>
+                                                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json"  trigger="hover" colors="primary:#f8aa39,secondary:#fc5e6e" style="width:100px;height:100px"></lord-icon>
+                                                        </lord-icon>                                          
+                                                        <p class="text-muted mb-3"></p>
+                                                        <div class="hstack gap-2 justify-content-center">
+                                                            <a href="#" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</a>
+                                                            <a href="#" class="btn btn-primary">確定</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+                                    <!-- 撤銷約定 modal -->
+                                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="early-repayment" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content border-0">
+                                                <div class="modal-header bg-soft-info p-3">
+                                                    <h5 class="modal-title" id="early-repayment">提前還券明細</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                                                </div>
+                                                <form class="tablelist-form" autocomplete="off">
+                                                    <div class="modal-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="account" class="form-label">客戶帳號</label>
+                                                                    <input type="text" class="form-control" value="700r-1234567" id="account" disabled>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="name" class="form-label">客戶姓名</label>
+                                                                    <input type="text" id="name" class="form-control" value="錢**" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div>
+                                                                    <label for="loan-date" class="form-label">出借日期</label>
+                                                                    <input type="text" id="loan-date" class="form-control" value="2022/12/10" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div>
+                                                                    <label for="contract-number" class="form-label">出借書號</label>
+                                                                    <input type="text" id="contract-number" class="form-control" value="0001" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div>
+                                                                    <label for="stock-number" class="form-label">股票代號</label>
+                                                                    <input type="text" id="stock-number" class="form-control" value="00679B" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div>
+                                                                    <label for="stock-name" class="form-label">股票名稱</label>
+                                                                    <input type="text" id="stock-name" class="form-control" value="元大美債20年" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="early-repayment-date" class="form-label">提前還券日</label>
+                                                                    <input type="text" id="early-repayment-date" class="form-control" value="2023/05/22" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="return-amount" class="form-label">提前還券數量</label>
+                                                                    <input type="number" id="return-amount" class="form-control" placeholder="請輸入張數" required />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="lent-number" class="form-label">出借張數</label>
+                                                                    <input type="text" id="lent-number" class="form-control" value="239" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="already-return-number" class="form-label">已還張數</label>
+                                                                    <input type="text" id="already-return-number" class="form-control" value="0" disabled />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="available-repayment-number" class="form-label">可償還張數</label>
+                                                                    <input type="text" id="available-repayment-number" class="form-control" value="239" disabled />
+                                                                    <p class="float-start text-muted">可償還張數=出借張數-累積提前還券張數-累積公司主動還券張數</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="unpaid-amount" class="form-label">尚未還金額</label>
+                                                                    <input type="text" id="unpaid-amount" class="form-control" value="7,714,920" disabled />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="hstack gap-2 justify-content-end">
+                                                            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">取消</button>
+                                                            <button type="submit" class="btn btn-primary" id="submit-btn">送出</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end add modal-->
+            
+                                    <div class="row g-0 justify-content-end mb-4" id="pagination-element">
+                                        <!-- end col -->
+                                        <div class="col-sm-6">
+                                            <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                                <div class="page-item">
+                                                    <a href="javascript:void(0);" class="page-link" id="page-prev"><i class="ri-arrow-left-s-line"></i></a>
+                                                </div>
+                                                <span id="page-num" class="pagination"></span>
+                                                <div class="page-item">
+                                                    <a href="javascript:void(0);" class="page-link" id="page-next"><i class="ri-arrow-right-s-line"></i></a>
+                                                </div>
+                                            </div>
+                                        </div><!-- end col -->
+                                    </div>
+                                    <!--end row pagination-->
+            
+                                    <div class="mt-4">
+                                        <div class="card">
+                                            <div class="card-header p-0 border-0">
+                                                <div class="alert alert-secondary border-0 rounded-3 m-0 d-flex align-items-center" role="alert">
+                                                    <div class="flex-grow-1 text-truncate">
+                                                        <b>備註</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <ol class="mb-0 text-wrap">
+                                                    <li>
+                                                        <a>勾選<b class="text-secondary">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
+                                                            <br>勾選<b class="text-secondary">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
+                                                            <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>出借條件：預定提前還券日<b class="text-secondary">3個營業日前提出</b>提前還券。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Alert -->
+                                    <div class="alert alert-primary" role="alert">
+                                        <strong class="fs-16">同天申請之開戶與約定，如遇開戶退件或未成功等狀況，該日約定將由兆豐證券代為撤銷。</strong> 
+                                    </div> 
+                                </div>
+
+                                <!-- 還券查詢 -->
+                                <div class="tab-pane" id="reservedAll" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body align-items-center border-0">
+                                                    <div class="row g-2">
+                                                        <div class="col-xl-3 col-lg-12 col-md-12">
+                                                            <div class="search-box">
+                                                                <input type="text" class="form-control" id="searchReturnedCard" placeholder="輸入有價證券代號/名稱">
+                                                                <i class="ri-search-line search-icon"></i>
+                                                            </div>
+                                                        </div>
+                                                        <!--end col-->
+                                                        <div class="col-xl-3 col-lg-12 col-md-12">
+                                                            <div class="input-group">
+                                                                <div class="input-group-text bg-secondary border-secondary text-white">
+                                                                    <i class='bx bx-calendar'></i>
+                                                                </div>
+                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="Y/M/d" data-range-date="true" placeholder="選擇日期區間" id="rage-date">
+                                                            </div>
+                                                        </div>
+                                                        <!--end col-->
+                                                        <div class="col-xl-2 col-lg-12 col-md-12">
+                                                            <button class="btn btn-secondary w-100 mega-act" onclick="filterData();">查詢</button>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end card-body -->
+                                            </div><!-- end card-body -->
+                                            <!--Returned Cards-->
+                                            <div class="col-xl-12" id="returned-card"></div>
+
+                                            <!-- NoResult -->
+                                            <div class="noresult" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                                    <h5 class="mt-2">無資料</h5>
+                                                    <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end row-->
+                                </div>
+                                
                             </div>
-                            <!-- end tab -->
+                            <!-- end tab content -->
                         </div>
                     </div>
                     <div class="row row-cols-xl-3 row-cols-md-2 row-cols-sm-1">
-                        <div class="col">
-                            <div class="card card-animate m-card info mb-4">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0">
-                                        <span class="avatar-title bg-soft-light rounded-circle fs-3">
-                                            <i class="fa-regular fa-circle-right"></i>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <a class="h4 stretched-link ms-2" href="stockexchange-apply-success.html">出借成交查詢</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card card-animate m-card info mb-4">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar-sm flex-shrink-0">
-                                        <span class="avatar-title bg-soft-light rounded-circle fs-3">
-                                            <i class="fa-regular fa-circle-right"></i>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <a class="h4 stretched-link ms-2" href="stockexchange-returned-list.html">還券查詢</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col">
                             <div class="card card-animate m-card info mb-4">
                                 <div class="d-flex align-items-center">
@@ -758,8 +986,10 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/pages/form-wizard.init.js"></script>
 
-    <!-- apply List js -->
+    <!-- apply js -->
     <script src="assets/js/pages/apply-list.js"></script>
+    <script src="assets/js/pages/apply-success-card.js"></script>
+    <script src="assets/js/pages/returned-card.js"></script>
     
     <!-- App js -->
     <script src="assets/js/app.js"></script>
