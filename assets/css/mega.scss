@@ -1300,15 +1300,18 @@ table [data-qtvalue],
     font-size: 14px;
 }
 
-.progress-nav {
+.step-arrow-nav {
     .nav {
-        .nav-link.active,
-        .nav-link.done {
-            background-color: $btn-danger;
-            color: #ffffff;
+        background-color: $body-light;
+
+        .nav-link.active {
+            background-color: $danger-bg-fresh;
+            color: $body-color;
         }
     }
 }
+
+
 
 //form-check
 .form-check-input {

@@ -56,7 +56,8 @@ function loadApplyListData(datas, page) {
                                     <p class="text-danger mb-0">'+ datas[i].nowStock[1] + '(張)</p>\
                                 </div>\
                                 <div class="ms-lg-3 my-3 my-lg-0">\
-                                    <button type="button" class="btn btn-secondary w-100 nexttab nexttab" data-nexttab="pills-info-desc-tab">申請設定</button>\
+                                    <button type="button" class="btn btn-secondary btn-label right ms-auto nexttab" data-nexttab="pills-bill-address-tab">\
+                                    <i class="ri-truck-line label-icon align-middle fs-16 ms-2"></i>申請設定</button>\
                                 </div>\
                             </div>\
                         </div>\
@@ -65,9 +66,79 @@ function loadApplyListData(datas, page) {
             </div>';
         }
     }
+
+    // Checkout nav tab
+    var CheckoutTab = document.querySelectorAll(".checkout-tab");
+    if (CheckoutTab) {
+        Array.from(document.querySelectorAll(".checkout-tab")).forEach(function (form) {
+
+            // next tab
+            var NextTab = form.querySelectorAll(".nexttab");
+            if (NextTab) {
+                Array.from(form.querySelectorAll(".nexttab")).forEach(function (nextButton) {
+                    var tabEl = form.querySelectorAll('button[data-bs-toggle="pill"]');
+                    if (tabEl) {
+                        Array.from(tabEl).forEach(function (item) {
+                            item.addEventListener('show.bs.tab', function (event) {
+                                event.target.classList.add('done');
+                            });
+                        });
+                        nextButton.addEventListener("click", function () {
+                            var nextTab = nextButton.getAttribute('data-nexttab');
+                            if (nextTab) {
+                                document.getElementById(nextTab).click();
+                            }
+                        });
+                    }
+
+                });
+            }
+
+            //Pervies tab
+            var previesTab = document.querySelectorAll(".previestab");
+            if (previesTab) {
+                Array.from(form.querySelectorAll(".previestab")).forEach(function (prevButton) {
+
+                    prevButton.addEventListener("click", function () {
+                        var prevTab = prevButton.getAttribute('data-previous');
+                        if (prevTab) {
+                            var totalDone = prevButton.closest("form").querySelectorAll(".custom-nav .done").length;
+                            if (totalDone) {
+                                for (var i = totalDone - 1; i < totalDone; i++) {
+                                    (prevButton.closest("form").querySelectorAll(".custom-nav .done")[i]) ? prevButton.closest("form").querySelectorAll(".custom-nav .done")[i].classList.remove('done'): '';
+                                }
+                                document.getElementById(prevTab).click();
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Step number click
+            var tabButtons = form.querySelectorAll('button[data-bs-toggle="pill"]');
+            if (tabButtons) {
+                Array.from(tabButtons).forEach(function (button, i) {
+                    button.setAttribute("data-position", i);
+                    button.addEventListener("click", function () {
+                        (form.querySelectorAll(".custom-nav .done").length > 0) ?
+                        Array.from(form.querySelectorAll(".custom-nav .done")).forEach(function (doneTab) {
+                            doneTab.classList.remove('done');
+                        }): '';
+                        for (var j = 0; j <= i; j++) {
+                            tabButtons[j].classList.contains('active') ? tabButtons[j].classList.remove('done') : tabButtons[j].classList.add('done');
+                        }
+                    });
+                });
+            }
+        });
+    }
+    
     selectedPageA();
     currentPageA == 1 ? prevButtonA.parentNode.classList.add('disabled') : prevButtonA.parentNode.classList.remove('disabled');
     currentPageA == pagesA ? nextButtonA.parentNode.classList.add('disabled') : nextButtonA.parentNode.classList.remove('disabled');
+
+    
+    
 };
 
 
