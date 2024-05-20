@@ -1308,6 +1308,11 @@ table [data-qtvalue],
             background-color: $danger-bg-fresh;
             color: $body-color;
         }
+
+        .nav-link.done {
+            background-color: $danger-light;
+            color: #ffffff;
+        }
     }
 }
 

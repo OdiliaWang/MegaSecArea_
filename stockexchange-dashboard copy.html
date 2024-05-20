@@ -22,6 +22,8 @@
     <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery Css-->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <!-- custom Css-->
     <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
 </head>
@@ -416,12 +418,7 @@
                                                 </li>
                                                 <li class="nav-item" role="presentation">
                                                     <button class="nav-link fs-15 p-3" id="pills-bill-address-tab" data-bs-toggle="pill" data-bs-target="#pills-bill-address" type="button" role="tab" aria-controls="pills-bill-address" aria-selected="false">
-                                                        <i class="ri-truck-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i> Shipping Info
-                                                    </button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link fs-15 p-3" id="pills-payment-tab" data-bs-toggle="pill" data-bs-target="#pills-payment" type="button" role="tab" aria-controls="pills-payment" aria-selected="false">
-                                                        <i class="ri-bank-card-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i> Payment Info
+                                                        <i class="ri-truck-line fs-16 p-2 bg-primary-subtle text-primary rounded-circle align-middle me-2"></i> 申請設定
                                                     </button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
@@ -435,92 +432,233 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade show active" id="pills-bill-info" role="tabpanel" aria-labelledby="pills-bill-info-tab">
                                                 <div class="row justify-content-center" id="apply-list"></div>
+                                                <div class="row justify-content-end mb-4" id="pagination-element">
+                                                    <div class="col-sm-6">
+                                                        <div class="pagination-block pagination pagination-separated justify-content-end justify-content-sm-end mb-sm-0">
+                                                            <div class="page-item">
+                                                                <a href="javascript:void(0);" class="page-link" id="page-prevA">前一頁</a>
+                                                            </div>
+                                                            <span id="page-numA" class="pagination"></span>
+                                                            <div class="page-item">
+                                                                <a href="javascript:void(0);" class="page-link" id="page-nextA">下一頁</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <!-- end tab pane -->
         
                                             <div class="tab-pane fade" id="pills-bill-address" role="tabpanel" aria-labelledby="pills-bill-address-tab">
-                                                <div>
-                                                    <h5 class="mb-1">Shipping Information</h5>
-                                                    <p class="text-muted mb-4">Please fill all information below</p>
-                                                </div>
-        
-                                                <div class="mt-4">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="fs-14 mb-0">Saved Address</h5>
+                                                <div class="col-lg-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8">
+                                                                    <div class="exchange-title d-xxl-flex d-lg-flex align-items-center">
+                                                                        <h3 class="mb-0 flex-grow-1">2316 中鋼構</h3>
+                                                                        <div class="d-flex align-items-center stock-num">
+                                                                            <div class="avatar-sm">
+                                                                                <span class="avatar-title bg-info-subtle text-info rounded-circle fs-20">
+                                                                                    <i class="fa-solid fa-chart-pie"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="flex-grow-1 ms-2">
+                                                                                <h5>05/01 庫存 45張</h5>
+                                                                            </div> <!-- 庫存數 -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>                                                                       
                                                         </div>
-                                                        <div class="flex-shrink-0">
-                                                            <!-- Button trigger modal -->
-                                                            <button type="button" class="btn btn-sm btn-info mb-3" data-bs-toggle="modal" data-bs-target="#addAddressModal">
-                                                                Add Address
-                                                            </button>
-                                                        </div>
+                                                        <!-- end card header -->
+                                                        <!-- card boby-->
+                                                        <div class="card-body">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8">
+                                                                    <div class="mt-2 px-1">
+                                                                        <h5 class="mb-4"><i class="fa-solid fa-quote-right text-secondary me-2"></i>約定出借(張)</h5>
+                                                                    </div>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-12 col-sm-12 mb-2">
+                                                                            <div class="input-step full-width step-secondary">
+                                                                                <button type="button" id="jian" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
+                                                                                <input type="number" class="product-quantity" value="" min="1" max="">
+                                                                                <button type="button" id="jia" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8">
+                                                                    <div class="mt-3 px-1">
+                                                                        <h5 class="mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>出借費率</h5>
+                                                                        <p class="text-muted mb-4 fs-6 fw-normal">請選擇自行輸入或由兆豐證券代為決定</p>
+                                                                        <div class="dateArea">
+                                                                            <div class="row align-items-center p-2">
+                                                                                <div class="col-lg-12 col-md-12 mb-2">
+                                                                                    <label for="Input-1" class="form-label">
+                                                                                        <input class="form-check-input align-text-top" type="radio" id="checkSelf" name="rate-setup" checked>
+                                                                                        <label class="form-check-label" for="checkSelf">自行輸入</label>
+                                                                                    </label>
+                                                                                    <input type="number" class="form-control form-control-sm" id="Input-1" placeholder="請輸入0.01%-16%之間費率">
+                                                                                </div>
+                                                                                <div class="col-lg-12 col-md-12 mt-3">
+                                                                                    <input class="form-check-input align-text-top" type="radio" id="checkForMega" name="rate-setup">
+                                                                                    <label class="form-check-label" for="checkForMega">由兆豐證券代為決定費率</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end 出借費率 -->
+                    
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-lg-8">
+                                                                    <div class="mt-3 px-1">
+                                                                        <h5 class="mb-4 mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>要求提前還券條件</h5>
+                                                                        <!-- 還券條件 -->
+                                                                        <div class="col-lg-12">
+                                                                            <div class="card overflow-hidden shadow-none mb-2">
+                                                                                <div class="card-body bg-light p-3">
+                                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                                        <div class="flex-shrink-0 me-3">
+                                                                                            <h5 class="mb-0">股東會</h5>
+                                                                                        </div>
+                                                                                        <div class="hstack gap-2">
+                                                                                            <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-1-outlined" checked>
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-1-outlined">是</label>
+                                                                                            <input type="radio" class="btn-check" name="shareholder-mt" id="btn-check-2-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-2-outlined">否</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="card overflow-hidden shadow-none mb-2">
+                                                                                <div class="card-body bg-light p-3">
+                                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                                        <div class="flex-shrink-0 me-3">
+                                                                                            <h5 class="mb-0">臨時股東會</h5>
+                                                                                        </div>
+                                                                                        <div class="hstack gap-2">
+                                                                                            <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-3-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-3-outlined">是</label>
+                                                                                            <input type="radio" class="btn-check" name="sp-shareholder-mt" id="btn-check-4-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-4-outlined">否</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="card overflow-hidden shadow-none mb-2">
+                                                                                <div class="card-body bg-light p-3">
+                                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                                        <div class="flex-shrink-0 me-3">
+                                                                                            <h5 class="mb-0">現金增資</h5>
+                                                                                        </div>
+                                                                                        <div class="hstack gap-2">
+                                                                                            <input type="radio" class="btn-check" name="FPO" id="btn-check-5-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-5-outlined">是</label>
+                                                                                            <input type="radio" class="btn-check" name="FPO" id="btn-check-6-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-6-outlined">否</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="card overflow-hidden shadow-none mb-2">
+                                                                                <div class="card-body bg-light p-3">
+                                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                                        <div class="flex-shrink-0 me-3">
+                                                                                            <h5 class="mb-0">除權</h5>
+                                                                                        </div>
+                                                                                        <div class="hstack gap-2">
+                                                                                            <input type="radio" class="btn-check" name="XR" id="btn-check-7-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-7-outlined">是</label>
+                                                                                            <input type="radio" class="btn-check" name="XR" id="btn-check-8-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-8-outlined">否</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="card overflow-hidden shadow-none mb-1">
+                                                                                <div class="card-body bg-light p-3">
+                                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                                        <div class="flex-shrink-0 me-3">
+                                                                                            <h5 class="mb-0">除息</h5>
+                                                                                        </div>
+                                                                                        <div class="hstack gap-2">
+                                                                                            <input type="radio" class="btn-check" name="XD" id="btn-check-9-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-9-outlined">是</label>
+                                                                                            <input type="radio" class="btn-check" name="XD" id="btn-check-10-outlined">
+                                                                                            <label class="btn btn-outline-primary mb-0" for="btn-check-10-outlined">否</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end 還券條件 -->
+                                                        </div><!-- end card-body -->
+                                                        
+                                                        <div class="card-footer text-center">
+                                                            <div class="form-check mt-4">
+                                                                <input class="form-check-input me-2" type="checkbox" id="iamCheck">
+                                                                台端已確認非擔任出借股票公司(公開發行公司)之董事、監察人、經理人及持有公司股份超過10%之股票(包含其配偶、未成年子女、利用他人名義持有及交付信託之股票)
+                                                            </div>
+                                                            <div class="d-flex justify-content-center mt-4 mb-2">
+                                                                <button type="button" id="goApply" class="btn btn-secondary" onclick="" data-bs-toggle="modal" data-bs-target="#topmodal" disabled>送出</button>
+                                                            </div>
+                                                            
+                                                            <!-- .modal -->
+                                                            <div id="topmodal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-body text-center p-5">
+                                                                            <div class="mt-4">
+                                                                                <h4 class="mb-3">有價證券出借申請<br>設定成功</h4>
+                                                                                <lord-icon src="https://cdn.lordicon.com/cjieiyzp.json"  trigger="loop" colors="primary:#cc9a56,secondary:#ffe6e6" style="width:100px;height:100px"></lord-icon>
+                                                                                </lord-icon>                                          
+                                                                                <p class="text-muted mb-3">您可以至出借中股票清單<br>查詢出借商品與變更設定</p>
+                                                                                <div class="hstack gap-2 justify-content-center">
+                                                                                    <a href="#pills-finish" class="btn btn-primary">前往清單</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><!-- /.modal-content -->
+                                                                </div><!-- /.modal-dialog -->
+                                                            </div><!-- /.modal -->
+                                                        </div><!-- end card-footer -->
+                                                    </div><!-- end card -->
+                                                    <!-- Warning Alert -->
+                                                    <div class="alert alert-primary alert-dismissible alert-label-icon rounded-label fade show" role="alert">
+                                                        <i class="ri-alert-line label-icon"></i>上市櫃公司內部人不得自行或利用直接、間接設立之境內外公司等他人名義進行標的證券借貸交易
                                                     </div>
-                                                    <div class="row gy-3">
-                                                        <div class="col-lg-4 col-sm-6">
-                                                            <div class="form-check card-radio">
-                                                                <input id="shippingAddress01" name="shippingAddress" type="radio" class="form-check-input" checked>
-                                                                <label class="form-check-label" for="shippingAddress01">
-                                                                    <span class="mb-4 fw-semibold d-block text-muted text-uppercase">Home Address</span>
-        
-                                                                    <span class="fs-14 mb-2 d-block">Marcus Alfaro</span>
-                                                                    <span class="text-muted fw-normal text-wrap mb-1 d-block">4739 Bubby Drive Austin, TX 78729</span>
-                                                                    <span class="text-muted fw-normal d-block">Mo. 012-345-6789</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="d-flex flex-wrap p-2 py-1 bg-light rounded-bottom border mt-n1">
-                                                                <div>
-                                                                    <a href="#" class="d-block text-body p-1 px-2" data-bs-toggle="modal" data-bs-target="#addAddressModal"><i class="ri-pencil-fill text-muted align-bottom me-1"></i> Edit</a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="#" class="d-block text-body p-1 px-2" data-bs-toggle="modal" data-bs-target="#removeItemModal"><i class="ri-delete-bin-fill text-muted align-bottom me-1"></i> Remove</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-sm-6">
-                                                            <div class="form-check card-radio">
-                                                                <input id="shippingAddress02" name="shippingAddress" type="radio" class="form-check-input">
-                                                                <label class="form-check-label" for="shippingAddress02">
-                                                                    <span class="mb-4 fw-semibold d-block text-muted text-uppercase">Office Address</span>
-        
-                                                                    <span class="fs-14 mb-2 d-block">James Honda</span>
-                                                                    <span class="text-muted fw-normal text-wrap mb-1 d-block">1246 Virgil Street Pensacola, FL 32501</span>
-                                                                    <span class="text-muted fw-normal d-block">Mo. 012-345-6789</span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="d-flex flex-wrap p-2 py-1 bg-light rounded-bottom border mt-n1">
-                                                                <div>
-                                                                    <a href="#" class="d-block text-body p-1 px-2" data-bs-toggle="modal" data-bs-target="#addAddressModal"><i class="ri-pencil-fill text-muted align-bottom me-1"></i> Edit</a>
-                                                                </div>
-                                                                <div>
-                                                                    <a href="#" class="d-block text-body p-1 px-2" data-bs-toggle="modal" data-bs-target="#removeItemModal"><i class="ri-delete-bin-fill text-muted align-bottom me-1"></i> Remove</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-        
-                                                    <div class="mt-4">
-                                                        <h5 class="fs-14 mb-3">Shipping Method</h5>
-        
-                                                        <div class="row g-4">
-                                                            <div class="col-lg-6">
-                                                                <div class="form-check card-radio">
-                                                                    <input id="shippingMethod01" name="shippingMethod" type="radio" class="form-check-input" checked>
-                                                                    <label class="form-check-label" for="shippingMethod01">
-                                                                        <span class="fs-20 float-end mt-2 text-wrap d-block fw-semibold">Free</span>
-                                                                        <span class="fs-14 mb-1 text-wrap d-block">Free Delivery</span>
-                                                                        <span class="text-muted fw-normal text-wrap d-block">Expected Delivery 3 to 5 Days</span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="form-check card-radio">
-                                                                    <input id="shippingMethod02" name="shippingMethod" type="radio" class="form-check-input" checked>
-                                                                    <label class="form-check-label" for="shippingMethod02">
-                                                                        <span class="fs-20 float-end mt-2 text-wrap d-block fw-semibold">$24.99</span>
-                                                                        <span class="fs-14 mb-1 text-wrap d-block">Express Delivery</span>
-                                                                        <span class="text-muted fw-normal text-wrap d-block">Delivery within 24hrs.</span>
-                                                                    </label>
+                    
+                                                    <!-- 注意事項 -->                            
+                                                    <div class="accordion accordion-flush accordion-mega mb-3" id="accordionFlushExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                                <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                                    注意事項
+                                                                </button>
+                                                            </h2>
+                                                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                                <div class="accordion-body">
+                                                                    <div class="m-2">                                       
+                                                                        <ol class="mb-0 text-wrap" style="list-style:cjk-ideographic">
+                                                                            <li>
+                                                                                <span>勾選<b class="text-danger">「是」</b>者：若股票已出借，由本公司於股東會 / 除權息 / 現金增資最後過戶日前，辦理股票提前還券事宜。
+                                                                                <br>勾選<b class="text-danger">「否」</b>者：若股票已出借，則本公司不於股東會 / 除權息 / 現金增資最後過戶日前辦理股票提前還券事宜。
+                                                                                <br>其出借部位將無法出席股東會，但出借人仍可依證券商辦理有價證券借貸辦法權益補償相關規定取得應有之股息股利。</span>
+                                                                            </li>
+                                                                            <li>出借條件：預定提前還券日<b class="text-danger">3個營業日前提出</b>提前還券。</li>
+                                                                            <li>依公司法規定：本公司借券業務不得以2886兆豐金為標的證券。</li>
+                                                                            <li>出借有價證券交易標的，係指得為融資融券交易之有價證券或其他經主管機關核准之有價證券。</li>
+                                                                            <li>上市櫃公司內部人不得自行或利用直接間接設立之境內外公司等他人名義進行標的證券借貸交易。</li>
+                                                                            <li>配合民法第205條修訂，將約定利率上限，自原本年利率百分之二十以下調整為年利率百分之十六以下，自110年7月20日起實施。</li>
+                                                                            <li>約定申請將於您收到「有價證券借貸開戶完成」之電子郵件通知後始生效，如有相關問題，請洽分公司營業員。</li>
+                                                                        </ol>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -529,87 +667,7 @@
         
                                                 <div class="d-flex align-items-start gap-3 mt-4">
                                                     <button type="button" class="btn btn-light btn-label previestab" data-previous="pills-bill-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>Back to Personal Info</button>
-                                                    <button type="button" class="btn btn-secondary btn-label right ms-auto nexttab" data-nexttab="pills-payment-tab"><i class="ri-bank-card-line label-icon align-middle fs-16 ms-2"></i>Continue to Payment</button>
-                                                </div>
-                                            </div>
-                                            <!-- end tab pane -->
-        
-                                            <div class="tab-pane fade" id="pills-payment" role="tabpanel" aria-labelledby="pills-payment-tab">
-                                                <div>
-                                                    <h5 class="mb-1">Payment Selection</h5>
-                                                    <p class="text-muted mb-4">Please select and enter your billing information</p>
-                                                </div>
-        
-                                                <div class="row g-4">
-                                                    <div class="col-lg-4 col-sm-6">
-                                                        <div data-bs-toggle="collapse" data-bs-target="#paymentmethodCollapse.show" aria-expanded="false" aria-controls="paymentmethodCollapse">
-                                                            <div class="form-check card-radio">
-                                                                <input id="paymentMethod01" name="paymentMethod" type="radio" class="form-check-input">
-                                                                <label class="form-check-label" for="paymentMethod01">
-                                                                    <span class="fs-16 text-muted me-2"><i class="ri-paypal-fill align-bottom"></i></span>
-                                                                    <span class="fs-14 text-wrap">Paypal</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-sm-6">
-                                                        <div data-bs-toggle="collapse" data-bs-target="#paymentmethodCollapse" aria-expanded="true" aria-controls="paymentmethodCollapse">
-                                                            <div class="form-check card-radio">
-                                                                <input id="paymentMethod02" name="paymentMethod" type="radio" class="form-check-input" checked>
-                                                                <label class="form-check-label" for="paymentMethod02">
-                                                                    <span class="fs-16 text-muted me-2"><i class="ri-bank-card-fill align-bottom"></i></span>
-                                                                    <span class="fs-14 text-wrap">Credit / Debit Card</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-        
-                                                    <div class="col-lg-4 col-sm-6">
-                                                        <div data-bs-toggle="collapse" data-bs-target="#paymentmethodCollapse.show" aria-expanded="false" aria-controls="paymentmethodCollapse">
-                                                            <div class="form-check card-radio">
-                                                                <input id="paymentMethod03" name="paymentMethod" type="radio" class="form-check-input">
-                                                                <label class="form-check-label" for="paymentMethod03">
-                                                                    <span class="fs-16 text-muted me-2"><i class="ri-money-dollar-box-fill align-bottom"></i></span>
-                                                                    <span class="fs-14 text-wrap">Cash on Delivery</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-        
-                                                <div class="collapse show" id="paymentmethodCollapse">
-                                                    <div class="card p-4 border shadow-none mb-0 mt-4">
-                                                        <div class="row gy-3">
-                                                            <div class="col-md-12">
-                                                                <label for="cc-name" class="form-label">Name on card</label>
-                                                                <input type="text" class="form-control" id="cc-name" placeholder="Enter name">
-                                                                <small class="text-muted">Full name as displayed on card</small>
-                                                            </div>
-        
-                                                            <div class="col-md-6">
-                                                                <label for="cc-number" class="form-label">Credit card number</label>
-                                                                <input type="text" class="form-control" id="cc-number" placeholder="xxxx xxxx xxxx xxxx">
-                                                            </div>
-        
-                                                            <div class="col-md-3">
-                                                                <label for="cc-expiration" class="form-label">Expiration</label>
-                                                                <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY">
-                                                            </div>
-        
-                                                            <div class="col-md-3">
-                                                                <label for="cc-cvv" class="form-label">CVV</label>
-                                                                <input type="text" class="form-control" id="cc-cvv" placeholder="xxx">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-muted mt-2 fst-italic">
-                                                        <i data-feather="lock" class="text-muted icon-xs"></i> Your transaction is secured with SSL encryption
-                                                    </div>
-                                                </div>
-        
-                                                <div class="d-flex align-items-start gap-3 mt-4">
-                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="pills-bill-address-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i>Back to Shipping</button>
-                                                    <button type="button" class="btn btn-secondary btn-label right ms-auto nexttab" data-nexttab="pills-finish-tab"><i class="ri-shopping-basket-line label-icon align-middle fs-16 ms-2"></i>Complete Order</button>
+                                                    <button type="button" class="btn btn-secondary btn-label right ms-auto nexttab" data-nexttab="pills-finish-tab"><i class="ri-bank-card-line label-icon align-middle fs-16 ms-2"></i>Continue to Payment</button>
                                                 </div>
                                             </div>
                                             <!-- end tab pane -->
@@ -653,6 +711,17 @@
             </div>
         </div>
 
+
+    <!--checkbox & button-->
+    <script>
+        $(function () {
+            $("#iamCheck").click(function () {
+                $("#goApply").prop("disabled", !$("#iamCheck:checked").length);
+            });
+        });
+    </script>
+    <!--end checkbox & button-->
+    
     <!-- JAVASCRIPT -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
@@ -678,6 +747,8 @@
 
         flatpickr("input[id=rage-date]", config);
     </script>
+
+    
     </body>
 
 </html>

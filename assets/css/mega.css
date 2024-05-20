@@ -1148,6 +1148,10 @@ table [data-qtvalue]::before,
   background-color: #E6EFFF;
   color: #495057;
 }
+.step-arrow-nav .nav .nav-link.done {
+  background-color: #829ee3;
+  color: #ffffff;
+}
 
 .form-check-input {
   margin-top: 0 !important;
