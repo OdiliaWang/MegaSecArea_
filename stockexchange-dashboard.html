@@ -179,7 +179,7 @@
                         </li> <!-- end Dashboard Menu -->
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarExchange" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarExchange">
-                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸與借券</span>
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
                             </a>
                             <div class="collapse menu-dropdown" id="sidebarExchange">
                                 <ul class="nav nav-sm flex-column">
@@ -671,7 +671,7 @@
                                                     </lord-icon>                                          
                                                     <p class="text-muted mb-3">您可以至出借成交查詢<br>查詢出借商品與變更設定</p>
         
-                                                    <h5 class="fw-semibold">Order ID: <a href="#!" class="text-decoration-underline">前往查詢</a></h5>
+                                                    <a href="#!" class="text-decoration-underline">前往查詢</a>
                                                 </div>
                                             </div>
                                             <!-- end tab pane -->
@@ -685,7 +685,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="card">
-                                                <div class="card-header align-items-center border-0">
+                                                <div class="card-body align-items-center border-0">
                                                     <div class="row g-2">
                                                         <div class="col-xl-4 col-lg-4 col-md-5">
                                                             <div class="search-box">
@@ -698,11 +698,34 @@
                                                             <button type="button" class="btn btn-secondary">查詢</button>
                                                         </div> -->
                                                     </div>
-                                                </div><!-- end card-header -->
-                                            </div><!-- end card-body -->
+                                                </div>
+                                            </div>
                                             <!--ApplySuccess Cards-->
                                             <div class="row" id="success-card"></div>
-                                            <!-- end Content -->
+
+
+                                            <!-- NoResult -->
+                                            <div class="noresultA" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                                    <h5 class="mt-2">無資料</h5>
+                                                    <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row justify-content-end mb-4" id="pagination-element">
+                                                <div class="col-sm-6">
+                                                    <div class="pagination-block pagination pagination-separated justify-content-end justify-content-sm-end mb-sm-0">
+                                                        <div class="page-item">
+                                                            <a href="javascript:void(0);" class="page-link" id="page-prevB">前一頁</a>
+                                                        </div>
+                                                        <span id="page-numB" class="pagination"></span>
+                                                        <div class="page-item">
+                                                            <a href="javascript:void(0);" class="page-link" id="page-nextB">下一頁</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!--end row-->                               
@@ -726,23 +749,6 @@
                                         </div><!-- /.modal-dialog -->
                                     </div><!-- /.modal -->
                                     <!-- 撤銷約定 modal -->
-                                    
-            
-                                    <div class="row g-0 justify-content-end mb-4" id="pagination-element">
-                                        <!-- end col -->
-                                        <div class="col-sm-6">
-                                            <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                                <div class="page-item">
-                                                    <a href="javascript:void(0);" class="page-link" id="page-prev"><i class="ri-arrow-left-s-line"></i></a>
-                                                </div>
-                                                <span id="page-num" class="pagination"></span>
-                                                <div class="page-item">
-                                                    <a href="javascript:void(0);" class="page-link" id="page-next"><i class="ri-arrow-right-s-line"></i></a>
-                                                </div>
-                                            </div>
-                                        </div><!-- end col -->
-                                    </div>
-                                    <!--end row pagination-->
             
                                     <div class="mt-4">
                                         <div class="card">
@@ -815,25 +821,29 @@
                                                             <button class="btn btn-secondary w-100 mega-act" onclick="filterData();">查詢</button>
                                                         </div>
                                                     </div>
-                                                </div><!-- end card-body -->
-                                            </div><!-- end card-body -->
+                                                </div>
+                                            </div>
                                             <!--Returned Cards-->
                                             <div class="col-xl-12" id="returned-card"></div>
+                                            <div class="row justify-content-end mb-4" id="pagination-element">
+                                                <div class="col-sm-6">
+                                                    <div class="pagination-block pagination pagination-separated justify-content-end justify-content-sm-end mb-sm-0">
+                                                        <div class="page-item">
+                                                            <a href="javascript:void(0);" class="page-link" id="page-prevB">前一頁</a>
+                                                        </div>
+                                                        <span id="page-numB" class="pagination"></span>
+                                                        <div class="page-item">
+                                                            <a href="javascript:void(0);" class="page-link" id="page-nextB">下一頁</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <!-- NoResult -->
-                                <div class="noresult" style="display: none">
-                                    <div class="text-center">
-                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
-                                        <h5 class="mt-2">無資料</h5>
-                                        <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- end tab content -->
-                        </div>
+                         </div>   
                         <!-- end card body -->
 
                     </div>
@@ -876,8 +886,8 @@
 
     <!-- apply List js -->
     <script src="assets/js/pages/apply-list.js"></script>
-    <script src="assets/js/pages/apply-success-card.js"></script>
-    <script src="assets/js/pages/returned-card.js"></script>
+    <script src="assets/js/pages/success-card.js"></script>
+    <!-- <script src="assets/js/pages/returned-card.js"></script> -->
     
     <!-- App js -->
     <script src="assets/js/app.js"></script>

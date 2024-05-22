@@ -171,9 +171,9 @@ searchElementList.addEventListener("keyup", function () {
 
     // 檢查搜尋結果是否為空
     if (filterData.length > 0) {
-        document.getElementsByClassName("noresult")[0].style.display = "none";
+        document.getElementsByClassName("noresultB")[0].style.display = "none";
     } else {
-        document.getElementsByClassName("noresult")[0].style.display = "block";
+        document.getElementsByClassName("noresultB")[0].style.display = "block";
     }
 
     // 分頁帶出頁數

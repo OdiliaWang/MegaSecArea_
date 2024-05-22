@@ -1,12 +1,12 @@
 var url = "assets/json/";
 var allSuccessList = '';
 
-var prevButton = document.getElementById('page-prev');
-var nextButton = document.getElementById('page-next');
+var prevButtonB = document.getElementById('page-prevB');
+var nextButtonB = document.getElementById('page-nextB');
 
 // configuration variables
-var currentPage = 1;
-var itemsPerPage = 6;
+var currentPageB = 1;
+var itemsPerPageB = 6;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
@@ -30,17 +30,17 @@ getJSON("apply-success-list.json", function (err, data) {
         console.log("Something went wrong: " + err);
     } else {
         allSuccessList = data;
-        loadSuccessListData(allSuccessList, currentPage);
-        paginationEvents();
+        loadSuccessListData(allSuccessList, currentPageB);
+        paginationEventsB();
     }
 });
 
 function loadSuccessListData(datas, page) {
-    var pages = Math.ceil(datas.length / itemsPerPage)
+    var pagesB = Math.ceil(datas.length / itemsPerPageB)
     if (page < 1) page = 1
-    if (page > pages) page = pages
+    if (page > pagesB) page = pagesB
     document.querySelector("#success-card").innerHTML = '';
-    for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
+    for (var i = (page - 1) * itemsPerPageB; i < (page * itemsPerPageB) && i < datas.length; i++) {
         
         if (datas[i]) {
             document.querySelector("#success-card").innerHTML += '<div class="col-xl-4 col-lg-4 col-md-6">\
@@ -155,9 +155,9 @@ function loadSuccessListData(datas, page) {
         </div>';
         }
     }
-    selectedPage();
-    currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
-    currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+    selectedPageB();
+    currentPageB == 1 ? prevButtonB.parentNode.classList.add('disabled') : prevButtonB.parentNode.classList.remove('disabled');
+    currentPageB == pagesB ? nextButtonB.parentNode.classList.add('disabled') : nextButtonB.parentNode.classList.remove('disabled');
 }
 
 function isRequire1(val) {
@@ -207,34 +207,34 @@ function isRequire5(val) {
 
 
 
-function selectedPage() {
-    var pagenumLink = document.getElementById('page-num').getElementsByClassName('clickPageNumber');
-    for (var i = 0; i < pagenumLink.length; i++) {
-        if (i == currentPage - 1) {
-            pagenumLink[i].parentNode.classList.add("active");
+function selectedPageB() {
+    var pagenumLinkB = document.getElementById('page-numB').getElementsByClassName('clickPageNumber');
+    for (var i = 0; i < pagenumLinkB.length; i++) {
+        if (i == currentPageB - 1) {
+            pagenumLinkB[i].parentNode.classList.add("active");
         } else {
-            pagenumLink[i].parentNode.classList.remove("active");
+            pagenumLinkB[i].parentNode.classList.remove("active");
         }
     }
 };
 
 // paginationEvents
-function paginationEvents() {
+function paginationEventsB() {
     var numPages = function numPages() {
-        return Math.ceil(allSuccessList.length / itemsPerPage);
+        return Math.ceil(allSuccessList.length / itemsPerPageB);
     };
 
-    function clickPage() {
+    function clickPageB() {
         document.addEventListener('click', function (e) {
             if (e.target.nodeName == "A" && e.target.classList.contains("clickPageNumber")) {
-                currentPage = e.target.textContent;
-                loadSuccessListData(allSuccessList, currentPage);
+                currentPageB = e.target.textContent;
+                loadSuccessListData(allSuccessList, currentPageB);
             }
         });
     };
 
-    function pageNumbers() {
-        var pageNumber = document.getElementById('page-num');
+    function pageNumbersB() {
+        var pageNumber = document.getElementById('page-numB');
         pageNumber.innerHTML = "";
         // for each page
         for (var i = 1; i < numPages() + 1; i++) {
@@ -242,23 +242,23 @@ function paginationEvents() {
         }
     }
 
-    prevButton.addEventListener('click', function () {
-        if (currentPage > 1) {
-            currentPage--;
-            loadSuccessListData(allSuccessList, currentPage);
+    prevButtonB.addEventListener('click', function () {
+        if (currentPageB > 1) {
+            currentPageB--;
+            loadSuccessListData(allSuccessList, currentPageB);
         }
     });
 
-    nextButton.addEventListener('click', function () {
-        if (currentPage < numPages()) {
-            currentPage++;
-            loadSuccessListData(allSuccessList, currentPage);
+    nextButtonB.addEventListener('click', function () {
+        if (currentPageB < numPages()) {
+            currentPageB++;
+            loadSuccessListData(allSuccessList, currentPageB);
         }
     });
 
-    pageNumbers();
-    clickPage();
-    selectedPage();
+    pageNumbersB();
+    clickPageB();
+    selectedPageB();
 }
 
 
@@ -285,20 +285,20 @@ searchElementList.addEventListener("keyup", function () {
 
     // 檢查搜尋結果是否為空
     if (filterData.length > 0) {
-        document.getElementsByClassName("noresult")[0].style.display = "none";
+        document.getElementsByClassName("noresultA")[0].style.display = "none";
     } else {
-        document.getElementsByClassName("noresult")[0].style.display = "block";
+        document.getElementsByClassName("noresultA")[0].style.display = "block";
     }
 
     // 分頁帶出頁數
-    var pageNumber = document.getElementById('page-num');
+    var pageNumber = document.getElementById('page-numB');
     pageNumber.innerHTML = "";
-    var dataPageNum = Math.ceil(filterData.length / itemsPerPage)
+    var dataPageNum = Math.ceil(filterData.length / itemsPerPageB)
     // for each page
     for (var i = 1; i < dataPageNum + 1; i++) {
         pageNumber.innerHTML += "<div class='page-item'><a class='page-link clickPageNumber' href='javascript:void(0);'>" + i + "</a></div>";
     }
-    loadSuccessListData(filterData, currentPage);
+    loadSuccessListData(filterData, currentPageB);
 });
 
 
