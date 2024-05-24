@@ -687,7 +687,7 @@
                                             <div class="card">
                                                 <div class="card-body align-items-center border-0">
                                                     <div class="row g-2">
-                                                        <div class="col-xl-4 col-lg-4 col-md-5">
+                                                        <div class="col-xl-3 col-lg-12 col-md-12">
                                                             <div class="search-box">
                                                                 <input type="text" class="form-control" id="searchSuccessCard" placeholder="輸入有價證券代號/名稱">
                                                                 <i class="ri-search-line search-icon"></i>
@@ -702,6 +702,104 @@
                                             </div>
                                             <!--ApplySuccess Cards-->
                                             <div class="row" id="success-card"></div>
+
+                                            <!-- 提前還券 modal -->
+                                            <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="early-repayment" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                    <div class="modal-content border-0">
+                                                        <div class="modal-header bg-soft-info p-3">
+                                                            <h5 class="modal-title" id="early-repayment">提前還券明細</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                                                        </div>
+                                                        <form class="tablelist-form" autocomplete="off">
+                                                            <div class="modal-body">
+                                                                <div class="row g-3">
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="account" class="form-label">客戶帳號</label>
+                                                                            <input type="text" class="form-control" value="700r-1234567" id="account" disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="name" class="form-label">客戶姓名</label>
+                                                                            <input type="text" id="name" class="form-control" value="錢**" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <div>
+                                                                            <label for="loan-date" class="form-label">出借日期</label>
+                                                                            <input type="text" id="loan-date" class="form-control" value="2022/12/10" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <div>
+                                                                            <label for="contract-number" class="form-label">出借書號</label>
+                                                                            <input type="text" id="contract-number" class="form-control" value="0001" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <div>
+                                                                            <label for="stock-number" class="form-label">股票代號</label>
+                                                                            <input type="text" id="stock-number" class="form-control" value="00679B" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <div>
+                                                                            <label for="stock-name" class="form-label">股票名稱</label>
+                                                                            <input type="text" id="stock-name" class="form-control" value="元大美債20年" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="early-repayment-date" class="form-label">提前還券日</label>
+                                                                            <input type="text" id="early-repayment-date" class="form-control" value="2023/05/22" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="return-amount" class="form-label">提前還券數量</label>
+                                                                            <input type="number" id="return-amount" class="form-control" placeholder="請輸入張數" required />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="lent-number" class="form-label">出借張數</label>
+                                                                            <input type="text" id="lent-number" class="form-control" value="239" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="already-return-number" class="form-label">已還張數</label>
+                                                                            <input type="text" id="already-return-number" class="form-control" value="0" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="available-repayment-number" class="form-label">可償還張數</label>
+                                                                            <input type="text" id="available-repayment-number" class="form-control" value="239" disabled />
+                                                                            <p class="float-start text-muted">可償還張數=出借張數-累積提前還券張數-累積公司主動還券張數</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div>
+                                                                            <label for="unpaid-amount" class="form-label">尚未還金額</label>
+                                                                            <input type="text" id="unpaid-amount" class="form-control" value="7,714,920" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <div class="hstack gap-2 justify-content-end">
+                                                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
+                                                                    <button type="submit" class="btn btn-secondary" id="submit-btn">送出</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end add modal-->
 
 
                                             <!-- NoResult -->
@@ -741,7 +839,7 @@
                                                         <p class="text-muted mb-3"></p>
                                                         <div class="hstack gap-2 justify-content-center">
                                                             <a href="#" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</a>
-                                                            <a href="#" class="btn btn-primary">確定</a>
+                                                            <a href="#" class="btn btn-secondary">確定</a>
                                                         </div>
                                                     </div>
                                                 </div>
