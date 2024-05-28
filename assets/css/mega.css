@@ -952,7 +952,7 @@ button[mega_act] {
   position: relative;
 }
 .nav.nav-pills .nav-link {
-  border-radius: 10px;
+  border-radius: 0px;
   color: #495057;
   transition: all 0.5s ease 0s;
   width: 100%;
@@ -1179,7 +1179,7 @@ table [data-qtvalue]::before,
 }
 .progress {
   height: 2rem;
-  border-radius: 10rem;
+  border-radius: 10px;
   background-color: #eff2f7;
   font-size: 14px;
 }
@@ -1192,7 +1192,7 @@ table [data-qtvalue]::before,
   color: #495057;
 }
 .step-arrow-nav .nav .nav-link.done {
-  background-color: #829ee3;
+  background-color: #B0D0F7;
   color: #ffffff;
 }
 

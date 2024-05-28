@@ -46,6 +46,7 @@ $warning-800: #79416d;
 $warning-600: #934f84;
 $danger-800: #485d93;
 $danger-600: #6a80b7;
+$danger-400: #B0D0F7;
 $table-muted: #8392abca;
 $secondary-color: #a3a3a3;
 $border-color: #ced4da;
@@ -1083,7 +1084,7 @@ button[mega_act] {
     position: relative;
 
     .nav-link {
-        border-radius: 10px;
+        border-radius: 0px;
         color: $body-color;
         transition: all 0.5s ease 0s;
         width: 100%;
@@ -1357,7 +1358,7 @@ table [data-qtvalue],
 //progress
 .progress {
     height: 2rem;
-    border-radius: 10rem;
+    border-radius: 10px;
     background-color: #eff2f7;
     font-size: 14px;
 }
@@ -1372,7 +1373,7 @@ table [data-qtvalue],
         }
 
         .nav-link.done {
-            background-color: $danger-light;
+            background-color: $danger-400;
             color: #ffffff;
         }
     }
