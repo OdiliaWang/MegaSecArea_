@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="zh-TW" 
+    data-layout="semibox" 
+    data-sidebar-visibility="show" 
+    data-sidebar="light" 
+    data-sidebar-size="lg" 
+    data-sidebar-image="none" 
+    data-preloader="disable">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <title>不限用途款項借貸</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="17">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <!-- <div class="ms-1 header-item d-none d-sm-flex">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-toggle="fullscreen">
+                                <i class='bx bx-fullscreen fs-22'></i>
+                            </button>
+                        </div> -->
+
+                        <div class="dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-light position-relative p-1 btn-ghost-secondary rounded-circle" id="header-notice-dpn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-24'></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-primary p-1"><span class="visually-hidden">unread messages</span></span>                                
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="header-notice-dpn">
+                                <div class="notice-popup">
+                                    <div class="title">
+                                        <span class="h2">通知訊息</span>
+                                        <span class="text-end">
+                                            <a class="data-today">2023/01/03 星期五</a>
+                                        </span>
+                                    </div>
+                                    <div class="notice-data-list">
+                                        <div class="data-area">
+                                            <div class="data-cont no-data">
+                                                <i class="bx bx-message-alt-detail"></i>
+                                                <p>無最新通知</p>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>交割款通知：帳戶將在02/03交割款項1,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>今日</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>期貨追繳保證金通知：帳戶將在03/04交割款項30,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>2023/02/21</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ms-xl-3 ms-lg-3 ms-md-3 ms-sm-1 header-item topbar-user">
+                            <button type="button" class="btn" id="header-member-dpn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user" src="assets/img/user-profolio.jpg" alt="用戶">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1"><b>個人服務</b><i class="bx bxs-chevron-down-circle ms-1"></i></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="header-member-dpn">
+                                <div class="member-popup">
+                                    <span class="dropdown-header"><b>趙豐仁</b>，您好！
+                                      <p class="h5">歡迎進入兆豐專區</p>
+                                    </span>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-user-circle"></i><span>整戶維持率</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-edit"></i><span>個資修改</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-lock"></i><span>密碼變更</span></a>
+                                    <a class="mb-dropdown-item" href="index.html#oService"><i class="bx bx-customize"></i><span>更多服務</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-log-in"></i><span>登出</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- ===== Sidebar ==== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/img/Megasec.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/img/svg/MegaArea.svg" alt="" height="30">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <section class="user-data">
+                            <div class="sidebar-username">
+                                <span>趙豐仁</span>
+                            </div>
+                            <div class="sidebar-account">天母分公司 7000-1234567</div>
+                        </section>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarInvest" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvest">
+                                <i class='bx bx-pie-chart'></i><span data-key="t-invest">定期定額買台股</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarInvest">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="investock-dashboard.html" class="nav-link" data-key="t-all">總覽</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-products.html" class="nav-link" data-key="t-product">約定商品</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-valid-list.html" class="nav-link" data-key="t-valid">委託清單</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-charge-list.html" class="nav-link" data-key="t-charge">扣款清單</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarExchange" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarExchange">
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarExchange">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="stockexchange-dashboard.html" class="nav-link" data-key="t-lend">有價證券借貸</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="unres-purpose-loans-dashboard.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarSign" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSign">
+                                <i class="bx bx-pen"></i> <span data-key="t-sign">簽署中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarSign">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="sign-Contract.html" class="nav-link" data-key="t-oSign">同意書簽署</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-W8ben.html" class="nav-link" data-key="t-w8ben">W-8BEN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-Laundering.html" class="nav-link" data-key="t-customer">客戶身份盡職審查</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-KYC.html" class="nav-link" data-key="t-kyc">投資適性評估(KYC)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Sign Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="adv-collection-dashboard.html">
+                                <i class='bx bx-bar-chart-alt-2'></i> <span data-key="t-advcollection">預收款券</span>
+                            </a>
+                        </li>
+                        <!-- <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class='bx bx-archive-in'></i> <span data-key="t-dividend">配股配息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class="bx bx-money"></i> <span data-key="t-ledger">分戶帳</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebareOpen" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebareOpen">
+                                <i class="bx bx-user-circle"></i> <span data-key="t-eOpen">開戶</span>
+                                <!-- <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span> -->
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebareOpen">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen1">複委託線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen2">財富管理線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen3">信用線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end eOpen Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMore" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMore">
+                                <i class="bx bx-customize"></i> <span data-key="t-more">更多服務</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMore">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="apply-epassbook.html" class="nav-link" data-key="t-epass">集保e存摺</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="takeover-bid.html" class="nav-link" data-key="t-takeoverBid">公開收購</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/emegaSub/login.do" class="nav-link" data-key="t-subsc">訂閱中心</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/Spaper/login.do?returnUrl=/index.do" class="nav-link" data-key="t-news">理財電子報</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-option">期權拆組</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end more Menu -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLink" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLink">
+                                <i class='bx bx-share-alt'></i> <span data-key="t-link">相關連結</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLink">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/index.do" class="nav-link">
+                                            兆豐證券理財網
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megafutures.com.tw/index.do" class="nav-link">
+                                            兆豐期貨
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megasia.com.tw/index.do" class="nav-link">
+                                            兆豐國際投顧
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Leads</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
+                                        <li class="breadcrumb-item active">Leads</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" id="leadsList">
+                                <div class="card-header border-0">
+
+                                    <div class="row g-4 align-items-center">
+                                        <div class="col-sm-3">
+                                            <div class="search-box">
+                                                <input type="text" class="form-control search" placeholder="Search for...">
+                                                <i class="ri-search-line search-icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-auto ms-auto">
+                                            <div class="hstack gap-2">
+                                                <button class="btn btn-soft-danger" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="ri-filter-3-line align-bottom me-1"></i> Fliters</button>
+                                                <button type="button" class="btn btn-secondary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i> Add Leads</button>
+                                                <span class="dropdown">
+                                                    <button class="btn btn-soft-info btn-icon fs-14" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="ri-settings-4-line"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                                                        <li><a class="dropdown-item" href="#">Move to pipline</a></li>
+                                                        <li><a class="dropdown-item" href="#">Add to exceptions</a></li>
+                                                        <li><a class="dropdown-item" href="#">Switch to common form view</a></li>
+                                                        <li><a class="dropdown-item" href="#">Reset form view to default</a></li>
+                                                    </ul>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <div class="table-responsive table-card">
+                                            <table class="table align-middle" id="customerTable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th scope="col" style="width: 50px;">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="checkAll" value="option">
+                                                            </div>
+                                                        </th>
+
+                                                        <th class="sort" data-sort="name">Name</th>
+                                                        <th class="sort" data-sort="company_name">Company</th>
+                                                        <th class="sort" data-sort="leads_score">Leads Score</th>
+                                                        <th class="sort" data-sort="phone">Phone</th>
+                                                        <th class="sort" data-sort="location">Location</th>
+                                                        <th class="sort" data-sort="tags">Tags</th>
+                                                        <th class="sort" data-sort="date">Create Date</th>
+                                                        <th class="sort" data-sort="action">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="list form-check-all">
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
+                                                            </div>
+                                                        </th>
+                                                        <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <img src="assets/images/users/avatar-10.jpg" alt="" class="avatar-xxs rounded-circle image_src object-fit-cover">
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-2 name">Tonya Noble</div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="company_name">Force Medicines</td>
+                                                        <td class="leads_score">147</td>
+                                                        <td class="phone">580-464-4694</td>
+                                                        <td class="location">Los Angeles, USA</td>
+                                                        <td class="tags">
+                                                            <span class="badge bg-primary-subtle text-primary">Lead</span>
+                                                            <span class="badge bg-primary-subtle text-primary">Partner</span>
+                                                        </td>
+                                                        <td class="date">07 Apr, 2021</td>
+                                                        <td>
+                                                            <ul class="list-inline hstack gap-2 mb-0">
+                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Call">
+                                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
+                                                                        <i class="ri-phone-line fs-16"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Message">
+                                                                    <a href="javascript:void(0);" class="text-muted d-inline-block">
+                                                                        <i class="ri-question-answer-line fs-16"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                                    <a href="javascript:void(0);"><i class="ri-eye-fill align-bottom text-muted"></i></a>
+                                                                </li>
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                                    <a class="edit-item-btn" href="#showModal" data-bs-toggle="modal"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
+                                                                </li>
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
+                                                                    <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
+                                                                        <i class="ri-delete-bin-fill align-bottom text-muted"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="noresult" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
+                                                    <h5 class="mt-2">Sorry! No Result Found</h5>
+                                                    <p class="text-muted mb-0">We've searched more than 150+ leads We did not find any leads for you search.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <div class="pagination-wrap hstack gap-2">
+                                                <a class="page-item pagination-prev disabled" href="#">
+                                                    Previous
+                                                </a>
+                                                <ul class="pagination listjs-pagination mb-0"></ul>
+                                                <a class="page-item pagination-next" href="#">
+                                                    Next
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-light p-3">
+                                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                                                </div>
+                                                <form class="tablelist-form" autocomplete="off">
+                                                    <div class="modal-body">
+                                                        <input type="hidden" id="id-field" />
+                                                        <div class="row g-3">
+                                                            <div class="col-lg-12">
+                                                                <div class="text-center">
+                                                                    <div class="position-relative d-inline-block">
+                                                                        <div class="position-absolute bottom-0 end-0">
+                                                                            <label for="lead-image-input" class="mb-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Select Image">
+                                                                                <div class="avatar-xs cursor-pointer">
+                                                                                    <div class="avatar-title bg-light border rounded-circle text-muted">
+                                                                                        <i class="ri-image-fill"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </label>
+                                                                            <input class="form-control d-none" value="" id="lead-image-input" type="file" accept="image/png, image/gif, image/jpeg">
+                                                                        </div>
+                                                                        <div class="avatar-lg p-1">
+                                                                            <div class="avatar-title bg-light rounded-circle">
+                                                                                <img src="assets/images/users/user-dummy-img.jpg" id="lead-img" class="avatar-md rounded-circle object-fit-cover" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h5 class="fs-13 mt-3">Lead Image</h5>
+                                                                </div>
+                                                                <div>
+                                                                    <label for="leadname-field" class="form-label">Name</label>
+                                                                    <input type="text" id="leadname-field" class="form-control" placeholder="Enter Name" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                            <div class="col-lg-12">
+                                                                <div>
+                                                                    <label for="company_name-field" class="form-label">Company Name</label>
+                                                                    <input type="text" id="company_name-field" class="form-control" placeholder="Enter company name" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="leads_score-field" class="form-label">Leads Score</label>
+                                                                    <input type="text" id="leads_score-field" class="form-control" placeholder="Enter lead score" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="phone-field" class="form-label">Phone</label>
+                                                                    <input type="text" id="phone-field" class="form-control" placeholder="Enter phone no" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                            <div class="col-lg-12">
+                                                                <div>
+                                                                    <label for="location-field" class="form-label">Location</label>
+                                                                    <input type="text" id="location-field" class="form-control" placeholder="Enter location" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                            <div class="col-lg-12">
+                                                                <div>
+                                                                    <label for="taginput-choices" class="form-label">Tags</label>
+                                                                    <select class="form-control" name="taginput-choices" id="taginput-choices" multiple>
+                                                                        <option value="Lead">Lead</option>
+                                                                        <option value="Partner">Partner</option>
+                                                                        <option value="Exiting">Exiting</option>
+                                                                        <option value="Long-term">Long-term</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div>
+                                                                    <label for="date-field" class="form-label">Created Date</label>
+                                                                    <input type="date" id="date-field" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" placeholder="Select Date" required />
+                                                                </div>
+                                                            </div>
+                                                            <!--end col-->
+                                                        </div>
+                                                        <!--end row-->
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div class="hstack gap-2 justify-content-end">
+                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary" id="add-btn">Add leads</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end modal-->
+
+                                    <!-- Modal -->
+                                    <div class="modal fade zoomIn" id="deleteRecordModal" tabindex="-1" aria-labelledby="deleteRecordLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close"></button>
+                                                </div>
+                                                <div class="modal-body p-5 text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#405189,secondary:#f06548" style="width:90px;height:90px"></lord-icon>
+                                                    <div class="mt-4 text-center">
+                                                        <h4 class="fs-semibold">You are about to delete a lead ?</h4>
+                                                        <p class="text-muted fs-14 mb-4 pt-1">Deleting your lead will remove all of your information from our database.</p>
+                                                        <div class="hstack gap-2 justify-content-center remove">
+
+                                                            <button class="btn btn-link link-success fw-medium text-decoration-none" id="deleteRecord-close" data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</button>
+                                                            <button class="btn btn-danger" id="delete-record">Yes, Delete It!!</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end modal -->
+
+
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                        <div class="offcanvas-header bg-light">
+                                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Leads Filters</h5>
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <!--end offcanvas-header-->
+                                        <form action="" class="d-flex flex-column justify-content-end h-100">
+                                            <div class="offcanvas-body">
+                                                <div class="mb-4">
+                                                    <label for="datepicker-range" class="form-label text-muted text-uppercase fw-semibold mb-3">Date</label>
+                                                    <input type="date" class="form-control" id="datepicker-range" data-provider="flatpickr" data-range="true" placeholder="Select date">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="country-select" class="form-label text-muted text-uppercase fw-semibold mb-3">Country</label>
+                                                    <select class="form-control" data-choices data-choices-multiple-remove="true" name="country-select" id="country-select" multiple>
+                                                        <option value="">Select country</option>
+                                                        <option value="Argentina">Argentina</option>
+                                                        <option value="Belgium">Belgium</option>
+                                                        <option value="Brazil" selected>Brazil</option>
+                                                        <option value="Colombia">Colombia</option>
+                                                        <option value="Denmark">Denmark</option>
+                                                        <option value="France">France</option>
+                                                        <option value="Germany">Germany</option>
+                                                        <option value="Mexico">Mexico</option>
+                                                        <option value="Russia">Russia</option>
+                                                        <option value="Spain">Spain</option>
+                                                        <option value="Syria">Syria</option>
+                                                        <option value="United Kingdom" selected>United Kingdom</option>
+                                                        <option value="United States of America">United States of America</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="status-select" class="form-label text-muted text-uppercase fw-semibold mb-3">Status</label>
+                                                    <div class="row g-2">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">New Leads</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label" for="inlineCheckbox2">Old Leads</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                                                <label class="form-check-label" for="inlineCheckbox3">Loss Leads</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                                                <label class="form-check-label" for="inlineCheckbox4">Follow Up</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="leadscore" class="form-label text-muted text-uppercase fw-semibold mb-3">Lead Score</label>
+                                                    <div class="row g-2 align-items-center">
+                                                        <div class="col-lg">
+                                                            <input type="number" class="form-control" id="leadscore" placeholder="0">
+                                                        </div>
+                                                        <div class="col-lg-auto">
+                                                            To
+                                                        </div>
+                                                        <div class="col-lg">
+                                                            <input type="number" class="form-control" id="leadscore" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label for="leads-tags" class="form-label text-muted text-uppercase fw-semibold mb-3">Tags</label>
+                                                    <div class="row g-3">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="marketing" value="marketing">
+                                                                <label class="form-check-label" for="marketing">Marketing</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="management" value="management">
+                                                                <label class="form-check-label" for="management">Management</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="business" value="business">
+                                                                <label class="form-check-label" for="business">Business</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="investing" value="investing">
+                                                                <label class="form-check-label" for="investing">Investing</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="partner" value="partner">
+                                                                <label class="form-check-label" for="partner">Partner</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="lead" value="lead">
+                                                                <label class="form-check-label" for="lead">Leads</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="sale" value="sale">
+                                                                <label class="form-check-label" for="sale">Sale</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="owner" value="owner">
+                                                                <label class="form-check-label" for="owner">Owner</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="banking" value="banking">
+                                                                <label class="form-check-label" for="banking">Banking</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="banking" value="banking">
+                                                                <label class="form-check-label" for="banking">Exiting</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="banking" value="banking">
+                                                                <label class="form-check-label" for="banking">Finance</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="banking" value="banking">
+                                                                <label class="form-check-label" for="banking">Fashion</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end offcanvas-body-->
+                                            <div class="offcanvas-footer border-top p-3 text-center hstack gap-2">
+                                                <button class="btn btn-light w-100">Clear Filter</button>
+                                                <button type="submit" class="btn btn-primary w-100">Filters</button>
+                                            </div>
+                                            <!--end offcanvas-footer-->
+                                        </form>
+                                    </div>
+                                    <!--end offcanvas-->
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Themesbrand
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- list.js min js -->
+    <script src="assets/libs/list.js/list.min.js"></script>
+    <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <!-- crm leads init -->
+    <script src="assets/js/pages/crm-leads.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
