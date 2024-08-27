@@ -16,18 +16,17 @@ if (checkAll) {
     };
 }
 
-var perPage = 8;
+var perPage = 5;
 var editlist = false;
 
 //Table
 var options = {
     valueNames: [
         "id",
-        "customer_name",
-        "email",
-        "date",
-        "phone",
-        "status",
+        "stockName",
+        "amount",
+        "charge",
+        "rate",
     ],
     page: perPage,
     pagination: true,
@@ -79,18 +78,17 @@ xhttp.onload = function () {
   Array.from(json_records).forEach(raw => {
     customerList.add({
       id: '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ'+raw.id+"</a>",
-      customer_name: raw.customer_name,
-      email: raw.email,
-      date: raw.date,
-      phone: raw.phone,
-      status: isStatus(raw.status)
+      stockName: raw.stockName,
+      amount: raw.amount,
+      charge: raw.charge,
+      rate: raw.rate,
     });
     customerList.sort('id', { order: "desc" });
     refreshCallbacks();
   });
   customerList.remove("id", '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a>');
 }
-xhttp.open("GET", "assets/json/table-customer-list.json");
+xhttp.open("GET", "assets/json/unres-loan-list.json");
 xhttp.send();
 
 isCount = new DOMParser().parseFromString(
@@ -102,10 +100,9 @@ var isValue = isCount.body.firstElementChild.innerHTML;
 
 var idField = document.getElementById("id-field"),
     customerNameField = document.getElementById("customername-field"),
-    emailField = document.getElementById("email-field"),
-    dateField = document.getElementById("date-field"),
-    phoneField = document.getElementById("phone-field"),
-    statusField = document.getElementById("status-field"),
+    amountField = document.getElementById("amount-field"),
+    chargeField = document.getElementById("charge-field"),
+    rateField = document.getElementById("rate-field"),
     addBtn = document.getElementById("add-btn"),
     editBtn = document.getElementById("edit-btn"),
     removeBtns = document.getElementsByClassName("remove-item-btn"),
@@ -113,41 +110,6 @@ var idField = document.getElementById("id-field"),
 refreshCallbacks();
 //filterContact("All");
 
-function filterContact(isValue) {
-    var values_status = isValue;
-    customerList.filter(function (data) {
-        var statusFilter = false;
-        matchData = new DOMParser().parseFromString(
-            data.values().status,
-            "text/html"
-        );
-        var status = matchData.body.firstElementChild.innerHTML;
-        if (status == "All" || values_status == "All") {
-            statusFilter = true;
-        } else {
-            statusFilter = status == values_status;
-        }
-        return statusFilter;
-    });
-
-    customerList.update();
-}
-
-function updateList() {
-    var values_status = document.querySelector("input[name=status]:checked").value;
-    data = userList.filter(function (item) {
-        var statusFilter = false;
-
-        if (values_status == "All") {
-            statusFilter = true;
-        } else {
-            statusFilter = item.values().sts == values_status;
-            console.log(statusFilter, "statusFilter");
-        }
-        return statusFilter;
-    });
-    userList.update();
-}
 
 if (document.getElementById("showModal")) {
     document.getElementById("showModal").addEventListener("show.bs.modal", function (e) {
@@ -190,18 +152,17 @@ Array.prototype.slice.call(forms).forEach(function (form) {
         } else {
             event.preventDefault();
             if (
-                customerNameField.value !== "" &&
-                emailField.value !== "" &&
-                dateField.value !== "" &&
-                phoneField.value !== "" && !editlist
+                stockNameField.value !== "" &&
+                amountField.value !== "" &&
+                chargeField.value !== "" &&
+                rateField.value !== "" && !editlist
             ) {
                 customerList.add({
                     id: '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ' + count + "</a>",
-                    customer_name: customerNameField.value,
-                    email: emailField.value,
-                    date: dateField.value,
-                    phone: phoneField.value,
-                    status: isStatus(statusField.value),
+                    stockName: stockNameField.value,
+                    amount: amountField.value,
+                    charge: chargeField.value,
+                    rate: rateField.value,
                 });
                 customerList.sort('id', { order: "desc" });
                 document.getElementById("close-modal").click();
@@ -218,10 +179,10 @@ Array.prototype.slice.call(forms).forEach(function (form) {
                 //     showCloseButton: true
                 // });
             } else if (
-                customerNameField.value !== "" &&
-                emailField.value !== "" &&
-                dateField.value !== "" &&
-                phoneField.value !== "" && editlist
+                stockNameField.value !== "" &&
+                amountField.value !== "" &&
+                chargeField.value !== "" &&
+                rateField.value !== "" && editlist
             ){
                 var editValues = customerList.get({
                     id: idField.value,
@@ -232,11 +193,10 @@ Array.prototype.slice.call(forms).forEach(function (form) {
                     if (selectedid == itemId) {
                         x.values({
                             id: '<a href="javascript:void(0);" class="fw-medium link-primary">' + idField.value + "</a>",
-                            customer_name: customerNameField.value,
-                            email: emailField.value,
-                            date: dateField.value,
-                            phone: phoneField.value,
-                            status: isStatus(statusField.value),
+                            stockName: stockNameField.value,
+                            amount: amountField.value,
+                            charge: chargeField.value,
+                            rate: rateField.value,
                         });
                     }
                 });
@@ -255,23 +215,7 @@ Array.prototype.slice.call(forms).forEach(function (form) {
     }, false)
 })
 
-var statusVal = new Choices(statusField);
-function isStatus(val) {
-    switch (val) {
-        case "Active":
-            return (
-                '<span class="badge bg-success-subtle text-success text-uppercase">' +
-                val +
-                "</span>"
-            );
-        case "Block":
-            return (
-                '<span class="badge bg-danger-subtle text-danger text-uppercase">' +
-                val +
-                "</span>"
-            );
-    }
-}
+
 
 function ischeckboxcheck() {
     Array.from(document.getElementsByName("checkAll")).forEach(function (x) {
@@ -324,22 +268,10 @@ function refreshCallbacks() {
                     if (selectedid == itemId) {
                         editlist = true;
                         idField.value = selectedid;
-                        customerNameField.value = x._values.customer_name;
-                        emailField.value = x._values.email;
-                        dateField.value = x._values.date;
-                        phoneField.value = x._values.phone;
-
-                        if (statusVal) statusVal.destroy();
-                        statusVal = new Choices(statusField);
-                        val = new DOMParser().parseFromString(x._values.status, "text/html");
-                        var statusSelec = val.body.firstElementChild.innerHTML;
-                        statusVal.setChoiceByValue(statusSelec);
-
-                        flatpickr("#date-field", {
-                            // enableTime: true,
-                            dateFormat: "d M, Y",
-                            defaultDate: x._values.date,
-                        });
+                        stockNameField.value = x._values.stockName;
+                        amountField.value = x._values.amount;
+                        chargeField.value = x._values.charge;
+                        rateField.value = x._values.rate;
                     }
                 });
             });
@@ -348,9 +280,9 @@ function refreshCallbacks() {
 
 function clearFields() {
     customerNameField.value = "";
-    emailField.value = "";
-    dateField.value = "";
-    phoneField.value = "";
+    amountField.value = "";
+    chargeField.value = "";
+    rateField.value = "";
 }
 
 function deleteMultiple() {
