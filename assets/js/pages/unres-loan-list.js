@@ -1,3 +1,40 @@
+var url = "assets/json/";
+var allunresAplList = '';
+
+var prevButton = document.getElementById('page-prev');
+var nextButton = document.getElementById('page-next');
+
+// configuration variables
+var currentPage = 1;
+var itemsPerPage = 5;
+
+// getJSON
+var getJSON = function (jsonurl, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url + jsonurl, true);
+    xhr.responseType = "json";
+    xhr.onload = function () {
+        var status = xhr.status;
+        if (status === 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status, xhr.response);
+        }
+    };
+    xhr.send();
+};
+
+// get json
+getJSON("unres-loan-list.json", function (err, data) {
+    if (err !== null) {
+        console.log("錯誤" + err);
+    } else {
+        allunresAplList = data;
+        loadAplListData(allunresAplList, currentPage);
+        paginationEvents();
+    }
+});
+
 var checkAll = document.getElementById("checkAll");
 if (checkAll) {
     checkAll.onclick = function () {
@@ -16,367 +53,120 @@ if (checkAll) {
     };
 }
 
-var perPage = 5;
-var editlist = false;
+function loadAplListData(datas, page) {
+    var pages = Math.ceil(datas.length / itemsPerPage)
+    if (page < 1) page = 1
+    if (page > pages) page = pages
+    document.querySelector("#applyTable").innerHTML = '';
+    for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
+        if (datas[i]) {
+            document.querySelector("#applyTable").innerHTML += '<tr>\
+            <th scope="row">\
+                <div class="form-check">\
+                    <input class="form-check-input" type="checkbox" name="chk_child" value="option1">\
+                </div>\
+            </th>\
+            <td style="display:none;">'+ datas[i].id + '</td>\
+            <td class="flex-grow-1">\
+                <h5>'+ datas[i].stockName[0] + '</h5>\
+                <small class="text-muted"> '+ datas[i].stockName[1] + '</small>\
+            </td>\
+            <td>'+ datas[i].quantity + ' / '+ datas[i].amount + '</td>\
+            <td>'+ datas[i].charge + ' 元</td>\
+            <td>'+ datas[i].rate + ' %</td>\
+            <td><button type="button" class="btn btn-icon btn-primary" onclick="editBtn(this)"><i class="fa-solid fa-pen"></i></button></td>\
+        </tr>';
+        }
+    }
+    selectedPage();
+    currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
+    currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+}
 
-//Table
-var options = {
-    valueNames: [
-        "id",
-        "stockName",
-        "amount",
-        "charge",
-        "rate",
-    ],
-    page: perPage,
-    pagination: true,
-    plugins: [
-        ListPagination({
-            left: 2,
-            right: 2
-        })
-    ]
+//彈出修改視窗
+var currentRow;
+
+function editRow(button) {
+    currentRow = button.parentNode.parentNode;
+    var id = currentRow.cells[0].innerText;
+    var name = currentRow.cells[1].innerText;
+    var quantity = currentRow.cells[2].innerText;
+
+    document.getElementById("stockId").innerText = id;
+    document.getElementById("stockName").innerText = name;
+    document.getElementById("stockQuantity").value = quantity;
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("editModal").style.display = "block";
+}
+
+function saveChanges() {
+    var newQuantity = document.getElementById("stockAmount").value;
+    currentRow.cells[2].innerText = newQuantity;
+
+    closeModal();
+}
+
+function closeModal() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("editModal").style.display = "none";
+}
+
+
+
+
+function selectedPage() {
+    var pagenumLink = document.getElementById('page-num').getElementsByClassName('clickPageNumber');
+    for (var i = 0; i < pagenumLink.length; i++) {
+        if (i == currentPage - 1) {
+            pagenumLink[i].parentNode.classList.add("active");
+        } else {
+            pagenumLink[i].parentNode.classList.remove("active");
+        }
+    }
 };
 
-// Init list
-if (document.getElementById("customerList"))
-    var customerList = new List("customerList", options).on("updated", function (list) {
-        list.matchingItems.length == 0 ?
-            (document.getElementsByClassName("noresult")[0].style.display = "block") :
-            (document.getElementsByClassName("noresult")[0].style.display = "none");
-        var isFirst = list.i == 1;
-        var isLast = list.i > list.matchingItems.length - list.page;
-        // make the Prev and Nex buttons disabled on first and last pages accordingly
-        (document.querySelector(".pagination-prev.disabled")) ? document.querySelector(".pagination-prev.disabled").classList.remove("disabled"): '';
-        (document.querySelector(".pagination-next.disabled")) ? document.querySelector(".pagination-next.disabled").classList.remove("disabled"): '';
-        if (isFirst) {
-            document.querySelector(".pagination-prev").classList.add("disabled");
-        }
-        if (isLast) {
-            document.querySelector(".pagination-next").classList.add("disabled");
-        }
-        if (list.matchingItems.length <= perPage) {
-            document.querySelector(".pagination-wrap").style.display = "none";
-        } else {
-            document.querySelector(".pagination-wrap").style.display = "flex";
-        }
 
-        if (list.matchingItems.length == perPage) {
-            document.querySelector(".pagination.listjs-pagination").firstElementChild.children[0].click()
-        }
+// paginationEvents
+function paginationEvents() {
+    var numPages = function numPages() {
+        return Math.ceil(allunresAplList.length / itemsPerPage);
+    };
 
-        if (list.matchingItems.length > 0) {
-            document.getElementsByClassName("noresult")[0].style.display = "none";
-        } else {
-            document.getElementsByClassName("noresult")[0].style.display = "block";
-        }
-    });
-
-const xhttp = new XMLHttpRequest();
-xhttp.onload = function () {
-  var json_records = JSON.parse(this.responseText);
-  Array.from(json_records).forEach(raw => {
-    customerList.add({
-      id: '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ'+raw.id+"</a>",
-      stockName: raw.stockName,
-      amount: raw.amount,
-      charge: raw.charge,
-      rate: raw.rate,
-    });
-    customerList.sort('id', { order: "desc" });
-    refreshCallbacks();
-  });
-  customerList.remove("id", '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a>');
-}
-xhttp.open("GET", "assets/json/unres-loan-list.json");
-xhttp.send();
-
-isCount = new DOMParser().parseFromString(
-    customerList.items.slice(-1)[0]._values.id,
-    "text/html"
-);
-
-var isValue = isCount.body.firstElementChild.innerHTML;
-
-var idField = document.getElementById("id-field"),
-    customerNameField = document.getElementById("customername-field"),
-    amountField = document.getElementById("amount-field"),
-    chargeField = document.getElementById("charge-field"),
-    rateField = document.getElementById("rate-field"),
-    addBtn = document.getElementById("add-btn"),
-    editBtn = document.getElementById("edit-btn"),
-    removeBtns = document.getElementsByClassName("remove-item-btn"),
-    editBtns = document.getElementsByClassName("edit-item-btn");
-refreshCallbacks();
-//filterContact("All");
-
-
-if (document.getElementById("showModal")) {
-    document.getElementById("showModal").addEventListener("show.bs.modal", function (e) {
-        if (e.relatedTarget.classList.contains("edit-item-btn")) {
-            document.getElementById("exampleModalLabel").innerHTML = "Edit Customer";
-            document.getElementById("showModal").querySelector(".modal-footer").style.display = "block";
-            document.getElementById("add-btn").innerHTML = "Update";
-        } else if (e.relatedTarget.classList.contains("add-btn")) {
-            document.getElementById("exampleModalLabel").innerHTML = "Add Customer";
-            document.getElementById("showModal").querySelector(".modal-footer").style.display = "block";
-            document.getElementById("add-btn").innerHTML = "Add Customer";
-        } else {
-            document.getElementById("exampleModalLabel").innerHTML = "List Customer";
-            document.getElementById("showModal").querySelector(".modal-footer").style.display = "none";
-        }
-    });
-    ischeckboxcheck();
-
-    document.getElementById("showModal").addEventListener("hidden.bs.modal", function () {
-        clearFields();
-    });
-}
-document.querySelector("#customerList").addEventListener("click", function () {
-    ischeckboxcheck();
-});
-
-var table = document.getElementById("customerTable");
-// save all tr
-var tr = table.getElementsByTagName("tr");
-var trlist = table.querySelectorAll(".list tr");
-
-var count = 11;
-
-var forms = document.querySelectorAll('.tablelist-form')
-Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-        } else {
-            event.preventDefault();
-            if (
-                stockNameField.value !== "" &&
-                amountField.value !== "" &&
-                chargeField.value !== "" &&
-                rateField.value !== "" && !editlist
-            ) {
-                customerList.add({
-                    id: '<a href="javascript:void(0);" class="fw-medium link-primary">#VZ' + count + "</a>",
-                    stockName: stockNameField.value,
-                    amount: amountField.value,
-                    charge: chargeField.value,
-                    rate: rateField.value,
-                });
-                customerList.sort('id', { order: "desc" });
-                document.getElementById("close-modal").click();
-                refreshCallbacks();
-                clearFields();
-                filterContact("All");
-                count++;
-                // Swal.fire({
-                //     position: 'center',
-                //     icon: 'success',
-                //     title: 'Customer inserted successfully!',
-                //     showConfirmButton: false,
-                //     timer: 2000,
-                //     showCloseButton: true
-                // });
-            } else if (
-                stockNameField.value !== "" &&
-                amountField.value !== "" &&
-                chargeField.value !== "" &&
-                rateField.value !== "" && editlist
-            ){
-                var editValues = customerList.get({
-                    id: idField.value,
-                });
-                Array.from(editValues).forEach(function (x) {
-                    isid = new DOMParser().parseFromString(x._values.id, "text/html");
-                    var selectedid = isid.body.firstElementChild.innerHTML;
-                    if (selectedid == itemId) {
-                        x.values({
-                            id: '<a href="javascript:void(0);" class="fw-medium link-primary">' + idField.value + "</a>",
-                            stockName: stockNameField.value,
-                            amount: amountField.value,
-                            charge: chargeField.value,
-                            rate: rateField.value,
-                        });
-                    }
-                });
-                document.getElementById("close-modal").click();
-                clearFields();
-                // Swal.fire({
-                //     position: 'center',
-                //     icon: 'success',
-                //     title: 'Customer updated Successfully!',
-                //     showConfirmButton: false,
-                //     timer: 2000,
-                //     showCloseButton: true
-                // });
-            }
-        }
-    }, false)
-})
-
-
-
-function ischeckboxcheck() {
-    Array.from(document.getElementsByName("checkAll")).forEach(function (x) {
-        x.addEventListener("click", function (e) {
-            if (e.target.checked) {
-                e.target.closest("tr").classList.add("table-active");
-            } else {
-                e.target.closest("tr").classList.remove("table-active");
+    function clickPage() {
+        document.addEventListener('click', function (e) {
+            if (e.target.nodeName == "A" && e.target.classList.contains("clickPageNumber")) {
+                currentPage = e.target.textContent;
+                loadAplListData(allunresAplList, currentPage);
             }
         });
-    });
-}
+    };
 
-function refreshCallbacks() {
-    if (removeBtns)
-    Array.from(removeBtns).forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            e.target.closest("tr").children[1].innerText;
-            itemId = e.target.closest("tr").children[1].innerText;
-            var itemValues = customerList.get({
-                id: itemId,
-            });
-
-            Array.from(itemValues).forEach(function (x) {
-                deleteid = new DOMParser().parseFromString(x._values.id, "text/html");
-                var isElem = deleteid.body.firstElementChild;
-                var isdeleteid = deleteid.body.firstElementChild.innerHTML;
-                if (isdeleteid == itemId) {
-                    document.getElementById("delete-record").addEventListener("click", function () {
-                        customerList.remove("id", isElem.outerHTML);
-                        document.getElementById("deleteRecordModal").click();
-                    });
-                }
-            });
-        });
-    });
-
-    if (editBtns)
-        Array.from(editBtns).forEach(function (btn) {
-            btn.addEventListener("click", function (e) {
-                e.target.closest("tr").children[1].innerText;
-                itemId = e.target.closest("tr").children[1].innerText;
-                var itemValues = customerList.get({
-                    id: itemId,
-                });
-
-                Array.from(itemValues).forEach(function (x) {
-                    isid = new DOMParser().parseFromString(x._values.id, "text/html");
-                    var selectedid = isid.body.firstElementChild.innerHTML;
-                    if (selectedid == itemId) {
-                        editlist = true;
-                        idField.value = selectedid;
-                        stockNameField.value = x._values.stockName;
-                        amountField.value = x._values.amount;
-                        chargeField.value = x._values.charge;
-                        rateField.value = x._values.rate;
-                    }
-                });
-            });
-        });
-}
-
-function clearFields() {
-    customerNameField.value = "";
-    amountField.value = "";
-    chargeField.value = "";
-    rateField.value = "";
-}
-
-function deleteMultiple() {
-  ids_array = [];
-  var items = document.getElementsByName('chk_child');
-  Array.from(items).forEach(function (ele) {
-    if (ele.checked == true) {
-      var trNode = ele.parentNode.parentNode.parentNode;
-      var id = trNode.querySelector('.id a').innerHTML;
-      ids_array.push(id);
-    }
-  });
-  if (typeof ids_array !== 'undefined' && ids_array.length > 0) {
-    if (confirm('Are you sure you want to delete this?')) {
-        Array.from(ids_array).forEach(function (id) {
-        customerList.remove("id", `<a href="javascript:void(0);" class="fw-medium link-primary">${id}</a>`);
-      });
-      document.getElementById('checkAll').checked = false;
-    } else {
-      return false;
-    }
-  } else {
-    Swal.fire({
-      title: 'Please select at least one checkbox',
-      confirmButtonClass: 'btn btn-info',
-      buttonsStyling: false,
-      showCloseButton: true
-    });
-  }
-}
-
-
-
-document.querySelectorAll(".listjs-table").forEach(function(item){
-    item.querySelector(".pagination-next").addEventListener("click", function () {
-        (item.querySelector(".pagination.listjs-pagination")) ? (item.querySelector(".pagination.listjs-pagination").querySelector(".active")) ?
-         item.querySelector(".pagination.listjs-pagination").querySelector(".active").nextElementSibling.children[0].click(): '': '';
-    });
-});
-
-document.querySelectorAll(".listjs-table").forEach(function(item){
-    item.querySelector(".pagination-prev").addEventListener("click", function () {
-        (item.querySelector(".pagination.listjs-pagination")) ? (item.querySelector(".pagination.listjs-pagination").querySelector(".active")) ?
-         item.querySelector(".pagination.listjs-pagination").querySelector(".active").previousSibling.children[0].click(): '': '';
-    });
-});
-
-
-// data- attribute example
-var attroptions = {
-    valueNames: [
-        'name',
-        'born',
-        {
-            data: ['id']
-        },
-        {
-            attr: 'src',
-            name: 'image'
-        },
-        {
-            attr: 'href',
-            name: 'link'
-        },
-        {
-            attr: 'data-timestamp',
-            name: 'timestamp'
+    function pageNumbers() {
+        var pageNumber = document.getElementById('page-num');
+        pageNumber.innerHTML = "";
+        // for each page
+        for (var i = 1; i < numPages() + 1; i++) {
+            pageNumber.innerHTML += "<div class='page-item'><a class='page-link clickPageNumber' href='javascript:void(0);'>" + i + "</a></div>";
         }
-    ]
-};
+    }
 
-var attrList = new List('users', attroptions);
-attrList.add({
-    name: 'Leia',
-    born: '1954',
-    image: 'assets/images/users/avatar-5.jpg',
-    id: 5,
-    timestamp: '67893'
-});
+    prevButton.addEventListener('click', function () {
+        if (currentPage > 1) {
+            currentPage--;
+            loadAplListData(allunresAplList, currentPage);
+        }
+    });
 
-// Existing List
-var existOptionsList = {
-    valueNames: ['contact-name', 'contact-message']
-};
-var existList = new List('contact-existing-list', existOptionsList);
+    nextButton.addEventListener('click', function () {
+        if (currentPage < numPages()) {
+            currentPage++;
+            loadAplListData(allunresAplList, currentPage);
+        }
+    });
 
-// Fuzzy Search list
-var fuzzySearchList = new List('fuzzysearch-list', {
-    valueNames: ['name']
-});
+    pageNumbers();
+    clickPage();
+    selectedPage();
+}
 
-// pagination list
-var paginationList = new List('pagination-list', {
-    valueNames: ['pagi-list'],
-    page: 3,
-    pagination: true
-});
