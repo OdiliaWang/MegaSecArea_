@@ -6,7 +6,7 @@ var nextButton = document.getElementById('page-next');
 
 // configuration variables
 var currentPage = 1;
-var itemsPerPage = 3;
+var itemsPerPage = 5;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
