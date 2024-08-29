@@ -552,53 +552,101 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="listjs-table" id="applyList">
-                                <div class="table-responsive table-card" id="scroll-mask">
-                                    <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
-                                        <table class="table table-nowrap align-middle">
-                                            <thead class="table-light">
-                                                <tr>
-                                                   <th class="col" style="width: 50px;">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                                        </div>
-                                                   </th>
-                                                   <th class="col"><!-- null --></th>
-                                                   <th class="col">可用張數 / 擔保張數</th>
-                                                   <th class="col">可借金額</th>
-                                                   <th class="col">利率</th> 
-                                                   <th class="col"><!-- null --></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list form-check-all" id="applyTable"></tbody>
-                                        </table>
-                                    </div>
-                                    <div class="noresult" style="display: none">
-                                        <div class="text-center">
-                                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
-                                            <h5 class="mt-2">無資料</h5>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">庫存轉擔保品</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="listjs-table" id="applyList">
+                                        <div class="table-responsive table-card" id="scroll-mask">
+                                            <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
+                                                <table class="table table-nowrap align-middle">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                           <th class="col" style="width: 50px;">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" id="checkAll" value="option">
+                                                                </div>
+                                                           </th>
+                                                           <th class="col"><!-- null --></th>
+                                                           <th class="col">可用張數 / 擔保張數</th>
+                                                           <th class="col">可借金額</th>
+                                                           <th class="col">利率</th> 
+                                                           <th class="col"><!-- null --></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="list form-check-all" id="applyTable"></tbody>
+                                                </table>
+                                            </div>
+                                            <div class="noresult" style="display: none">
+                                                <div class="text-center">
+                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                                    <h5 class="mt-2">無資料</h5>
+                                                </div>
+                                            </div>
                                         </div>
+                            
+                                        <div class="row m-3 justify-content-end" id="pagination-element">
+                                            <!-- end col -->
+                                            <div class="col-sm-6">
+                                                <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                                    <div class="page-item">
+                                                        <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
+                                                    </div>
+                                                    <span id="page-num" class="pagination"></span>
+                                                    <div class="page-item">
+                                                        <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
+                                                    </div>
+                                                </div>
+                                            </div><!-- end col -->
+                                        </div><!--end row pagination-->
                                     </div>
                                 </div>
-                    
-                                <div class="row m-3 justify-content-end" id="pagination-element">
-                                    <!-- end col -->
-                                    <div class="col-sm-6">
-                                        <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                            <div class="page-item">
-                                                <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
-                                            </div>
-                                            <span id="page-num" class="pagination"></span>
-                                            <div class="page-item">
-                                                <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
-                                            </div>
-                                        </div>
-                                    </div><!-- end col -->
-                                </div><!--end row pagination-->
                             </div>
-                        </div><!-- end card -->
+                        </div>
+    
+                        <div class="col-xl-4">
+                            <div class="sticky-side-div">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">申請匣</h5>
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sub Total :</td>
+                                                        <td class="text-end" id="cart-subtotal">$ 359.96</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Estimated Tax (12.5%) : </td>
+                                                        <td class="text-end" id="cart-tax">$ 44.99</td>
+                                                    </tr>
+                                                    <tr class="table-active">
+                                                        <th>Total (USD) :</th>
+                                                        <td class="text-end">
+                                                            <span class="fw-semibold" id="cart-total">
+                                                                $415.96
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <button class="btn btn-secondary w-100 fs-18">申請借款</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end stickey -->
+                        </div>
                     </div>
                     
                     
