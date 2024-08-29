@@ -50,13 +50,13 @@ function loadSuccessListData(datas, page) {
                         <div class="flex-grow-1">\
                             <div>\
                                 <span class="fw-semibold fs-20 mb-0">出借書號</span>\
-                                <span class="text-muted mb-1 fs-16">'+ datas[i].id + '</span>\
+                                <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].id + '</span>\
                             </div>\
                         </div>\
                         <div class="flex-shrink-0">\
                             <div>\
                                 <span class="fw-semibold fs-20 mb-0">借款日</span>\
-                                <span class="text-muted mb-1 fs-16">'+ datas[i].date + '</span>\
+                                <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].date + '</span>\
                             </div>\
                         </div>\
                     </div>\
@@ -64,14 +64,14 @@ function loadSuccessListData(datas, page) {
                 <div class="card-body p-3 pt-0">\
                     <div class="d-flex align-items-center justify-content-between mt-4">\
                         <div>\
-                            <p class="fw-semibold fs-20 mb-0">借款金額</p>\
-                            <p class="text-muted mb-1 fs-16">'+ datas[i].loanAmount + ' 元</p>\
+                            <span class="fw-semibold fs-20 mb-0">借款金額</span>\
+                            <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].loanAmount + ' 元</span>\
                         </div>\
                     </div>\
                     <div class="d-flex align-items-center mt-1">\
                         <div class="flex-grow-1">\
-                            <p class="fw-semibold fs-20 mb-0">未償金額</p>\
-                            <p class="text-muted mb-1 fs-16">'+ datas[i].notreturnedAmount + ' 元</p>\
+                            <span class="fw-semibold fs-20 mb-0">未償金額</span>\
+                            <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].notreturnedAmount + ' 元</span>\
                         </div>\
                         <div class="flex-shrink-0">\
                             <button type="button" class="btn btn-primary fs-18">還款</button>\

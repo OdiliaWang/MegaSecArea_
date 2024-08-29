@@ -536,7 +536,7 @@ button[mega_act] {
 .loanCard .btn {
   padding: 0.7rem;
   font-size: 1.09375rem;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
 }
 .loanCard .btn i {
   font-size: 1.95rem;
@@ -588,7 +588,7 @@ button[mega_act] {
 .signCard .btn {
   padding: 0.7rem;
   font-size: 1.09375rem;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
 }
 .signCard .btn i {
   font-size: 1.95rem;
@@ -639,7 +639,7 @@ button[mega_act] {
 .advCard .btn {
   padding: 0.7rem;
   font-size: 1.09375rem;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
 }
 .advCard .btn i {
   font-size: 1.95rem;
