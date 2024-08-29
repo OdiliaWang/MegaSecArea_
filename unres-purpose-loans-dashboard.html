@@ -10,7 +10,7 @@
 <head>
 
     <meta charset="UTF-8" />
-    <title>不限用途款項借貸</title>
+    <title>不限用途款項借貸 | 借貸中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -559,137 +559,121 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 新計畫 -->
-                    <!-- 借款申請 -->
-                    <h2 class="mb-3">借款申請 <span class="ms-2 fs-16">(試算、擔保品撥轉)</span></h2>
                     <div class="row">
-                        <div class="col-lg-12">
+                        <!-- 借款申請 -->
+                        <div class="col-xl-4">
                             <div class="card">
-                                <div class="card-body">
-                                    <div class="listjs-table" id="applyList">
-                                        <div class="table-responsive table-card" id="scroll-mask">
-                                            <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="secondary">
-                                                <table class="table table-nowrap align-middle">
-                                                    <thead class="table-light">
-                                                        <tr>
-                                                           <th class="col" style="width: 50px;">
-                                                                <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                                                </div>
-                                                           </th>
-                                                           <th class="col"><!-- null --></th>
-                                                           <th class="col">可用張數 / 擔保張數</th>
-                                                           <th class="col">可借金額</th>
-                                                           <th class="col">利率</th> 
-                                                           <th class="col"><!-- null --></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="list form-check-all" id="applyTable"></tbody>
-                                                </table>
-                                            </div>
-                                            <div class="noresult" style="display: none">
-                                                <div class="text-center">
-                                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
-                                                    <h5 class="mt-2">無資料</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row m-3 justify-content-end" id="pagination-element">
-                                            <!-- end col -->
-                                            <div class="col-sm-6">
-                                                <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                                                    <div class="page-item">
-                                                        <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
-                                                    </div>
-                                                    <span id="page-num" class="pagination"></span>
-                                                    <div class="page-item">
-                                                        <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end col -->
-                                        </div><!--end row pagination-->
-                                    </div>
-                                </div><!-- end card -->
-                            </div>
-
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
-                    <!-- 借款明細 -->
-                    <h2 class="mb-3">借款明細 <span class="ms-2 fs-16">(還款、退擔保品)</span></h2>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card" id="">
-                                
-                            </div>
-
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
-                    <!-- 其他查詢 -->
-                    <h2 class="mb-3">其他查詢</h2>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card" id="">
-                                
-                            </div>
-
-                        </div>
-                        <!--end col-->
-                    </div>
-                    <!--end row-->
-
-                    <!-- 擔保品數量 modal -->
-                    <div id="showModal" class="modal fade">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title">擔保品數量</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                                <div class="card-header">
+                                    <h2>借款申請 <span class="fs-16">(試算、擔保品撥轉)</span></h2>
                                 </div>
-                                <form class="tablelist-form" autocomplete="off">
-                                    <div class="modal-body">
-                                        <span id="stockId" style="display: none;"></span>
-                                        <div class="mb-3">
-                                            <label for="stockName" class="form-label">股票名稱</label>
-                                            <span id="stockName"></span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="stockQuantity" class="form-label">可用張數</label>
-                                            <span id="stockQuantity"></span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="stockLeverage" class="form-label">融通成數</label>
-                                            <span id="stockLeverage"></span>
-                                        </div>
-
-                                        <div>
-                                            <label for="stockAmount" class="form-label">擔保張數</label>
-                                            <div class="row">
-                                                <div class="d-flex flex-wrap align-items-start gap-2">
-                                                    <div class="input-step full-width step-secondary">
-                                                        <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
-                                                        <input type="number"  value="1" min="0" max="100000000" readonly>
-                                                        <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
-                                                    </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>前往申請</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <button type="button" id="closeBtn" class="btn btn-light" onclick="closeModal()">取消</button>
-                                            <button type="submit" id="saveBtn" class="btn btn-primary" onclick="saveChanges()">確定</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 借款明細 -->
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>借款明細 <span class="fs-16">(還款、退擔保品)</span></h2>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>前往查詢</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>其他查詢</h2>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>申請中案件</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>已償還借款明細查詢</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>                                      
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>借款進出明細查詢</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>                                      
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>擔保品餘額查詢</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>                                      
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="#!" class="card-link">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0 item">
+                                                    <span>擔保品進出查詢</span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="btn btn-icon btn-secondary float-end"><i class="bx bx-chevron-right fs-3"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>                                      
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <!--end modal -->
 
                 </div>
                 <!-- container-fluid -->
