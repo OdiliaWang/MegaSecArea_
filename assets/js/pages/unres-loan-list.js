@@ -6,7 +6,7 @@ var nextButton = document.getElementById('page-next');
 
 // configuration variables
 var currentPage = 1;
-var itemsPerPage = 5;
+var itemsPerPage = 3;
 
 // getJSON
 var getJSON = function (jsonurl, callback) {
@@ -74,7 +74,7 @@ function loadAplListData(datas, page) {
             <td>'+ datas[i].quantity + ' / '+ datas[i].amount + '</td>\
             <td>'+ datas[i].charge + ' 元</td>\
             <td>'+ datas[i].rate + ' %</td>\
-            <td><button type="button" class="btn btn-icon btn-primary" onclick="editBtn(this)"><i class="fa-solid fa-pen"></i></button></td>\
+            <td><button type="button" class="btn btn-icon btn-primary" data-bs-toggle="modal" onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button></td>\
         </tr>';
         }
     }
@@ -91,24 +91,27 @@ function editRow(button) {
     var id = currentRow.cells[0].innerText;
     var name = currentRow.cells[1].innerText;
     var quantity = currentRow.cells[2].innerText;
+    var leverage = currentRow.cells[3].innerText;
 
     document.getElementById("stockId").innerText = id;
     document.getElementById("stockName").innerText = name;
     document.getElementById("stockQuantity").value = quantity;
+    document.getElementById("stockLeverage").value = leverage;
 
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("editModal").style.display = "block";
+    document.getElementById("showModal").style.display = "block";
 }
 
 function saveChanges() {
-    var newQuantity = document.getElementById("stockAmount").value;
+    var newQuantity = document.getElementById("stockQuantity").value;
+    var newLeverage = document.getElementById("stockLeverage").value;
+
     currentRow.cells[2].innerText = newQuantity;
+    currentRow.cells[3].innerText = newLeverage;
 
     closeModal();
 }
 
 function closeModal() {
-    document.getElementById("overlay").style.display = "none";
     document.getElementById("editModal").style.display = "none";
 }
 
