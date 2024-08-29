@@ -39,11 +39,11 @@ function loadSuccessListData(datas, page) {
     var pagesB = Math.ceil(datas.length / itemsPerPageB)
     if (page < 1) page = 1
     if (page > pagesB) page = pagesB
-    document.querySelector("#success-card").innerHTML = '';
+    document.querySelector("#unloanSuccess-card").innerHTML = '';
     for (var i = (page - 1) * itemsPerPageB; i < (page * itemsPerPageB) && i < datas.length; i++) {
         
         if (datas[i]) {
-            document.querySelector("#success-card").innerHTML += '<div class="col-xl-4 col-lg-4 col-md-6">\
+            document.querySelector("#unloanSuccess-card").innerHTML += '<div class="col-xl-4 col-lg-4 col-md-6">\
             <div class="card card-animate">\
                 <div class="card-header bg-soft-secondary border-0">\
                     <div class="d-flex align-items-center">\
@@ -64,88 +64,33 @@ function loadSuccessListData(datas, page) {
                 <div class="card-body p-3 pt-0">\
                     <div class="d-flex align-items-center justify-content-between mt-4">\
                         <div>\
-                            <p class="fw-semibold fs-20 mb-0">出借書號</p>\
-                            <p class="text-muted mb-1 fs-16">'+ datas[i].id + '</p>\
-                        </div>\
-                        <div>\
-                            <p class="fw-semibold fs-20 mb-0">已出借張數</p>\
-                            <p class="text-muted mb-1 fs-16">'+ datas[i].lendingAmount + '</p>\
+                            <p class="fw-semibold fs-20 mb-0">借款金額</p>\
+                            <p class="text-muted mb-1 fs-16">'+ datas[i].loanAmount + ' 元</p>\
                         </div>\
                     </div>\
                     <div class="d-flex align-items-center mt-1">\
                         <div class="flex-grow-1">\
-                            <p class="fw-semibold fs-20 mb-1">出借費率</p>\
-                            <p class="text-muted mb-1 fs-16">'+ datas[i].lendingFee + '</p>\
+                            <p class="fw-semibold fs-20 mb-0">未償金額</p>\
+                            <p class="text-muted mb-1 fs-16">'+ datas[i].notreturnedAmount + ' 元</p>\
+                        </div>\
+                        <div class="flex-shrink-0">\
+                            <button type="button" class="btn btn-secondary fs-18">還款</button>\
                         </div>\
                     </div>\
-                    <div class="d-flex align-items-center mt-1">\
-                        <div class="flex-grow-1">\
-                            <p class="fw-semibold fs-20 mb-1">提前還券條件</p>\
-                            <span>'+ isRequire1(datas[i].requirement[0]) + ' </span>\
-                            <span>'+ isRequire2(datas[i].requirement[1]) + '</span>\
-                            <span>'+ isRequire3(datas[i].requirement[2]) + '</span>\
-                            <span>'+ isRequire4(datas[i].requirement[3]) + '</span>\
-                            <span>'+ isRequire5(datas[i].requirement[4]) + '</span>\
-                        </div>\
+                    <div class="hstack gap-2">\
+                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
+                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
                     </div>\
                     <div class="d-flex align-items-center mt-3 text-center">\
                         <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">\
-                            <button type="button" class="btn btn-soft-secondary btn-icon rounded-pill"><i class="ri-arrow-down-s-line"></i></button>\
+                            <button type="button" class="btn link-dark">更多明細 <i class="ri-arrow-down-s-line"></i></button>\
                         </div>\
                     </div>\
                 </div>\
                 <div class="collapse border-top border-top-dashed" id="'+ datas[i].controlNo + '">\
-                    <div class="card-body">\
-                        <h6 class="fw-semibold fs-20 mb-2">出借餘額</h6>\
-                        <ul class="list-unstyled vstack gap-2 mb-0">\
-                            <li>\
-                                <div class="d-flex">\
-                                    <div class="flex-shrink-0 avatar-xxs text-muted">\
-                                        <i class="bx bx-up-arrow-circle fs-16"></i>\
-                                    </div>\
-                                    <div class="flex-grow-1">\
-                                        <h6 class="mb-0 fs-16">已出借張數</h6>\
-                                        <a class="text-muted fs-16">'+ datas[i].lendingAmount + '</a>\
-                                    </div>\
-                                </div>\
-                            </li>\
-                            <li>\
-                                <div class="d-flex">\
-                                    <div class="flex-shrink-0 avatar-xxs text-muted">\
-                                        <i class="bx bx-import fs-16"></i>\
-                                    </div>\
-                                    <div class="flex-grow-1">\
-                                        <h6 class="mb-0 fs-16">還券張數</h6>\
-                                        <a class="text-muted ">'+ datas[i].returnedAmount + '</a>\
-                                    </div>\
-                                </div>\
-                            </li>\
-                            <li>\
-                                <div class="d-flex">\
-                                    <div class="flex-shrink-0 avatar-xxs text-muted">\
-                                        <i class="ri-mac-line"></i>\
-                                    </div>\
-                                    <div class="flex-grow-1">\
-                                        <h6 class="mb-0 fs-16">未還券張數</h6>\
-                                        <a class="text-muted fs-16">'+ datas[i].notreturnedAmount + '</a>\
-                                    </div>\
-                                </div>\
-                            </li>\
-                            <li>\
-                                <div class="d-flex">\
-                                    <div class="flex-shrink-0 avatar-xxs text-muted">\
-                                        <i class="bx bx-money-withdraw"></i>\
-                                    </div>\
-                                    <div class="flex-grow-1">\
-                                        <h6 class="mb-0 fs-16">預估收入</h6>\
-                                        <a class="text-muted fs-16">'+ datas[i].estincome + '</a>\
-                                    </div>\
-                                </div>\
-                            </li>\
-                        </ul>\
-                    </div>\
-                    <div class="card-footer hstack gap-2">\
-                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal"><i class="bx bxs-bank align-center me-1 fs-16"></i>提前還券</a>\
+                    <div class="card-footer border-0 hstack gap-2">\
+                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">借款明細</a>\
+                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
                     </div>\
                 </div>\
             </div>\
