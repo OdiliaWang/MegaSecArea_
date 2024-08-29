@@ -102,53 +102,6 @@ function loadSuccessListData(datas, page) {
     currentPageB == pagesB ? nextButtonB.parentNode.classList.add('disabled') : nextButtonB.parentNode.classList.remove('disabled');
 }
 
-function isRequire1(val) {
-    switch (val) {
-        case "是":
-            return ('<span class="badge badge-success fs-16 mb-2">股東會' + "</span>");
-        case "否":
-            return ('<span class="badge badge-cancelled fs-16 mb-2">股東會' + "</span>");
-    }
-}
-
-function isRequire2(val) {
-    switch (val) {
-        case "是":
-            return ('<span class="badge badge-success fs-16">臨時股東會' + "</span>");
-        case "否":
-            return ('<span class="badge badge-cancelled fs-16">臨時股東會' + "</span>");
-    }
-}
-
-function isRequire3(val) {
-    switch (val) {
-        case "是":
-            return ('<span class="badge badge-success fs-16">現金增資' + "</span>");
-        case "否":
-            return ('<span class="badge badge-cancelled fs-16">現金增資' + "</span>");
-    }
-}
-
-function isRequire4(val) {
-    switch (val) {
-        case "是":
-            return ('<span class="badge badge-success fs-16">除權' + "</span>");
-        case "否":
-            return ('<span class="badge badge-cancelled fs-16">除權' + "</span>");
-    }
-}
-
-function isRequire5(val) {
-    switch (val) {
-        case "是":
-            return ('<span class="badge badge-success fs-16">除息' + "</span>");
-        case "否":
-            return ('<span class="badge badge-cancelled fs-16">除息' + "</span>");
-    }
-}
-
-
-
 function selectedPageB() {
     var pagenumLinkB = document.getElementById('page-numB').getElementsByClassName('clickPageNumber');
     for (var i = 0; i < pagenumLinkB.length; i++) {
@@ -202,46 +155,6 @@ function paginationEventsB() {
     clickPageB();
     selectedPageB();
 }
-
-
-// Search list
-var searchElementList = document.getElementById("searchSuccessCard");
-searchElementList.addEventListener("keyup", function () {
-    var inputVal = searchElementList.value.toLowerCase();
-
-    // 搜尋範圍
-    function filterItems(arr, query) {
-        return arr.filter(function (el) {
-            return el.stockName.toLowerCase().indexOf(query.toLowerCase()) !== -1 || el.stockNo.toLowerCase().indexOf(query.toLowerCase()) !== -1
-        })
-    }
-
-    // 宣告搜尋結果
-    var filterData = filterItems(allSuccessList, inputVal);
-
-    if (filterData.length == 0) {
-        document.getElementById("pagination-element").style.display = "none";
-    } else {
-        document.getElementById("pagination-element").style.display = "flex";
-    }
-
-    // 檢查搜尋結果是否為空
-    if (filterData.length > 0) {
-        document.getElementsByClassName("noresultA")[0].style.display = "none";
-    } else {
-        document.getElementsByClassName("noresultA")[0].style.display = "block";
-    }
-
-    // 分頁帶出頁數
-    var pageNumber = document.getElementById('page-numB');
-    pageNumber.innerHTML = "";
-    var dataPageNum = Math.ceil(filterData.length / itemsPerPageB)
-    // for each page
-    for (var i = 1; i < dataPageNum + 1; i++) {
-        pageNumber.innerHTML += "<div class='page-item'><a class='page-link clickPageNumber' href='javascript:void(0);'>" + i + "</a></div>";
-    }
-    loadSuccessListData(filterData, currentPageB);
-});
 
 
 
