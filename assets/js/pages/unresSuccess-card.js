@@ -43,9 +43,9 @@ function loadSuccessListData(datas, page) {
     for (var i = (page - 1) * itemsPerPageB; i < (page * itemsPerPageB) && i < datas.length; i++) {
         
         if (datas[i]) {
-            document.querySelector("#unloanSuccess-card").innerHTML += '<div class="col-xl-4 col-lg-4 col-md-6">\
+            document.querySelector("#unloanSuccess-card").innerHTML += '<div class="col-xxl-12 col-lg-12 col-sm-12">\
             <div class="card card-animate">\
-                <div class="card-header bg-soft-secondary border-0">\
+                <div class="card-header bg-light border-0">\
                     <div class="d-flex align-items-center">\
                         <div class="flex-grow-1">\
                             <div>\
@@ -77,9 +77,9 @@ function loadSuccessListData(datas, page) {
                             <button type="button" class="btn btn-primary fs-18">還款</button>\
                         </div>\
                     </div>\
-                    <div class="hstack gap-2">\
-                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
-                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
+                    <div class="mt-3 hstack gap-2">\
+                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
+                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
                     </div>\
                     <div class="d-flex align-items-center mt-3 text-center">\
                         <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">\
@@ -89,8 +89,8 @@ function loadSuccessListData(datas, page) {
                 </div>\
                 <div class="collapse border-top border-top-dashed" id="'+ datas[i].controlNo + '">\
                     <div class="card-footer border-0 hstack gap-2">\
-                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">借款明細</a>\
-                        <a class="btn btn-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
+                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">借款明細</a>\
+                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
                     </div>\
                 </div>\
             </div>\
