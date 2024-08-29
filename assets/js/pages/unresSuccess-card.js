@@ -74,7 +74,7 @@ function loadSuccessListData(datas, page) {
                             <p class="text-muted mb-1 fs-16">'+ datas[i].notreturnedAmount + ' 元</p>\
                         </div>\
                         <div class="flex-shrink-0">\
-                            <button type="button" class="btn btn-secondary fs-18">還款</button>\
+                            <button type="button" class="btn btn-primary fs-18">還款</button>\
                         </div>\
                     </div>\
                     <div class="hstack gap-2">\
@@ -83,7 +83,7 @@ function loadSuccessListData(datas, page) {
                     </div>\
                     <div class="d-flex align-items-center mt-3 text-center">\
                         <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">\
-                            <button type="button" class="btn link-dark">更多明細 <i class="ri-arrow-down-s-line"></i></button>\
+                            <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>\
                         </div>\
                     </div>\
                 </div>\
