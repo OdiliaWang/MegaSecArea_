@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-8206.4" y1="25740.2" x2="-8206.4" y2="25740.2" gradientTransform="translate(-596.8 -1288.2) rotate(-180) scale(0 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#a22225"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-9920.8" y1="-21581.4" x2="-10933.4" y2="-21581.4" gradientTransform="translate(-589.5 -1285.2) rotate(-180) scale(0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="#e3d8bc"/>
+      <stop offset=".4" stop-color="#b6994e"/>
+      <stop offset=".5" stop-color="#a48022"/>
+      <stop offset=".6" stop-color="#9f7b23"/>
+      <stop offset=".8" stop-color="#926f26"/>
+      <stop offset=".9" stop-color="#7c5b2c"/>
+      <stop offset="1" stop-color="#72512f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-10514.8" y1="-21372.1" x2="-10925.2" y2="-22338.9" gradientTransform="translate(-589.5 -1285.2) rotate(-180) scale(0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0" stop-color="#f8f6f0"/>
+      <stop offset=".2" stop-color="#dbcca7"/>
+      <stop offset=".3" stop-color="#c3ab6e"/>
+      <stop offset=".4" stop-color="#b29444"/>
+      <stop offset=".5" stop-color="#a7852b"/>
+      <stop offset=".5" stop-color="#a48022"/>
+      <stop offset=".7" stop-color="#8b6928"/>
+      <stop offset="1" stop-color="#72512f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="10949.4" y1="22275.9" x2="9936.9" y2="22275.9" gradientTransform="translate(-593.1 -1288.2) scale(0)" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-5" x1="10354.9" y1="22485.4" x2="9944.5" y2="21518.7" gradientTransform="translate(-593.1 -1288.2) scale(0)" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="_圖層_1" data-name="圖層_1">
+      <g>
+        <path class="cls-6" d="M3.8,40.3C3.8,20.4,19.9,4.2,39.8,4.2s36.1,16.1,36.1,36.1-16.2,36.1-36.1,36.1S3.8,60.2,3.8,40.3Z"/>
+        <polygon class="cls-5" points="40 40 40 40 40 40 40 40"/>
+        <path class="cls-4" d="M11.5,22.2c7.1-5.1,17.2-8.2,28.5-8.2s21.4,3.2,28.5,8.2c6.5,4.6,10.5,10.9,10.5,17.8,0-14.6-8-27.2-19.8-34-5.4-3-11.6-4.9-18.2-5h0c-.3,0-.6,0-1,0h0c-.3,0-.6,0-1,0h0c-6.6.2-12.8,2-18.2,5-5.8,3.6-9.4,8.7-9.4,14.4s0,1.2.1,1.7Z"/>
+        <path class="cls-3" d="M68.5,57.8c0,.6.1,1.2.1,1.7,0,5.7-3.6,10.9-9.4,14.5,11.8-6.7,19.8-19.4,19.8-33.9s-4-13.1-10.5-17.8c-7.1-5.1-17.3-8.2-28.5-8.2v26c14.9,0,27.2,7.8,28.5,17.8Z"/>
+        <path class="cls-2" d="M68.5,57.8c-7.1,5.1-17.3,8.2-28.5,8.2s-21.4-3.2-28.5-8.2c-6.5-4.7-10.5-10.9-10.5-17.8,0,14.6,8,27.2,19.8,33.9,5.4,3.1,11.6,4.9,18.2,5,0,0,0,0,0,0,.3,0,.6,0,1,0h0c.3,0,.7,0,1,0,0,0,0,0,0,0,6.6-.2,12.8-2,18.2-5,5.8-3.6,9.4-8.7,9.4-14.5s0-1.2-.1-1.7Z"/>
+        <path class="cls-1" d="M11.5,22.2c0-.6-.1-1.2-.1-1.7,0-5.7,3.6-10.9,9.4-14.4C9,12.8,1,25.5,1,40s4,13.1,10.5,17.8c7.1,5.1,17.2,8.2,28.5,8.2v-26c-14.9,0-27.2-7.8-28.5-17.8Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
