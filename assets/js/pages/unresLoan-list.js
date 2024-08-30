@@ -54,10 +54,11 @@ if (checkAll) {
 }
 
 function loadAplListData(datas, page) {
-    var pages = Math.ceil(datas.length / itemsPerPage)
-    if (page < 1) page = 1
-    if (page > pages) page = pages
+    var pages = Math.ceil(datas.length / itemsPerPage);
+    if (page < 1) page = 1;
+    if (page > pages) page = pages;
     document.querySelector("#applyCard").innerHTML = '';
+
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         if (datas[i]) {
             document.querySelector("#applyCard").innerHTML += '<div class="card p-0">\
@@ -84,7 +85,7 @@ function loadAplListData(datas, page) {
                             </div>\
                             <div class="d-flex flex-wrap">\
                                 <div class="p-1 px-1">\
-                                    <button id="editBtn-'+ i +'" class="btn btn-secondary btn-icon">\
+                                    <button id="editBtn-'+ i +'" class="btn btn-secondary btn-icon edit-btn" data-index="'+ i +'" data-amount="'+ datas[i].amount +'">\
                                     <i class="fa-solid fa-pen"></i>\
                                     </button>\
                                 </div>\
@@ -106,43 +107,48 @@ function loadAplListData(datas, page) {
                             <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
                             <p class="text-muted mb-0">NTD '+ datas[i].charge + ' 元</p>\
                         </div>\
+                            </div>\
+                        </div>\
                     </div>\
-                </div>\
-            </div>\
-        </div>';
+                </div>';
         }
     }
+
+
     selectedPage();
+
     currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
     currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
-    //edit
-    datas.forEach((data, index) => {
-        document.getElementById('editBtn-' + index).addEventListener('click', function () {
-            showEditInput(index, data.amount);
-        });
+
+ 
+    document.querySelector("#applyCard").addEventListener('click', function (event) {
+        if (event.target && event.target.closest('.edit-btn')) {
+            var index = event.target.closest('.edit-btn').getAttribute('data-index');
+            var amount = event.target.closest('.edit-btn').getAttribute('data-amount');
+            showEditInput(index, amount);
+        }
     });
 }
 
 function showEditInput(index, currentAmount) {
-    // Input and Button
     var amountElement = document.getElementById('amount-' + index);
     var originalHtml = amountElement.innerHTML;
 
-    amountElement.innerHTML = `<input type="text" id="editAmount-${index}" value="${currentAmount}" class="form-control d-inline-block mt-2" style="width: 80px;">
+    amountElement.innerHTML = `<input type="text" id="editAmount-${index}" value="${currentAmount}" class="form-control d-inline-block" style="width: 80px;">
         <button id="confirmBtn-${index}" class="btn btn-primary btn-sm ms-2">確定</button>
         <button id="cancelBtn-${index}" class="btn btn-outline-secondary btn-sm ms-2">取消</button>`;
 
-    // 確定button
     document.getElementById('confirmBtn-' + index).addEventListener('click', function () {
         var newAmount = document.getElementById('editAmount-' + index).value;
         amountElement.innerHTML = newAmount + ' 張';
     });
 
-    // 取消button
     document.getElementById('cancelBtn-' + index).addEventListener('click', function () {
         amountElement.innerHTML = originalHtml;
     });
 }
+
+
 
 
 function selectedPage() {
