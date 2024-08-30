@@ -84,9 +84,9 @@ function loadAplListData(datas, page) {
                             </div>\
                             <div class="d-flex flex-wrap">\
                                 <div class="p-1 px-1">\
-                                    <a class="btn btn-secondary btn-icon" href="#!">\
+                                    <button id="editBtn-'+ i +'" class="btn btn-secondary btn-icon">\
                                     <i class="fa-solid fa-pen"></i>\
-                                    </a>\
+                                    </button>\
                                 </div>\
                             </div>\
                         </div>\
@@ -100,7 +100,7 @@ function loadAplListData(datas, page) {
                         </div>\
                         <div class="d-flex flex-wrap gap-4 align-items-center">\
                             <span class="badge badge-secondary badge-border fs-6">擔保張數</span>\
-                            <p class="text-muted mb-0">'+ datas[i].amount + ' 張</p>\
+                            <p id="amount-'+ i +'" class="text-muted mb-0">'+ datas[i].amount + ' 張</p>\
                         </div>\
                         <div class="d-flex flex-wrap gap-4 align-items-center">\
                             <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
@@ -110,13 +110,39 @@ function loadAplListData(datas, page) {
                         </div>\
                     </div>\
                 </div>';
-                }
-            }
+        }
+    }
     selectedPage();
     currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
     currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
+    //edit
+    datas.forEach((data, index) => {
+        document.getElementById('editBtn-' + index).addEventListener('click', function () {
+            showEditInput(index, data.amount);
+        });
+    });
 }
 
+function showEditInput(index, currentAmount) {
+    // Input and Button
+    var amountElement = document.getElementById('amount-' + index);
+    var originalHtml = amountElement.innerHTML;
+
+    amountElement.innerHTML = `<input type="text" id="editAmount-${index}" value="${currentAmount}" class="form-control d-inline-block mt-2" style="width: 80px;">
+        <button id="confirmBtn-${index}" class="btn btn-primary btn-sm ms-2">確定</button>
+        <button id="cancelBtn-${index}" class="btn btn-outline-secondary btn-sm ms-2">取消</button>`;
+
+    // 確定button
+    document.getElementById('confirmBtn-' + index).addEventListener('click', function () {
+        var newAmount = document.getElementById('editAmount-' + index).value;
+        amountElement.innerHTML = newAmount + ' 張';
+    });
+
+    // 取消button
+    document.getElementById('cancelBtn-' + index).addEventListener('click', function () {
+        amountElement.innerHTML = originalHtml;
+    });
+}
 
 
 function selectedPage() {
