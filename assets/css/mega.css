@@ -1238,4 +1238,16 @@ table [data-qtvalue]::before,
 
 .idText {
   color: #3c61aa;
+}
+
+.feeColor {
+  color: #3c61aa;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.amountColor {
+  color: #3c61aa;
+  font-size: 16px;
+  font-weight: 900;
 }/*# sourceMappingURL=mega.css.map */

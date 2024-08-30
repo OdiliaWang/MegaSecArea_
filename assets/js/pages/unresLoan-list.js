@@ -106,10 +106,10 @@ function loadAplListData(datas, page) {
                             <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
                             <p class="text-muted mb-0">NTD '+ datas[i].charge + ' 元</p>\
                         </div>\
-                            </div>\
-                        </div>\
                     </div>\
-                </div>';
+                </div>\
+            </div>\
+        </div>';
         }
     }
     selectedPage();
