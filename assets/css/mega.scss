@@ -90,7 +90,13 @@ $border-color: #ced4da;
   color: $primary-800;
 }
 .link-secondary {
-    color: $secondary-800;
+    color: $secondary;
+    :hover {
+        color: $secondary-600;
+    }
+    :focus {
+        color: $secondary-800;
+    }
 }
 .link-success {
     color: $success-800;

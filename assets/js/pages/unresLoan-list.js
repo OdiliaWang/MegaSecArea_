@@ -57,64 +57,46 @@ function loadAplListData(datas, page) {
     var pages = Math.ceil(datas.length / itemsPerPage)
     if (page < 1) page = 1
     if (page > pages) page = pages
-    document.querySelector("#applyTable").innerHTML = '';
+    document.querySelector("#applyCard").innerHTML = '';
     for (var i = (page - 1) * itemsPerPage; i < (page * itemsPerPage) && i < datas.length; i++) {
         if (datas[i]) {
-            document.querySelector("#applyTable").innerHTML += '<tr>\
-            <th scope="row">\
-                <div class="form-check">\
-                    <input class="form-check-input" type="checkbox" name="chk_child" value="option1">\
+            document.querySelector("#applyCard").innerHTML += '<div class="card p-0">\
+            <div class="card-body p-3">\
+                <div class="d-flex">\
+                    <div class="avatar-xs">\
+                        <div class="avatar-title bg-primary rounded-circle align-bottom fs-20">\
+                            <i class="bx bx-bar-chart-alt-2"></i>\
+                        </div>\
+                    </div>\
+                    <div class="flex-grow-1 ms-2 mb-3">\
+                        <span style="display:none;">'+ datas[i].id + '</span>\
+                        <h3 class="mb-1">'+ datas[i].stockName[0] + '</h3>\
+                        <h5 class="text-muted mb-0">'+ datas[i].stockName[1] + '</h5>\
+                    </div>\
+                    <div class="d-flex flex-wrap">\
+                        <div class="p-1 px-1">\
+                            <a class="btn btn-secondary btn-icon" href="#!">\
+                            <i class="fa-solid fa-pen"></i>\
+                            </a>\
+                        </div>\
+                    </div>\
                 </div>\
-            </th>\
-            <td style="display:none;">'+ datas[i].id + '</td>\
-            <td class="flex-grow-1">\
-                <h5>'+ datas[i].stockName[0] + '</h5>\
-                <small class="text-muted"> '+ datas[i].stockName[1] + '</small>\
-            </td>\
-            <td>'+ datas[i].quantity + ' / '+ datas[i].amount + '</td>\
-            <td>'+ datas[i].charge + ' 元</td>\
-            <td>'+ datas[i].rate + ' %</td>\
-            <td class="text-center"><a class="btn btn-icon btn-primary" href="#showModal" data-bs-toggle="modal"><i class="fa-solid fa-pen"></i></a></td>\
-        </tr>';
+                <div class="d-flex flex-wrap gap-4 align-items-center">\
+                    <span class="badge badge-primary badge-border fs-6 mb-1">可用張數 / 擔保張數</span>\
+                    <p class="text-muted mb-0">'+ datas[i].quantity + ' / '+ datas[i].amount + '</p>\
+                </div>\
+                <div class="d-flex flex-wrap gap-4 align-items-center">\
+                    <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
+                    <p class="text-muted mb-0">NTD '+ datas[i].charge + ' 元</p>\
+                </div>\
+            </div>\
+        </div>';
         }
     }
     selectedPage();
     currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
     currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
 }
-
-//彈出修改視窗
-var currentRow;
-
-function editRow(button) {
-    currentRow = button.parentNode.parentNode;
-    var id = currentRow.cells[0].innerText;
-    var name = currentRow.cells[1].innerText;
-    var quantity = currentRow.cells[2].innerText;
-    var leverage = currentRow.cells[3].innerText;
-
-    document.getElementById("stockId").innerText = id;
-    document.getElementById("stockName").innerText = name;
-    document.getElementById("stockQuantity").value = quantity;
-    document.getElementById("stockLeverage").value = leverage;
-
-    document.getElementById("showModal").style.display = "block";
-}
-
-function saveChanges() {
-    var newQuantity = document.getElementById("stockQuantity").value;
-    var newLeverage = document.getElementById("stockLeverage").value;
-
-    currentRow.cells[2].innerText = newQuantity;
-    currentRow.cells[3].innerText = newLeverage;
-
-    closeModal();
-}
-
-function closeModal() {
-    document.getElementById("editModal").style.display = "none";
-}
-
 
 
 

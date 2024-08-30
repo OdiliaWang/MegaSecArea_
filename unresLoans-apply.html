@@ -782,278 +782,202 @@
         </div>
       </div>
 
-      <!-- ============================================================== -->
-      <!-- Start right Content here -->
-      <!-- ============================================================== -->
-      <div class="main-content">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
         <div class="page-content">
-          <div class="container-fluid">
-            <!-- start page title -->
-            <div class="row">
-              <div class="col-12">
-                <div
-                  class="page-title-box d-sm-flex align-items-center justify-content-between"
-                >
-                  <h1 class="mb-2 mb-sm-0">不限用途款項借貸</h1>
-                  <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                      <li class="breadcrumb-item">
-                        <a href="index.html"
-                          ><i class="fa-solid fa-house me-1"></i>兆豐專區</a
-                        >
-                      </li>
-                      <li class="breadcrumb-item">
-                        <a href="unres-purpose-loans-dashboard.html"
-                          >回不限用途款項借貸</a
-                        >
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end page title -->
-
-            <!-- 頁首 cards -->
-            <div class="row">
-              <div class="col-12">
-                <div class="card adv-card-bg">
-                  <div class="card-body pb-0 px-3">
-                    <div class="row align-items-center g-3 mb-3">
-                      <div class="col-md-auto">
-                        <div class="position-relative d-inline-block">
-                          <img
-                            src="assets/img/user-dummy-img.jpg"
-                            alt=""
-                            class="avatar-lg rounded-circle img-thumbnail"
-                          />
-                          <span
-                            class="contact-active position-absolute rounded-circle bg-success"
-                          >
-                            <span class="visually-hidden"></span>
-                          </span>
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h1 class="mb-2 mb-sm-0">借款申請</h1>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="unres-purpose-loans-dashboard.html"> <i class="fa-solid fa-chevron-left me-2"></i>回不限用途款項借貸</a>
+                                    </li>
+                                </ol>
+                            </div>
                         </div>
-                        <!-- <div class="hstack flex-wrap mt-2">
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <!-- 頁首 cards -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card adv-card-bg">
+                            <div class="card-body pb-0 px-3">
+                                <div class="row align-items-center g-3 mb-3">
+                                    <div class="col-md-auto">
+                                        <div class="position-relative d-inline-block">
+                                            <img src="assets/img/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail"/>
+                                            <span class="contact-active position-absolute rounded-circle bg-success">
+                                                <span class="visually-hidden"></span>
+                                            </span>
+                                        </div>
+                                        <!-- <div class="hstack flex-wrap mt-2">
                                                 <a class="btn btn-outline-secondary d-grid" href="#!" target="_blank">前往開戶</a>
                                             </div> -->
-                      </div>
-                      <div class="col-md col-sm-12">
-                        <div class="hstack gap-2 flex-wrap">
-                          <div>
-                            <i class="ri-user-3-line align-bottom me-1"></i
-                            >郝大偉
-                          </div>
-                          <div class="vr"></div>
-                          <div>
-                            <i class="ri-home-smile-line align-bottom me-1"></i>
-                            7000-1234567 天母分公司
-                          </div>
-                        </div>
-                        <div class="hstack gap-2 flex-wrap mt-2">
-                          <div>
-                            <i class="ri-building-line align-bottom me-1"></i>
-                            開戶狀態
-                            <span class="badge badge-success fs-14"
-                              >已開戶</span
-                            >
-                            <!-- <span class="badge badge-primary fs-14">未開戶</span> -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xl-8 col-lg-12 col-md-12">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="card-title mb-0">申請庫存轉擔保品</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="listjs-table" id="applyList">
-                      <div class="table-responsive table-card" id="scroll-mask">
-                        <div
-                          data-simplebar
-                          data-simplebar-auto-hide="false"
-                          data-simplebar-track="secondary"
-                        >
-                          <table class="table table-nowrap align-middle">
-                            <thead class="table-light">
-                              <tr>
-                                <th class="col" style="width: 50px">
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                      id="checkAll"
-                                      value="option" />
-                                  </div>
-                                </th>
-                                <th class="col"><!-- null --></th>
-                                <th class="col">可用張數 / 擔保張數</th>
-                                <th class="col">可借金額</th>
-                                <th class="col">利率</th>
-                                <th class="col"><!-- null --></th>
-                              </tr>
-                            </thead>
-                            <tbody
-                              class="list form-check-all"
-                              id="applyTable"></tbody>
-                          </table>
-                        </div>
-                        <div class="noresult" style="display: none">
-                          <div class="text-center">
-                            <lord-icon
-                              src="https://cdn.lordicon.com/msoeawqm.json"
-                              trigger="loop"
-                              colors="primary:#cb954b,secondary:#ffe0e0" style="width: 75px; height: 75px"></lord-icon>
-                            <h5 class="mt-2">無資料</h5>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div
-                        class="row m-3 justify-content-end"
-                        id="pagination-element">
-                        <!-- end col -->
-                        <div class="col-sm-6">
-                          <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
-                            <div class="page-item">
-                              <a  href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
-                            </div>
-                            <span id="page-num" class="pagination"></span>
-                            <div class="page-item">
-                              <a  href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- end col -->
-                      </div>
-                      <!--end row pagination-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                <div class="col-xl-4 col-lg-12 col-md-12">
-                    <div class="sticky-side-div">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">申請匣</h5>
-                            </div>
-                            <div class="card-body pt-2">
-                                <div class="table-responsive">
-                                    <table class="table table-borderless mb-0">
-                                        <tbody>
-                                            <tr>
-                                                <td>可借金額上限(元)</td>
-                                                <td class="text-end px-0" id="cart-subtotal">3,000,000 元</td>
-                                            </tr>
-                                            <tr class="table-light">
-                                                <th>借款金額(元)
-                                                    <a href="#!" class="link-success"><i class="fa-solid fa-pen ms-2"></i></a>
-                                                </th>
-                                                <td class="text-end">
-                                                    <span class="fw-semibold" id="cart-total">0 元</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <button class="btn btn-secondary w-100 fs-16">申請借款</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- end table-responsive -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end stickey -->
-                </div>
-            </div>
-
-            <!-- 擔保品數量 modal -->
-            <div id="showModal" class="modal fade">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                    <div class="modal-header bg-light p-3">
-                        <h5 class="modal-title">擔保品數量</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        id="close-modal"></button>
-                    </div>
-                    <form class="tablelist-form" autocomplete="off">
-                        <div class="modal-body">
-                        <span id="stockId" style="display: none"></span>
-                        <div class="mb-3">
-                            <label for="stockName" class="form-label">股票名稱</label>
-                            <span id="stockName"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="stockQuantity" class="form-label">可用張數</label>
-                            <span id="stockQuantity"></span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="stockLeverage" class="form-label">融通成數</label>
-                            <span id="stockLeverage"></span>
-                        </div>
-
-                        <div>
-                            <label for="stockAmount" class="form-label">擔保張數</label>
-                            <div class="row">
-                                <div class="d-flex flex-wrap align-items-start gap-2">
-                                    <div class="input-step full-width step-secondary">
-                                        <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
-                                        <input type="number" value="1" min="0" max="100000000" readonly/>
-                                        <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
+                                    </div>
+                                    <div class="col-md col-sm-12">
+                                        <div class="hstack gap-2 flex-wrap">
+                                            <div>
+                                                <i class="ri-user-3-line align-bottom me-1"></i>郝大偉
+                                            </div>
+                                        <div class="vr"></div>
+                                        <div>
+                                            <i class="ri-home-smile-line align-bottom me-1"></i>
+                                            7000-1234567 天母分公司
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2 flex-wrap mt-2">   
+                                        <div>
+                                            <i class="ri-building-line align-bottom me-1"></i>開戶狀態
+                                            <span class="badge badge-success fs-14">已開戶</span>
+                                            <!-- <span class="badge badge-primary fs-14">未開戶</span> -->
+                                        </div>
+                                    </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-12 col-md-12">
+                            <!-- start Apply Cards -->
+                            <div id="applyCard"></div>
+                            
+                            <!-- NoResult -->
+                            <div class="noresult" style="display: none">
+                                <div class="text-center">
+                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                    <h5 class="mt-2">無資料</h5>
+                                    <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-0 justify-content-end mb-4" id="pagination-element">
+                                <!-- end col -->
+                                <div class="col-sm-6">
+                                    <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                        <div class="page-item">
+                                            <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
+                                        </div>
+                                        <span id="page-num" class="pagination"></span>
+                                        <div class="page-item">
+                                            <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
+                                        </div>
+                                    </div>
+                                </div><!-- end col -->
+                            </div>
+                            <!--end row pagination-->
                         </div>
-                        <div class="modal-footer">
-                        <div class="hstack gap-2 justify-content-end">
-                            <button
-                            type="button"
-                            id="closeBtn"
-                            class="btn btn-light"
-                            onclick="closeModal()">取消
-                            </button>
-                            <button
-                            type="submit"
-                            id="saveBtn"
-                            class="btn btn-primary"
-                            onclick="saveChanges()"> 確定
-                            </button>
+                        <div class="col-xl-4 col-lg-12 col-md-12">
+                            <div class="sticky-side-div">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">申請匣</h5>
+                                    </div>
+                                    <div class="card-body pt-2">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>可借金額上限</td>
+                                                        <td class="text-end px-0" id="cart-subtotal">3,000,000 元</td>
+                                                    </tr>
+                                                    <tr class="table-light">
+                                                        <th>借款金額
+                                                            <a href="unresLoansAmount-adjust.html" class="link-secondary"><i class="fa-solid fa-pen ms-1"></i></a>
+                                                        </th>
+                                                        <td class="text-end">
+                                                            <span class="fw-semibold" id="cart-total">0 元</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <button class="btn btn-secondary w-100 fs-16">申請借款</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end stickey -->
                         </div>
-                        </div>
-                    </form>
                     </div>
                 </div>
-            </div>
-            <!--end modal -->
-          </div>
-          <!-- container-fluid -->
-        </div>
-        <!-- End Page-content -->
 
-        <footer class="footer">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-12">
-                <span
-                  class="d-block text-center"
-                  style="font-weight: 400; font-size: 14px"
-                  >兆豐證券股份有限公司 客服專線(02)2351-7017</span
-                >
-              </div>
+                    <!-- 擔保品數量 modal -->
+                    <div id="showModal" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-light p-3">
+                                    <h5 class="modal-title">擔保品數量</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                                </div>
+                                <form class="tablelist-form" autocomplete="off">
+                                    <div class="modal-body">
+                                        <span id="stockId" style="display: none"></span>
+                                        <div class="mb-3">
+                                            <label for="stockName" class="form-label">股票名稱</label>
+                                            <span id="stockName"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="stockQuantity" class="form-label">可用張數</label>
+                                            <span id="stockQuantity"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="stockLeverage" class="form-label">融通成數</label>
+                                            <span id="stockLeverage"></span>
+                                        </div>
+                                        <div>
+                                            <label for="stockAmount" class="form-label">擔保張數</label>
+                                            <div class="row">
+                                                <div class="d-flex flex-wrap align-items-start gap-2">
+                                                    <div class="input-step full-width step-secondary">
+                                                        <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
+                                                        <input type="number" value="1" min="0" max="100000000" readonly/>
+                                                        <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="hstack gap-2 justify-content-end">
+                                            <button type="button" id="closeBtn" class="btn btn-light" onclick="closeModal()">取消</button>
+                                            <button type="submit" id="saveBtn" class="btn btn-primary" onclick="saveChanges()">確定</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end modal -->
+                </div>
+                <!-- container-fluid -->
             </div>
-          </div>
-        </footer>
-      </div>
-      <!-- end main content-->
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-sm-12">
+                        <span class="d-block text-center" style="font-weight: 400; font-size: 14px">兆豐證券股份有限公司 客服專線(02)2351-7017</span>
+                    </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
     </div>
     <!-- END layout-wrapper -->
 

@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>變更約定 | 定期定額買台股</title>
+    <title>申貸金額 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -346,15 +346,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">變更約定</h1>
+                                <h1 class="mb-sm-0">申貸金額</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="index.html"><i class="fa-solid fa-house me-1"></i>兆豐專區</a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="investock-dashboard.html">定期定額總覽</a></li>
-                                        <li class="breadcrumb-item active">變更約定</li>
+                                            <a href="unresLoans-apply.html">不限用途款項借貸</a></li>
+                                        <li class="breadcrumb-item active">申貸金額</li>
                                     </ol>
                                 </div>
                             </div>
@@ -364,78 +364,58 @@
                     <!--頁首 Cards-->
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
-                            <!--  Alert -->
-                            <div id="output"></div>
-
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-body">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
-                                            <div class="entrust-title d-xxl-flex d-lg-flex align-items-center">
-                                                <h3 class="mt-2 mb-0 flex-grow-1">0050 元大台灣50</h3>
-                                                <div class="flex-grow-1 mt-2">
-                                                    <h6 class="mb-0 user-num" style="font-weight: 400;">證券帳號</h6>
-                                                    <h5 class="mb-0">天母分公司 7000-1234567</h5>
+                                            <div class="mt-0 px-1">
+                                                <div class="hstack gap-3">
+                                                    <h5 class="mb-0">利率</h5>
+                                                    <span class="fee">3%</span>
                                                 </div>
-                                                <div class="flex-shrink-0 mt-2">
-                                                    <button type="button" class="btn btn-outline-primary" id="stopBtn">申請暫停扣款</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="mt-3 px-1">
+                                                <div class="hstack gap-3">
+                                                    <h5 class="mb-0">可借金額上限</h5>
+                                                    <span class="fee">30,000元</span>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="mt-3 px-1">
+                                                <h5 class="mb-2">申請借款金額</h5>
+                                                <input type="text" class="form-control" id="valueInput" value="帶入預設金額且可以更改">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end card header -->
-                                <!-- card boby-->
+                            </div>
+                            <!-- end Card -->
+                            <div class="card">
                                 <div class="card-body">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-8">
-                                            <div class="mt-2 px-1">
-                                                <h5 class="mb-4"><i class="fa-solid fa-quote-right text-secondary me-2"></i>原約定內容</h5>
-                                                <div class="dateArea">
-                                                    <span class="fs-16">每月18日, 每月28日 / 申購 NTD 4,000</span>
+                                            <div class="mt-0 px-1">
+                                                <div class="hstack gap-3">
+                                                    <h5 class="mb-0">利率</h5>
+                                                    <span class="fee">3%</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row justify-content-center">
                                         <div class="col-lg-8">
                                             <div class="mt-3 px-1">
-                                                <h5 class="mb-4 mt-5"><i class="fa-solid fa-quote-right text-secondary me-2"></i>新設定</h5>
-                                                <!--扣款日期-->
-                                                <div class="col-lg-12">
-                                                    <h5 class="mb-4">每月扣款日期 (可複選)</h5>   
-                                                        <!-- Checkbox Buttons -->
-                                                        <div id="model-err" class="dateArea">
-                                                            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                                                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="chargeDate-btn">
-                                                                <label class="btn btn-outline-secondary p-3 mb-0" for="btncheck1">8日</label>
-                                                            
-                                                                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="chargeDate-btn">
-                                                                <label class="btn btn-outline-secondary p-3 mb-0" for="btncheck2">18日</label>
-                                                            
-                                                                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="chargeDate-btn">
-                                                                <label class="btn btn-outline-secondary p-3 mb-0" for="btncheck3">28日</label>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                        <span id="errorText" class="error" style="display:none;">扣款日期至少選擇一日</span>
+                                                <div class="hstack gap-3">
+                                                    <h5 class="mb-0">可借金額上限</h5>
+                                                    <span class="fee">30,000元</span>
                                                 </div>
-                                                <!--申購金額-->
-                                                <div class="col-lg-12">
-                                                    <h5 class="mb-2 mt-4">申購金額</h5>
-                                                    <div class="row">
-                                                        <div class="d-flex flex-wrap align-items-start gap-2">
-                                                            <div class="input-step full-width step-secondary">
-                                                                <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1000)">–</button>
-                                                                <input type="number"  value="3000" min="3000" max="100000000" readonly>
-                                                                <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1000)">+</button>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end col -->
-                                                        <p class="mt-2 text-muted fs-6 fw-normal">每檔投資標的最低申購金額為新台幣3,000元(以仟元為級距)</p>
-                                                    </div>
-                                                    <!-- end row -->   
-                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="mt-3 px-1">
+                                                <h5 class="mb-2">申請借款金額</h5>
+                                                <input type="text" class="form-control" id="valueInput" value="帶入預設金額且可以更改">
                                             </div>
                                         </div>
                                     </div>
@@ -445,40 +425,12 @@
                             <div class="row justify-content-center mb-5">
                                 <div class="col-lg-4">
                                     <div class="hstack gap-3">
-                                        <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-lg btn-outline-secondary w-50"> 取消 </button>
-                                        <button class="btn btn-lg btn-secondary w-50" type="submit" onclick="validateCheckbox()">下一步</button>
+                                        <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-lg btn-outline-secondary w-50">取消</button>
+                                        <button onclick="javascript:history.back(-1)" class="btn btn-lg btn-secondary w-50" type="submit">確認</button>
                                     </div>
                                 </div>
                             </div>
                             <!-- end button -->
-
-                            <!-- 注意事項 -->                            
-                            <div class="accordion accordion-flush accordion-mega mb-3" id="accordionFlushExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                            注意事項
-                                        </button>
-                                    </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <div class="m-2">                                       
-                                                <ol class="mb-0 text-wrap" style="list-style:cjk-ideographic">
-                                                    <li>本約定書視為雙方契約書內容之一部份。</li>
-                                                    <li>本約定書內容嗣有變動修正之需求，甲乙雙方同意另行以書面或電子媒體簽訂之。</li>
-                                                    <li>每檔投資標的最低申購金額為新台幣3.000元(以仟元為級距)。</li>
-                                                    <li>委託人同意以與貴公司間委託買賣證券受託契約書所留之印鑑樣式作為本業務之約定簽章樣式，其餘基本資料依委託買賣證券受託契約中委託人基本資料為準。</li>
-                                                    <li>委託人須於指定扣款日前一日16:00前完成簽訂契約，始得於指定扣款日進行扣款。</li>
-                                                    <li>委託人須在指定扣款日前，於證券款項劃撥帳戶存入投資金額及交易手續費。</li>
-                                                    <li>委託人同意於指定之證券款項劃撥帳戶餘額不足支付投資金額及交易手續費時，同一契約編號之投資標的買進委託均視為取消，將不予執行。</li>
-                                                    <li>本公司並無補扣機制，如同一契約編號之投資標的連續三次扣款失敗，本公司將主動終止該契約編號之定時定額約定。</li>
-                                                    <li class="text-warning"><b>定期定額買台股業務，僅限兆豐銀行證券交割戶</b></li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -518,6 +470,9 @@
     <script src="assets/js/backtotop.js"></script>
     <script src="assets/js/pages/chargeDate-validation.js"></script>
     <script src="assets/js/output.js"></script>
+
+    <!-- input step init -->
+    <script src="assets/js/pages/form-input-spin.init.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>

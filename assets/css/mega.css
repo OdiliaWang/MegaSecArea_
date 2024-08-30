@@ -41,6 +41,12 @@
 }
 
 .link-secondary {
+  color: #cb954b;
+}
+.link-secondary :hover {
+  color: #e3b26d;
+}
+.link-secondary :focus {
   color: #d49c4f;
 }
 
