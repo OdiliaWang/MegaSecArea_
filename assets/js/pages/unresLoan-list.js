@@ -74,7 +74,7 @@ function loadAplListData(datas, page) {
             <td>'+ datas[i].quantity + ' / '+ datas[i].amount + '</td>\
             <td>'+ datas[i].charge + ' 元</td>\
             <td>'+ datas[i].rate + ' %</td>\
-            <td><button type="button" class="btn btn-icon btn-primary" href="#showModal" data-bs-toggle="modal"><i class="fa-solid fa-pen"></i></button></td>\
+            <td class="text-center"><a class="btn btn-icon btn-primary" href="#showModal" data-bs-toggle="modal"><i class="fa-solid fa-pen"></i></a></td>\
         </tr>';
         }
     }

@@ -86,6 +86,25 @@ $border-color: #ced4da;
   }
 }
 
+.link-primary {
+  color: $primary-800;
+}
+.link-secondary {
+    color: $secondary-800;
+}
+.link-success {
+    color: $success-800;
+}
+.link-info {
+    color: $info-800;
+}
+.link-warning {
+    color: $warning-800;
+}
+.link-danger {
+    color: $danger-800;
+}
+
 .bg-soft-primary {
   background-color: $primary-bg-fresh;
 }

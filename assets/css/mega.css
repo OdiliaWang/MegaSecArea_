@@ -36,6 +36,30 @@
   }
 }
 
+.link-primary {
+  color: #de6269;
+}
+
+.link-secondary {
+  color: #d49c4f;
+}
+
+.link-success {
+  color: #7bd9c4;
+}
+
+.link-info {
+  color: #49376d;
+}
+
+.link-warning {
+  color: #79416d;
+}
+
+.link-danger {
+  color: #485d93;
+}
+
 .bg-soft-primary {
   background-color: #ffe6e6;
 }

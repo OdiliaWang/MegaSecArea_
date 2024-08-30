@@ -888,8 +888,7 @@
                                       class="form-check-input"
                                       type="checkbox"
                                       id="checkAll"
-                                      value="option"
-                                    />
+                                      value="option" />
                                   </div>
                                 </th>
                                 <th class="col"><!-- null --></th>
@@ -901,8 +900,7 @@
                             </thead>
                             <tbody
                               class="list form-check-all"
-                              id="applyTable"
-                            ></tbody>
+                              id="applyTable"></tbody>
                           </table>
                         </div>
                         <div class="noresult" style="display: none">
@@ -910,9 +908,7 @@
                             <lord-icon
                               src="https://cdn.lordicon.com/msoeawqm.json"
                               trigger="loop"
-                              colors="primary:#cb954b,secondary:#ffe0e0"
-                              style="width: 75px; height: 75px"
-                            ></lord-icon>
+                              colors="primary:#cb954b,secondary:#ffe0e0" style="width: 75px; height: 75px"></lord-icon>
                             <h5 class="mt-2">無資料</h5>
                           </div>
                         </div>
@@ -920,29 +916,16 @@
 
                       <div
                         class="row m-3 justify-content-end"
-                        id="pagination-element"
-                      >
+                        id="pagination-element">
                         <!-- end col -->
                         <div class="col-sm-6">
-                          <div
-                            class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0"
-                          >
+                          <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
                             <div class="page-item">
-                              <a
-                                href="javascript:void(0);"
-                                class="page-link"
-                                id="page-prev"
-                                >前一頁</a
-                              >
+                              <a  href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
                             </div>
                             <span id="page-num" class="pagination"></span>
                             <div class="page-item">
-                              <a
-                                href="javascript:void(0);"
-                                class="page-link"
-                                id="page-next"
-                                >下一頁</a
-                              >
+                              <a  href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
                             </div>
                           </div>
                         </div>
@@ -954,144 +937,101 @@
                 </div>
               </div>
 
-              <div class="col-xl-4 col-lg-12 col-md-12">
-                <div class="sticky-side-div">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title mb-0">申請匣</h5>
+                <div class="col-xl-4 col-lg-12 col-md-12">
+                    <div class="sticky-side-div">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">申請匣</h5>
+                            </div>
+                            <div class="card-body pt-2">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td>可借金額上限(元)</td>
+                                                <td class="text-end px-0" id="cart-subtotal">3,000,000 元</td>
+                                            </tr>
+                                            <tr class="table-light">
+                                                <th>借款金額(元)
+                                                    <a href="#!" class="link-success"><i class="fa-solid fa-pen ms-2"></i></a>
+                                                </th>
+                                                <td class="text-end">
+                                                    <span class="fw-semibold" id="cart-total">0 元</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <button class="btn btn-secondary w-100 fs-16">申請借款</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- end table-responsive -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body pt-2">
-                      <div class="table-responsive">
-                        <table class="table table-borderless mb-0">
-                          <tbody>
-                            <tr>
-                              <td>可借款金額</td>
-                              <td class="text-end px-0" id="cart-subtotal">
-                                3,000,000 元
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Estimated Tax (12.5%) :</td>
-                              <td class="text-end" id="cart-tax">$ 44.99</td>
-                            </tr>
-                            <tr class="table-active">
-                              <th>Total (USD) :</th>
-                              <td class="text-end">
-                                <span class="fw-semibold" id="cart-total">
-                                  $415.96
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td colspan="2">
-                                <button class="btn btn-secondary w-100 fs-18">
-                                  申請借款
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- end table-responsive -->
-                    </div>
-                  </div>
+                    <!-- end stickey -->
                 </div>
-                <!-- end stickey -->
-              </div>
             </div>
 
             <!-- 擔保品數量 modal -->
             <div id="showModal" class="modal fade">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header bg-light p-3">
-                    <h5 class="modal-title">擔保品數量</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                      id="close-modal"
-                    ></button>
-                  </div>
-                  <form class="tablelist-form" autocomplete="off">
-                    <div class="modal-body">
-                      <span id="stockId" style="display: none"></span>
-                      <div class="mb-3">
-                        <label for="stockName" class="form-label"
-                          >股票名稱</label
-                        >
-                        <span id="stockName"></span>
-                      </div>
-                      <div class="mb-3">
-                        <label for="stockQuantity" class="form-label"
-                          >可用張數</label
-                        >
-                        <span id="stockQuantity"></span>
-                      </div>
-                      <div class="mb-3">
-                        <label for="stockLeverage" class="form-label"
-                          >融通成數</label
-                        >
-                        <span id="stockLeverage"></span>
-                      </div>
-
-                      <div>
-                        <label for="stockAmount" class="form-label"
-                          >擔保張數</label
-                        >
-                        <div class="row">
-                          <div class="d-flex flex-wrap align-items-start gap-2">
-                            <div class="input-step full-width step-secondary">
-                              <button
-                                type="button"
-                                class="minus"
-                                onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)"
-                              >
-                                –
-                              </button>
-                              <input
-                                type="number"
-                                value="1"
-                                min="0"
-                                max="100000000"
-                                readonly
-                              />
-                              <button
-                                type="button"
-                                class="plus"
-                                onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)"
-                              >
-                                +
-                              </button>
-                            </div>
-                          </div>
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header bg-light p-3">
+                        <h5 class="modal-title">擔保品數量</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="close-modal"></button>
+                    </div>
+                    <form class="tablelist-form" autocomplete="off">
+                        <div class="modal-body">
+                        <span id="stockId" style="display: none"></span>
+                        <div class="mb-3">
+                            <label for="stockName" class="form-label">股票名稱</label>
+                            <span id="stockName"></span>
                         </div>
-                      </div>
+                        <div class="mb-3">
+                            <label for="stockQuantity" class="form-label">可用張數</label>
+                            <span id="stockQuantity"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="stockLeverage" class="form-label">融通成數</label>
+                            <span id="stockLeverage"></span>
+                        </div>
+
+                        <div>
+                            <label for="stockAmount" class="form-label">擔保張數</label>
+                            <div class="row">
+                                <div class="d-flex flex-wrap align-items-start gap-2">
+                                    <div class="input-step full-width step-secondary">
+                                        <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
+                                        <input type="number" value="1" min="0" max="100000000" readonly/>
+                                        <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <div class="hstack gap-2 justify-content-end">
+                            <button
+                            type="button"
+                            id="closeBtn"
+                            class="btn btn-light"
+                            onclick="closeModal()">取消
+                            </button>
+                            <button
+                            type="submit"
+                            id="saveBtn"
+                            class="btn btn-primary"
+                            onclick="saveChanges()"> 確定
+                            </button>
+                        </div>
+                        </div>
+                    </form>
                     </div>
-                    <div class="modal-footer">
-                      <div class="hstack gap-2 justify-content-end">
-                        <button
-                          type="button"
-                          id="closeBtn"
-                          class="btn btn-light"
-                          onclick="closeModal()"
-                        >
-                          取消
-                        </button>
-                        <button
-                          type="submit"
-                          id="saveBtn"
-                          class="btn btn-primary"
-                          onclick="saveChanges()"
-                        >
-                          確定
-                        </button>
-                      </div>
-                    </div>
-                  </form>
                 </div>
-              </div>
             </div>
             <!--end modal -->
           </div>
@@ -1130,7 +1070,7 @@
     <script src="assets/libs/list.pagination.js/list.pagination.min.js"></script>
 
     <!-- listjs init -->
-    <script src="assets/js/pages/unres-loan-list.js"></script>
+    <script src="assets/js/pages/unresLoan-list.js"></script>
 
     <!-- Sweet Alerts js -->
     <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
