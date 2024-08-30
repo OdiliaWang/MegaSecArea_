@@ -62,37 +62,56 @@ function loadAplListData(datas, page) {
         if (datas[i]) {
             document.querySelector("#applyCard").innerHTML += '<div class="card p-0">\
             <div class="card-body p-3">\
-                <div class="d-flex">\
-                    <div class="avatar-xs">\
-                        <div class="avatar-title bg-primary rounded-circle align-bottom fs-20">\
-                            <i class="bx bx-bar-chart-alt-2"></i>\
+                <div class="row">\
+                    <div class="col-xl-1">\
+                        <div class="d-flex flex-wrap">\
+                            <div class="form-check form-check-inline">\
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option">\
+                            </div>\
                         </div>\
                     </div>\
-                    <div class="flex-grow-1 ms-2 mb-3">\
-                        <span style="display:none;">'+ datas[i].id + '</span>\
-                        <h3 class="mb-1">'+ datas[i].stockName[0] + '</h3>\
-                        <h5 class="text-muted mb-0">'+ datas[i].stockName[1] + '</h5>\
-                    </div>\
-                    <div class="d-flex flex-wrap">\
-                        <div class="p-1 px-1">\
-                            <a class="btn btn-secondary btn-icon" href="#!">\
-                            <i class="fa-solid fa-pen"></i>\
-                            </a>\
+                    <div class="col-xl-11">\
+                        <div class="d-flex">\
+                            <div class="avatar-xs">\
+                                <div class="avatar-title bg-primary rounded-circle align-bottom fs-20">\
+                                    <i class="bx bx-bar-chart-alt-2"></i>\
+                                </div>\
+                            </div>\
+                            <div class="flex-grow-1 ms-2 mb-3">\
+                                <span style="display:none;">'+ datas[i].id + '</span>\
+                                <h3 class="mb-1">'+ datas[i].stockName[0] + '</h3>\
+                                <h5 class="text-muted mb-0">'+ datas[i].stockName[1] + '</h5>\
+                            </div>\
+                            <div class="d-flex flex-wrap">\
+                                <div class="p-1 px-1">\
+                                    <a class="btn btn-secondary btn-icon" href="#!">\
+                                    <i class="fa-solid fa-pen"></i>\
+                                    </a>\
+                                </div>\
+                            </div>\
+                        </div>\
+                        <div class="d-flex flex-wrap gap-4 align-items-center">\
+                            <span class="badge badge-primary badge-border fs-6 mb-1">可用張數</span>\
+                            <p class="text-muted mb-0">'+ datas[i].quantity + ' 張</p>\
+                        </div>\
+                        <div class="d-flex flex-wrap gap-4 align-items-center">\
+                            <span class="badge badge-warning badge-border fs-6">融通成數 / 利率</span>\
+                            <p class="text-muted mb-0">'+ datas[i].leverage + ' 成 / '+ datas[i].rate + ' % </p>\
+                        </div>\
+                        <div class="d-flex flex-wrap gap-4 align-items-center">\
+                            <span class="badge badge-secondary badge-border fs-6">擔保張數</span>\
+                            <p class="text-muted mb-0">'+ datas[i].amount + ' 張</p>\
+                        </div>\
+                        <div class="d-flex flex-wrap gap-4 align-items-center">\
+                            <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
+                            <p class="text-muted mb-0">NTD '+ datas[i].charge + ' 元</p>\
+                        </div>\
+                            </div>\
                         </div>\
                     </div>\
-                </div>\
-                <div class="d-flex flex-wrap gap-4 align-items-center">\
-                    <span class="badge badge-primary badge-border fs-6 mb-1">可用張數 / 擔保張數</span>\
-                    <p class="text-muted mb-0">'+ datas[i].quantity + ' / '+ datas[i].amount + '</p>\
-                </div>\
-                <div class="d-flex flex-wrap gap-4 align-items-center">\
-                    <span class="badge badge-secondary badge-border fs-6">可借金額</span>\
-                    <p class="text-muted mb-0">NTD '+ datas[i].charge + ' 元</p>\
-                </div>\
-            </div>\
-        </div>';
-        }
-    }
+                </div>';
+                }
+            }
     selectedPage();
     currentPage == 1 ? prevButton.parentNode.classList.add('disabled') : prevButton.parentNode.classList.remove('disabled');
     currentPage == pages ? nextButton.parentNode.classList.add('disabled') : nextButton.parentNode.classList.remove('disabled');
