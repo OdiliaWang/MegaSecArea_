@@ -18,21 +18,21 @@
   animation: fade-up 1.5s infinite linear;
 }
 
-#d-layout {
+#m-layout {
   display: block;
 }
-@media (max-width: 767px) {
-  #d-layout {
+@media (min-width: 768px) {
+  #m-layout {
     display: none;
   }
 }
 
-#m-layout {
+#d-layout {
   display: none;
 }
-@media (max-width: 767px) {
-  #m-layout {
-    display: flex;
+@media (min-width: 767.99px) {
+  #d-layout {
+    display: block;
   }
 }
 

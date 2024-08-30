@@ -61,8 +61,8 @@ function loadSuccessListData(datas, page) {
                         </div>\
                     </div>\
                 </div>\
-                <div class="card-body p-3 pt-0">\
-                    <div class="d-flex align-items-center justify-content-between mt-4">\
+                <div class="card-body p-3">\
+                    <div class="d-flex align-items-center justify-content-between">\
                         <div>\
                             <span class="fw-semibold fs-20 mb-0">借款金額</span>\
                             <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].loanAmount + ' 元</span>\
@@ -73,24 +73,43 @@ function loadSuccessListData(datas, page) {
                             <span class="fw-semibold fs-20 mb-0">未償金額</span>\
                             <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].notreturnedAmount + ' 元</span>\
                         </div>\
-                        <div class="flex-shrink-0">\
-                            <button type="button" class="btn btn-primary fs-18">還款</button>\
+                        <div id="m-layout">\
+                            <div class="flex-shrink-0">\
+                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>\
+                            </div>\
                         </div>\
                     </div>\
-                    <div class="mt-3 hstack gap-2">\
-                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
-                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
-                    </div>\
-                    <div class="d-flex align-items-center mt-3 text-center">\
-                        <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">\
-                            <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>\
+                    <div id="d-layout">\
+                        <div class="d-flex">\
+                            <div class="flex-grow-1">\
+                                <div class="mt-3 hstack gap-2">\
+                                    <a class="btn btn-outline-secondary fs-16" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
+                                    <a class="btn btn-outline-secondary fs-16" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
+                                    <a class="btn btn-outline-secondary fs-16" href="#showModal" data-bs-toggle="modal">借款明細</a>\
+                                    <a class="btn btn-outline-secondary fs-16" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
+                                </div>\
+                            </div>\
+                            <div class="flex-shrink-0">\
+                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>\
+                            </div>\
                         </div>\
                     </div>\
-                </div>\
-                <div class="collapse border-top border-top-dashed" id="'+ datas[i].controlNo + '">\
-                    <div class="card-footer border-0 hstack gap-2">\
-                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">借款明細</a>\
-                        <a class="btn btn-outline-secondary btn-sm w-100 fs-18" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
+                    <div id="m-layout">\
+                        <div class="mt-3 hstack gap-2">\
+                            <a class="btn btn-outline-secondary w-100 fs-16" href="#showModal" data-bs-toggle="modal">退擔保品</a>\
+                            <a class="btn btn-outline-secondary w-100 fs-16" href="#showModal" data-bs-toggle="modal">轉擔保品</a>\
+                        </div>\
+                        <div class="align-items-center mt-1 text-center">\
+                            <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">\
+                                <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>\
+                            </div>\
+                        </div>\
+                        <div class="collapse" id="'+ datas[i].controlNo + '">\
+                            <div class="hstack gap-2">\
+                                <a class="btn btn-outline-secondary w-100 fs-16" href="#showModal" data-bs-toggle="modal">借款明細</a>\
+                                <a class="btn btn-outline-secondary w-100 fs-16" href="#showModal" data-bs-toggle="modal">擔保品明細</a>\
+                            </div>\
+                        </div>\
                     </div>\
                 </div>\
             </div>\

@@ -71,17 +71,18 @@ $border-color: #ced4da;
   animation: fade-up 1.5s infinite linear;
 }
 
-#d-layout {
+
+#m-layout {
   display: block;
-  @media (max-width: 767px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
 
-#m-layout {
+#d-layout {
   display: none;
-  @media (max-width: 767px) {
-    display: flex;
+  @media (min-width: 767.99px) {
+    display: block;
   }
 }
 
