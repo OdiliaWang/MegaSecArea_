@@ -71,7 +71,6 @@ $border-color: #ced4da;
   animation: fade-up 1.5s infinite linear;
 }
 
-
 #m-layout {
   display: block;
   @media (min-width: 768px) {
@@ -90,25 +89,25 @@ $border-color: #ced4da;
   color: $primary-800;
 }
 .link-secondary {
-    color: $secondary;
-    :hover {
-        color: $secondary-600;
-    }
-    :focus {
-        color: $secondary-800;
-    }
+  color: $secondary;
+  :hover {
+    color: $secondary-600;
+  }
+  :focus {
+    color: $secondary-800;
+  }
 }
 .link-success {
-    color: $success-800;
+  color: $success-800;
 }
 .link-info {
-    color: $info-800;
+  color: $info-800;
 }
 .link-warning {
-    color: $warning-800;
+  color: $warning-800;
 }
 .link-danger {
-    color: $danger-800;
+  color: $danger-800;
 }
 
 .bg-soft-primary {
@@ -1426,12 +1425,17 @@ table [data-qtvalue],
 
 //unres
 .feeColor {
-    color: $danger;
-    font-size: 16px;
-    font-weight: 900;
+  color: $danger;
+  font-size: 16px;
+  font-weight: 900;
 }
 .amountColor {
-    color: $danger;
-    font-size: 16px;
-    font-weight: 900;
+  color: $danger;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.input-step.inputAdjust {
+  height: 40px;
+  width: 150px;
 }

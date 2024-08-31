@@ -1250,4 +1250,9 @@ table [data-qtvalue]::before,
   color: #3c61aa;
   font-size: 16px;
   font-weight: 900;
+}
+
+.input-step.inputAdjust {
+  height: 40px;
+  width: 150px;
 }/*# sourceMappingURL=mega.css.map */

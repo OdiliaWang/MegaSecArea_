@@ -55,16 +55,16 @@
 	},
 	{
 		"id": "7",
-		"stockName": ["富喬","1815"],
+		"stockName": ["十銓","4967"],
 		"quantity":"300",
 		"leverage":"2",
 		"amount": "0",
 		"rate": "2",
-		"charge": "1,200,000"
+		"charge": "465,838"
 	},
 	{
 		"id": "8",
-		"stockName": ["大立光","3008"],
+		"stockName": ["益登","3048"],
 		"quantity":"104",
 		"leverage":"5",
 		"amount": "0",
@@ -73,20 +73,20 @@
 	},
 	{
 		"id": "9",
-		"stockName": ["鴻海","2317"],
+		"stockName": ["錸寶","8104"],
 		"quantity":"100",
 		"leverage":"5",
 		"amount": "0",
 		"rate": "3",
-		"charge": "1,200,000"
+		"charge": "2,364,758"
 	},
 	{
 		"id": "10",
-		"stockName": ["創惟","6104"],
+		"stockName": ["弘憶股","3312"],
 		"quantity":"555",
 		"leverage":"6",
 		"amount": "0",
 		"rate": "1.5",
-		"charge": "1,200,000"
+		"charge": "789,065"
 	}
 ]
