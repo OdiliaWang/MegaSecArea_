@@ -36,6 +36,17 @@
   }
 }
 
+@media (min-width: 768px) {
+  .w-sm-lg-100 {
+    width: 100%;
+  }
+}
+@media (min-width: 767.99px) {
+  .w-sm-lg-100 {
+    width: 50%;
+  }
+}
+
 .link-primary {
   color: #de6269;
 }
@@ -1242,8 +1253,11 @@ table [data-qtvalue]::before,
 
 .feeColor {
   color: #3c61aa;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
+  line-height: 1.5;
+  border: #3c61aa 1px solid !important;
+  padding: 0.3px 5px;
 }
 
 .amountColor {

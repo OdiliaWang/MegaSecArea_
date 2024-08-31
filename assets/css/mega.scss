@@ -85,6 +85,15 @@ $border-color: #ced4da;
   }
 }
 
+.w-sm-lg-100 {
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+  @media (min-width: 767.99px) {
+    width: 50%;
+  }
+}
+
 .link-primary {
   color: $primary-800;
 }
@@ -1426,8 +1435,11 @@ table [data-qtvalue],
 //unres
 .feeColor {
   color: $danger;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
+  line-height: 1.5;
+  border: $danger 1px solid !important;
+  padding: 0.3px 5px;
 }
 .amountColor {
   color: $danger;

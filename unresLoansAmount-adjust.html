@@ -402,12 +402,12 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card">
-                                    <div class="card-header">
+                                    <div class="card-header bg-light">
                                         <div class="row justify-content-center">
                                             <div class="col-lg-10">
                                                 <div class="mt-0 px-1">
-                                                    <h4 class="mb-0">利率</h4>
-                                                    <span class="fee feeColor">2.5%</span>
+                                                    <span class="mb-0 h4">利率</span>
+                                                    <span class="badge border feeColor">2.5%</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -416,17 +416,17 @@
                                         <div class="row justify-content-center">
                                             <div class="col-lg-10">
                                                 <div class="px-1">
-                                                    <h5 class="mb-3"><i class="fa-solid fa-quote-right text-secondary me-2"></i>抵繳股票</h5>
+                                                    <h5 class="mb-3">抵繳股票</h5>
                                                     <div class="card border-1 shadow-none p-1">
                                                         <div class="card-body">
-                                                            <div class="row">
+                                                            <div class="row align-items-center">
                                                                 <div class="col-sm-3">
-                                                                    <h4 class="mb-1">創惟</h4>
+                                                                    <h5 class="mb-1">創惟</h5>
                                                                     <h5 class="mb-0 text-muted">6103</h5>
                                                                 </div>
                                                                 <div class="col-sm-5">
-                                                                    <p class="fs-16 mb-1">擔保張數</p>
-                                                                    <div class="input-step inputAdjust">
+                                                                    <p class="mb-1">擔保張數</p>
+                                                                    <div class="input-step inputAdjust step-secondary">
                                                                         <button type="button" class="minus">–</button>
                                                                         <input type="number" value="1" min="1" max="100">
                                                                         <button type="button" class="plus">+</button>
@@ -440,14 +440,14 @@
                                                     </div>
                                                     <div class="card border-1 shadow-none p-1">
                                                         <div class="card-body">
-                                                            <div class="row">
+                                                            <div class="row align-items-center">
                                                                 <div class="col-sm-3">
-                                                                    <h4 class="mb-1">台積電</h4>
+                                                                    <h5 class="mb-1">台積電</h5>
                                                                     <h5 class="mb-0 text-muted">2330</h5>
                                                                 </div>
                                                                 <div class="col-sm-5">
-                                                                    <p class="fs-16 mb-1">擔保張數</p>
-                                                                    <div class="input-step inputAdjust">
+                                                                    <p class="mb-1">擔保張數</p>
+                                                                    <div class="input-step inputAdjust step-secondary">
                                                                         <button type="button" class="minus">–</button>
                                                                         <input type="number" value="1" min="1" max="100">
                                                                         <button type="button" class="plus">+</button>
@@ -470,15 +470,24 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-10">
-                                                <!-- desktop -->
-                                                <div id="d-layout" class="mt-3 px-1">
-                                                    <h5 class="mb-2">申請借款金額</h5>
-                                                    <input type="text" class="form-control w-50" id="valueInput" value="帶入預設金額且可以更改">
+                                                <div class="mt-3 px-1">
+                                                    <div class="vstack gap-2">
+                                                        <h5>申請借款金額</h5>
+                                                        <input type="text" class="form-control w-sm-lg-100" id="valueInput" value="帶入預設金額且可以更改">
+                                                    </div>
                                                 </div>
-                                                <!-- moblie -->
-                                                <div id="m-layout" class="mt-3 px-1">
-                                                    <h5 class="mb-2">申請借款金額</h5>
-                                                    <input type="text" class="form-control w-100" id="valueInput" value="帶入預設金額且可以更改">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <div class="mt-3 px-1">
+                                                    <div class="vstack gap-2">
+                                                        <h5>融通目的</h5>
+                                                        <select class="form-select mb-3 w-sm-lg-100" aria-label="Default select example">
+                                                            <option selected>Open this select menu</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
