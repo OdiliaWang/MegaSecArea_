@@ -1292,4 +1292,16 @@ table [data-qtvalue]::before,
 }
 .unres-check-card .card-header {
   border-color: #ffe0e0;
+}
+
+.unres-return-card {
+  border: 2px solid #42cca4;
+  border-radius: 0.25rem;
+}
+.unres-return-card .card-header {
+  border-color: #42cca4;
+  background-color: #42cca4;
+}
+.unres-return-card .card-header .h4 {
+  color: #fff;
 }/*# sourceMappingURL=mega.css.map */

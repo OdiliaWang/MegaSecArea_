@@ -1480,3 +1480,15 @@ table [data-qtvalue],
         border-color: $primary-400;
     }
 }
+
+.unres-return-card {
+  border: 2px solid $success;
+  border-radius: 0.25rem;
+    .card-header {
+      border-color: $success;
+      background-color: $success;
+      .h4 {
+        color: #fff;
+      }
+    }
+}

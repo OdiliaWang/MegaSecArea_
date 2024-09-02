@@ -83,7 +83,7 @@ function loadSuccessListData(datas, page) {
                         <div class="d-flex">\
                             <div class="flex-grow-1">\
                                 <div class="mt-3 hstack gap-2">\
-                                    <a class="btn btn-outline-secondary fs-16" href="#!">退擔保品</a>\
+                                    <a class="btn btn-outline-secondary fs-16" href="unresLoansReturn-collateral.html">退擔保品</a>\
                                     <a class="btn btn-outline-secondary fs-16" href="#!">轉擔保品</a>\
                                     <a class="btn btn-outline-secondary fs-16" href="#!">借款明細</a>\
                                     <a class="btn btn-outline-secondary fs-16" href="#!">擔保品明細</a>\
