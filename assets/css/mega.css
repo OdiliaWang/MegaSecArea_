@@ -1284,4 +1284,12 @@ table [data-qtvalue]::before,
   justify-content: center;
   background-color: transparent;
   position: absolute;
+}
+
+.unres-check-card {
+  border: 2px solid #ffe0e0;
+  border-radius: 0.25rem;
+}
+.unres-check-card .card-header {
+  border-color: #ffe0e0;
 }/*# sourceMappingURL=mega.css.map */

@@ -1471,5 +1471,12 @@ table [data-qtvalue],
   justify-content: center;
   background-color:transparent;
   position: absolute;
-  
+}
+
+.unres-check-card {
+  border: 2px solid $primary-400;
+  border-radius: 0.25rem;
+    .card-header {
+        border-color: $primary-400;
+    }
 }
