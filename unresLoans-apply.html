@@ -910,54 +910,6 @@
                         </div>
                     </div>
                 </div>
-
-                    <!-- 擔保品數量 modal -->
-                    <div id="showModal" class="modal fade">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header bg-light p-3">
-                                    <h5 class="modal-title">擔保品數量</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
-                                </div>
-                                <form class="tablelist-form" autocomplete="off">
-                                    <div class="modal-body">
-                                        <span id="stockId" style="display: none"></span>
-                                        <div class="mb-3">
-                                            <label for="stockName" class="form-label">股票名稱</label>
-                                            <span id="stockName"></span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="stockQuantity" class="form-label">可用張數</label>
-                                            <span id="stockQuantity"></span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="stockLeverage" class="form-label">融通成數</label>
-                                            <span id="stockLeverage"></span>
-                                        </div>
-                                        <div>
-                                            <label for="stockAmount" class="form-label">擔保張數</label>
-                                            <div class="row">
-                                                <div class="d-flex flex-wrap align-items-start gap-2">
-                                                    <div class="input-step full-width step-secondary">
-                                                        <button type="button" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown(1)">–</button>
-                                                        <input type="number" value="1" min="0" max="100000000" readonly/>
-                                                        <button type="button" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp(1)">+</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <div class="hstack gap-2 justify-content-end">
-                                            <button type="button" id="closeBtn" class="btn btn-light" onclick="closeModal()">取消</button>
-                                            <button type="submit" id="saveBtn" class="btn btn-primary" onclick="saveChanges()">確定</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end modal -->
                 </div>
                 <!-- container-fluid -->
             </div>
