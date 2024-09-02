@@ -1252,12 +1252,13 @@ table [data-qtvalue]::before,
 }
 
 .feeColor {
-  color: #3c61aa;
+  color: #fff;
   font-size: 18px;
   font-weight: 900;
   line-height: 1.5;
   border: #3c61aa 1px solid !important;
   padding: 0.3px 5px;
+  background-color: #3c61aa;
 }
 
 .amountColor {
@@ -1269,4 +1270,18 @@ table [data-qtvalue]::before,
 .input-step.inputAdjust {
   height: 40px;
   width: 150px;
+}
+
+.m-card-flag-ftp {
+  bottom: 3rem;
+  top: 0;
+  right: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
 }/*# sourceMappingURL=mega.css.map */

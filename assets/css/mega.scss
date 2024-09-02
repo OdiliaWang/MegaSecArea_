@@ -1434,12 +1434,13 @@ table [data-qtvalue],
 
 //unres
 .feeColor {
-  color: $danger;
+  color: #fff;
   font-size: 18px;
   font-weight: 900;
   line-height: 1.5;
   border: $danger 1px solid !important;
   padding: 0.3px 5px;
+  background-color: $danger;
 }
 .amountColor {
   color: $danger;
@@ -1450,4 +1451,25 @@ table [data-qtvalue],
 .input-step.inputAdjust {
   height: 40px;
   width: 150px;
+}
+
+.m-card-flag-ftp {
+  bottom: 3rem;
+  top: 0;
+  right: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-bottom-left-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color:transparent;
+  position: absolute;
+  
 }
