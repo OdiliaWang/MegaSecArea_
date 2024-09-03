@@ -1499,9 +1499,28 @@ table [data-qtvalue],
   position: absolute;
 }
 
+.m-card-flag-fbt {
+  bottom: 0;
+  right: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-bottom-left-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color:transparent;
+  position: absolute;
+}
+
 .unres-check-card {
   border: 2px solid $primary-400;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
     .card-header {
         border-color: $primary-400;
     }
@@ -1509,7 +1528,7 @@ table [data-qtvalue],
 
 .unres-return-card {
   border: 2px solid $success;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
     .card-header {
       border-color: $success;
       background-color: $success;

@@ -1304,9 +1304,22 @@ table [data-qtvalue]::before,
   position: absolute;
 }
 
+.m-card-flag-fbt {
+  bottom: 0;
+  right: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+}
+
 .unres-check-card {
   border: 2px solid #ffe0e0;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
 }
 .unres-check-card .card-header {
   border-color: #ffe0e0;
@@ -1314,7 +1327,7 @@ table [data-qtvalue]::before,
 
 .unres-return-card {
   border: 2px solid #42cca4;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
 }
 .unres-return-card .card-header {
   border-color: #42cca4;
