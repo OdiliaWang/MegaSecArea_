@@ -1546,13 +1546,14 @@ table [data-qtvalue],
   }
 
 .unres-check-card {
-  border: 2px solid $primary-400;
-  border-radius: 0.65rem;
+  border: 1px solid $primary-400;
+  border-radius: 0.5rem;
     .card-header {
         display: flex;
         align-items: center;
         border-color: $primary-400;
         background-color: $primary-400;
+        border-radius: 0.25rem 0.25rem 0 0;
         .avatar-title {
             background-color: #fff;
             span {
@@ -1566,13 +1567,14 @@ table [data-qtvalue],
 }
 
 .unres-return-card {
-  border: 2px solid $success;
-  border-radius: 0.65rem;
+  border: 1px solid $success;
+  border-radius: 0.5rem;
     .card-header {
       display: flex;
       align-items: center;
       border-color: $success;
       background-color: $success;
+      border-radius: 0.25rem 0.25rem 0 0;
       .avatar-title {
         background-color: #fff;
         span {
