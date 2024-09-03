@@ -1425,7 +1425,7 @@ table [data-qtvalue],
 //adv-colleaction
 .adv-card-bg {
   background-color: #fff5e2;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .idText {
@@ -1475,7 +1475,7 @@ table [data-qtvalue],
 
 .unres-check-card {
   border: 2px solid $primary-400;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
     .card-header {
         border-color: $primary-400;
     }
@@ -1483,7 +1483,7 @@ table [data-qtvalue],
 
 .unres-return-card {
   border: 2px solid $success;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
     .card-header {
       border-color: $success;
       background-color: $success;
