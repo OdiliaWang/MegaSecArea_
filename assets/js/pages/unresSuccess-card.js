@@ -49,13 +49,13 @@ function loadSuccessListData(datas, page) {
                     <div class="d-flex align-items-center">\
                         <div class="flex-grow-1">\
                             <div>\
-                                <span class="fw-semibold fs-20 mb-0">出借書號</span>\
+                                <span class="fw-semibold mb-0">出借書號</span>\
                                 <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].id + '</span>\
                             </div>\
                         </div>\
                         <div class="flex-shrink-0">\
                             <div>\
-                                <span class="fw-semibold fs-20 mb-0">借款日</span>\
+                                <span class="fw-semibold mb-0">借款日</span>\
                                 <span class="ms-2 text-muted mb-1 fs-16">'+ datas[i].date + '</span>\
                             </div>\
                         </div>\

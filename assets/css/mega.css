@@ -283,6 +283,11 @@ button[mega_act] {
   width: 100%;
 }
 
+.-ms {
+  margin-left: 2.5rem;
+  margin-top: 0.5rem;
+}
+
 .user-data {
   margin: 0.5rem 1.2rem 1.5rem 1.2rem;
   border-bottom: 8px solid transparent;
@@ -1322,7 +1327,19 @@ table [data-qtvalue]::before,
   border-radius: 0.65rem;
 }
 .unres-check-card .card-header {
+  display: flex;
+  align-items: center;
   border-color: #ffe0e0;
+  background-color: #ffe0e0;
+}
+.unres-check-card .card-header .avatar-title {
+  background-color: #fff;
+}
+.unres-check-card .card-header .avatar-title span {
+  color: #495057;
+}
+.unres-check-card .card-header .h4 {
+  color: #495057;
 }
 
 .unres-return-card {
@@ -1330,8 +1347,16 @@ table [data-qtvalue]::before,
   border-radius: 0.65rem;
 }
 .unres-return-card .card-header {
+  display: flex;
+  align-items: center;
   border-color: #42cca4;
   background-color: #42cca4;
+}
+.unres-return-card .card-header .avatar-title {
+  background-color: #fff;
+}
+.unres-return-card .card-header .avatar-title span {
+  color: #42cca4;
 }
 .unres-return-card .card-header .h4 {
   color: #fff;

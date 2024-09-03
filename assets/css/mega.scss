@@ -327,6 +327,11 @@ button[mega_act] {
   width: 100%;
 }
 
+.-ms {
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+}
+
 .user-data {
   margin: 0.5rem 1.2rem calc(0.5rem * 3) 1.2rem;
   border-bottom: 8px solid transparent;
@@ -1522,7 +1527,19 @@ table [data-qtvalue],
   border: 2px solid $primary-400;
   border-radius: 0.65rem;
     .card-header {
+        display: flex;
+        align-items: center;
         border-color: $primary-400;
+        background-color: $primary-400;
+        .avatar-title {
+            background-color: #fff;
+            span {
+              color: $body-color;
+            }
+          }
+          .h4 {
+            color: $body-color;
+          }
     }
 }
 
@@ -1530,8 +1547,16 @@ table [data-qtvalue],
   border: 2px solid $success;
   border-radius: 0.65rem;
     .card-header {
+      display: flex;
+      align-items: center;
       border-color: $success;
       background-color: $success;
+      .avatar-title {
+        background-color: #fff;
+        span {
+          color: $success;
+        }
+      }
       .h4 {
         color: #fff;
       }

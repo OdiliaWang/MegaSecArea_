@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>擔保品退回申請 | 不限用途款項借貸</title>
+    <title>借款進出查詢 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,11 +490,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">擔保品退回申請</h1>
+                                <h1 class="mb-sm-0">借款進出查詢</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
-                                            <a href="unresLoans-detail.html"><i class="fa-solid fa-chevron-left me-2"></i> 回借款明細</a>
+                                            <a href="unres-purpose-loans-dashboard.html"><i class="fa-solid fa-chevron-left me-2"></i> 回不限用途款項借貸</a>
                                         </li>
                                     </ol>
                                 </div>
@@ -504,218 +504,163 @@
                     <!-- end row -->
                     <!--頁首 Cards-->
                     <div class="row">
-                        <div class="col-xxl-12">
-                            <div class="card unres-return-card">
-                                <div class="card-header">
-                                    <div class="avatar-xs">
-                                        <div class="avatar-title rounded-circle align-bottom fs-18">
-                                            <span class="mb-0 h4">1</span>
+                        <div class="col-12">
+                            <div class="card adv-card-bg">
+                                <div class="card-body pb-0 px-3">
+                                    <div class="row align-items-center g-3 mb-3">
+                                        <div class="col-md-auto">
+                                            <div class="position-relative d-inline-block">
+                                                <img src="assets/img/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md col-sm-12">
+                                            <div class="hstack gap-2 flex-wrap">
+                                                <div>
+                                                    <i class="ri-user-3-line align-bottom me-1"></i>郝大偉
+                                                </div>
+                                            <div class="vr"></div>
+                                            <div>
+                                                <i class="ri-home-smile-line align-bottom me-1"></i>
+                                                7000-1234567 天母分公司
+                                            </div>
+                                        </div>
+                                        <div class="hstack gap-2 flex-wrap mt-2">   
+                                            <div>
+                                                <i class="ri-building-line align-bottom me-1"></i>開戶狀態
+                                                <span class="badge badge-success fs-14">已開戶</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <span class="mb-0 h4 ms-2">擔保品退回內容</span>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="row gy-3">
-                                            <div class="d-flex">
-                                                <div class="avatar-xs">
-                                                    <div class="avatar-title bg-success rounded-circle align-bottom fs-18">
-                                                        <i class="bx bx-receipt"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 mb-3">
-                                                    <h5 class="mb-1">鴻海</h5>
-                                                    <h5 class="text-muted mb-0">2317</h5>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">原始張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">已退還張數</h5>
-                                                <span class="text-danger">0張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <h5 class="mb-1 fw-medium">擔保品市值</h5>
-                                                <span class="text-danger">32,500,000元</span>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                <div class="input-step inputAdjust step-secondary">
-                                                    <button type="button" class="minus">–</button>
-                                                    <input type="number" value="1" min="1" max="100">
-                                                    <button type="button" class="plus">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row gy-3">
-                                            <div class="d-flex">
-                                                <div class="avatar-xs">
-                                                    <div class="avatar-title bg-success rounded-circle align-bottom fs-18">
-                                                        <i class="bx bx-receipt"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 mb-3">
-                                                    <h5 class="mb-1">鴻海</h5>
-                                                    <h5 class="text-muted mb-0">2317</h5>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">原始張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">已退還張數</h5>
-                                                <span class="text-danger">0張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <h5 class="mb-1 fw-medium">擔保品市值</h5>
-                                                <span class="text-danger">32,500,000元</span>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                <div class="input-step inputAdjust step-secondary">
-                                                    <button type="button" class="minus">–</button>
-                                                    <input type="number" value="1" min="1" max="100">
-                                                    <button type="button" class="plus">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row gy-3">
-                                            <div class="d-flex">
-                                                <div class="avatar-xs">
-                                                    <div class="avatar-title bg-success rounded-circle align-bottom fs-18">
-                                                        <i class="bx bx-receipt"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-2 mb-3">
-                                                    <h5 class="mb-1">鴻海</h5>
-                                                    <h5 class="text-muted mb-0">2317</h5>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">原始張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">已退還張數</h5>
-                                                <span class="text-danger">0張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                <span class="text-danger">200張</span>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <h5 class="mb-1 fw-medium">擔保品市值</h5>
-                                                <span class="text-danger">32,500,000元</span>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                <div class="input-step inputAdjust step-secondary">
-                                                    <button type="button" class="minus">–</button>
-                                                    <input type="number" value="1" min="1" max="100">
-                                                    <button type="button" class="plus">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row g-2">
+                                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class='bx bx-calendar fs-5'></i>
+                                                        </div>
+                                                        <input type="text" class="form-control" data-provider="flatpickr" data-date-format="Y/M/d" data-range-date="true" placeholder="選擇申請日期區間" id="rage-date">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                                    <button class="btn btn-secondary w-100 mega-act" onclick="filterData();">查詢</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="col-lg-12">
-                        <div class="card unres-check-card">
-                            <div class="card-header">
-                                <div class="avatar-xs">
-                                    <div class="avatar-title rounded-circle align-bottom fs-18">
-                                        <span class="mb-0 h4">2</span>
+                        <!-- start Cards -->
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-header bg-light border-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold mb-0">借款書號</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">0001</span>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <span class="fw-semibold mb-0">申請日期</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">2023/10/10</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="mb-0 h4 ms-2">申請內容確認</span>
-                            </div>
-                            <div class="card-body">
-                                <!-- 1 -->
-                                <div class="card border-1 shadow-none p-1">
-                                    <div class="card-body">
-                                        <div class="row g-3">
-                                            <div class="col-sm-2">
-                                                <h5 class="mb-1">台積電</h5>
-                                                <h5 class="mb-0 text-muted">2330</h5>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                <span class="text-secondary">200張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">市值</h5>
-                                                <span class="text-secondary ">32,500,000元</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                <span class="text-secondary ">1張</span>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 avatar-xs">
+                                            <div class="avatar-title bg-secondary rounded-circle align-bottom fs-5">
+                                            <i class="bx bx-dollar-circle"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                </div><!-- end 1 -->
-                                <!-- 2 -->
-                                <div class="card border-1 shadow-none p-1">
-                                    <div class="card-body">
-                                        <div class="row g-3">
-                                            <div class="col-sm-2">
-                                                <h5 class="mb-1">台積電</h5>
-                                                <h5 class="mb-0 text-muted">2330</h5>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                <span class="text-secondary">200張</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">市值</h5>
-                                                <span class="text-secondary ">32,500,000元</span>
-                                            </div>
-                                            <div class="col-sm">
-                                                <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                <span class="text-secondary ">1張</span>
-                                            </div>
+                                        <div class="flex-grow-1 ms-2">
+                                            <span class="fw-semibold fs-20 mb-0">借款金額</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
                                         </div>
                                     </div>
-                                </div><!-- end 2 -->
+                                    <div class="-ms">
+                                        <span class="mb-1">還款金額</span>
+                                        <span class="badge badge-secondary fs-5">900,000 元</span></h5>
+                                        <div class="mt-2">
+                                            <span class="mb-1">還款日期</span>
+                                            <span class="ms-2 text-muted fs-16">2024/05/29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Card 1 -->
+
+                            <div class="card">
+                                <div class="card-header bg-light border-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold mb-0">借款書號</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">0001</span>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <span class="fw-semibold mb-0">申請日期</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">2023/10/10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 avatar-xs">
+                                            <div class="avatar-title bg-secondary rounded-circle align-bottom fs-5">
+                                            <i class="bx bx-dollar-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-2">
+                                            <span class="fw-semibold fs-20 mb-0">借款金額</span>
+                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
+                                        </div>
+                                    </div>
+                                    <div class="-ms">
+                                        <span class="mb-1">還款金額</span>
+                                        <span class="badge badge-secondary fs-5">900,000 元</span></h5>
+                                        <div class="mt-2">
+                                            <span class="mb-1">還款日期</span>
+                                            <span class="ms-2 text-muted fs-16">2024/05/29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end Card 2 -->
+                        </div>
+
+                        <!-- NoResult -->
+                        <div class="noresult" style="display: none">
+                            <div class="text-center">
+                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
+                                <h5 class="mt-2">無資料</h5>
+                                <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
                             </div>
                         </div>
-                    </div>
-                    <!-- end Card -->
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-lg-4">
-                            <div class="hstack gap-3">
-                                <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-lg btn-outline-secondary w-50">取消</button>
-                                <a class="btn btn-lg btn-secondary w-50" href="#!">確認送出</a>
-                            </div>
+
+                        <div class="row g-0 justify-content-end mb-4" id="pagination-element">
+                            <!-- end col -->
+                            <div class="col-sm-6">
+                                <div class="pagination-block pagination pagination-separated justify-content-center justify-content-sm-end mb-sm-0">
+                                    <div class="page-item">
+                                        <a href="javascript:void(0);" class="page-link" id="page-prev">前一頁</a>
+                                    </div>
+                                    <span id="page-num" class="pagination"></span>
+                                    <div class="page-item">
+                                        <a href="javascript:void(0);" class="page-link" id="page-next">下一頁</a>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
                         </div>
+                        <!--end row pagination-->
                     </div>
-                    <!-- end button -->
                 </div>
                 <!-- end container fluid -->
             </div>
@@ -747,6 +692,17 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- flatpickr -->
+    <script src="assets/js/flatpicker-custom.js"></script>
+
+    <script>
+        config = {
+            mode: "range"
+        }
+
+        flatpickr("input[id=rage-date]", config);
+    </script>
     
 </body>
 </html>
