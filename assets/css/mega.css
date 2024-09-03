@@ -288,6 +288,11 @@ button[mega_act] {
   margin-top: 0.5rem;
 }
 
+.mega-c-link {
+  color: #495057;
+  font-size: 14px;
+}
+
 .user-data {
   margin: 0.5rem 1.2rem 1.5rem 1.2rem;
   border-bottom: 8px solid transparent;
@@ -1315,6 +1320,17 @@ table [data-qtvalue]::before,
   width: 3.5rem;
   height: 3.5rem;
   border-bottom-left-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+}
+
+.m-card-link-ftp {
+  bottom: 3rem;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
