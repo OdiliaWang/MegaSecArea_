@@ -250,9 +250,27 @@ button[mega_act] {
   background-color: transparent;
   border: transparent;
   color: #c23656;
-  height: calc(0.2rem + 1em + 2px);
-  width: calc(0.2rem + 1em + 2px);
+  height: calc(0.3rem + 1em + 2px);
+  width: calc(0.3rem + 1em + 2px);
   padding: 0;
+}
+
+.btn-icon-dark {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: transparent;
+  color: #495057;
+  height: calc(0.3rem + 1em + 2px);
+  width: calc(0.3rem + 1em + 2px);
+  padding: 0;
+}
+.btn-icon-dark :hover {
+  background-color: #fff6e6;
+  padding: 0.65rem 0.7rem;
+  border-radius: 50rem;
 }
 
 .center {

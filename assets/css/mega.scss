@@ -258,6 +258,7 @@ $border-color: #ced4da;
   background-color: #f6f9fd;
 }
 
+//Buttons
 button[mega_act] {
   height: 40px;
   font-size: 16px;
@@ -286,10 +287,35 @@ button[mega_act] {
   background-color: transparent;
   border: transparent;
   color: $primary;
-  height: calc(0.2rem + 1em + 2px);
-  width: calc(0.2rem + 1em + 2px);
+  height: calc(0.3rem + 1em + 2px);
+  width: calc(0.3rem + 1em + 2px);
   padding: 0;
 }
+.btn-icon-dark {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: transparent;
+  color: $body-color;
+  height: calc(0.3rem + 1em + 2px);
+  width: calc(0.3rem + 1em + 2px);
+  padding: 0;
+
+  :hover{
+    background-color: $secondary-bg-fresh;
+    padding: 0.65rem 0.7rem;
+    border-radius: 50rem;
+  }
+}
+
 
 .center {
   display: flex;
