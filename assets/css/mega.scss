@@ -16,7 +16,7 @@ $secondary-bg-fresh: #fff6e6;
 $success-bg-fresh: #e3fff2;
 $info-bg-fresh: #efebfe;
 $warning-bg-fresh: #fff0fe;
-$danger-bg-fresh: #e6efff;
+$danger-bg-fresh: #eff4fd;
 $body-bg: #fbfaf7;
 $body-color: #495057;
 $body-bg-gray: #f0efefb6;
@@ -253,6 +253,10 @@ $border-color: #ced4da;
   color: #5974a2;
   background-color: #e4e8ed;
 }
+.badge-danger {
+  color: $danger;
+  background-color: $danger-bg-fresh;
+}
 .badge-cancelled {
   color: #d2d8df;
   background-color: #f6f9fd;
@@ -327,9 +331,18 @@ button[mega_act] {
 }
 
 .mega-c-link {
-    color: $body-color !important;
+    color: $body-color;
     font-size: 16px;
+}
 
+.mega-c-title {
+  padding: 0.8rem 1rem;
+  position: relative;
+
+  &.success {
+    color: $success;
+    background-color: $success-bg-fresh;
+  }
 }
 
 .avatar-mega-item {

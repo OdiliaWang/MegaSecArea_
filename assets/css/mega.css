@@ -144,7 +144,7 @@
 }
 
 .danger {
-  background-color: #e6efff;
+  background-color: #eff4fd;
 }
 .danger a {
   color: #495057;
@@ -225,6 +225,11 @@
   background-color: #e4e8ed;
 }
 
+.badge-danger {
+  color: #3c61aa;
+  background-color: #eff4fd;
+}
+
 .badge-cancelled {
   color: #d2d8df;
   background-color: #f6f9fd;
@@ -284,8 +289,17 @@ button[mega_act] {
 }
 
 .mega-c-link {
-  color: #495057 !important;
+  color: #495057;
   font-size: 16px;
+}
+
+.mega-c-title {
+  padding: 0.8rem 1rem;
+  position: relative;
+}
+.mega-c-title.success {
+  color: #42cca4;
+  background-color: #e3fff2;
 }
 
 .avatar-mega-item {
@@ -559,7 +573,7 @@ button[mega_act] {
 
 .card-danger {
   position: relative;
-  background-color: #e6efff;
+  background-color: #eff4fd;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
@@ -1259,7 +1273,7 @@ table [data-qtvalue]::before,
   background-color: #fcfcfc;
 }
 .step-arrow-nav .nav .nav-link.active {
-  background-color: #e6efff;
+  background-color: #eff4fd;
   color: #495057;
 }
 .step-arrow-nav .nav .nav-link.done {
