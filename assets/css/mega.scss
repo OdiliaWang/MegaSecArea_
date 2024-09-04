@@ -332,7 +332,7 @@ button[mega_act] {
 
 .mega-c-link {
     color: $body-color;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .mega-c-title {
@@ -342,6 +342,10 @@ button[mega_act] {
   &.success {
     color: $success;
     background-color: $success-bg-fresh;
+  }
+  &.info {
+    color: $info;
+    background-color: $info-bg-fresh;
   }
 }
 

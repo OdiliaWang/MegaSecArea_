@@ -290,7 +290,7 @@ button[mega_act] {
 
 .mega-c-link {
   color: #495057;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .mega-c-title {
@@ -300,6 +300,10 @@ button[mega_act] {
 .mega-c-title.success {
   color: #42cca4;
   background-color: #e3fff2;
+}
+.mega-c-title.info {
+  color: #5a4180;
+  background-color: #efebfe;
 }
 
 .avatar-mega-item {
