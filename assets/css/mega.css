@@ -284,8 +284,8 @@ button[mega_act] {
 }
 
 .mega-c-link {
-  color: #495057;
-  font-size: 14px;
+  color: #495057 !important;
+  font-size: 16px;
 }
 
 .avatar-mega-item {
