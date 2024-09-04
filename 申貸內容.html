@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>借款明細查詢 | 不限用途款項借貸</title>
+    <title>申貸內容 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,11 +490,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">借款明細查詢</h1>
+                                <h1 class="mb-sm-0">申貸內容</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
-                                            <a href="不限用途款項借貸menu.html"><i class="fa-solid fa-chevron-left me-2"></i> 回不限用途款項借貸</a>
+                                            <a href="借款申請.html"><i class="fa-solid fa-chevron-left me-2"></i> 回借款申請</a>
                                         </li>
                                     </ol>
                                 </div>
@@ -520,8 +520,7 @@
                                                 </div>
                                             <div class="vr"></div>
                                             <div>
-                                                <i class="ri-home-smile-line align-bottom me-1"></i>
-                                                7000-1234567 天母分公司
+                                                <i class="ri-home-smile-line align-bottom me-1"></i>7000-1234567 天母分公司
                                             </div>
                                         </div>
                                         <div class="hstack gap-2 flex-wrap mt-2">   
@@ -534,76 +533,250 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-12 col-lg-12 col-sm-12">
-                            <div class="card card-animate">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <div>
-                                                <span class="fw-semibold mb-0">出借書號</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">0001</span>
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <span class="mb-0 h4">利率 <i class="fa-solid fa-caret-right ms-1"></i></span>
+                                                <span class="badge border feeColor ms-2">2.5%</span>
                                             </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <div>
-                                                <span class="fw-semibold mb-0">借款日</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">2024/05/29</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <span class="fw-semibold fs-20 mb-0">借款金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">未償金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
-                                        </div>
-                                        <div id="m-layout">
-                                            <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="d-layout">
-                                        <div class="d-flex">
-                                            <div class="flex-grow-1">
-                                                <div class="mt-3 hstack gap-2">
-                                                    <a class="btn btn-outline-secondary fs-16" href="退擔保品.html">退擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="轉存擔保品.html">轉擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="借款明細.html">借款明細</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="擔保品明細.html">擔保品明細</a>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="px-1">
+                                                            <h5 class="mb-3">抵繳股票</h5>
+                                                            <div class="card border-1 shadow-none p-1">
+                                                                <div class="card-body">
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-2">
+                                                                            <h5 class="mb-1">創惟</h5>
+                                                                            <h5 class="mb-0 text-muted">6103</h5>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">可用張數</h5>
+                                                                            <span class="text-secondary ">555張</span>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">融通成數</h5>
+                                                                            <span class="text-secondary ">3成</span>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <h5 class="mb-1 fw-medium">擔保張數</h5>
+                                                                            <div class="input-step inputAdjust step-secondary">
+                                                                                <button type="button" class="minus">–</button>
+                                                                                <input type="number" value="1" min="1" max="100">
+                                                                                <button type="button" class="plus">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm m-card-flag-ftp mt-0">
+                                                                            <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card border-1 shadow-none p-1">
+                                                                <div class="card-body">
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-2">
+                                                                            <h5 class="mb-1">台積電</h5>
+                                                                            <h5 class="mb-0 text-muted">2330</h5>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">可用張數</h5>
+                                                                            <span class="text-secondary ">100張</span>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">融通成數</h5>
+                                                                            <span class="text-secondary ">3成</span>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <h5 class="mb-1 fw-medium">擔保張數</h5>
+                                                                            <div class="input-step inputAdjust step-secondary">
+                                                                                <button type="button" class="minus">–</button>
+                                                                                <input type="number" value="1" min="1" max="100">
+                                                                                <button type="button" class="plus">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm m-card-flag-ftp mt-0">
+                                                                            <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <div class="px-1">
+                                                            <div class="hstack gap-3">
+                                                                <h5 class="mb-0">可借金額上限</h5>
+                                                                <span class="amountColor">500,000元</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <div class="mt-3 px-1">
+                                                            <div class="vstack gap-2">
+                                                                <h5>申請借款金額</h5>
+                                                                <input type="text" class="form-control w-sm-lg-100" id="valueInput" value="帶入預設金額且可以更改">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <span class="mb-0 h4">利率 <i class="fa-solid fa-caret-right ms-1"></i></span>
+                                                <span class="badge border feeColor ms-2">3%</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="px-1">
+                                                            <h5 class="mb-3">抵繳股票</h5>
+                                                            <div class="card border-1 shadow-none p-1">
+                                                                <div class="card-body">
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-2">
+                                                                            <h5 class="mb-1">創惟</h5>
+                                                                            <h5 class="mb-0 text-muted">6103</h5>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">可用張數</h5>
+                                                                            <span class="text-secondary ">555張</span>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">融通成數</h5>
+                                                                            <span class="text-secondary ">3成</span>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <h5 class="mb-1 fw-medium">擔保張數</h5>
+                                                                            <div class="input-step inputAdjust step-secondary">
+                                                                                <button type="button" class="minus">–</button>
+                                                                                <input type="number" value="1" min="1" max="100">
+                                                                                <button type="button" class="plus">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm m-card-flag-ftp mt-0">
+                                                                            <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card border-1 shadow-none p-1">
+                                                                <div class="card-body">
+                                                                    <div class="row g-3">
+                                                                        <div class="col-sm-2">
+                                                                            <h5 class="mb-1">台積電</h5>
+                                                                            <h5 class="mb-0 text-muted">2330</h5>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">可用張數</h5>
+                                                                            <span class="text-secondary ">100張</span>
+                                                                        </div>
+                                                                        <div class="col-sm">
+                                                                            <h5 class="mb-1 fw-medium">融通成數</h5>
+                                                                            <span class="text-secondary ">3成</span>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <h5 class="mb-1 fw-medium">擔保張數</h5>
+                                                                            <div class="input-step inputAdjust step-secondary">
+                                                                                <button type="button" class="minus">–</button>
+                                                                                <input type="number" value="1" min="1" max="100">
+                                                                                <button type="button" class="plus">+</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm m-card-flag-ftp mt-0">
+                                                                            <button class="btn btn-icon-dark"><i class="fa-solid fa-trash-can"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <div class="px-1">
+                                                            <div class="hstack gap-3">
+                                                                <h5 class="mb-0">可借金額上限</h5>
+                                                                <span class="amountColor">500,000元</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <div class="mt-3 px-1">
+                                                            <div class="vstack gap-2">
+                                                                <h5>申請借款金額</h5>
+                                                                <input type="text" class="form-control w-sm-lg-100" id="valueInput" value="帶入預設金額且可以更改">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="m-layout">
-                                        <div class="mt-3 hstack gap-2">
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="退擔保品.html">退擔保品</a>
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="轉存擔保品.html">轉擔保品</a>
-                                        </div>
-                                        <div class="align-items-center mt-1 text-center">
-                                            <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">
-                                                <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="collapse" id="'+ datas[i].controlNo + '">
-                                            <div class="hstack gap-2">
-                                                <a class="btn btn-outline-secondary w-100 fs-16" href="#!">借款明細</a>
-                                                <a class="btn btn-outline-secondary w-100 fs-16" href="擔保品明細.html">擔保品明細</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
+                            <div class="col-xl-4">
+                                <div class="sticky-side-div">
+                                    <div class="card unres-check-card">
+                                        <div class="card-header d-block">
+                                            <div class="mt-0 px-1">
+                                                <span class="mb-0 h4">申請內容確認</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="px-1">
+                                                        <div class="hstack gap-3">
+                                                            <h5 class="mb-0">可借金額上限（總額）</h5>
+                                                            <span class="amountColor">1,000,000元</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="mt-3 px-1">
+                                                        <div class="hstack gap-2">
+                                                            <h5>申請借款金額（總額）</h5>
+                                                            <span class="amountColor">80,000元</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="mt-3 px-1">
+                                                        <div class="vstack gap-2">
+                                                            <h5>融通目的</h5>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>投資上市櫃有價證券</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <span class="text-primary fs-14">【本人聲明非上列擔保品發行公司之內部人（含配偶、未成年子女與利用他人名義持有者）】</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-12">
+                                            <div class="hstack gap-3">
+                                                <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
+                                                <a class="btn btn-secondary w-50" href="回傳結果.html">確認送出</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end button -->
+                                </div>
+                                <!-- end Sticky -->
+                            </div>
+                            <!-- end Card -->
                         </div>
                     </div>
                 </div>

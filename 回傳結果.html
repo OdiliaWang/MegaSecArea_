@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>借款明細查詢 | 不限用途款項借貸</title>
+    <title>申請結果 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,7 +490,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">借款明細查詢</h1>
+                                
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
@@ -503,104 +503,24 @@
                     </div>
                     <!-- end row -->
                     <!--頁首 Cards-->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card adv-card-bg">
-                                <div class="card-body pb-0 px-3">
-                                    <div class="row align-items-center g-3 mb-3">
-                                        <div class="col-md-auto">
-                                            <div class="position-relative d-inline-block">
-                                                <img src="assets/img/user-dummy-img.jpg" alt="" class="avatar-lg rounded-circle img-thumbnail"/>
-                                            </div>
-                                        </div>
-                                        <div class="col-md col-sm-12">
-                                            <div class="hstack gap-2 flex-wrap">
-                                                <div>
-                                                    <i class="ri-user-3-line align-bottom me-1"></i>郝大偉
-                                                </div>
-                                            <div class="vr"></div>
-                                            <div>
-                                                <i class="ri-home-smile-line align-bottom me-1"></i>
-                                                7000-1234567 天母分公司
-                                            </div>
-                                        </div>
-                                        <div class="hstack gap-2 flex-wrap mt-2">   
-                                            <div>
-                                                <i class="ri-building-line align-bottom me-1"></i>整戶維持率
-                                                <span class="badge badge-warning fs-14">100%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-12 col-lg-12 col-sm-12">
-                            <div class="card card-animate">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <div>
-                                                <span class="fw-semibold mb-0">出借書號</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">0001</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <div>
-                                                <span class="fw-semibold mb-0">借款日</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">2024/05/29</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-3">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <span class="fw-semibold fs-20 mb-0">借款金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">未償金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
-                                        </div>
-                                        <div id="m-layout">
-                                            <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="d-layout">
-                                        <div class="d-flex">
-                                            <div class="flex-grow-1">
-                                                <div class="mt-3 hstack gap-2">
-                                                    <a class="btn btn-outline-secondary fs-16" href="退擔保品.html">退擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="轉存擔保品.html">轉擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="借款明細.html">借款明細</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="擔保品明細.html">擔保品明細</a>
-                                                </div>
-                                            </div>
-                                            <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="m-layout">
-                                        <div class="mt-3 hstack gap-2">
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="退擔保品.html">退擔保品</a>
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="轉存擔保品.html">轉擔保品</a>
-                                        </div>
-                                        <div class="align-items-center mt-1 text-center">
-                                            <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">
-                                                <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="collapse" id="'+ datas[i].controlNo + '">
-                                            <div class="hstack gap-2">
-                                                <a class="btn btn-outline-secondary w-100 fs-16" href="#!">借款明細</a>
-                                                <a class="btn btn-outline-secondary w-100 fs-16" href="擔保品明細.html">擔保品明細</a>
-                                            </div>
-                                        </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-12">
+                            <div class="card">
+                                <div class="card-body text-center mt-3 mb-3">
+                                    <h3 class="fw-bold">委託送出成功</h3>
+                                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/jvihlqtw.json"
+                                        trigger="hover"
+                                        colors="primary:#42cca4"
+                                        state="hover-2"
+                                        style="width:100px;height:100px">
+                                    </lord-icon>
+                                    <br>
+                                    <div class="p-3 pb-0 text-center">
+                                        <span class="fs-16">您已完成「不限用途款項借貸」申請 <br>
+                                            請至<a href="#!" class="link-danger">申請中案件</a>檢查委託狀態
+                                        </span>
                                     </div>
                                 </div>
                             </div>
