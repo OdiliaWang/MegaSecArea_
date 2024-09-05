@@ -20,6 +20,10 @@
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+
+    <!-- Sweet Alert css-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
@@ -592,6 +596,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4">
+                                    <div class="hstack gap-3">
+                                        <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
+                                        <button type="button" id="sa-params" class="btn btn-secondary w-50" href="#!">確認送出</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end button -->
                         </div>
                     </div>
                 </div>
@@ -622,6 +635,12 @@
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/backtotop.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweetalerts.custom.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
