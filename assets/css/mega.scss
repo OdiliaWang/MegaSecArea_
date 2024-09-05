@@ -156,6 +156,12 @@ $border-color: #ced4da;
 
   a {
     color: #495057;
+    &.btn {
+      color: $success;
+      &:hover {
+        color: #fff;
+      }
+    }
   }
   i {
     color: $success;

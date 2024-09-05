@@ -119,6 +119,12 @@
 .success a {
   color: #495057;
 }
+.success a.btn {
+  color: #42cca4;
+}
+.success a.btn:hover {
+  color: #fff;
+}
 .success i {
   color: #42cca4;
 }
