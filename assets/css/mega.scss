@@ -353,6 +353,10 @@ button[mega_act] {
     color: $info;
     background-color: $info-bg-fresh;
   }
+  &.danger {
+    color: $danger;
+    background-color: $danger-bg-fresh;
+  }
 }
 
 .avatar-mega-item {

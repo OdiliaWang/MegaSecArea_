@@ -311,6 +311,10 @@ button[mega_act] {
   color: #5a4180;
   background-color: #efebfe;
 }
+.mega-c-title.danger {
+  color: #3c61aa;
+  background-color: #eff4fd;
+}
 
 .avatar-mega-item {
   height: 1.5rem;
