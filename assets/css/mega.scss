@@ -11,7 +11,7 @@ $success-light: #a6f4dc;
 $info-light: #ab93e5;
 $warning-light: #ce84c7;
 $danger-light: #829ee3;
-$primary-bg-fresh: #ffe6e6;
+$primary-bg-fresh: #fee7e7;
 $secondary-bg-fresh: #fff6e6;
 $success-bg-fresh: #e3fff2;
 $info-bg-fresh: #efebfe;
@@ -31,8 +31,9 @@ $btn-success: #62ddb9;
 $btn-info: #785bbb;
 $btn-warning: #a265c6;
 $btn-danger: #829ee3;
-$gray-600: #696e74;
-$gray-400: #989ea5;
+$gray-800: #696e74;
+$gray-600: #989ea5;
+$gray-400: #fce9e9c7;
 $primary-800: #de6269;
 $primary-600: #ed787e;
 $primary-400: #ffe0e0;
@@ -356,6 +357,10 @@ button[mega_act] {
   &.danger {
     color: $danger;
     background-color: $danger-bg-fresh;
+  }
+  &.light {
+    color: $primary-600;
+    background-color: $gray-400;
   }
 }
 

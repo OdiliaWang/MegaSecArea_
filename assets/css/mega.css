@@ -78,7 +78,7 @@
 }
 
 .bg-soft-primary {
-  background-color: #ffe6e6;
+  background-color: #fee7e7;
 }
 
 .bg-soft-secondary {
@@ -94,7 +94,7 @@
 }
 
 .primary {
-  background-color: #ffe6e6;
+  background-color: #fee7e7;
 }
 .primary a {
   color: #495057;
@@ -314,6 +314,10 @@ button[mega_act] {
 .mega-c-title.danger {
   color: #3c61aa;
   background-color: #eff4fd;
+}
+.mega-c-title.light {
+  color: #ed787e;
+  background-color: rgba(252, 233, 233, 0.7803921569);
 }
 
 .avatar-mega-item {
