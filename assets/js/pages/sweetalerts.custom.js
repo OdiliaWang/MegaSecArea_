@@ -17,7 +17,7 @@ if (document.getElementById("sa-params"))
                 Swal.fire({
                     title: '已刪除成功',
                     icon: 'success',
-                    confirmButtonText: '<a style="color:#ffffff" href="當日借款.html">完成</a>',
+                    confirmButtonText: '<a style="color:#ffffff" href="不限用途款項借貸menu.html">完成</a>',
                     confirmButtonClass: 'btn btn-secondary w-xs mt-2',
                     buttonsStyling: false
                 })
