@@ -540,32 +540,32 @@
                                         <div class="flex-grow-1">
                                             <div>
                                                 <span class="fw-semibold mb-0">出借書號</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">0001</span>
+                                                <span class="ms-2 text-muted">0001</span>
                                             </div>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div>
                                                 <span class="fw-semibold mb-0">借款日</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">2024/05/29</span>
+                                                <span class="ms-2 text-muted">2024/05/29</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body p-3">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <div>
-                                            <span class="fw-semibold fs-20 mb-0">借款金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
+                                            <span class="mb-0">借款金額</span>
+                                            <span class="ms-2 text-muted mb-1">18,000,000 元</span>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center mt-1">
                                         <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">未償金額</span>
-                                            <span class="ms-2 text-muted mb-1 fs-16">18,000,000 元</span>
+                                            <span class="mb-0">未償金額</span>
+                                            <span class="ms-2 text-muted mb-1">18,000,000 元</span>
                                         </div>
                                         <div id="m-layout">
                                             <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
+                                                <button type="button" class="btn btn-primary">還款</button>
                                             </div>
                                         </div>
                                     </div>
@@ -573,28 +573,31 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
                                                 <div class="mt-3 hstack gap-2">
-                                                    <a class="btn btn-outline-secondary fs-16" href="退擔保品.html">退擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="轉存擔保品.html">轉擔保品</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="借款明細.html">借款明細</a>
-                                                    <a class="btn btn-outline-secondary fs-16" href="擔保品明細.html">擔保品明細</a>
+                                                    <a class="btn btn-outline-secondary" href="退擔保品.html">退擔保品</a>
+                                                    <a class="btn btn-outline-secondary" href="轉存擔保品.html">轉擔保品</a>
+                                                    <a class="btn btn-outline-secondary" href="借款明細.html">借款明細</a>
+                                                    <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
                                                 </div>
                                             </div>
                                             <div class="flex-shrink-0">
-                                                <button type="button" class="btn btn-primary fs-16 mt-3">還款</button>
+                                                <button type="button" class="btn btn-primary mt-3">還款</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="m-layout">
                                         <div class="mt-3 hstack gap-2">
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="退擔保品.html">退擔保品</a>
-                                            <a class="btn btn-outline-secondary w-100 fs-16" href="轉存擔保品.html">轉擔保品</a>
+                                            <a class="btn btn-outline-secondary w-100" href="退擔保品.html">退擔保品</a>
+                                            <a class="btn btn-outline-secondary w-100" href="轉存擔保品.html">轉擔保品</a>
                                         </div>
                                         <div class="align-items-center mt-1 text-center">
-                                            <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#'+ datas[i].controlNo + '" aria-expanded="false" aria-controls="'+ datas[i].controlNo + '">
-                                                <button type="button" class="btn link-dark moreDetail">更多明細 <i class="ri-arrow-down-s-line moreDetail"></i></button>
+                                            <div class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#cardBtn" aria-expanded="false" aria-controls="cardBtn">
+                                                <button type="button" class="btn toggle-btn">檢視其他明細
+                                                    <i class="fa-solid fa-chevron-down open"></i>
+                                                    <i class="fa-solid fa-chevron-up close"></i>
+                                                </button>
                                             </div>
                                         </div>
-                                        <div class="collapse" id="'+ datas[i].controlNo + '">
+                                        <div class="collapse" id="cardBtn">
                                             <div class="hstack gap-2">
                                                 <a class="btn btn-outline-secondary w-100 fs-16" href="#!">借款明細</a>
                                                 <a class="btn btn-outline-secondary w-100 fs-16" href="擔保品明細.html">擔保品明細</a>
@@ -634,10 +637,10 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/backtotop.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    
+
+   
 </body>
 </html>
