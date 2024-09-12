@@ -1,10 +1,4 @@
-/*
-Template Name: Velzon - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://Themesbrand.com/
-Contact: Themesbrand@gmail.com
-File: Sweatalerts init js
-*/
+
 
 //Basic
 if (document.getElementById("sa-basic"))
