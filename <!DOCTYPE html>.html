@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xl-8">
+          <!-- 卡片欄位根據利率生成 -->
+          <div id="rateCards"></div>
+        </div>
+      
+        <!-- 申請內容確認區塊 -->
+        <div class="col-xl-4">
+            <div class="sticky-side-div">
+                <div class="card unres-check-card">
+                    <div class="card-header d-block">
+                        <div class="mt-0 px-1">
+                            <span class="mb-0 h4">申請內容確認</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="px-1">
+                            <div class="hstack gap-3">
+                                <h5 class="mb-0">可借金額上限（總額）</h5>
+                                <span class="amountColor" id="totalLoanLimit">0元</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mt-3 px-1">
+                            <div class="hstack gap-2">
+                                <h5>申請借款金額（總額）</h5>
+                                <span class="amountColor" id="totalRequestedLoan">0元</span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 送出按鈕 -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="hstack gap-3">
+                        <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
+                        <a class="btn btn-secondary w-50" href="unresLoans-result.html">確認送出</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <Script>
+        window.onload = function () {
+            const selectedStocks = JSON.parse(sessionStorage.getItem('selectedStocks')) || [];
+            const rateCategories = {};
+            let totalLoanLimit = 0;
+            let totalRequestedLoan = 0;
+
+            // 將股票根據利率分類
+            selectedStocks.forEach(stock => {
+                if (!rateCategories[stock.rate]) {
+                rateCategories[stock.rate] = [];
+                }
+                rateCategories[stock.rate].push(stock);
+            });
+
+            const rateCardsDiv = document.getElementById('rateCards');
+
+            // 生成卡片
+            for (const rate in rateCategories) {
+                let stocksHTML = '';
+                rateCategories[rate].forEach(stock => {
+                const availableQuantity = stock.quantity; // 可用張數
+                const leverage = stock.leverage; // 融通成數 (借款比例)
+                const collateralQuantity = stock.amount; // 擔保張數
+                const maxLoanAmount = (collateralQuantity * leverage * 1000).toFixed(2); // 計算可借金額
+
+                // 計算總額
+                totalLoanLimit += parseFloat(maxLoanAmount);
+                totalRequestedLoan += parseFloat(maxLoanAmount); // 假設使用全部擔保張數
+
+                // 生成卡片的HTML
+                stocksHTML += `
+                    <div class="card border-1 shadow-none p-1">
+                    <div class="card-body">
+                        <div class="row g-3">
+                        <div class="col-sm-2">
+                            <h5 class="mb-1">${stock.stockName[0]}</h5>
+                            <h5 class="mb-0 text-muted">${stock.stockId}</h5>
+                        </div>
+                        <div class="col-sm">
+                            <h5 class="mb-1 fw-medium">可用張數</h5>
+                            <span class="text-secondary ">${availableQuantity} 張</span>
+                        </div>
+                        <div class="col-sm">
+                            <h5 class="mb-1 fw-medium">融通成數</h5>
+                            <span class="text-secondary ">${leverage} 成</span>
+                        </div>
+                        <div class="col-sm-5">
+                            <h5 class="mb-1 fw-medium">擔保張數</h5>
+                            <div class="input-step inputAdjust step-secondary">
+                            <button type="button" class="minus">–</button>
+                            <input type="number" value="${collateralQuantity}" min="1" max="${availableQuantity}">
+                            <button type="button" class="plus">+</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>`;
+                });
+
+                // 插入利率區塊
+                rateCardsDiv.innerHTML += `
+                <div class="col-lg-12">
+                    <div class="card">
+                    <div class="card-header bg-light">
+                        <span class="mb-0 h4">利率 <i class="fa-solid fa-caret-right ms-1"></i></span>
+                        <span class="badge border feeColor ms-2">${rate}%</span>
+                    </div>
+                    <div class="card-body">
+                        ${stocksHTML}
+                    </div>
+                    </div>
+                </div>`;
+            }
+
+            // 更新總額
+            document.getElementById('totalLoanLimit').textContent = `${totalLoanLimit.toLocaleString()}元`;
+            document.getElementById('totalRequestedLoan').textContent = `${totalRequestedLoan.toLocaleString()}元`;
+        };
+
+    </Script>
+</body>
+</html>
+  
+

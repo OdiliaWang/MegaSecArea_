@@ -655,7 +655,7 @@ button[mega_act] {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 10px 0px 10px;
-  background-color: #ed787e;
+  background-image: linear-gradient(to right, rgba(237, 120, 126, 0.7254901961) 0%, rgba(255, 211, 213, 0.7215686275) 90%);
   border-radius: 10px;
   vertical-align: text-bottom;
 }
@@ -707,7 +707,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #829ee3;
+  background-image: linear-gradient(to right, rgba(130, 158, 227, 0.7254901961) 0%, rgba(182, 202, 255, 0.7215686275) 90%);
   border-radius: 10px;
   vertical-align: text-bottom;
 }
@@ -736,7 +736,6 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #829ee3;
     border-radius: 13px;
     flex: none;
   }
@@ -759,7 +758,7 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-color: #cc9a56;
+  background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 10px;
 }
 .advCard .btn {
@@ -787,7 +786,6 @@ button[mega_act] {
     margin-top: 7px;
     margin-bottom: 7px;
     flex-shrink: 0 !important;
-    background-color: #cc9a56;
     border-radius: 13px;
     flex: none;
   }
@@ -812,7 +810,7 @@ button[mega_act] {
 .nameCard .employImg {
   margin-left: auto !important;
   margin-right: auto !important;
-  background-color: #cc9a56;
+  background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 50%;
 }
 .nameCard .employ-Name {
@@ -1017,9 +1015,9 @@ button[mega_act] {
   }
 }
 .growth {
-  background: url(../img/growth.png);
+  background: url(../img/img_growth.png);
   background-repeat: no-repeat;
-  background-position: right 5% top -30%;
+  background-position: right 5% top -10%;
 }
 
 .signCenter {
