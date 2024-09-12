@@ -1,0 +1,33 @@
+/* Layout */
+#m-layout {
+display: block;
+@media (min-width: 768px) {
+    display: none;
+}
+}
+
+#d-layout {
+display: none;
+@media (min-width: 767.99px) {
+    display: block;
+}
+}
+
+.w-sm-lg-100 {
+@media (min-width: 768px) {
+    width: 100%;
+}
+@media (min-width: 767.99px) {
+    width: 50%;
+}
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.w-full {
+    width: 100%;
+}

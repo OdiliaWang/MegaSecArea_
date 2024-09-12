@@ -1,0 +1,17 @@
+/* Container */
+.chartjs-chart {
+    max-height: 250px;
+}
+
+.lastday {
+    vertical-align: baseline;
+    padding-left: 10px;
+}
+    @media (max-width: 767px) {
+    .lastday {
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+

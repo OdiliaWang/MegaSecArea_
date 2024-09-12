@@ -1,0 +1,147 @@
+/* Navbar */
+.nav-tabs {
+border: 0px;
+
+.nav-link {
+    border: 0px;
+}
+}
+.nav-border-bottom .nav-link {
+border-bottom: 5px solid transparent;
+padding: 20px;
+font-size: 1rem;
+}
+.nav-border-bottom .nav-link.active {
+border-bottom-color: $secondary;
+}
+
+.tabs-secondary {
+.nav-link.active {
+    color: $secondary;
+}
+}
+
+.nav.nav-pills {
+// background: $body-bg-gray;
+border-radius: 10px;
+position: relative;
+
+.nav-link {
+    border-radius: 0px;
+    color: $body-color;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.nav-item {
+    z-index: 3;
+}
+}
+
+.nav.nav-pills .nav-link.active {
+animation: 0.2s ease;
+}
+
+.nav-secondary .nav-link.active {
+color: #fff;
+background-color: $secondary-800;
+border-radius: 5px;
+}
+
+.nav-secondary.nav-tabs-custom {
+.nav-link.active {
+    color: #cb954b;
+    background-color: var(--vz-secondary-bg);
+
+    &::after {
+    background-color: #cb954b;
+    }
+}
+}
+
+.nav-tabs-custom {
+.nav-item {
+    .nav-link {
+    &::after {
+        height: 4px;
+    }
+    }
+}
+}
+
+.navbar-toggler {
+display: none;
+}
+
+@media (max-width: 576px) {
+.nav {
+    .nav-link {
+    font-size: 18px;
+    }
+}
+.m-flex-column {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+}
+
+@media (max-width: 767px) {
+.topnav-hamburger {
+    display: none;
+}
+.navbar-toggler {
+    display: inline-block;
+    margin-left: 1em;
+}
+}
+
+.offcanvas-header {
+padding-bottom: 0;
+}
+
+.offcanvas-body.navbar-menu {
+width: 400px;
+z-index: 1002;
+background: var(--vz-vertical-menu-bg);
+border-left: 1px solid var(--vz-vertical-menu-border);
+bottom: 0;
+margin-top: 0;
+position: fixed;
+top: 0;
+-webkit-box-shadow: var(--vz-vertical-menu-box-shadow);
+box-shadow: var(--vz-vertical-menu-box-shadow);
+padding: 0 0 calc(70px + 25px) 0;
+-webkit-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;
+}
+
+.offcanvas {
+.navbar-nav {
+    .nav-link {
+    i {
+        display: inline-block;
+        min-width: 1.75rem;
+        font-size: 1.20375rem;
+        line-height: inherit;
+    }
+    }
+}
+}
+
+.offcanvas {
+.navbar-menu {
+    .navbar-nav {
+    .nav-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0.625rem 1.5rem;
+        font-size: 1.20375rem;
+    }
+    }
+}
+}

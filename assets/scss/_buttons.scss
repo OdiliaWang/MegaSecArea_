@@ -1,0 +1,57 @@
+/* Buttons */
+button[mega_act] {
+    height: 40px;
+    font-size: 16px;
+    line-height: 1px;
+}
+  
+.btn {
+    &.mega-act {
+      height: 40px;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+}
+  
+.btn-icon-primary {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    color: $primary;
+    height: calc(0.3rem + 1em + 2px);
+    width: calc(0.3rem + 1em + 2px);
+    padding: 0;
+}
+.btn-icon-dark {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    color: $body-color;
+    height: calc(0.3rem + 1em + 2px);
+    width: calc(0.3rem + 1em + 2px);
+    padding: 0;
+
+    :hover{
+        background-color: $secondary-bg-fresh;
+        padding: 0.65rem 0.7rem;
+        border-radius: 50rem;
+    }
+}
