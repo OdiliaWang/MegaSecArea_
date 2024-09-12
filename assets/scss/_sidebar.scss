@@ -1,0 +1,52 @@
+/* Sidebar */
+.user-data {
+    margin: 0.5rem 1.2rem calc(0.5rem * 3) 1.2rem;
+    border-bottom: 8px solid transparent;
+    border-image: linear-gradient(
+      0.25turn,
+      rgba(118, 57, 153),
+      rgba(194, 54, 86)
+    );
+    border-image-slice: 1;
+    text-align: center;
+}
+
+.sidebar-username {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+[data-sidebar-size="sm"] .user-data {
+    display: none;
+}
+
+@media (max-width: 499px) {
+    #navbar-nav > {
+      .nav-item {
+        font-size: 1.05rem;
+      }
+    }
+    .sidebar-username {
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+}
+  
+@media screen and (min-width: 499.1px) {
+    .sidebar-username {
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+}
+  
+.sidebar-account {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}

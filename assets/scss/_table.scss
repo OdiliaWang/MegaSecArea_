@@ -1,0 +1,29 @@
+/* Table */
+.table-nowrap th,
+.table-nowrap td {
+    white-space: nowrap;
+}
+
+table [data-qtvalue],
+[data-charge],
+[data-extrafee] {
+    font-weight: bold;
+    &::before {
+        content: "NTD";
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 0.1rem;
+    }
+}
+
+[data-chargedate] span {
+    font-size: 14px;
+}
+
+.table-btn {
+    margin: 1.55rem 0;
+}
+
+.table-footer-cta {
+    padding: 1rem;
+}

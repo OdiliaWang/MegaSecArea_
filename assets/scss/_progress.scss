@@ -1,0 +1,23 @@
+/* Progress */
+.progress {
+    height: 2rem;
+    border-radius: 10px;
+    background-color: #eff2f7;
+    font-size: 14px;
+}
+
+.step-arrow-nav {
+    .nav {
+        background-color: $body-light;
+
+        .nav-link.active {
+            background-color: $danger-bg-fresh;
+            color: $body-color;
+        }
+
+        .nav-link.done {
+            background-color: $danger-400;
+            color: #ffffff;
+        }
+    }
+}

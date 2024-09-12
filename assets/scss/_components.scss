@@ -1,0 +1,192 @@
+/* Components */
+
+/* link */
+///////////////
+.link-primary {
+    color: $primary-800;
+}
+.link-secondary {
+    color: $secondary;
+    :hover {
+        color: $secondary-600;
+    }
+    :focus {
+        color: $secondary-800;
+    }
+}
+.link-success {
+    color: $success-800;
+}
+.link-info {
+    color: $info-800;
+}
+.link-warning {
+    color: $warning-800;
+}
+.link-danger {
+    color: $danger-800;
+}
+
+/* background */
+///////////////
+.bg-transaction {
+    background-image: url(../img/ebba-img-3.png);
+    background-size: cover;
+}
+
+.bg-soft-primary {
+    background-color: $primary-bg-fresh;
+}
+.bg-soft-secondary {
+    background-color: $secondary-bg-fresh;    
+}
+.bg-soft-warning {
+    background-color: $warning-bg-fresh;
+}
+.bg-soft-light {
+    background-color: rgba(255, 255, 255, 0.287) !important;
+}
+
+/* basic */
+///////////////
+.primary {
+    background-color: $primary-bg-fresh;
+
+    a {
+        color: #495057;
+    }
+    i {
+        color: #f69ba0;
+    }
+}
+.secondary {
+    background-color: $secondary-bg-fresh;
+
+    a {
+        color: #495057;
+    }
+    i {
+        color: $secondary-800;
+    }
+}
+.success {
+    background-color: $success-bg-fresh;
+
+    a {
+        color: #495057;
+        &.btn {
+        color: $success;
+        &:hover {
+            color: #fff;
+        }
+        }
+    }
+    i {
+        color: $success;
+    }
+}
+.info {
+    background-color: $info-bg-fresh;
+
+    a {
+        color: #495057;
+    }
+    i {
+        color: $info-600;
+    }
+}
+.warning {
+    background-color: $warning-bg-fresh;
+
+    a {
+        color: #495057;
+    }
+    i {
+        color: $warning-600;
+    }
+}
+.danger {
+    background-color: $danger-bg-fresh;
+
+    a {
+        color: #495057;
+    }
+    i {
+        color: $danger-600;
+    }
+}
+
+//dot & text
+///////////////
+.chart-first,
+.text-primary {
+    color: $primary-800 !important;
+}
+.chart-second,
+.text-secondary {
+    color: $secondary-800 !important;
+}
+.chart-third,
+.text-success {
+    color: $primary-400 !important;
+}
+.chart-forth,
+.text-info {
+    color: $info-600 !important;
+}
+.chart-fifth {
+    color: $info-light !important;
+}
+.text-warning {
+    color: $warning-800 !important;
+}
+
+
+//Ribbon
+///////////////
+.ribbon-box.right {
+    .ribbon-primary {
+        background: $primary;
+    }
+    .ribbon-primary.ribbon-shape::before {
+        border-right-color: $primary;
+        border-top-color: $primary;
+    }
+    .ribbon-primary.ribbon-shape::before {
+        border-right-color: $primary;
+        border-top-color: $primary;
+    }
+    .ribbon-primary::before {
+        border-color: transparent;
+    }
+
+    .ribbon-warning {
+        background: $warning-800;
+    }
+    .ribbon-warning.ribbon-shape::before {
+        border-right-color: $warning-800;
+        border-top-color: $warning-800;
+    }
+    .ribbon-warning.ribbon-shape::before {
+        border-right-color: $warning-800;
+        border-top-color: $warning-800;
+    }
+    .ribbon-warning::before {
+        border-color: transparent;
+    }
+
+    .ribbon-danger {
+        background: $danger-800;
+    }
+    .ribbon-danger.ribbon-shape::before {
+        border-right-color: $danger-800;
+        border-top-color: $danger-800;
+    }
+    .ribbon-danger.ribbon-shape::before {
+        border-right-color: $danger-800;
+        border-top-color: $danger-800;
+    }
+    .ribbon-danger::before {
+        border-color: transparent;
+    }
+}

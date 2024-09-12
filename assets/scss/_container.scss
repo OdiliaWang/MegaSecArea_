@@ -1,4 +1,7 @@
 /* Container */
+
+/* customized page */
+///////////////
 .chartjs-chart {
     max-height: 250px;
 }
@@ -15,3 +18,274 @@
 }
 
 
+/* index */
+///////////////
+.banner-index {
+    position: relative;
+    display: flex;
+    border-radius: 0.75rem;
+    background: linear-gradient(
+        117deg,
+        rgba(190, 206, 247, 1) 10%,
+        rgba(255, 243, 226, 1) 100%
+    );
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+    overflow: hidden;
+    h4 {
+        padding: 1rem;
+        font-size: 1.25rem;
+    }
+    i {
+        color: $danger;
+        font-size: 1.675rem;
+        margin-top: 0.1em;
+    }
+}
+
+@media (min-width: 1800.98px) {
+    .banner-index {
+        display: none;
+    }
+}
+
+.growth {
+    background: url(../img/img_growth.png);
+    background-repeat: no-repeat;
+    background-position: right 5% top -10%;
+}
+
+/* invest products page */
+///////////////
+.stock-in-ani {
+    width: 40px;
+    i {
+        display: inline;
+        font-size: 16px;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    i[cartadded] {
+        display: none;
+    }
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+        border: 1px solid $btn-primary;
+
+        i {
+        display: none;
+        }
+
+        i[cartadded] {
+        display: inline;
+        font-size: 16px;
+        line-height: 1.35;
+        text-align: center;
+        color: $btn-primary;
+        }
+    }
+}
+
+/* sign center page */
+///////////////
+.signCenter {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    .option-title {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $body-color;
+        img {
+        margin-right: 0.3rem;
+        width: 25px;
+        }
+        p {
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 0;
+        }
+    }
+    .card-footer {
+        display: none;
+    }
+}
+
+/* investock delete */
+///////////////
+.dateArea {
+    padding: 15px 0px;
+    border: 1px solid #ececec;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.error {
+    color: #c23656;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.error-border {
+    border: 1px solid #c23656;
+}
+
+.entrust-title,
+.exchange-title {
+    padding: 10px;
+}
+@media (max-width: 767px) {
+    .entrust-title,
+    .exchange-title {
+        padding: 0px;
+    }
+    .user-num,
+    .stock-num {
+        margin-top: 0.5rem;
+    }
+}
+
+/* adv collection */
+///////////////
+.adv-card-bg {
+    background-color: #fff5e2;
+    border-radius: 0.5rem;
+}
+
+.idText {
+    color: $danger;
+}
+
+
+/* unres loan */
+///////////////
+.feeColor {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.5;
+    border: $danger 1px solid !important;
+    padding: 0.3px 5px;
+    background-color: $danger;
+}
+.amountColor {
+    color: $danger;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.input-step.inputAdjust {
+    height: 40px;
+    width: 150px;
+}
+
+.m-card-flag-ftp {
+    bottom: 3rem;
+    top: 0;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-bottom-left-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color:transparent;
+    position: absolute;
+}
+
+.m-card-flag-fbt {
+    bottom: 0;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-bottom-left-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color:transparent;
+    position: absolute;
+}
+
+.m-card-link-ftp {
+    bottom: 3rem;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color:transparent;
+    position: absolute;
+}
+
+.unres-check-card {
+    border: 1px solid $primary-400;
+    border-radius: 0.5rem;
+    .card-header {
+        display: flex;
+        align-items: center;
+        border-color: $primary-400;
+        background-color: $primary-400;
+        border-radius: 0.25rem 0.25rem 0 0;
+        .avatar-title {
+            background-color: #fff;
+            span {
+              color: $body-color;
+            }
+        }
+        .h4 {
+            color: $body-color;
+        }
+    }
+}
+
+.unres-return-card {
+    border: 1px solid $success;
+    border-radius: 0.5rem;
+    .card-header {
+        display: flex;
+        align-items: center;
+        border-color: $success;
+        background-color: $success;
+        border-radius: 0.25rem 0.25rem 0 0;
+        .avatar-title {
+            background-color: #fff;
+            span {
+            color: $success;
+            }
+        }
+        .h4 {
+            color: #fff;
+        }
+    }
+}

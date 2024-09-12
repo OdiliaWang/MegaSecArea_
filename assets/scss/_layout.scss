@@ -1,4 +1,5 @@
 /* Layout */
+
 #m-layout {
 display: block;
 @media (min-width: 768px) {
@@ -30,4 +31,22 @@ display: none;
   
 .w-full {
     width: 100%;
+}
+
+/* form-check */
+///////////////
+.form-check-input {
+    margin-top: 0 !important;
+  }
+
+/* menu link items */
+///////////////
+.item {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 0.3rem;
+        width: 25px;
+    }
 }

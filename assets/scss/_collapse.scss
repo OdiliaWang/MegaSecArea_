@@ -1,0 +1,28 @@
+/* Collapse */
+.toggle-btn {
+    font-weight: normal;
+    i {
+        color: $gray-600;
+        font-size: 12px;
+        margin-left: 0.35rem;
+    }
+}
+
+[aria-expanded="false"] {
+    .open {
+        display: inline;
+    }
+    .close {
+        display: none;
+    }
+}
+
+[aria-expanded="true"] {
+    .open {
+        display: none;
+    }
+    .close {
+        display: inline;
+        transition: 0.65s all ease-in-out;
+    }
+}
