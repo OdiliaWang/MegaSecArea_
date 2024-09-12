@@ -322,7 +322,6 @@
 }
 
 /* Components */
-/* link */
 .link-primary {
   color: #de6269;
 }
@@ -353,7 +352,6 @@
   color: #485d93;
 }
 
-/* background */
 .bg-transaction {
   background-image: url(../img/ebba-img-3.png);
   background-size: cover;
@@ -375,7 +373,6 @@
   background-color: rgba(255, 255, 255, 0.287) !important;
 }
 
-/* basic */
 .primary {
   background-color: #fee7e7;
 }
@@ -559,12 +556,10 @@
   width: 100%;
 }
 
-/* form-check */
 .form-check-input {
   margin-top: 0 !important;
 }
 
-/* menu link items */
 .item {
   font-size: 1rem;
   display: -webkit-box;
@@ -580,7 +575,6 @@
 }
 
 /* Container */
-/* customized page */
 .chartjs-chart {
   max-height: 250px;
 }
@@ -596,7 +590,6 @@
     margin-bottom: 0.5rem;
   }
 }
-/* index */
 .banner-index {
   position: relative;
   display: -webkit-box;
@@ -635,7 +628,6 @@
   background-position: right 5% top -10%;
 }
 
-/* invest products page */
 .stock-in-ani {
   width: 40px;
 }
@@ -665,7 +657,6 @@
   color: #ed787e;
 }
 
-/* sign center page */
 .signCenter {
   border-radius: 0.75rem;
   padding: 1rem;
@@ -694,7 +685,6 @@
   display: none;
 }
 
-/* investock delete */
 .dateArea {
   padding: 15px 0px;
   border: 1px solid #ececec;
@@ -738,7 +728,6 @@
     margin-top: 0.5rem;
   }
 }
-/* adv collection */
 .adv-card-bg {
   background-color: #fff5e2;
   border-radius: 0.5rem;
@@ -748,7 +737,6 @@
   color: #3c61aa;
 }
 
-/* unres loan */
 .feeColor {
   color: #fff;
   font-size: 18px;
