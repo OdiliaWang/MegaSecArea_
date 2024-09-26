@@ -864,6 +864,32 @@
   color: #fff;
 }
 
+/* Collapse */
+.toggle-btn {
+  font-weight: normal;
+}
+.toggle-btn i {
+  color: #989ea5;
+  font-size: 12px;
+  margin-left: 0.35rem;
+}
+
+[aria-expanded=false] .open {
+  display: inline;
+}
+[aria-expanded=false] .close {
+  display: none;
+}
+
+[aria-expanded=true] .open {
+  display: none;
+}
+[aria-expanded=true] .close {
+  display: inline;
+  -webkit-transition: 0.65s all ease-in-out;
+  transition: 0.65s all ease-in-out;
+}
+
 /* Buttons */
 button[mega_act] {
   height: 40px;
