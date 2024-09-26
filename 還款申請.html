@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>擔保品退回申請 | 不限用途款項借貸</title>
+    <title>還款申請 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,7 +490,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">擔保品退回申請</h1>
+                                <h1 class="mb-sm-0">還款申請</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
@@ -533,105 +533,86 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-12">
-                            <div class="row">
-                                <div id="returnOrder">
-                                    <div class="d-flex gap-2">
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="checkbox" id="formCheck1">
-                                        </div>
+                        <div class="col-xxl-12 col-lg-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header bg-light border-0">
+                                    <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
-                                            <div class="card">
-                                                <div class="card-header bg-light border-0">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <span class="fw-semibold fs-20 mb-0">台積電</span>
-                                                            <h5 class="mb-0 text-muted">2330</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-body">
-                                                    <div class="row g-3">
-                                                        <div class="col-sm">
-                                                            <h5 class="mb-1 fw-medium">原始張數</h5>
-                                                            <span class="text-danger">200張</span>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <h5 class="mb-1 fw-medium">已退還張數</h5>
-                                                            <span class="text-danger">0張</span>
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                            <span class="text-danger">200張</span>
-                                                        </div>
-                                                        <div class="col-sm-2">
-                                                            <h5 class="mb-1 fw-medium">擔保品市值</h5>
-                                                            <span class="text-danger">32,500,000元</span>
-                                                        </div>
-                                                        <div class="col-sm-3">
-                                                            <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                            <div class="input-step inputAdjust step-secondary">
-                                                                <button type="button" class="minus">–</button>
-                                                                <input type="number" value="1" min="1" max="100">
-                                                                <button type="button" class="plus">+</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div>
+                                                <span class="fw-semibold mb-0">出借書號</span>
+                                                <span class="ms-2 text-muted mb-1 fs-16">0001</span>
                                             </div>
-                                            <!-- end Card 1 -->
                                         </div>
+                                        <div class="flex-shrink-0">
+                                            <div>
+                                                <span class="fw-semibold mb-0">借款日</span>
+                                                <span class="ms-2 text-muted mb-1 fs-16">2024/05/29</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex mega-c-title info">
+                                    <div class="flex-grow-1">
+                                        <div class="mb-0">
+                                            <span class="fw-semibold mb-0">未償金額</span>
+                                            <span class="ms-2">1,800,000元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <h6 class="fs-14 fw-light text-muted">初始借款金額</h6>
+                                            <span>1,800,000元</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6 class="fs-14 fw-light text-muted">已還款金額</h6>
+                                            <span>0 元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold mb-1">計算利息日</span>
+                                            <span class="ms-2 mb-1">2024/08/13</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="fw-semibold mb-1">利息</span>
+                                        <span class="ms-2 mb-1">11,199 元</span>
+                                        <div class="mt-2">
+                                            <span class="fw-semibold mb-1">試算手續費</span>
+                                            <span class="ms-2">0 元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold mb-1">本次償還金額</span>
+                                            <span class="ms-2 mb-1">18,000,000 元</span>
+                                            <div class="mt-2">
+                                                <input type="number" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="fw-semibold mb-1">應繳金額</span>
+                                        <span class="ms-2 mb-1 text-danger">10,011,199 元</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-4 mb-5">
+                                    <div class="hstack gap-3">
+                                        <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
+                                        <a class="btn btn-secondary w-50" href="unresLoans-result.html">確認送出</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- end returnCrad -->
-
-                        <div class="col-lg-12">
-                            <div class="card unres-check-card" id="checkCard">
-                                <div class="card-header">
-                                    <span class="mb-0 h4">申請內容確認</span>
-                                </div>
-                                <div class="card-body pb-0">
-                                    <div id="orderCard">
-                                        <div class="card border-1 shadow-none p-1">
-                                            <div class="card-body">
-                                                <div class="row g-3">
-                                                    <div class="col-sm-2">
-                                                        <h5 class="mb-1">台積電</h5>
-                                                        <h5 class="mb-0 text-muted">2330</h5>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <h5 class="mb-1 fw-medium">未還張數</h5>
-                                                        <span class="text-secondary">200張</span>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <h5 class="mb-1 fw-medium">市值</h5>
-                                                        <span class="text-secondary ">32,500,000元</span>
-                                                    </div>
-                                                    <div class="col-sm">
-                                                        <h5 class="mb-1 fw-medium">本次退還張數</h5>
-                                                        <span class="text-secondary ">1張</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer border-top-0 pt-0">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-4">
-                                            <div class="hstack gap-3">
-                                                <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
-                                                <a class="btn btn-secondary w-50" href="unresLoans-result.html">確認送出</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end button -->
-                                </div>
-                            </div>
-                            <!-- end Check Card-->
-                        </div>
+                        <!-- end -->
                     </div>
                 </div>
                 <!-- end container fluid -->
