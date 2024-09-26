@@ -105,7 +105,7 @@
                                       <p class="h5">歡迎進入兆豐專區</p>
                                     </span>
                                     <a class="mb-dropdown-item" href="#!"><i class="bx bx-edit"></i><span>個資修改</span></a>
-                                    <a class="mb-dropdown-item" href="password-change.html"><i class="bx bx-lock"></i><span>密碼變更</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-lock"></i><span>密碼變更</span></a>
                                     <a class="mb-dropdown-item" href="index.html#oService"><i class="bx bx-customize"></i><span>更多服務</span></a>
                                     <a class="mb-dropdown-item" href="#!"><i class="bx bx-log-in"></i><span>登出</span></a>
                                 </div>
@@ -120,7 +120,7 @@
         <div class="app-menu navbar-menu">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                
+                <!-- Dark Logo-->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/img/svg/logo-sm.png" alt="" height="22">
@@ -177,7 +177,7 @@
                                         <a href="stockexchange-dashboard.html" class="nav-link" data-key="t-lend">有價證券借貸</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="unresLoans.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
+                                        <a href="unres-purpose-loans-dashboard.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
                                     </li>
                                 </ul>
                             </div>
@@ -241,7 +241,7 @@
                                         <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="unresLoans.html" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                        <a href="unres-purpose-loans-dashboard.html" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
                                     </li>
                                 </ul>
                             </div>
@@ -354,7 +354,7 @@
                                         <a href="stockexchange-dashboard.html" class="nav-link" data-key="t-lend">有價證券借貸</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="unresLoans.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
+                                        <a href="unres-purpose-loans-dashboard.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
                                     </li>
                                 </ul>
                             </div>
@@ -536,8 +536,32 @@
                         <!-- start Cards -->
                         <div class="col-xl-12">
                             <!-- 載入各筆擔保品資料 -->
-                             <!-- Card 1 -->
-                             <div class="card">
+                            <!-- Card 1 -->
+                            <div class="card">
+                                <div class="card-header bg-light border-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <span class="fw-semibold fs-20 mb-0">鴻海</span>
+                                            <h5 class="mb-0 text-muted">2317</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-2">
+                                        <div class="col-sm">
+                                            <h5 class="mb-1 fw-medium">未還張數</h5>
+                                            <span class="text-secondary">200張</span>
+                                        </div>
+                                        <div class="col-sm">
+                                            <h5 class="mb-1 fw-medium">擔保品市值</h5>
+                                            <span class="text-secondary">32,500,000元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="card">
                                 <div class="card-header bg-light border-0">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-grow-1">
@@ -613,7 +637,7 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/backtotop.js"></script>
+    
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
