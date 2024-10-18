@@ -539,12 +539,14 @@
                                     <div class="card-body">
                                         <form>
                                             <div class="row g-2">
-                                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
                                                     <div class="input-group">
                                                         <div class="input-group-text bg-secondary border-secondary text-white">
                                                             <i class='bx bx-calendar fs-5'></i>
                                                         </div>
-                                                        <input type="text" class="form-control" data-provider="flatpickr" data-date-format="Y/M/d" data-range-date="true" placeholder="選擇申請日期區間" id="rage-date">
+                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢起日" id="rage-date" readonly="readonly">
+                                                        <span class="input-group-text bg-light text-muted">至</span>
+                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢迄日" id="rage-date" readonly="readonly">
                                                     </div>
                                                 </div>
                                                 <!--end col-->
@@ -679,9 +681,9 @@
 
     <script>
         config = {
-            mode: "range"
-        }
-
+            altInput: true,
+            altFormat: "Y/M/d"
+        };
         flatpickr("input[id=rage-date]", config);
     </script>
     
