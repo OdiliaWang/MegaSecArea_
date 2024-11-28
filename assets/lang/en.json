@@ -26,5 +26,19 @@
     "t-option":"期權拆組",
     "t-epass":"集保e存摺",
     "t-news":"理財電子報",
-    "t-link":"相關連結"
+    "t-link":"相關連結",
+    "t-mega-invest":"兆豐國際投顧",
+    "t-invest-industry":"",
+    "t-invest-corp":"法人動向",
+    "t-invest-market":"盤勢分析",
+    "t-invest-member":"會員專區",
+    "t-invest-signup":"加入會員",
+    "t-invest-new-member-check":"新加入會員基本資料確認",
+    "t-futures-graphics":"選擇權技術圖形",
+    "t-futures-analyze":"台指期權盤後解析",
+    "t-futures-ol":"選擇權未平倉量",
+    "t-futures-foreign":"國外期貨商品解析",
+    "t-futures-schedule":"美國經濟數據時間表",
+    "t-futures-pre-market":"台指期權盤前解析",
+    "t-futures-average":"股票期貨日線"
 }

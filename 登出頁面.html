@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html   lang="zh-TW" 
+        data-layout="semibox" 
+        data-sidebar-visibility="show" 
+        data-sidebar="light" 
+        data-sidebar-size="lg" 
+        data-sidebar-image="none" 
+        data-preloader="disable">
+<head>
+    <meta charset="UTF-8" />
+    <title>兆豐專區</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdropLabel">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-light position-relative p-1 btn-ghost-secondary rounded-circle" id="header-notice-dpn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-24'></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-primary p-1"><span class="visually-hidden">unread messages</span></span>                                
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="header-notice-dpn">
+                                <div class="notice-popup">
+                                    <div class="title">
+                                        <span class="h2">通知訊息</span>
+                                        <span class="text-end">
+                                            <a class="data-today">2023/01/03 星期五</a>
+                                        </span>
+                                    </div>
+                                    <div class="notice-data-list">
+                                        <div class="data-area">
+                                            <div class="data-cont no-data">
+                                                <i class="bx bx-message-alt-detail"></i>
+                                                <p>無最新通知</p>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>交割款通知：帳戶將在02/03交割款項1,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>今日</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-area">
+                                            <div class="data-cont">
+                                                <span>期貨追繳保證金通知：帳戶將在03/04交割款項30,000元，記得確認銀行餘額足夠喔～</span>
+                                            </div>
+                                            <div class="data-time">
+                                                <span>2023/02/21</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ms-xl-3 ms-lg-3 ms-md-3 ms-sm-1 header-item topbar-user">
+                            <button type="button" class="btn" id="header-member-dpn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <img class="rounded-circle header-profile-user" src="assets/img/user-profolio.jpg" alt="用戶">
+                                    <span class="text-start ms-xl-2">
+                                        <span class="d-none d-xl-inline-block ms-1"><b>個人服務</b><i class="bx bxs-chevron-down-circle ms-1"></i></span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="header-member-dpn">
+                                <div class="member-popup">
+                                    <span class="dropdown-header"><b>趙豐仁</b>，您好！
+                                      <p class="h5">歡迎進入兆豐專區</p>
+                                    </span>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-edit"></i><span>個資修改</span></a>
+                                    <a class="mb-dropdown-item" href="password-change.html"><i class="bx bx-lock"></i><span>密碼變更</span></a>
+                                    <a class="mb-dropdown-item" href="index.html#oService"><i class="bx bx-customize"></i><span>更多服務</span></a>
+                                    <a class="mb-dropdown-item" href="#!"><i class="bx bx-log-in"></i><span>登出</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== Sidebar ==== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/img/svg/logo-sm.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/img/svg/MegaArea.svg" alt="" height="30">
+                    </span>
+                    <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                        <i class="ri-record-circle-line"></i>
+                    </button>
+                </a>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <section class="user-data">
+                            <div class="sidebar-username">
+                                <span>趙豐仁</span>
+                            </div>
+                        </section>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarInvest" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvest">
+                                <i class='bx bx-pie-chart'></i><span data-key="t-invest">定期定額買台股</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarInvest">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="investock-dashboard.html" class="nav-link" data-key="t-all">總覽</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-products.html" class="nav-link" data-key="t-product">約定商品</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-valid-list.html" class="nav-link" data-key="t-valid">委託清單</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-charge-list.html" class="nav-link" data-key="t-charge">扣款清單</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarExchange" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarExchange">
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarExchange">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="stockexchange-dashboard.html" class="nav-link" data-key="t-lend">有價證券借貸</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="unresLoans.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarSign" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSign">
+                                <i class="bx bx-pen"></i> <span data-key="t-sign">簽署中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarSign">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="sign-Contract.html" class="nav-link" data-key="t-oSign">同意書簽署</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-W8ben.html" class="nav-link" data-key="t-w8ben">W-8BEN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-Laundering.html" class="nav-link" data-key="t-customer">客戶身份盡職審查</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-KYC.html" class="nav-link" data-key="t-kyc">投資適性評估(KYC)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Sign Menu -->
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="adv-collection-dashboard.html">
+                                <i class='bx bx-bar-chart-alt-2'></i> <span data-key="t-advcollection">預收款券</span>
+                            </a>
+                        </li>
+                        <!-- <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class='bx bx-archive-in'></i> <span data-key="t-dividend">配股配息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class="bx bx-money"></i> <span data-key="t-ledger">分戶帳</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebareOpen" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebareOpen">
+                                <i class="bx bx-user-circle"></i> <span data-key="t-eOpen">開戶</span>
+                                <!-- <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span> -->
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebareOpen">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen1">複委託線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen2">財富管理線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen3">信用線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="unresLoans.html" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end eOpen Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMore" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMore">
+                                <i class="bx bx-customize"></i> <span data-key="t-more">更多服務</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMore">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="apply-epassbook.html" class="nav-link" data-key="t-epass">集保e存摺</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="takeover-bid.html" class="nav-link" data-key="t-takeoverBid">公開收購</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/emegaSub/login.do" class="nav-link" data-key="t-subsc">訂閱中心</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/Spaper/login.do?returnUrl=/index.do" class="nav-link" data-key="t-news">理財電子報</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-option">期權拆組</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end more Menu -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLink" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLink">
+                                <i class='bx bx-share-alt'></i> <span data-key="t-link">相關連結</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLink">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/index.do" class="nav-link">
+                                            兆豐證券理財網
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megafutures.com.tw/index.do" class="nav-link">
+                                            兆豐期貨
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megasia.com.tw/index.do" class="nav-link">
+                                            兆豐國際投顧
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+
+            <div class="offcanvas-body navbar-menu">
+                <div class="offcanvas-header d-block">
+                    <button type="button" class="btn-close text-reset float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                <div id="scrollbar">
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <section class="user-data">
+                            <div class="sidebar-username">
+                                <span>趙豐仁</span>
+                            </div>
+                        </section>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarInvest" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInvest">
+                                <i class='bx bx-pie-chart'></i><span data-key="t-invest">定期定額買台股</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarInvest">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="investock-dashboard.html" class="nav-link" data-key="t-all">總覽</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-products.html" class="nav-link" data-key="t-product">約定商品</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-valid-list.html" class="nav-link" data-key="t-valid">委託清單</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="investock-charge-list.html" class="nav-link" data-key="t-charge">扣款清單</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarExchange" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarExchange">
+                                <i class='bx bx-dollar-circle'></i> <span data-key="t-exchange">借貸中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarExchange">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="stockexchange-dashboard.html" class="nav-link" data-key="t-lend">有價證券借貸</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="unresLoans.html" class="nav-link" data-key="t-loan">不限用途款項借貸</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarSign" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSign">
+                                <i class="bx bx-pen"></i> <span data-key="t-sign">簽署中心</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarSign">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="sign-Contract.html" class="nav-link" data-key="t-oSign">同意書簽署</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-W8ben.html" class="nav-link" data-key="t-w8ben">W-8BEN</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-Laundering.html" class="nav-link" data-key="t-customer">客戶身份盡職審查</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="sign-KYC.html" class="nav-link" data-key="t-kyc">投資適性評估(KYC)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Sign Menu -->
+    
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="adv-collection-dashboard.html">
+                                <i class='bx bx-bar-chart-alt-2'></i> <span data-key="t-advcollection">預收款券</span>
+                            </a>
+                        </li>
+                        <!-- <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class='bx bx-archive-in'></i> <span data-key="t-dividend">配股配息</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#!">
+                                <i class="bx bx-money"></i> <span data-key="t-ledger">分戶帳</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebareOpen" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebareOpen">
+                                <i class="bx bx-user-circle"></i> <span data-key="t-eOpen">開戶</span>
+                                <!-- <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span> -->
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebareOpen">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen1">複委託線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen2">財富管理線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen3">信用線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen4">有價證券借貸線上開戶</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-eOpen5">不限用途款項借貸線上開戶</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end eOpen Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMore" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMore">
+                                <i class="bx bx-customize"></i> <span data-key="t-more">更多服務</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMore">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="apply-epassbook.html" class="nav-link" data-key="t-epass">集保e存摺</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="takeover-bid.html" class="nav-link" data-key="t-takeoverBid">公開收購</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/emegaSub/login.do" class="nav-link" data-key="t-subsc">訂閱中心</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/Spaper/login.do?returnUrl=/index.do" class="nav-link" data-key="t-news">理財電子報</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link" data-key="t-option">期權拆組</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- end more Menu -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLink" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLink">
+                                <i class='bx bx-share-alt'></i> <span data-key="t-link">相關連結</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLink">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="https://www.emega.com.tw/index.do" class="nav-link">
+                                            兆豐證券理財網
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megafutures.com.tw/index.do" class="nav-link">
+                                            兆豐期貨
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.megasia.com.tw/index.do" class="nav-link">
+                                            兆豐國際投顧
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="#!"><i class="fa-solid fa-chevron-left me-2"></i> 回兆豐專區</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!--頁首 Cards-->
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-12">
+                            <div class="text-center alert alert-success p-4">
+                                <span>您已成功登出</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end container fluid -->
+            </div>
+            <!-- footer -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="d-block text-center" style="font-weight: 400; font-size: 14px;">兆豐證券股份有限公司 客服專線(02)2351-7017</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>  
+        <!-- ==== End Main Content ==== -->
+    </div>
+    <!-- end layout -->
+
+
+    
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+  
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>
