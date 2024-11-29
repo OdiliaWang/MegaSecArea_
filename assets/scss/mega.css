@@ -27,7 +27,6 @@
 .nav.nav-pills .nav-link {
   border-radius: 0px;
   color: #495057;
-  -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   width: 100%;
 }
@@ -36,8 +35,7 @@
 }
 
 .nav.nav-pills .nav-link.active {
-  -webkit-animation: 0.2s ease;
-          animation: 0.2s ease;
+  animation: 0.2s ease;
 }
 
 .nav-secondary .nav-link.active {
@@ -67,9 +65,6 @@
     font-size: 18px;
   }
   .m-flex-column {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
 }
@@ -95,10 +90,8 @@
   margin-top: 0;
   position: fixed;
   top: 0;
-  -webkit-box-shadow: var(--vz-vertical-menu-box-shadow);
   box-shadow: var(--vz-vertical-menu-box-shadow);
   padding: 0 0 95px 0;
-  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
@@ -110,11 +103,7 @@
 }
 
 .offcanvas .navbar-menu .navbar-nav .nav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0.625rem 1.5rem;
   font-size: 1.20375rem;
@@ -125,32 +114,23 @@
   position: absolute;
   background-color: #f7f8fc;
   width: 430px;
-  -webkit-box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
-          box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
+  box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
   z-index: 1000;
   border-radius: 0px 0px 20px 20px;
   padding: 24px;
   top: 15px;
 }
 .dropdown .notice-popup .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .dropdown .notice-popup .title span {
   width: 50%;
 }
 .dropdown .notice-popup .data-today {
   color: #cb954b;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 12px;
 }
 .dropdown .notice-popup .data-today::before {
@@ -168,8 +148,7 @@
   margin-bottom: 1rem;
   background-color: #ffffff;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
-          box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
+  box-shadow: 0 0 15px 4px rgba(100, 98, 92, 0.06);
 }
 .dropdown .notice-popup .data-area .data-cont {
   font-size: 16px;
@@ -190,12 +169,8 @@
 }
 .dropdown .notice-popup .data-area .data-time {
   margin-top: 0.1rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 14px;
   color: #d8ac7c;
   font-weight: 600;
@@ -218,8 +193,7 @@
   position: absolute;
   background-color: #f7f8fc;
   width: 200px;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(217, 217, 217, 0.7137254902);
-          box-shadow: 0px 0px 15px 0px rgba(217, 217, 217, 0.7137254902);
+  box-shadow: 0px 0px 15px 0px rgba(217, 217, 217, 0.7137254902);
   z-index: 1000;
   letter-spacing: 1px;
   border-radius: 0px 0px 20px 20px;
@@ -279,7 +253,6 @@
   margin: 0.5rem 1.2rem 1.5rem 1.2rem;
   border-bottom: 8px solid transparent;
   -o-border-image: linear-gradient(0.25turn, rgb(118, 57, 153), rgb(194, 54, 86));
-     border-image: -webkit-gradient(linear, left top, right top, from(rgb(118, 57, 153)), to(rgb(194, 54, 86)));
      border-image: linear-gradient(0.25turn, rgb(118, 57, 153), rgb(194, 54, 86));
   border-image-slice: 1;
   text-align: center;
@@ -541,15 +514,9 @@
 }
 
 .center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .w-full {
@@ -562,12 +529,8 @@
 
 .item {
   font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .item img {
   margin-right: 0.3rem;
@@ -592,19 +555,13 @@
 }
 .banner-index {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   background: linear-gradient(117deg, rgb(190, 206, 247) 10%, rgb(255, 243, 226) 100%);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
   overflow: hidden;
 }
 .banner-index h4 {
@@ -641,7 +598,6 @@
   display: none;
 }
 .stock-in-ani:hover {
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #fff;
   border: 1px solid #ed787e;
@@ -662,12 +618,8 @@
   padding: 1rem;
 }
 .signCenter .option-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 1.25rem;
   font-weight: 700;
   color: #495057;
@@ -690,16 +642,9 @@
   border: 1px solid #ececec;
   border-radius: 0.25rem;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .error {
@@ -765,14 +710,8 @@
   width: 3.5rem;
   height: 3.5rem;
   border-bottom-left-radius: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   background-color: transparent;
   position: absolute;
@@ -784,14 +723,8 @@
   width: 3.5rem;
   height: 3.5rem;
   border-bottom-left-radius: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   background-color: transparent;
   position: absolute;
@@ -801,14 +734,8 @@
   bottom: 3rem;
   top: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   background-color: transparent;
   position: absolute;
@@ -819,12 +746,8 @@
   border-radius: 0.5rem;
 }
 .unres-check-card .card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-color: #ffe0e0;
   background-color: #ffe0e0;
   border-radius: 0.25rem 0.25rem 0 0;
@@ -844,12 +767,8 @@
   border-radius: 0.5rem;
 }
 .unres-return-card .card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-color: #42cca4;
   background-color: #42cca4;
   border-radius: 0.25rem 0.25rem 0 0;
@@ -886,7 +805,6 @@
 }
 [aria-expanded=true] .close {
   display: inline;
-  -webkit-transition: 0.65s all ease-in-out;
   transition: 0.65s all ease-in-out;
 }
 
@@ -905,14 +823,8 @@ button[mega_act] {
 
 .btn-icon-primary {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: transparent;
   border: transparent;
@@ -924,14 +836,8 @@ button[mega_act] {
 
 .btn-icon-dark {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: transparent;
   border: transparent;
@@ -983,20 +889,14 @@ button[mega_act] {
 .card-primary {
   position: relative;
   background-color: #ffe0e0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 .card-primary .card-header {
   color: #495057;
@@ -1009,20 +909,14 @@ button[mega_act] {
 .card-secondary {
   position: relative;
   background-color: #fff5e2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 .card-secondary .card-header {
   color: #495057;
@@ -1035,20 +929,14 @@ button[mega_act] {
 .card-info {
   position: relative;
   background-color: #f6f3fe;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 .card-info .card-header {
   color: #495057;
@@ -1061,20 +949,14 @@ button[mega_act] {
 .card-warning {
   position: relative;
   background-color: #ffe6ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 .card-warning .card-header {
   color: #495057;
@@ -1087,20 +969,14 @@ button[mega_act] {
 .card-danger {
   position: relative;
   background-color: #eff4fd;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 .card-danger .card-header {
   color: #495057;
@@ -1113,32 +989,25 @@ button[mega_act] {
 .card-white {
   position: relative;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
   margin-bottom: 1.5rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 
 .loanCard {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .loanCard .loanImg {
   margin-bottom: 0.7rem;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 10px 0px 10px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(237, 120, 126, 0.7254901961)), color-stop(90%, rgba(255, 211, 213, 0.7215686275)));
   background-image: linear-gradient(to right, rgba(237, 120, 126, 0.7254901961) 0%, rgba(255, 211, 213, 0.7215686275) 90%);
   border-radius: 10px;
   vertical-align: text-bottom;
@@ -1161,37 +1030,25 @@ button[mega_act] {
   }
   .loanCard {
     margin-bottom: 0.55rem !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: center;
+    flex-direction: row;
   }
   .loanCard .loanImg {
     display: block;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    flex-shrink: 0 !important;
     background-color: #ed787e;
     border-radius: 13px;
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+    flex: none;
   }
   .loanCard .loan-title {
     font-size: 1.2rem;
     font-weight: 500;
     margin-left: 1rem;
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    flex-grow: 1 !important;
   }
   .loanCard .btn {
     font-size: 0.85rem;
@@ -1206,7 +1063,6 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(130, 158, 227, 0.7254901961)), color-stop(90%, rgba(182, 202, 255, 0.7215686275)));
   background-image: linear-gradient(to right, rgba(130, 158, 227, 0.7254901961) 0%, rgba(182, 202, 255, 0.7215686275) 90%);
   border-radius: 10px;
   vertical-align: text-bottom;
@@ -1229,36 +1085,24 @@ button[mega_act] {
   }
   .signCard {
     margin-bottom: 0.55rem !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: center;
+    flex-direction: row;
   }
   .signCard .signImg {
     display: block;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    flex-shrink: 0 !important;
     border-radius: 13px;
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+    flex: none;
   }
   .signCard .sign-title {
     font-size: 1.2rem;
     font-weight: 500;
     margin-left: 1rem;
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    flex-grow: 1 !important;
   }
   .signCard .btn {
     font-size: 0.85rem;
@@ -1273,7 +1117,6 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 10px 10px 0px 10px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#e1b070), color-stop(80%, #f6cc94));
   background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 10px;
 }
@@ -1295,36 +1138,24 @@ button[mega_act] {
   }
   .advCard {
     margin-bottom: 0.55rem !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: center;
+    flex-direction: row;
   }
   .advCard .advImg {
     display: block;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
-    -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important;
+    flex-shrink: 0 !important;
     border-radius: 13px;
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+    flex: none;
   }
   .advCard .adv-title {
     font-size: 1.2rem;
     font-weight: 500;
     margin-left: 1rem;
-    -webkit-box-flex: 1 !important;
-        -ms-flex-positive: 1 !important;
-            flex-grow: 1 !important;
+    flex-grow: 1 !important;
   }
   .advCard .btn {
     font-size: 0.85rem;
@@ -1341,7 +1172,6 @@ button[mega_act] {
 .nameCard .employImg {
   margin-left: auto !important;
   margin-right: auto !important;
-  background-image: -webkit-gradient(linear, left top, right top, from(#e1b070), color-stop(80%, #f6cc94));
   background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 50%;
 }
@@ -1431,17 +1261,11 @@ button[mega_act] {
   font-size: 3rem;
 }
 .moreService .moreIcon {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-weight: 500;
   height: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -1458,19 +1282,13 @@ button[mega_act] {
 
 .m-card {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 0.75rem;
   padding: 0.8rem;
   margin-bottom: 0.75rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   word-wrap: break-word;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(56, 65, 74, 0.06);
 }
 
 /* Accordion */
@@ -1552,4 +1370,4 @@ table [data-qtvalue]::before,
 
 .table-footer-cta {
   padding: 1rem;
-}
+}/*# sourceMappingURL=mega.css.map */
