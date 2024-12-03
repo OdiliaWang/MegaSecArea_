@@ -416,69 +416,51 @@
 .moreCard {
     cursor: pointer;
     margin-bottom: 0.55rem !important;
-    padding: 1rem;
-    .moreImg {
-        background-color: $primary-400;
-        border-radius: 7px;
-        i {
-            color: $primary;
-            font-size: 1.675rem;
-        }
+    .moreIcon i {
+        font-size: 1.75rem;
+        color: $secondary;
     }
-    .more-title {
-        font-size: 1.05rem;
+    .moreTitle {
+        font-size: 1.25rem;
         font-weight: 500;
+        text-align: left;
+    }
+    i {
+        font-size: 1.55rem;
+        color: #495057;
     }
 }
 
 .serviTitle {
-    margin-bottom: 1.25rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.65rem;
+    font-size: 1.1rem;
 }
 
-.moreService {
+.investmentService {
     position: relative;
     display: block;
-    background: linear-gradient(
-        117deg,
-        rgba(203, 149, 75, 1) 0%,
-        rgba(226, 180, 117, 1) 52%,
-        rgba(240, 204, 156, 1) 100%
-    );
-    border-radius: 50rem;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    height: 6rem;
-    width: 6rem;
-    word-wrap: break-word;
-    i {
-        color: $body-light;
-        font-size: 3rem;
-    }
-    .moreIcon {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-weight: 500;
-        height: 100%;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        width: 100%;
-    }
+    background: $primary-bg-fresh;
     &:hover {
-        background: $secondary;
+        background: $primary-light;
+    }
+    .investmentTitle {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-align: left;
     }
 }
-.moreText {
+.futuresService {
+    position: relative;
     display: block;
-    font-size: 1rem;
-    color: $body-color;
-    text-align: center;
+    background: $danger-bg-fresh;
+    &:hover {
+        background: $danger-light;
+    }
+    .futuresTitle {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-align: left;
+    }
 }
 
 .m-card {

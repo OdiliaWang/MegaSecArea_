@@ -1259,59 +1259,52 @@ button[mega_act] {
 .moreCard {
   cursor: pointer;
   margin-bottom: 0.55rem !important;
-  padding: 1rem;
 }
-.moreCard .moreImg {
-  background-color: #ffe0e0;
-  border-radius: 7px;
+.moreCard .moreIcon i {
+  font-size: 1.75rem;
+  color: #cb954b;
 }
-.moreCard .moreImg i {
-  color: #c23656;
-  font-size: 1.675rem;
-}
-.moreCard .more-title {
-  font-size: 1.05rem;
+.moreCard .moreTitle {
+  font-size: 1.25rem;
   font-weight: 500;
+  text-align: left;
+}
+.moreCard i {
+  font-size: 1.55rem;
+  color: #495057;
 }
 
 .serviTitle {
-  margin-bottom: 1.25rem;
-  font-size: 1.5rem;
+  margin-bottom: 0.65rem;
+  font-size: 1.1rem;
 }
 
-.moreService {
+.investmentService {
   position: relative;
   display: block;
-  background: linear-gradient(117deg, rgb(203, 149, 75) 0%, rgb(226, 180, 117) 52%, rgb(240, 204, 156) 100%);
-  border-radius: 50rem;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  height: 6rem;
-  width: 6rem;
-  word-wrap: break-word;
+  background: #fee7e7;
 }
-.moreService i {
-  color: #fcfcfc;
-  font-size: 3rem;
+.investmentService:hover {
+  background: #f69ba0;
 }
-.moreService .moreIcon {
-  align-items: center;
-  color: #fff;
-  display: flex;
+.investmentService .investmentTitle {
+  font-size: 1.25rem;
   font-weight: 500;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-}
-.moreService:hover {
-  background: #cb954b;
+  text-align: left;
 }
 
-.moreText {
+.futuresService {
+  position: relative;
   display: block;
-  font-size: 1rem;
-  color: #495057;
-  text-align: center;
+  background: #eff4fd;
+}
+.futuresService:hover {
+  background: #829ee3;
+}
+.futuresService .futuresTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
 }
 
 .m-card {
