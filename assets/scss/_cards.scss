@@ -180,9 +180,9 @@
     font-size: 1.25rem;
     font-weight: 500;
     .loanImg {
+        height: 4.5rem;
+        width: 4.5rem;
         margin-bottom: 0.7rem;
-        margin-left: auto;
-        margin-right: auto;
         padding: 10px 10px 0px 10px;
         background-image: linear-gradient(to right, #ed787eb9 0%, #ffd3d5b8  90%);
         border-radius: 10px;
@@ -213,6 +213,8 @@
     
         .loanImg {
             display: block;
+            height: 4.5rem;
+            width: 4.5rem;
             padding: 0px;
             margin-top: 7px;
             margin-bottom: 7px;
@@ -235,11 +237,11 @@
 
 .signCard {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
     .signImg {
+        height: 4.5rem;
+        width: 4.5rem;
         margin-bottom: 0.7rem;
-        margin-left: auto !important;
-        margin-right: auto !important;
         padding: 10px 10px 0px 10px;
         background-image: linear-gradient(to right, #829ee3b9 0%, #b6caffb8  90%);
         border-radius: 10px;
@@ -270,6 +272,8 @@
     
         .signImg {
             display: block;
+            height: 4.5rem;
+            width: 4.5rem;
             padding: 0px;
             margin-top: 7px;
             margin-bottom: 7px;
@@ -291,11 +295,11 @@
 
 .advCard {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
     .advImg {
+        height: 4.5rem;
+        width: 4.5rem;
         margin-bottom: 0.7rem;
-        margin-left: auto !important;
-        margin-right: auto !important;
         padding: 10px 10px 0px 10px;
         background-image: linear-gradient(to right, #e1b070 0%, #f6cc94  80%);
         border-radius: 10px;
@@ -325,6 +329,8 @@
     
         .advImg {
             display: block;
+            height: 4.5rem;
+            width: 4.5rem;
             padding: 0px;
             margin-top: 7px;
             margin-bottom: 7px;

@@ -33,7 +33,6 @@
     background-image: url(../img/ebba-img-3.png);
     background-size: cover;
 }
-
 .bg-soft-primary {
     background-color: $primary-bg-fresh;
 }
@@ -45,6 +44,9 @@
 }
 .bg-soft-light {
     background-color: rgba(255, 255, 255, 0.287) !important;
+}
+.bg-primary-liner {
+    background-image: linear-gradient(to right, #ed787eb9 0%, #ffd3d5b8  90%);
 }
 
 // basic

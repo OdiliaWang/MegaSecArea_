@@ -49,9 +49,34 @@ button[mega_act] {
     width: calc(0.3rem + 1em + 2px);
     padding: 0;
 
-    :hover{
+    :hover {
         background-color: $secondary-bg-fresh;
         padding: 0.65rem 0.7rem;
         border-radius: 50rem;
+    }
+}
+
+.btn-loan {
+    color: $btn-primary;
+    background-color: $primary-bg-fresh;
+
+    :hover {
+        color: $primary-800;
+    }
+}
+.btn-sign {
+    color: $btn-danger;
+    background-color: $danger-bg-fresh;
+
+    :hover {
+        color: $danger-800;
+    }
+}
+.btn-adv {
+    color: $btn-secondary;
+    background-color: $secondary-bg-fresh;
+
+    :hover {
+        color: $secondary-800;
     }
 }

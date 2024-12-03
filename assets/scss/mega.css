@@ -346,6 +346,10 @@
   background-color: rgba(255, 255, 255, 0.287) !important;
 }
 
+.bg-primary-liner {
+  background-image: linear-gradient(to right, rgba(237, 120, 126, 0.7254901961) 0%, rgba(255, 211, 213, 0.7215686275) 90%);
+}
+
 .primary {
   background-color: #fee7e7;
 }
@@ -852,6 +856,30 @@ button[mega_act] {
   border-radius: 50rem;
 }
 
+.btn-loan {
+  color: #ed787e;
+  background-color: #fee7e7;
+}
+.btn-loan :hover {
+  color: #de6269;
+}
+
+.btn-sign {
+  color: #829ee3;
+  background-color: #eff4fd;
+}
+.btn-sign :hover {
+  color: #485d93;
+}
+
+.btn-adv {
+  color: #cc9a56;
+  background-color: #fff6e6;
+}
+.btn-adv :hover {
+  color: #d49c4f;
+}
+
 /* Cards */
 .mega-c-link {
   color: #495057;
@@ -1004,9 +1032,9 @@ button[mega_act] {
   font-weight: 500;
 }
 .loanCard .loanImg {
+  height: 4.5rem;
+  width: 4.5rem;
   margin-bottom: 0.7rem;
-  margin-left: auto;
-  margin-right: auto;
   padding: 10px 10px 0px 10px;
   background-image: linear-gradient(to right, rgba(237, 120, 126, 0.7254901961) 0%, rgba(255, 211, 213, 0.7215686275) 90%);
   border-radius: 10px;
@@ -1036,6 +1064,8 @@ button[mega_act] {
   }
   .loanCard .loanImg {
     display: block;
+    height: 4.5rem;
+    width: 4.5rem;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
@@ -1056,12 +1086,12 @@ button[mega_act] {
 }
 .signCard {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .signCard .signImg {
+  height: 4.5rem;
+  width: 4.5rem;
   margin-bottom: 0.7rem;
-  margin-left: auto !important;
-  margin-right: auto !important;
   padding: 10px 10px 0px 10px;
   background-image: linear-gradient(to right, rgba(130, 158, 227, 0.7254901961) 0%, rgba(182, 202, 255, 0.7215686275) 90%);
   border-radius: 10px;
@@ -1091,6 +1121,8 @@ button[mega_act] {
   }
   .signCard .signImg {
     display: block;
+    height: 4.5rem;
+    width: 4.5rem;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
@@ -1110,12 +1142,12 @@ button[mega_act] {
 }
 .advCard {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .advCard .advImg {
+  height: 4.5rem;
+  width: 4.5rem;
   margin-bottom: 0.7rem;
-  margin-left: auto !important;
-  margin-right: auto !important;
   padding: 10px 10px 0px 10px;
   background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 10px;
@@ -1144,6 +1176,8 @@ button[mega_act] {
   }
   .advCard .advImg {
     display: block;
+    height: 4.5rem;
+    width: 4.5rem;
     padding: 0px;
     margin-top: 7px;
     margin-bottom: 7px;
