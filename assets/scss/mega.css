@@ -1213,9 +1213,6 @@ button[mega_act] {
 .otherCard {
   margin-bottom: 0.55rem !important;
 }
-.otherCard:hover {
-  color: #cb954b;
-}
 .otherCard .otherImg {
   margin-left: auto !important;
   margin-right: auto !important;
