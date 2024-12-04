@@ -350,6 +350,11 @@
   background-image: linear-gradient(to right, rgba(237, 120, 126, 0.7254901961) 0%, rgba(255, 211, 213, 0.7215686275) 90%);
 }
 
+.bg-card-circle {
+  background-image: url("../img/ebba-img-4.png");
+  background-size: cover;
+}
+
 .primary {
   background-color: #fee7e7;
 }
@@ -442,6 +447,10 @@
 
 .text-warning {
   color: #79416d !important;
+}
+
+.text-card-muted {
+  color: #888;
 }
 
 .ribbon-box.right .ribbon-primary {
@@ -856,30 +865,6 @@ button[mega_act] {
   border-radius: 50rem;
 }
 
-.btn-loan {
-  color: #ed787e;
-  background-color: #fee7e7;
-}
-.btn-loan :hover {
-  color: #de6269;
-}
-
-.btn-sign {
-  color: #829ee3;
-  background-color: #eff4fd;
-}
-.btn-sign :hover {
-  color: #485d93;
-}
-
-.btn-adv {
-  color: #cc9a56;
-  background-color: #fff6e6;
-}
-.btn-adv :hover {
-  color: #d49c4f;
-}
-
 /* Cards */
 .mega-c-link {
   color: #495057;
@@ -1048,9 +1033,6 @@ button[mega_act] {
 .loanCard .btn i {
   font-size: 1.95rem;
 }
-.loanCard .card-footer {
-  background-color: transparent !important;
-}
 
 @media (max-width: 767px) {
   .loanCard .card-img-top {
@@ -1105,9 +1087,6 @@ button[mega_act] {
 .signCard .btn i {
   font-size: 1.95rem;
 }
-.signCard .card-footer {
-  background-color: transparent !important;
-}
 
 @media (max-width: 767px) {
   .signCard .card-img-top {
@@ -1152,16 +1131,15 @@ button[mega_act] {
   background-image: linear-gradient(to right, #e1b070 0%, #f6cc94 80%);
   border-radius: 10px;
 }
+.advCard .adv-title span {
+  color: #495057;
+}
 .advCard .btn {
-  padding: 0.7rem;
   font-size: 1.09375rem;
   border-radius: 0.25rem;
 }
 .advCard .btn i {
   font-size: 1.95rem;
-}
-.advCard .card-footer {
-  background-color: transparent !important;
 }
 
 @media (max-width: 767px) {
@@ -1190,6 +1168,9 @@ button[mega_act] {
     font-weight: 500;
     margin-left: 1rem;
     flex-grow: 1 !important;
+  }
+  .advCard .adv-title span {
+    color: #495057;
   }
   .advCard .btn {
     font-size: 0.85rem;
@@ -1246,7 +1227,7 @@ button[mega_act] {
   color: #cb954b;
   font-size: 1.675rem;
 }
-.otherCard .o-title {
+.otherCard .otherTitle {
   font-size: 1.05rem;
   font-weight: 500;
   margin-left: 1rem;
@@ -1282,10 +1263,7 @@ button[mega_act] {
 .investmentService {
   position: relative;
   display: block;
-  background: #fee7e7;
-}
-.investmentService:hover {
-  background: #f69ba0;
+  background-color: #ffe0e0;
 }
 .investmentService .investmentTitle {
   font-size: 1.25rem;
@@ -1296,10 +1274,7 @@ button[mega_act] {
 .futuresService {
   position: relative;
   display: block;
-  background: #eff4fd;
-}
-.futuresService:hover {
-  background: #829ee3;
+  background-color: #d9e7f8;
 }
 .futuresService .futuresTitle {
   font-size: 1.25rem;

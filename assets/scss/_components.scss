@@ -48,6 +48,10 @@
 .bg-primary-liner {
     background-image: linear-gradient(to right, #ed787eb9 0%, #ffd3d5b8  90%);
 }
+.bg-card-circle {
+    background-image: url("../img/ebba-img-4.png");
+    background-size: cover;
+}
 
 // basic
 ///////////////
@@ -141,6 +145,9 @@
 }
 .text-warning {
     color: $warning-800 !important;
+}
+.text-card-muted {
+    color: #888;
 }
 
 

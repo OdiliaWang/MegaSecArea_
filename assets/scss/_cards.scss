@@ -197,9 +197,6 @@
             font-size: 1.95rem;
         }
     }
-    .card-footer {
-        background-color: transparent !important;
-    }
 }
 @media (max-width: 767px) {
     .loanCard .card-img-top {
@@ -256,9 +253,6 @@
             font-size: 1.95rem;
         }
     }
-    .card-footer {
-        background-color: transparent !important;
-    }
 }
 @media (max-width: 767px) {
     .signCard .card-img-top {
@@ -304,8 +298,12 @@
         background-image: linear-gradient(to right, #e1b070 0%, #f6cc94  80%);
         border-radius: 10px;
     }
+    .adv-title {
+        span {
+            color: $body-color;
+        }
+    }
     .btn {
-        padding: 0.7rem;
         font-size: 1.09375rem;
         border-radius: 0.25rem;
     
@@ -313,11 +311,8 @@
             font-size: 1.95rem;
         }
     }
-    .card-footer {
-        background-color: transparent !important;
-    }
 }
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .advCard .card-img-top {
         width: 100px;
     }
@@ -343,6 +338,10 @@
             font-weight: 500;
             margin-left: 1rem;
             flex-grow: 1 !important;
+
+            span {
+                color: $body-color;
+            }
         }
         .btn {
             font-size: 0.85rem;
@@ -402,7 +401,7 @@
             font-size: 1.675rem;
         }
     }
-    .o-title {
+    .otherTitle {
         font-size: 1.05rem;
         font-weight: 500;
         margin-left: 1rem;
@@ -439,23 +438,18 @@
 .investmentService {
     position: relative;
     display: block;
-    background: $primary-bg-fresh;
-    &:hover {
-        background: $primary-light;
-    }
+    background-color: $primary-400;
     .investmentTitle {
         font-size: 1.25rem;
         font-weight: 500;
         text-align: left;
     }
 }
+
 .futuresService {
     position: relative;
     display: block;
-    background: $danger-bg-fresh;
-    &:hover {
-        background: $danger-light;
-    }
+    background-color: $danger-400;
     .futuresTitle {
         font-size: 1.25rem;
         font-weight: 500;
