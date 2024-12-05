@@ -60,6 +60,16 @@
     background-position: right 5% top -10%;
 }
 
+ul[mega_act] {
+    .list-group-item {
+        border-width: 0;
+    }
+    &:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
 // invest products page
 ///////////////
 .stock-in-ani {

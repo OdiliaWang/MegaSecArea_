@@ -598,6 +598,14 @@
   background-position: right 5% top -10%;
 }
 
+ul[mega_act] .list-group-item {
+  border-width: 0;
+}
+ul[mega_act]:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
 .stock-in-ani {
   width: 40px;
 }
@@ -1179,6 +1187,8 @@ button[mega_act] {
 .nameCard {
   margin-bottom: 0.55rem !important;
   color: #495057;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: none;
 }
 .nameCard .n-title {
   font-size: 1.25rem;
