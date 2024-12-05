@@ -605,6 +605,7 @@
 
 ul[mega_act] .list-group-item {
   border-width: 0;
+  padding: 0.7rem 1.5rem;
 }
 ul[mega_act]:first-child {
   border-top-right-radius: 0;
