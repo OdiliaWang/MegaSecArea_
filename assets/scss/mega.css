@@ -299,6 +299,10 @@
   padding: 20px 24px;
 }
 
+.mega-close {
+  background-color: #cb954b;
+}
+
 /* Components */
 .link-primary {
   color: #de6269;
