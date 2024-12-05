@@ -1185,7 +1185,7 @@ button[mega_act] {
   }
 }
 .nameCard {
-  margin-bottom: 0.55rem !important;
+  margin-bottom: 0.55rem;
   color: #495057;
   border-radius: 0.5rem 0.5rem 0 0;
   box-shadow: none;
