@@ -607,6 +607,9 @@ ul[mega_act] .list-group-item {
   border-width: 0;
   padding: 0.7rem 1.5rem;
 }
+ul[mega_act] .list-group-item:hover {
+  color: #cb954b;
+}
 ul[mega_act]:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -1247,6 +1250,9 @@ button[mega_act] {
 .otherCard a i {
   font-size: 1.55rem;
   color: #495057;
+}
+.otherCard:hover {
+  color: #cb954b;
 }
 
 .moreCard {

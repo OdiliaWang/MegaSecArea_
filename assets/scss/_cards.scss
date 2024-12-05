@@ -408,6 +408,10 @@
         font-size: 1.55rem;
         color: #495057;
     }
+
+    &:hover {
+        color: $secondary;
+    }
 }
   
 .moreCard {
