@@ -92,8 +92,8 @@
   --vz-secondary-bg-rgb: 255, 255, 255;
   --vz-tertiary-color: rgba(39, 42, 58, 0.5);
   --vz-tertiary-color-rgb: 39, 42, 58;
-  --vz-tertiary-bg: #faf2e6;
-  --vz-tertiary-bg-rgb: 250, 242, 230;
+  --vz-tertiary-bg: #FFF5E2;
+  --vz-tertiary-bg-rgb: rgb(255, 245, 226);
   --vz-heading-color: #495057;
   --vz-link-color: #d8ac7c;
   --vz-link-color-rgb: 104, 124, 254;

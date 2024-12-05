@@ -165,7 +165,7 @@
     background-color: #fff;
     display: flex;
     border-radius: 0.75rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.7rem 1.05rem;
     margin-bottom: 1.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -392,12 +392,11 @@
         margin-left: auto !important;
         margin-right: auto !important;
         margin-bottom: 0.3rem;
-        background-color: #fff5e2;
+        background-color: #f7f7f6;
         border-radius: 7px;
     
         i {
             color: $secondary;
-            font-size: 1.675rem;
         }
     }
     .otherTitle {
@@ -405,7 +404,7 @@
         font-weight: 500;
         margin-left: 1rem;
     }
-    i {
+    a i {
         font-size: 1.55rem;
         color: #495057;
     }

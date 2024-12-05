@@ -1012,7 +1012,7 @@ button[mega_act] {
   background-color: #fff;
   display: flex;
   border-radius: 0.75rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.7rem 1.05rem;
   margin-bottom: 1.5rem;
   flex-direction: column;
   min-width: 0;
@@ -1227,19 +1227,18 @@ button[mega_act] {
   margin-left: auto !important;
   margin-right: auto !important;
   margin-bottom: 0.3rem;
-  background-color: #fff5e2;
+  background-color: #f7f7f6;
   border-radius: 7px;
 }
 .otherCard .otherImg i {
   color: #cb954b;
-  font-size: 1.675rem;
 }
 .otherCard .otherTitle {
   font-size: 1.05rem;
   font-weight: 500;
   margin-left: 1rem;
 }
-.otherCard i {
+.otherCard a i {
   font-size: 1.55rem;
   color: #495057;
 }
