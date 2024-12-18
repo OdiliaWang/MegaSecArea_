@@ -24,6 +24,7 @@
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/mega.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
     <!-- Begin page -->
@@ -536,7 +537,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-12 col-lg-12 col-sm-12">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-xxl-3 col-sm-4">
+                                                <select class="form-control" data-choices data-choices-search-false id="stock-select">
+                                                    <option value="">選擇股票名稱</option>
+                                                    <option value="1" selected>全部</option>
+                                                    <option value="2">鴻海 2317</option>
+                                                    <option value="3">台積電 2330</option>
+                                                    <option value="4">兆豐金 2886</option>
+                                                </select>
+                                            </div>
+                                            <!--end col-->
+        
+                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                                <button type="button" class="btn btn-secondary w-100 mega-act">查詢</button>
+                                            </div>
+                                            <!--end col-->
+                                        </div>
+                                        <!--end row-->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
                             <div class="card">
                                 <div class="card-header bg-light border-0">
                                     <div class="d-flex align-items-center">
@@ -663,11 +690,15 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-   
+    <script>
+        const stockChoices = new Choices('#stock-select', {
+            searchEnabled: false,
+        });
+    </script>
 </body>
 </html>

@@ -1,3 +1,12 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Version: 4.3.0
+Website: https://Themesbrand.com/
+Contact: Themesbrand@gmail.com
+File: Main Js File
+*/
+
 (function () {
 	("use strict");
 
@@ -967,7 +976,7 @@
 	function initTopbarComponents() {
 		if (document.getElementsByClassName("dropdown-item-cart")) {
 			var dropdownItemCart = document.querySelectorAll(".dropdown-item-cart").length;
-			Array.from(document.querySelectorAll("#cart-dropdown .dropdown-menu-cart .remove-item-btn")).forEach(function (item) {
+			Array.from(document.querySelectorAll("#page-topbar .dropdown-menu-cart .remove-item-btn")).forEach(function (item) {
 				item.addEventListener("click", function (e) {
 					dropdownItemCart--;
 					this.closest(".dropdown-item-cart").remove();
