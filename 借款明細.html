@@ -541,22 +541,35 @@
                             <div class="card">
                                 <div class="card-body">
                                     <form>
-                                        <div class="row g-3">
-                                            <div class="col-xxl-3 col-sm-4">
-                                                <select class="form-control" data-choices data-choices-search-false id="stock-select">
-                                                    <option value="">選擇股票名稱</option>
-                                                    <option value="1" selected>全部</option>
-                                                    <option value="2">鴻海 2317</option>
-                                                    <option value="3">台積電 2330</option>
-                                                    <option value="4">兆豐金 2886</option>
-                                                </select>
+                                        <div class="row">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <div class="row g-3">
+                                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                                            <select class="form-control" data-choices data-choices-search-false id="stock-select">
+                                                                <option value="">選擇股票名稱</option>
+                                                                <option value="1" selected>全部</option>
+                                                                <option value="2">鴻海 2317</option>
+                                                                <option value="3">台積電 2330</option>
+                                                                <option value="4">兆豐金 2886</option>
+                                                            </select>
+                                                        </div>
+                                                        <!--end col-->
+                    
+                                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                                            <button type="button" class="btn btn-secondary w-100 mega-act">查詢</button>
+                                                        </div>
+                                                        <!--end col-->
+                                                    </div>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <select class="form-control" data-choices data-choices-search-false id="sort-by">
+                                                        <option value="">選擇排序方式</option>
+                                                        <option value="1" selected>依借款日期</option>
+                                                        <option value="2">依出借書號</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <!--end col-->
-        
-                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                <button type="button" class="btn btn-secondary w-100 mega-act">查詢</button>
-                                            </div>
-                                            <!--end col-->
                                         </div>
                                         <!--end row-->
                                     </form>
@@ -697,6 +710,10 @@
 
     <script>
         const stockChoices = new Choices('#stock-select', {
+            searchEnabled: false,
+        });
+
+        const listSortBy = new Choices('#sort-by', {
             searchEnabled: false,
         });
     </script>
