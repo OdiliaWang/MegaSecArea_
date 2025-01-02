@@ -26,3 +26,22 @@ if (document.getElementById("sa-params"))
             }
         });
     });
+
+//Warning Message
+if (document.getElementById("swal2-warning"))
+    document.getElementById("swal2-warning").addEventListener("click", function () {
+        Swal.fire({
+            title: "您尚未開立不限用途款項借貸帳戶",
+            icon: "warning",
+            showCancelButton: false,
+            confirmButtonClass: 'btn btn-secondary w-xs me-2 mt-2',
+            cancelButtonClass: 'btn btn-danger w-xs mt-2',
+            confirmButtonText: "確認返回",
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                history.back(); // 跳轉回上一頁
+            }
+        });
+    });
