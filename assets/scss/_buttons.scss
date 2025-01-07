@@ -12,6 +12,17 @@ button[mega_act] {
       line-height: 1.2;
     }
 }
+
+button[megaWeb].btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+        &:hover {
+            background-color: #b1314f;
+        }
+        &:active {
+            background-color: #a12a45;
+        }
+}
   
 .btn-icon-primary {
     position: relative;
