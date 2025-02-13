@@ -65,15 +65,15 @@ if (document.getElementById("swl-longcontent"))
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">未還張數</h5>' +
-                                                        '<span class="text-secondary">200張</span>' +
+                                                        '<span class="text-danger">200張</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">市值</h5>' +
-                                                        '<span class="text-secondary ">32,500,000元</span>' +
+                                                        '<span class="text-danger">32,500,000元</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">本次退還張數</h5>' +
-                                                        '<span class="text-secondary ">1張</span>' +
+                                                        '<span class="text-danger">1張</span>' +
                                                     '</div>' +
                                                 '</div>' +
                                             '</div>' +
@@ -87,15 +87,15 @@ if (document.getElementById("swl-longcontent"))
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">未還張數</h5>' +
-                                                        '<span class="text-secondary">200張</span>' +
+                                                        '<span class="text-danger">200張</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">市值</h5>' +
-                                                        '<span class="text-secondary ">32,500,000元</span>' +
+                                                        '<span class="text-danger">32,500,000元</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">本次退還張數</h5>' +
-                                                        '<span class="text-secondary ">1張</span>' +
+                                                        '<span class="text-danger">1張</span>' +
                                                     '</div>' +
                                                 '</div>' +
                                             '</div>' +
@@ -106,12 +106,20 @@ if (document.getElementById("swl-longcontent"))
                         '</div>' ,
             customClass: {
                 confirmButton: 'btn btn-secondary w-xs mt-2',
+                cancelButton: 'btn btn-outline-secondary w-xs me-2 mt-2',
                 closeButton: 'custom-close-btn'
             },
             confirmButtonText: '確認送出',
+            cancelButtonText: '取消',
             width: 1200,
             padding: 20,
             buttonsStyling: false,
-            showCloseButton: true  
-        })
+            showCancelButton: true,
+            showCloseButton: true,
+            reverseButtons: true  
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "unresLoans-result.html"; // 點擊確認後跳轉到 abc.html
+            }
+        });
     });

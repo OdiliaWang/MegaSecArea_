@@ -490,11 +490,17 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">申請內容</h1>
+                                <h1 class="mb-sm-0">存入擔保品</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
-                                            <a href="借款明細查詢.html"><i class="fa-solid fa-chevron-left me-2"></i> 回借款明細</a>
+                                            <a href="不限用途款項借貸menu.html">不限用途款項借貸</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            <a href="未償還借款明細.html">未償還借款明細</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            存入擔保品
                                         </li>
                                     </ol>
                                 </div>
@@ -545,30 +551,28 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="row g-2">
+                                <div class="row g-3">
                                     <div class="col-sm">
                                         <h5 class="mb-1 fw-medium">可用張數</h5>
-                                        <span class="text-secondary">3張</span>
+                                        <span class="text-muted">3張</span>
                                     </div>
                                     <div class="col-sm">
                                         <h5 class="mb-1 fw-medium">在途張數</h5>
-                                        <span class="text-secondary">1張</span>
+                                        <span class="text-muted">1張</span>
                                     </div>
                                     <div class="col-sm">
                                         <h5 class="mb-1 fw-medium">擔保品市值</h5>
-                                        <span class="text-secondary">307,500元</span>
+                                        <span class="text-muted">307,500元</span>
                                     </div>
                                     <div class="col-sm">
                                         <h5 class="mb-1 fw-medium">成數</h5>
-                                        <span class="text-secondary">60</span>
+                                        <span class="text-muted">60</span>
                                     </div>
                                     <div class="col-sm">
                                         <h5 class="mb-1 fw-medium">利率</h5>
-                                        <span class="text-secondary">6%</span>
+                                        <span class="text-muted">6%</span>
                                     </div>
-                                </div>
-                                <div class="row g-2 mt-2">
-                                    <div class="col-sm">
+                                    <div class="col-sm-auto">
                                         <h5 class="mb-1 fw-medium">本次轉擔保品張數</h5>
                                         <div class="input-step inputAdjust step-secondary">
                                             <button type="button" class="minus">–</button>
@@ -576,9 +580,15 @@
                                             <button type="button" class="plus">+</button>
                                         </div>
                                     </div>
-                                    <div class="col-sm">
-                                        <h5 class="mb-1 fw-medium">可借貸金額</h5>
-                                        <span class="text-danger">205,000元</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-sm-auto text-end">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="h5 fw-medium mb-0">可借貸金額</div>
+                                            <span class="text-danger">205,000元</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -587,7 +597,7 @@
                             <div class="col-xl-4">
                                 <div class="hstack gap-3">
                                     <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
-                                    <a class="btn btn-secondary w-50" href="unresLoans-result.html">確認送出</a>
+                                    <a class="btn btn-secondary w-50" href="#!">確認送出</a>
                                 </div>
                             </div>
                         </div>
