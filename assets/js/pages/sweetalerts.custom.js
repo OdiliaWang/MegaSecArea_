@@ -82,16 +82,16 @@ if (document.getElementById("swl-longcontent"))
                                             '<div class="card-body">' +
                                                 '<div class="row g-3">' +
                                                     '<div class="col-sm-2">' +
-                                                        '<h5 class="mb-1">台積電</h5>' +
-                                                        '<h5 class="mb-0 text-muted">2330</h5>' +
+                                                        '<h5 class="mb-1">WW</h5>' +
+                                                        '<h5 class="mb-0 text-muted">1325</h5>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">未還張數</h5>' +
-                                                        '<span class="text-danger">200張</span>' +
+                                                        '<span class="text-danger">50張</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">市值</h5>' +
-                                                        '<span class="text-danger">32,500,000元</span>' +
+                                                        '<span class="text-danger">3,620,000元</span>' +
                                                     '</div>' +
                                                     '<div class="col-sm">' +
                                                         '<h5 class="mb-1 fw-medium">本次退還張數</h5>' +
@@ -119,7 +119,7 @@ if (document.getElementById("swl-longcontent"))
             reverseButtons: true  
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "unresLoans-result.html"; // 點擊確認後跳轉到 abc.html
+                window.location.href = "unresLoans-result.html";
             }
         });
     });
