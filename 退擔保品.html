@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>擔保品退回 | 不限用途款項借貸</title>
+    <title>未償還借款申請-退回擔保品</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -20,6 +20,10 @@
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+
+    <!-- Sweet Alert css-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
@@ -492,9 +496,12 @@
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                 <h1 class="mb-sm-0">退回擔保品</h1>
                                 <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
+                                    <ol class="breadcrumb m-0 fs-12">
                                         <li class="breadcrumb-item">
-                                            未償還借款申請
+                                            <a href="不限用途款項借貸menu.html">不限用途款項借貸</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">
+                                            <a href="未償還借款申請.html">未償還借款申請</a>
                                         </li>
                                         <li class="breadcrumb-item active">
                                             退回擔保品
@@ -641,6 +648,55 @@
                                         </div>
                                     </div>
                                     <!-- end Card 2 -->
+                                    <div class="d-flex gap-2">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="formCheck1">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="card">
+                                                <div class="card-header bg-light border-0">
+                                                    <div class="d-flex">
+                                                        <div class="flex-grow-0">
+                                                            <span class="fw-semibold fs-20 mb-0">WW</span>
+                                                            <h5 class="mb-0 text-muted">9632</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-2">
+                                                            <span class="badge badge-success ms-3 fs-14">次要</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row g-3">
+                                                        <div class="col-sm">
+                                                            <h5 class="mb-1 fw-medium">原始張數</h5>
+                                                            <span class="text-muted">2張</span>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <h5 class="mb-1 fw-medium">已退還張數</h5>
+                                                            <span class="text-muted">0張</span>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <h5 class="mb-1 fw-medium">未還張數</h5>
+                                                            <span class="text-muted">2張</span>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <h5 class="mb-1 fw-medium">擔保品市值</h5>
+                                                            <span class="text-muted">3,500,000元</span>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <h5 class="mb-1 fw-medium">本次退還張數</h5>
+                                                            <div class="input-step inputAdjust step-secondary">
+                                                                <button type="button" class="minus">–</button>
+                                                                <input type="number" value="1" min="1" max="100">
+                                                                <button type="button" class="plus">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end Card 3 -->
                                 </div>
                             </div>
                         </div>
@@ -649,7 +705,7 @@
                             <div class="col-xl-4">
                                 <div class="hstack gap-3">
                                     <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
-                                    <button type="submit" class="btn btn-secondary w-50">下一步，申請確認</button>
+                                    <button type="button" class="btn btn-secondary w-50" id="swl-longcontent">下一步，申請確認</button>
                                 </div>
                             </div>
                         </div>
@@ -681,6 +737,10 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="assets/js/pages/sweetalerts.custom.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>

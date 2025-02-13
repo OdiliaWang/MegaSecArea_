@@ -897,6 +897,10 @@ button[megaWeb].btn-primary:active {
   border-radius: 50rem;
 }
 
+.custom-close-btn {
+  font-size: 20px !important;
+}
+
 /* Cards */
 .mega-c-link {
   color: #495057;
