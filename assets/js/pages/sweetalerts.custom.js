@@ -47,8 +47,8 @@ if (document.getElementById("swal2-warning"))
     });
 
 // Long Content
-if (document.getElementById("swl-longcontent"))
-    document.getElementById("swl-longcontent").addEventListener("click", function () {
+if (document.getElementById("confirmBtn"))
+    document.getElementById("confirmBtn").addEventListener("click", function () {
         Swal.fire({
             html: '<div class="card unres-check-card">' +
                                 '<div class="card-header">' +
