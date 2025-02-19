@@ -17,15 +17,383 @@ if (document.getElementById("sa-params"))
                 Swal.fire({
                     title: '已刪除成功',
                     icon: 'success',
-                    confirmButtonText: '<a style="color:#ffffff" href="不限用途款項借貸menu.html">完成</a>',
-                    confirmButtonClass: 'btn btn-secondary w-xs mt-2',
-                    buttonsStyling: false
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
                 })
             } else if (result.isDissmissed) {
                 Swal.close();
             }
         });
     });
+
+// Delete data for loan
+if (document.getElementById("swal2-deleteLoan"))
+    document.getElementById("swal2-deleteLoan").addEventListener("click", function () {
+        Swal.fire({
+            title: '確認刪除',
+            html: '<div class="card mb-0 border-0 shadow-none">' +
+                    '<div class="card-body pt-0 pb-0">' +
+                        '<div class="row g-3 justify-content-center">' +
+                            '<div class="col-12">' +
+                                '<div class="alert alert-primary mb-0">' +
+                                    '<i class="ri-delete-bin-line me-2 fs-18"></i>' +
+                                    '<span class="text-primary">這筆資料將會刪除，請再次確認</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款日期</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">2024/5/9</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款書號</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">0001</span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                               ' <div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款金額</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">1,800,000 <span>元</span></span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'+
+                '</div>',
+            showCancelButton: true,
+            confirmButtonText: '確認刪除',
+            cancelButtonText: '取消',
+            confirmButtonClass: 'btn btn-outline-secondary w-xs me-2',
+            cancelButtonClass: 'btn btn-secondary w-xs',
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    title: '已刪除成功',
+                    icon: 'success',
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
+                })
+            } else if (result.isDissmissed) {
+                Swal.close();
+            }
+        });
+    });
+
+// Delete data for debt payment
+if (document.getElementById("swal2-debtPayment"))
+    document.getElementById("swal2-debtPayment").addEventListener("click", function () {
+        Swal.fire({
+            title: '確認刪除',
+            html: '<div class="card mb-0 border-0 shadow-none">' +
+                    '<div class="card-body pt-0 pb-0">' +
+                        '<div class="row g-3 justify-content-center">' +
+                            '<div class="col-12">' +
+                                '<div class="alert alert-primary mb-0">' +
+                                    '<i class="ri-delete-bin-line me-2 fs-18"></i>' +
+                                    '<span class="text-primary">這筆資料將會刪除，請再次確認</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款日期</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">2024/5/9</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款書號</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">0001</span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                               ' <div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">還款金額</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">1,800,000 <span>元</span></span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'+
+                '</div>',
+            showCancelButton: true,
+            confirmButtonText: '確認刪除',
+            cancelButtonText: '取消',
+            confirmButtonClass: 'btn btn-outline-secondary w-xs me-2',
+            cancelButtonClass: 'btn btn-secondary w-xs',
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    title: '已刪除成功',
+                    icon: 'success',
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
+                })
+            } else if (result.isDissmissed) {
+                Swal.close();
+            }
+        });
+    });
+
+
+// Delete data for return
+if (document.getElementById("swal2-deleteReturn"))
+    document.getElementById("swal2-deleteReturn").addEventListener("click", function () {
+        Swal.fire({
+            title: '確認刪除',
+            html: '<div class="card mb-0 border-0 shadow-none">' +
+                    '<div class="card-body pt-0 pb-0">' +
+                        '<div class="row g-3 justify-content-center">' +
+                            '<div class="col-12">' +
+                                '<div class="alert alert-primary mb-0">' +
+                                    '<i class="ri-delete-bin-line me-2 fs-18"></i>' +
+                                    '<span class="text-primary">這筆資料將會刪除，請再次確認</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款日期</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">2024/5/9</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款書號</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">0001</span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                               ' <div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">擔保品</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">鴻海 <span>200</span> <span>張</span></span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'+
+                '</div>',
+            showCancelButton: true,
+            confirmButtonText: '確認刪除',
+            cancelButtonText: '取消',
+            confirmButtonClass: 'btn btn-outline-secondary w-xs me-2',
+            cancelButtonClass: 'btn btn-secondary w-xs',
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    title: '已刪除成功',
+                    icon: 'success',
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
+                })
+            } else if (result.isDissmissed) {
+                Swal.close();
+            }
+        });
+    });
+
+
+// Delete data for return
+if (document.getElementById("swal2-deleteReturn"))
+    document.getElementById("swal2-deleteReturn").addEventListener("click", function () {
+        Swal.fire({
+            title: '確認刪除',
+            html: '<div class="card mb-0 border-0 shadow-none">' +
+                    '<div class="card-body pt-0 pb-0">' +
+                        '<div class="row g-3 justify-content-center">' +
+                            '<div class="col-12">' +
+                                '<div class="alert alert-primary mb-0">' +
+                                    '<i class="ri-delete-bin-line me-2 fs-18"></i>' +
+                                    '<span class="text-primary">這筆資料將會刪除，請再次確認</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款日期</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">2024/5/9</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款書號</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">0001</span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                               ' <div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">擔保品</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">鴻海 <span>200</span> <span>張</span></span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'+
+                '</div>',
+            showCancelButton: true,
+            confirmButtonText: '確認刪除',
+            cancelButtonText: '取消',
+            confirmButtonClass: 'btn btn-outline-secondary w-xs me-2',
+            cancelButtonClass: 'btn btn-secondary w-xs',
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    title: '已刪除成功',
+                    icon: 'success',
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
+                })
+            } else if (result.isDissmissed) {
+                Swal.close();
+            }
+        });
+    });
+
+
+
+// Delete data for deposit
+if (document.getElementById("swal2-deleteDeposit"))
+    document.getElementById("swal2-deleteDeposit").addEventListener("click", function () {
+        Swal.fire({
+            title: '確認刪除',
+            html: '<div class="card mb-0 border-0 shadow-none">' +
+                    '<div class="card-body pt-0 pb-0">' +
+                        '<div class="row g-3 justify-content-center">' +
+                            '<div class="col-12">' +
+                                '<div class="alert alert-primary mb-0">' +
+                                    '<i class="ri-delete-bin-line me-2 fs-18"></i>' +
+                                    '<span class="text-primary">這筆資料將會刪除，請再次確認</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款日期</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">2024/5/9</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                                '<div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">借款書號</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">0001</span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                            '<div class="col-7">' +
+                               ' <div class="d-flex align-items-center">' +
+                                    '<div class="flex-grow-1 text-start">' +
+                                        '<span class="mb-0 fw-medium">擔保品</span>' +
+                                    '</div>' +
+                                    '<div class="flex-shrink-0">' +
+                                        '<span class="fs-14">鴻海 <span>5</span> <span>張</span></span>' +
+                                    '</div>' +
+                               ' </div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'+
+                '</div>',
+            showCancelButton: true,
+            confirmButtonText: '確認刪除',
+            cancelButtonText: '取消',
+            confirmButtonClass: 'btn btn-outline-secondary w-xs me-2',
+            cancelButtonClass: 'btn btn-secondary w-xs',
+            buttonsStyling: false,
+            showCloseButton: false
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    title: '已刪除成功',
+                    icon: 'success',
+                    confirmButtonText: '完成',
+                    confirmButtonClass: 'btn btn-secondary w-xs',
+                    buttonsStyling: false,
+                    preConfirm: () => {
+                        window.location.href = "回傳結果.html";
+                    }
+                })
+            } else if (result.isDissmissed) {
+                Swal.close();
+            }
+        });
+    });
+
 
 // Warning Message
 if (document.getElementById("swal2-warning"))
