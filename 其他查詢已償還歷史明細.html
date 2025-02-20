@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>擔保品餘額查詢 | 不限用途款項借貸</title>
+    <title>已償還歷史明細 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,14 +490,17 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">擔保品餘額查詢</h1>
+                                <h1 class="mb-sm-0">已償還歷史明細</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="不限用途款項借貸menu.html">不限用途款項借貸</a>
                                         </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="已償還借款明細查詢.html">其他查詢 - 已償還借款明細</a>
+                                        </li>
                                         <li class="breadcrumb-item active">
-                                            其他查詢 - 擔保品餘額查詢
+                                            已償還歷史明細
                                         </li>
                                     </ol>
                                 </div>
@@ -536,62 +539,68 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- start Cards -->
                         <div class="col-xl-12">
+                            <!-- Cards 1 -->
                             <div class="card">
                                 <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">台積電</span>
-                                            <h5 class="mb-0 text-muted">2330</h5>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <a class="card-link mega-c-link" href="擔保品餘額明細.html">餘額明細 <i class="fa-solid fa-chevron-right ms-1"></i></a>
-                                        </div>
-                                    </div>
+                                    <span class="fw-semibold mb-0">借款書號</span>
+                                    <span class="ms-2 text-muted mb-1">0001</span>
                                 </div>
-                                <div class="card-body">
-                                    <div class="row g-2">
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">原始擔保張數</h5>
-                                            <span class="text-secondary ">50張</span>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">剩餘擔保張數</h5>
-                                            <span class="text-secondary ">33張</span>
-                                        </div>
-                                    </div>
+                                <div class="card-body p-0">
+                                    <!-- 載入歷史還款紀錄 -->
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
+                                                    <span>20240810</span>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
+                                                    <span>150,000</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
+                                                    <span>300</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
+                                                    <span>20240820</span>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
+                                                    <span>150,000</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
+                                                    <span>300</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
+                                                    <span>20240830</span>
+                                                </div>
+                                                <div class="col">
+                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
+                                                    <span>150,000</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
+                                                    <span>300</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!-- end Card 1 -->
-
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">台積電</span>
-                                            <h5 class="mb-0 text-muted">2330</h5>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <a class="card-link mega-c-link" href="擔保品餘額明細.html">餘額明細 <i class="fa-solid fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row g-2">
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">原始擔保張數</h5>
-                                            <span class="text-secondary ">50張</span>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">剩餘擔保張數</h5>
-                                            <span class="text-secondary ">33張</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end Card 2 -->
                         </div>
 
                         <!-- NoResult -->

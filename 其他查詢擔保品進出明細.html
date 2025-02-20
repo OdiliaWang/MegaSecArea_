@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>已償還歷史明細 | 不限用途款項借貸</title>
+    <title>其他查詢 - 擔保品進出查詢 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,17 +490,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">已償還歷史明細</h1>
+                                <h1 class="mb-sm-0">擔保品進出明細</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="不限用途款項借貸menu.html">不限用途款項借貸</a>
                                         </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="已償還借款明細查詢.html">其他查詢 - 已償還借款明細查詢</a>
-                                        </li>
                                         <li class="breadcrumb-item active">
-                                            已償還歷史明細
+                                            其他查詢 - 擔保品進出明細
                                         </li>
                                     </ol>
                                 </div>
@@ -539,67 +536,252 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row g-2">
+                                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class='bx bx-calendar fs-5'></i>
+                                                        </div>
+                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢起日" id="rage-date" readonly="readonly">
+                                                        <span class="input-group-text bg-light text-muted">至</span>
+                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢迄日" id="rage-date" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                                <!--end col-->
+                                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                                                    <button class="btn btn-secondary w-100 mega-act">查詢</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- start Cards -->
                         <div class="col-xl-12">
-                            <!-- Cards 1 -->
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <span class="fw-semibold mb-0">借款書號</span>
-                                    <span class="ms-2 text-muted mb-1">0001</span>
+                            <div id="d-layout">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card rounded-top">
+                                            <table class="table table-nowrap table-centered align-middle mb-0">
+                                                <thead class="bg-light text-muted">
+                                                    <tr>
+                                                        <th scope="col" style="width: 20%;">申請日期</th>
+                                                        <th scope="col" style="width: 30%;">股票名稱</th>
+                                                        <th scope="col" style="width: 30%;">異動別</th>
+                                                        <th scope="col" style="width: 10%;">匯出</th>
+                                                        <th scope="col" style="width: 10%;">匯入</th>
+                                                    </tr><!-- end tr -->
+                                                </thead><!-- thead -->
+    
+                                                <tbody>
+                                                    <tr>
+                                                        <td> 2023/05/07 </td>
+                                                        <td> 台積電 <span class="ms-1 text-muted">2330</span></td>
+                                                        <td> 本人擔保品入庫</td>
+                                                        <td> </td>
+                                                        <td> 3 <span class="ms-1">張</span></td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td> 2023/07/01 </td>
+                                                        <td> 台積電 <span class="ms-1 text-muted">2330</span></td>
+                                                        <td> 本人擔保品出庫</td>
+                                                        <td> 1 <span class="ms-1">張</span></td>
+                                                        <td> </td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td> 2023/08/01 </td>
+                                                        <td> 鴻海 <span class="ms-1 text-muted">2317</span></td>
+                                                        <td> 他人補繳品入庫</td>
+                                                        <td> </td>
+                                                        <td> 1 <span class="ms-1">張</span></td>
+                                                    </tr><!-- end tr -->
+                                                </tbody><!-- end tbody -->
+                                            </table><!-- end table -->
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-body p-0">
-                                    <!-- 載入歷史還款紀錄 -->
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
-                                                    <span>20240810</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
-                                                    <span>150,000</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
-                                                    <span>300</span>
+                            </div>
+                            <!-- end d-layout -->
+
+                            <div id="m-layout">
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold fs-20 mb-0">台積電</span>
+                                                <h5 class="mb-0 text-muted">2330</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12 px-3">
+                                                <div class="alert alert-danger border-0 mb-0">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <span class="fs-14">2023/05/07</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
-                                                    <span>20240820</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
-                                                    <span>150,000</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
-                                                    <span>300</span>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">異動別</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-info fs-16">本人擔保品入庫</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款日期</h6>
-                                                    <span>20240830</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">還款金額(元)</h6>
-                                                    <span>150,000</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">利息(元)</h6>
-                                                    <span>300</span>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯出</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16"></span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯入</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16">3 <span class="ms-1">張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- end Card 1 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold fs-20 mb-0">台積電</span>
+                                                <h5 class="mb-0 text-muted">2330</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12 px-3">
+                                                <div class="alert alert-danger border-0 mb-0">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <span class="fs-14">2023/07/01</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">異動別</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-info fs-16">本人擔保品入庫</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯出</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16">1 <span class="ms-1">張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯入</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 2 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold fs-20 mb-0">鴻海</span>
+                                                <h5 class="mb-0 text-muted">2317</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12 px-3">
+                                                <div class="alert alert-danger border-0 mb-0">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <span class="fs-14">2023/08/01</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">異動別</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-info fs-16">他人補繳品入庫</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯出</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">匯入</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success fs-16">1 <span class="ms-1">張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 3 -->
                             </div>
                         </div>
 
@@ -608,7 +790,6 @@
                             <div class="text-center">
                                 <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
                                 <h5 class="mt-2">無資料</h5>
-                                <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
                             </div>
                         </div>
 
@@ -665,9 +846,9 @@
 
     <script>
         config = {
-            mode: "range"
-        }
-
+            altInput: true,
+            altFormat: "Y/M/d"
+        };
         flatpickr("input[id=rage-date]", config);
     </script>
     

@@ -8,7 +8,7 @@
         data-preloader="disable">
 <head>
     <meta charset="UTF-8" />
-    <title>借款進出明細查詢 | 不限用途款項借貸</title>
+    <title>其他查詢 - 擔保品餘額 | 不限用途款項借貸</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
@@ -490,14 +490,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">借款進出明細查詢</h1>
+                                <h1 class="mb-sm-0">擔保品餘額</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="不限用途款項借貸menu.html">不限用途款項借貸</a>
                                         </li>
                                         <li class="breadcrumb-item active">
-                                            其他查詢 - 借款進出明細查詢
+                                            其他查詢 - 擔保品餘額
                                         </li>
                                     </ol>
                                 </div>
@@ -536,66 +536,127 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="row g-2">
-                                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
-                                                    <div class="input-group">
-                                                        <div class="input-group-text bg-secondary border-secondary text-white">
-                                                            <i class='bx bx-calendar fs-5'></i>
-                                                        </div>
-                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢起日" id="rage-date" readonly="readonly">
-                                                        <span class="input-group-text bg-light text-muted">至</span>
-                                                        <input type="text" class="form-control flatpickr-input" data-provider="flatpickr" placeholder="選擇查詢迄日" id="rage-date" readonly="readonly">
-                                                    </div>
-                                                </div>
-                                                <!--end col-->
-                                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
-                                                    <button class="btn btn-secondary w-100 mega-act">查詢</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <!-- start Cards -->
                         <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold mb-0">借款書號</span>
-                                            <span class="ms-1 text-muted mb-1">0001</span>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <span class="fw-semibold mb-0">申請日期</span>
-                                            <span class="ms-1 text-muted mb-1">2023/10/10</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row g-2">
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">借款金額</h5>
-                                            <span class="text-secondary">18,000,000 元</span>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">剩餘擔保張數</h5>
-                                            <span class="text-secondary">33張</span>
-                                        </div>
-                                        <div class="col-sm">
-                                            <h5 class="mb-1 fw-medium">還款日期</h5>
-                                            <span class="text-secondary">2024/05/29</span>
+                            <!-- desk -->
+                            <div id="d-layout">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card rounded-top">
+                                            <table class="table table-nowrap table-centered align-middle mb-0">
+                                                <thead class="bg-light text-muted">
+                                                    <tr>
+                                                        <th scope="col" style="width: 20%;">股票名稱</th>
+                                                        <th scope="col" style="width: 20%;">原始擔保張數</th>
+                                                        <th scope="col" style="width: 30%;">剩餘擔保張數</th>
+                                                        <th scope="col" class="text-center" style="width: 10%;">餘額明細</th>
+                                                    </tr><!-- end tr -->
+                                                </thead><!-- thead -->
+    
+                                                <tbody>
+                                                    <tr>
+                                                        <td> 台積電 <span class="ms-1 text-muted">2330</span></td>
+                                                        <td> 33 <span class="ms-1">張</span></td>
+                                                        <td> 11 <span class="ms-1">張</span></td>
+                                                        <td class="text-center"><a class="btn btn-outline-secondary btn-sm" href="其他查詢擔保品餘額明細.html">查看</a></td>
+                                                    </tr><!-- end tr -->
+                                                    <tr>
+                                                        <td> TT <span class="ms-1 text-muted">3216</span></td>
+                                                        <td> 50 <span class="ms-1">張</span></td>
+                                                        <td> 10 <span class="ms-1">張</span></td>
+                                                        <td class="text-center"><a class="btn btn-outline-secondary btn-sm" href="其他查詢擔保品餘額明細.html">查看</a></td>
+                                                    </tr><!-- end tr -->
+                                                </tbody><!-- end tbody -->
+                                            </table><!-- end table -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end Card 1 -->
+                            <!-- end d-layout -->
+
+                            <div id="m-layout">
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold mb-0">台積電</span>
+                                                <h5 class="text-muted mb-0">2330</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">原始擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14"> 33 <span>張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">剩餘擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14"> 11 <span>張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="vstack g-2 mt-2">
+                                                    <a class="btn btn-soft-secondary btn-sm"href="其他查詢擔保品餘額明細.html">查看明細</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 1 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold mb-0">TT</span>
+                                                <h5 class="text-muted mb-0">3216</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">原始擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14"> 50 <span>張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">剩餘擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14"> 10 <span>張</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="vstack g-2 mt-2">
+                                                    <a class="btn btn-soft-secondary btn-sm"href="其他查詢擔保品餘額明細.html">查看明細</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 2 -->
+                            </div>
                         </div>
 
                         <!-- NoResult -->
@@ -603,7 +664,6 @@
                             <div class="text-center">
                                 <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#cb954b,secondary:#ffe0e0" style="width:75px;height:75px"></lord-icon>
                                 <h5 class="mt-2">無資料</h5>
-                                <p class="text-muted mb-0">很抱歉，搜尋不到您所輸入的資料</p>
                             </div>
                         </div>
 
@@ -660,9 +720,9 @@
 
     <script>
         config = {
-            altInput: true,
-            altFormat: "Y/M/d"
-        };
+            mode: "range"
+        }
+
         flatpickr("input[id=rage-date]", config);
     </script>
     
