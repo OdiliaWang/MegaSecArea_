@@ -492,7 +492,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1 class="mb-sm-0">借款</h1>
+                                <h1 class="mb-sm-0">借款申請進度</h1>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
@@ -541,133 +541,107 @@
 
                         <!-- start Cards -->
                         <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold mb-0">借款書號</span>
-                                            <span class="ms-1 text-muted">0001</span>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <span class="badge badge-success fs-16 p-2"> 申請中 </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body pt-0 pb-0">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-lg-6 pt-3 pb-3">
-                                            <div class="row g-2">
-                                                <div class="col-12">
-                                                    <div class="alert alert-danger border-0 mb-0">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex-grow-1">
-                                                                <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
-                                                            </div>
-                                                            <div class="flex-shrink-0">
-                                                                <span class="fs-14">2024/05/09</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 px-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">借款金額</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">18,000,000 <span>元</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="m-layout" class="d-md-block d-lg-none">
-                                                    <div class="row g-2">
-                                                        <div class="bg-primary-subtle rounded p-2">
-                                                            <h5 class="mb-1 fw-medium">
-                                                                <i class="fa-solid fa-tag text-secondary align-bottom me-1"></i>
-                                                                擔保品
-                                                            </h5>
-                                                            <span class="fs-14">FF(1張)、OO(1張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)</span> 
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="d-layout" class="col-xl-6 col-lg-6 d-md-none d-lg-block border-start pt-3 pb-3">
-                                            <div class="row-cols-1"> 
-                                                <div class="bg-primary-subtle rounded p-2">
-                                                    <h5 class="mb-1 fw-medium">
-                                                        <i class="fa-solid fa-tag text-secondary align-bottom me-1"></i>
-                                                        擔保品
-                                                    </h5>
-                                                    <span class="fs-14">台積電(2張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)</span> 
-                                                </div>
-                                            </div>
+                            <!-- desk -->
+                            <div id="d-layout" class="d-md-none d-lg-block">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card rounded-top">
+                                            <table class="table align-middle table-nowrap mb-0">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th data-sort="" scope="col">申請日期</th>
+                                                        <th data-sort="" scope="col">借款書號</th>
+                                                        <th data-sort="" scope="col" style="width: 20%;">借款金額</th>
+                                                        <th data-sort="" scope="col" style="width: 40%;">擔保品</th>
+                                                        <th data-sort="" scope="col" class="text-center" style="width: 10%;">狀態</th>
+                                                        <th data-sort="" scope="col"></th>
+                                                    </tr>
+                                                    <!--end tr-->
+                                                </thead>
+                                                <tbody>
+                                                    <!-- data 1 -->
+                                                    <tr>
+                                                        <td>2024/05/09</td>
+                                                        <td>0001</td>
+                                                        <td>18,000,000 <span>元</span></td>
+                                                        <td>台積電(2張)、鴻海(2張)</td>
+                                                        <td>
+                                                            <span class="badge badge-success fs-16">申請中</span>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-outline-secondary btn-sm" id="swal2-deleteLoan">刪除</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- data 2 -->
+                                                    <tr>
+                                                        <td>2024/05/30</td>
+                                                        <td>0002</td>
+                                                        <td>18,000,000 <span>元</span></td>
+                                                        <td>台積電(2張)、鴻海(2張)、YB(2張)</td>
+                                                        <td>
+                                                            <span class="badge badge-success fs-16">申請中</span>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-outline-secondary btn-sm" id="swal2-deleteLoan">刪除</button>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- data 3 -->
+                                                    <tr>
+                                                        <td>2024/07/09</td>
+                                                        <td>0008</td>
+                                                        <td>18,000,000 <span>元</span></td>
+                                                        <td>台積電(2張)、鴻海(2張)</td>
+                                                        <td>
+                                                            <span class="badge badge-primary fs-16">處理中</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--end table-->
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-footer p-0 px-3">
-                                    <div class="float-end">
-                                        <button type="button" class="btn btn-light" id="swal2-deleteLoan">
-                                            <i class="fa-solid fa-trash-can"></i>
-                                            <div class="ms-1 d-inline">刪除</div>
-                                        </button>
-                                    </div>
+                                    <!--end card-body-->
                                 </div>
                             </div>
-                            <!-- end Card 1 -->
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold mb-0">借款書號</span>
-                                            <span class="ms-1 text-muted">0001</span>
-                                        </div>
-                                        <div class="flex-shrink-0">
-                                            <span class="badge badge-primary fs-16 p-2"> 處理中 </span>
+                            <!-- mobile -->
+                            <div id="m-layout" class="d-md-block d-lg-none">
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold mb-0">借款書號</span>
+                                                <span class="ms-1 text-muted">0001</span>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="badge badge-success fs-16 p-2"> 申請中 </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-body pt-0 pb-0">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-lg-6 pt-3 pb-3">
-                                            <div class="row g-2">
-                                                <div class="col-12">
-                                                    <div class="alert alert-danger border-0 mb-0">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex-grow-1">
-                                                                <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
-                                                            </div>
-                                                            <div class="flex-shrink-0">
-                                                                <span class="fs-14">2024/05/09</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 px-3">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-danger border-0 mb-0">
                                                     <div class="d-flex align-items-center">
                                                         <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">借款金額</h5>
+                                                            <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
                                                         </div>
                                                         <div class="flex-shrink-0">
-                                                            <span class="fs-14">18,000,000 <span>元</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="m-layout" class="d-md-block d-lg-none">
-                                                    <div class="row g-2">
-                                                        <div class="bg-primary-subtle rounded p-2">
-                                                            <h5 class="mb-1 fw-medium">
-                                                                <i class="fa-solid fa-tag text-secondary align-bottom me-1"></i>
-                                                                擔保品
-                                                            </h5>
-                                                            <span class="fs-14">FF(1張)、OO(1張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)</span> 
+                                                            <span class="fs-14">2024/05/09</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div id="d-layout" class="col-xl-6 col-lg-6 d-md-none d-lg-block border-start pt-3 pb-3">
-                                            <div class="row-cols-1"> 
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">借款金額</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">18,000,000 <span>元</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
                                                 <div class="bg-primary-subtle rounded p-2">
                                                     <h5 class="mb-1 fw-medium">
                                                         <i class="fa-solid fa-tag text-secondary align-bottom me-1"></i>
@@ -678,9 +652,75 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="card-footer p-0 px-3">
+                                        <div class="float-end">
+                                            <button type="button" class="btn btn-light" id="swal2-deleteLoan">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                <div class="ms-1 d-inline">刪除</div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- end Card 1 -->
+                                
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold mb-0">借款書號</span>
+                                                <span class="ms-1 text-muted">0001</span>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="badge badge-success fs-16 p-2"> 申請中 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="alert alert-danger border-0 mb-0">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="mb-0 fw-medium text-danger">申請日期</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <span class="fs-14">2024/05/09</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">借款金額</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">18,000,000 <span>元</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="bg-primary-subtle rounded p-2">
+                                                    <h5 class="mb-1 fw-medium">
+                                                        <i class="fa-solid fa-tag text-secondary align-bottom me-1"></i>
+                                                        擔保品
+                                                    </h5>
+                                                    <span class="fs-14">FF(1張)、OO(1張)、鴻海(2張)、AA(1張)、FF(1張)、OO(1張)</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer p-0 px-3">
+                                        <div class="float-end">
+                                            <button type="button" class="btn btn-light" id="swal2-deleteLoan">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                <div class="ms-1 d-inline">刪除</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 2 -->
                             </div>
-                            <!-- end Card 2 -->
                         </div>
 
                         <!-- NoResult -->
