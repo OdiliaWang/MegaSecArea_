@@ -539,7 +539,81 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-12 col-lg-12 col-sm-12">
+                        <!-- desk -->
+                        <div id="d-layout" class="card d-md-none d-lg-block">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive table-card">
+                                        <table class="table align-middle table-nowrap" id="customerTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th data-sort="" scope="col">借款日期</th>
+                                                    <th data-sort="" scope="col">出借書號</th>
+                                                    <th data-sort="" scope="col" style="width: 15%;">初始借款金額</th>
+                                                    <th data-sort="" scope="col" style="width: 15%;">已還款金額</th>
+                                                    <th data-sort="" scope="col" style="width: 15%;">未償金額</th>
+                                                    <th data-sort="" scope="col">計算利息日</th>
+                                                    <th data-sort="" scope="col">利息</th>
+                                                    <th data-sort="" scope="col">試算手續費</th>
+                                                    <th data-sort="" scope="col"></th>
+                                                </tr>
+                                                <!--end tr-->
+                                            </thead>
+                                            <tbody>
+                                                <!-- data 1 -->
+                                                <tr>
+                                                    <td>2023/08/01</td>
+                                                    <td>0001</td>
+                                                    <td>18,000,000 <span>元</span></td>
+                                                    <td>0 <span>元</span></td>
+                                                    <td>18,000,000 <span>元</span></td>
+                                                    <td>2024/08/13</td>
+                                                    <td>110,199 <span>元</span></td>
+                                                    <td>0 <span>元</span></td>
+                                                    <td>
+                                                        <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
+                                                    </td>
+                                                </tr>
+                                                <!-- data 2 -->
+                                                <tr>
+                                                    <td>2023/08/11</td>
+                                                    <td>0002</td>
+                                                    <td>18,000,000 <span>元</span></td>
+                                                    <td>0 <span>元</span></td>
+                                                    <td>18,000,000 <span>元</span></td>
+                                                    <td>2024/08/13</td>
+                                                    <td>110,199 <span>元</span></td>
+                                                    <td>0 <span>元</span></td>
+                                                    <td>
+                                                        <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
+                                                    </td>
+                                                </tr>
+                                                <!-- data 3 -->
+                                                <tr>
+                                                    <td>2023/09/26</td>
+                                                    <td>0003</td>
+                                                    <td>200,000 <span>元</span></td>
+                                                    <td>180,000 <span>元</span></td>
+                                                    <td>20,000 <span>元</span></td>
+                                                    <td>2024/08/13</td>
+                                                    <td>4,500 <span>元</span></td>
+                                                    <td>3 <span>元</span></td>
+                                                    <td>
+                                                        <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--end table-->
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                        </div>
+
+
+                        <!-- mobile -->
+                        <div id="m-layout" class="d-md-block d-lg-none col-xxl-12 col-lg-12 col-sm-12">
                             <div class="card">
                                 <div class="card-header bg-light border-0">
                                     <div class="d-flex align-items-center">
@@ -549,128 +623,81 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body pt-0 pb-0">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="row g-2">
-                                                <div class="col-12 pt-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">借款日期</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">2024/05/29</span>
-                                                        </div>
-                                                    </div>
+                                <div class="card-body">
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">借款日期</h5>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">初始借款金額</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">100,800,000 <span>元</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">已還款金額</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">0 <span>元</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">未償金額</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">100,800,000 <span>元</span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="m-layout" class="d-md-block d-lg-none">
-                                                    <div class="row g-2">
-                                                        <div class="col-12">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-grow-1">
-                                                                    <h5 class="mb-0 fw-medium">計算利息日</h5>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <span class="fs-14">2024/08/13</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-grow-1">
-                                                                    <h5 class="mb-0 fw-medium">利息</h5>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <span class="fs-14">110,199 <span>元</span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-grow-1">
-                                                                    <h5 class="mb-0 fw-medium">試算手續費</h5>
-                                                                </div>
-                                                                <div class="flex-shrink-0">
-                                                                    <span class="fs-14">0 <span>元</span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 pb-3">
-                                                            <div class="float-end">
-                                                                <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">2024/05/29</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="d-layout" class="col-xl-6 col-lg-6 d-md-none d-lg-block border-start">
-                                            <div class="row g-2">
-                                                <div class="col-12 pt-3">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">計算利息日</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">2024/08/13</span>
-                                                        </div>
-                                                    </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">初始借款金額</h5>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">利息</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">110,199 <span>元</span></span>
-                                                        </div>
-                                                    </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">100,800,000 <span>元</span></span>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-0 fw-medium">試算手續費</h5>
-                                                        </div>
-                                                        <div class="flex-shrink-0">
-                                                            <span class="fs-14">0 <span>元</span></span>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">已還款金額</h5>
                                                 </div>
-                                                <div class="col-12 pb-3">
-                                                    <div class="float-end">
-                                                        <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
-                                                    </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">0 <span>元</span></span>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">未償金額</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">100,800,000 <span>元</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">計算利息日</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">2024/08/13</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">利息</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">110,199 <span>元</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">試算手續費</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">0 <span>元</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 pb-3">
+                                            <div class="float-end">
+                                                <a class="btn btn-outline-secondary" href="擔保品明細.html">擔保品明細</a>
                                             </div>
                                         </div>
                                     </div>
