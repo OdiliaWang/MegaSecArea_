@@ -549,7 +549,8 @@
                         </div>
                         
                         <!-- toast -->
-                        <div class="position-fixed top-0 end-0 p-3" style="z-index: 1099;">
+                         <!-- Display Position -->
+                         <div class="toast-container">
                             <div id="toast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
                                 <div class="d-flex">
                                     <div class="toast-body">應先退還次要(抵繳)擔保品，才可退還主要擔保品</div>
@@ -894,6 +895,16 @@
             });
         });
     </script>
+    
+    <style>
+        .toast-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1099;
+        }
+    </style>
     
 </body>
 </html>
