@@ -542,90 +542,238 @@
                         <!-- start Cards -->
                         <div class="col-xl-12">
                             <div class="card">
-                                <div class="card-header bg-light border-0">
+                                <div class="card-body border-0">
                                     <span class="fw-semibold fs-20 mb-0">台積電</span>
                                     <h5 class="mb-0 text-muted">2330</h5>
                                 </div>
-                                <div class="card-body">
-                                    <!-- 載入各筆借款書號資料 -->
-                                    <!-- Card 1 -->
-                                    <div class="card border-1 shadow-none">
-                                        <div class="card-header">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1">
-                                                    <span class="fw-semibold mb-0">借款書號</span>
-                                                    <span class="ms-2 text-muted mb-1">0001</span>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <span class="fw-semibold mb-0">借款日期</span>
-                                                    <span class="ms-2 text-muted mb-1">2024/08/01</span>
-                                                </div>
+                            </div>
+                            <div id="d-layout" class="card-body d-md-none d-lg-block">
+                                <!-- 載入各筆借款書號資料 -->
+                                <!-- Card 1 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold mb-0">借款書號</span>
+                                                <span class="ms-1 text-muted">0001</span>
                                             </div>
                                         </div>
-                                        <div class="card-body p-0">
-                                            <div class="mega-c-title danger mb-0">
-                                                <span class="fw-semibold mb-0"><i class="fa-solid fa-bookmark me-2"></i>維持率(市值/借款)</span>
-                                                <span class="ms-2">180%</span>
+                                    </div>
+                                    <div class="card-body pt-0 pb-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-lg-6 pt-3 pb-3">
+                                                <div class="row g-2">
+                                                    <div class="col-12">
+                                                        <div class="alert alert-danger border-0 mb-0">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-grow-1">
+                                                                    <h5 class="mb-0 fw-medium text-danger">借款日期</h5>
+                                                                </div>
+                                                                <div class="flex-shrink-0">
+                                                                    <span class="fs-14">2024/08/01</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 px-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="mb-0 fw-medium">借款金額</h5>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <span class="fs-14">18,000,000 <span>元</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 px-3">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="mb-1 fw-medium">維持率</h5>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <span class="badge badge-success">180%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">原始擔保張數</h6>
-                                                    <span>20 張</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">已退還張數</h6>
-                                                    <span>5 張</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">剩餘張數</h6>
-                                                    <span>10 張</span>
+                                            <div class="col-xl-6 col-lg-6 border-start pt-3 pb-3">
+                                                <div class="row g-2 py-3">
+                                                    <div class="col-12">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="mb-0 fw-medium">原始擔保張數</h5>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <span class="fs-14">20 <span>張</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="mb-0 fw-medium">已退還張數</h5>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <span class="fs-14">20 <span>張</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="mb-0 fw-medium">剩餘張數</h5>
+                                                            </div>
+                                                            <div class="flex-shrink-0">
+                                                                <span class="fs-14">10 <span>張</span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- end Card 1 -->
-
-                                    <!-- Card 2 -->
-                                    <div class="card border-1 shadow-none">
-                                        <div class="card-header">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1">
-                                                    <span class="fw-semibold mb-0">借款書號</span>
-                                                    <span class="ms-2 text-muted mb-1">0011</span>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <span class="fw-semibold mb-0">借款日期</span>
-                                                    <span class="ms-2 text-muted mb-1">2024/08/15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body p-0">
-                                            <div class="mega-c-title danger mb-0">
-                                                <span class="fw-semibold mb-0"><i class="fa-solid fa-bookmark me-2"></i>維持率(市值/借款)</span>
-                                                <span class="ms-2">200%</span>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">原始擔保張數</h6>
-                                                    <span>20 張</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">已退還張數</h6>
-                                                    <span>5 張</span>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="fs-14 fw-light text-muted">剩餘張數</h6>
-                                                    <span>10 張</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end Card 2 -->
                                 </div>
+                                <!-- end Card 1 -->
+                            </div>
+                            <div id="m-layout" class="card-body d-md-block d-lg-none">
+                                <!-- 載入各筆借款書號資料 -->
+                                <!-- Card 1 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-0 fw-medium">借款書號</h5>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="fs-14">0001</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">借款日期</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">2024/08/01</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">維持率</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success">180%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">原始擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">20 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">已退還張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">5 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">剩餘張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">10 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 1 -->
+                                 <!-- Card 2 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-0 fw-medium">借款書號</h5>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="fs-14">0011</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-0 fw-medium">借款日期</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">2024/08/15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">維持率</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="badge badge-success">180%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">原始擔保張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">20 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">已退還張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">5 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="mb-1 fw-medium">剩餘張數</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <span class="fs-14">10 張</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end Card 2 -->
                             </div>
                         </div>
 
