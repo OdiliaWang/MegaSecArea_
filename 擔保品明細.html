@@ -541,20 +541,56 @@
                         </div>
                         <!-- start Cards -->
                         <div class="col-xl-12">
-                            <!-- 載入各筆擔保品資料 -->
-                            <!-- Card 1 -->
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">鴻海</span>
-                                            <h5 class="mb-0 text-muted">2317</h5>
+                            <!-- desk -->
+                            <div id="d-layout" class="d-md-none d-lg-block">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive table-card rounded-top">
+                                            <table class="table align-middle table-nowrap">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th data-sort="" scope="col">股票名稱</th>
+                                                        <th data-sort="" scope="col">未還張數</th>
+                                                        <th data-sort="" scope="col">擔保品市值</th>
+                                                    </tr>
+                                                    <!--end tr-->
+                                                </thead>
+                                                <tbody>
+                                                    <!-- data 1 -->
+                                                    <tr>
+                                                        <td> 台積電 <span class="ms-1 text-muted">2330</span></td>
+                                                        <td> 33 <span class="ms-1">張</span></td>
+                                                        <td> 11 <span class="ms-1">張</span></td>
+                                                    </tr>
+                                                    <!-- data 2 -->
+                                                    <tr>
+                                                        <td> UU <span class="ms-1 text-muted">6985</span></td>
+                                                        <td> 11 <span class="ms-1">張</span></td>
+                                                        <td> 2 <span class="ms-1">張</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--end table-->
                                         </div>
                                     </div>
+                                    <!--end card-body-->
                                 </div>
-                                <div class="card-body p-0">
-                                    <div class="row g-2">
-                                        <div class="col-xl-6 col-lg-6 pt-3 px-3 pb-0">
+                            </div>
+                            <!-- mobile -->
+                            <div id="m-layout"class="d-md-block d-lg-none">
+                                <!-- 載入各筆擔保品資料 -->
+                                <!-- Card 1 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold fs-20 mb-0">鴻海</span>
+                                                <h5 class="mb-0 text-muted">2317</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="col-12">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1">
                                                     <h5 class="mb-0 fw-medium">未還張數</h5>
@@ -564,17 +600,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="d-layout" class="col-xl-6 col-lg-6 d-md-none d-lg-block border-start p-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-grow-1">
-                                                    <h5 class="mb-0 fw-medium">擔保品市值</h5>
-                                                </div>
-                                                <div class="flex-shrink-0">
-                                                    <span class="fs-14">32,500,000元</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="m-layout" class="col-12 d-md-block d-lg-none pt-0 pb-3 px-3">
+                                        <div class="col-12">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1">
                                                     <h5 class="mb-0 fw-medium">擔保品市值</h5>
@@ -586,45 +612,28 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Card 2 -->
-                            <div class="card">
-                                <div class="card-header bg-light border-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-grow-1">
-                                            <span class="fw-semibold fs-20 mb-0">MM</span>
-                                            <h5 class="mb-0 text-muted">2654</h5>
+                                <!-- Card 2 -->
+                                <div class="card">
+                                    <div class="card-header bg-light border-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <span class="fw-semibold fs-20 mb-0">MM</span>
+                                                <h5 class="mb-0 text-muted">2654</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="row g-2">
-                                        <div class="col-xl-6 col-lg-6 pt-3 px-3 pb-0">
-                                            <div class="col-12">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1">
-                                                        <h5 class="mb-0 fw-medium">未還張數</h5>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <span class="fs-14">100張</span>
-                                                    </div>
+                                    <div class="card-body">
+                                        <div class="col-12">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mb-0 fw-medium">未還張數</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <span class="fs-14">100張</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="d-layout" class="col-xl-6 col-lg-6 d-md-none d-lg-block border-start p-3">
-                                            <div class="col-12">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1">
-                                                        <h5 class="mb-0 fw-medium">擔保品市值</h5>
-                                                    </div>
-                                                    <div class="flex-shrink-0">
-                                                        <span class="fs-14">3,500,000元</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="m-layout" class="col-12 d-md-block d-lg-none pt-0 pb-3 px-3">
+                                        <div class="col-12">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-grow-1">
                                                     <h5 class="mb-0 fw-medium">擔保品市值</h5>
@@ -637,6 +646,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            
                         </div>
 
                         <!-- NoResult -->
