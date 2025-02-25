@@ -20,6 +20,8 @@
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- Sweet Alert css-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
@@ -546,7 +548,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1">
                                         <span class="fw-semibold fs-20 mb-0">聯成</span>
-                                        <h5 class="mb-0 text-muted">1313</h5>
+                                        <h5 class="mb-0 text-danger">1313</h5>
                                     </div>
                                 </div>
                             </div>
@@ -633,7 +635,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-grow-1">
                                         <span class="fw-semibold fs-20 mb-0">UU</span>
-                                        <h5 class="mb-0 text-muted">9685</h5>
+                                        <h5 class="mb-0 text-danger">9685</h5>
                                     </div>
                                 </div>
                             </div>
@@ -715,7 +717,7 @@
                             <div class="col-xl-4">
                                 <div class="hstack gap-3">
                                     <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
-                                    <a class="btn btn-secondary w-50" href="回傳結果.html">確認送出</a>
+                                    <button class="btn btn-secondary w-50" id="confirmBtn_3">確認送出</button>
                                 </div>
                             </div>
                         </div>
@@ -754,16 +756,10 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!-- flatpickr -->
-    <script src="assets/js/flatpicker-custom.js"></script>
-
-    <script>
-        config = {
-            mode: "range"
-        }
-
-        flatpickr("input[id=rage-date]", config);
-    </script>
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweetalerts.custom.js"></script>
     
 </body>
 </html>

@@ -50,7 +50,7 @@ if (document.getElementById("swal2-deleteLoan"))
                                         '<span class="mb-0 fw-medium">借款日期</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">2024/5/9</span>' +
+                                        '<span>2024/5/9</span>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>' +
@@ -60,7 +60,7 @@ if (document.getElementById("swal2-deleteLoan"))
                                         '<span class="mb-0 fw-medium">借款書號</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">0001</span>' +
+                                        '<span>0001</span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -70,7 +70,7 @@ if (document.getElementById("swal2-deleteLoan"))
                                         '<span class="mb-0 fw-medium">借款金額</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">1,800,000 <span>元</span></span>' +
+                                        '<span>1,800,000 <span>元</span></span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -122,7 +122,7 @@ if (document.getElementById("swal2-debtPayment"))
                                         '<span class="mb-0 fw-medium">借款日期</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">2024/5/9</span>' +
+                                        '<span>2024/5/9</span>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>' +
@@ -132,7 +132,7 @@ if (document.getElementById("swal2-debtPayment"))
                                         '<span class="mb-0 fw-medium">借款書號</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">0001</span>' +
+                                        '<span>0001</span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -142,7 +142,7 @@ if (document.getElementById("swal2-debtPayment"))
                                         '<span class="mb-0 fw-medium">還款金額</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">1,800,000 <span>元</span></span>' +
+                                        '<span>1,800,000 <span>元</span></span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -196,7 +196,7 @@ if (document.getElementById("swal2-deleteReturn"))
                                         '<span class="mb-0 fw-medium">借款日期</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">2024/5/9</span>' +
+                                        '<span>2024/5/9</span>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>' +
@@ -206,7 +206,7 @@ if (document.getElementById("swal2-deleteReturn"))
                                         '<span class="mb-0 fw-medium">借款書號</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">0001</span>' +
+                                        '<span>0001</span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -216,7 +216,7 @@ if (document.getElementById("swal2-deleteReturn"))
                                         '<span class="mb-0 fw-medium">擔保品</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">鴻海 <span>200</span> <span>張</span></span>' +
+                                        '<span>鴻海 <span>200</span> <span>張</span></span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -270,7 +270,7 @@ if (document.getElementById("swal2-deleteDeposit"))
                                         '<span class="mb-0 fw-medium">借款日期</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">2024/5/9</span>' +
+                                        '<span>2024/5/9</span>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>' +
@@ -280,7 +280,7 @@ if (document.getElementById("swal2-deleteDeposit"))
                                         '<span class="mb-0 fw-medium">借款書號</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">0001</span>' +
+                                        '<span>0001</span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -290,7 +290,7 @@ if (document.getElementById("swal2-deleteDeposit"))
                                         '<span class="mb-0 fw-medium">擔保品</span>' +
                                     '</div>' +
                                     '<div class="flex-shrink-0">' +
-                                        '<span class="fs-14">鴻海 <span>5</span> <span>張</span></span>' +
+                                        '<span>鴻海 <span>5</span> <span>張</span></span>' +
                                     '</div>' +
                                ' </div>' +
                             '</div>' +
@@ -348,7 +348,7 @@ if (document.getElementById("confirmBtn"))
         Swal.fire({
             html: '<div class="card unres-check-card">' +
                                 '<div class="card-header">' +
-                                    '<span class="mb-0 h4">請確認內容明細</span>' +
+                                    '<span class="mb-0 h4">請確認 借款書號0001 退回擔保品內容 </span>' +
                                 '</div>' +
                                 '<div class="card-body pb-0">' +
                                     '<div id="orderCard">' +
@@ -415,7 +415,158 @@ if (document.getElementById("confirmBtn"))
             reverseButtons: true  
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "unresLoans-result.html";
+                window.location.href = "回傳結果.html";
+            }
+        });
+    });
+
+
+// Repayment Apply Content
+if (document.getElementById("confirmBtn_2"))
+    document.getElementById("confirmBtn_2").addEventListener("click", function () {
+        Swal.fire({
+            html:   '<div class="card unres-check-card mb-0">' +
+                        '<div class="card-header">' +
+                            '<span class="mb-0 h4">請確認 借款書號0001 還款內容</span>' +
+                        '</div>' +
+                        '<div class="card-body">' +
+                            '<div class="row g-3 justify-content-center">' +
+                                '<div class="col-12 col-sm-7">' +
+                                    '<div class="d-flex align-items-center">' +
+                                        '<div class="flex-grow-1 text-start">' +
+                                            '<span class="mb-0 fw-medium">借款書號</span>' +
+                                        '</div>' +
+                                        '<div class="flex-shrink-0">' +
+                                            '<span class="text-danger">0001</span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-12 col-sm-7">' +
+                                    '<div class="d-flex align-items-center">' +
+                                        '<div class="flex-grow-1 text-start">' +
+                                            '<span class="mb-0 fw-medium">預計還款金額</span>' +
+                                        '</div>' +
+                                        '<div class="flex-shrink-0">' +
+                                            '<span class="text-danger">10,000,000 <span>元</span></span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-12 col-sm-7">' +
+                                    '<div class="d-flex align-items-center">' +
+                                        '<div class="flex-grow-1 text-start">' +
+                                            '<span class="mb-0 fw-medium">應償還利息</span>' +
+                                        '</div>' +
+                                        '<div class="flex-shrink-0">' +
+                                            '<span class="text-danger">11,199 <span>元</span></span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-12 col-sm-7">' +
+                                    '<div class="d-flex align-items-center">' +
+                                        '<div class="flex-grow-1 text-start">' +
+                                            '<span class="mb-0 fw-medium">手續費</span>' +
+                                        '</div>' +
+                                        '<div class="flex-shrink-0">' +
+                                            '<span class="text-danger">0 <span>元</span></span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-12 col-sm-7">' +
+                                    '<div class="d-flex align-items-center">' +
+                                        '<div class="flex-grow-1 text-start">' +
+                                            '<span class="mb-0 fw-medium">應繳金額</span>' +
+                                        '</div>' +
+                                        '<div class="flex-shrink-0">' +
+                                            '<span class="text-danger">10,011,199 <span>元</span></span>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' ,
+            customClass: {
+                confirmButton: 'btn btn-secondary w-xs mt-2',
+                cancelButton: 'btn btn-outline-secondary w-xs me-2 mt-2',
+                closeButton: 'custom-close-btn'
+            },
+            confirmButtonText: '確認送出',
+            cancelButtonText: '取消',
+            width: 1200,
+            padding: 20,
+            buttonsStyling: false,
+            showCancelButton: true,
+            showCloseButton: true,
+            reverseButtons: true  
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "回傳結果.html";
+            }
+        });
+    });
+
+
+// Deposit Apply Content
+if (document.getElementById("confirmBtn_3"))
+    document.getElementById("confirmBtn_3").addEventListener("click", function () {
+        Swal.fire({
+            html:   '<div class="card unres-check-card">' +
+                                '<div class="card-header">' +
+                                    '<span class="mb-0 h4">請確認 借款書號0001 存入擔保品內容</span>' +
+                                '</div>' +
+                                '<div class="card-body pb-0">' +
+                                    '<div class="card border-1 shadow-none p-1">' +
+                                            '<div class="card-body">' +
+                                                '<div class="row g-3">' +
+                                                    '<div class="col-sm-2">' +
+                                                        '<h5 class="mb-1">聯成</h5>' +
+                                                        '<h5 class="mb-0 text-muted">1313</h5>' +
+                                                    '</div>' +
+                                                    '<div class="col-sm">' +
+                                                        '<h5 class="mb-1 fw-medium">本次轉擔保品張數</h5>' +
+                                                        '<span class="text-danger">1張</span>' +
+                                                    '</div>' +
+                                                    '<div class="col-sm">' +
+                                                        '<h5 class="mb-1 fw-medium">可借貸金額</h5>' +
+                                                        '<span class="text-danger">6,480元</span>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="card border-1 shadow-none p-1">' +
+                                            '<div class="card-body">' +
+                                                '<div class="row g-3">' +
+                                                    '<div class="col-sm-2">' +
+                                                        '<h5 class="mb-1"> UU </h5>' +
+                                                        '<h5 class="mb-0 text-muted">1325</h5>' +
+                                                    '</div>' +
+                                                    '<div class="col-sm">' +
+                                                        '<h5 class="mb-1 fw-medium">本次轉擔保品張數</h5>' +
+                                                        '<span class="text-danger">1張</span>' +
+                                                    '</div>' +
+                                                    '<div class="col-sm">' +
+                                                        '<h5 class="mb-1 fw-medium">可借貸金額</h5>' +
+                                                        '<span class="text-danger">100,000元</span>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'  ,
+            customClass: {
+                confirmButton: 'btn btn-secondary w-xs mt-2',
+                cancelButton: 'btn btn-outline-secondary w-xs me-2 mt-2',
+                closeButton: 'custom-close-btn'
+            },
+            confirmButtonText: '確認送出',
+            cancelButtonText: '取消',
+            width: 1200,
+            padding: 20,
+            buttonsStyling: false,
+            showCancelButton: true,
+            showCloseButton: true,
+            reverseButtons: true  
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "回傳結果.html";
             }
         });
     });

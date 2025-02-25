@@ -20,6 +20,8 @@
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/daa3deb879.js" crossorigin="anonymous" ></script>
+    <!-- Sweet Alert css-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
@@ -548,7 +550,7 @@
                                         <div class="flex-grow-1">
                                             <div>
                                                 <span class="fw-semibold mb-0">出借書號</span>
-                                                <span class="ms-2 text-muted mb-1 fs-16">0001</span>
+                                                <span class="ms-2 mb-1 text-danger">0001</span>
                                             </div>
                                         </div>
                                     </div>
@@ -695,7 +697,7 @@
                                 <div class="col-xl-4">
                                     <div class="hstack gap-3">
                                         <button onclick="javascript:history.back(-1)" type="button" id="back" class="btn btn-outline-secondary w-50">取消</button>
-                                        <a class="btn btn-secondary w-50" href="回傳結果.html">確認送出</a>
+                                        <button class="btn btn-secondary w-50" id="confirmBtn_2">確認送出</button>
                                     </div>
                                 </div>
                             </div>
@@ -732,6 +734,11 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweetalerts.custom.js"></script>
     
 </body>
 </html>
