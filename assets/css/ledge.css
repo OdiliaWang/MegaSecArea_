@@ -1,0 +1,168 @@
+body {
+    background-color: #FFFBF5;
+}
+
+#page-topbar{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:75px;
+    min-height: 70px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 16px -2px rgba(56, 65, 74, 0.15);
+            box-shadow: 0 1px 16px -2px rgba(56, 65, 74, 0.15);
+    padding: 30px 0;
+}
+
+/* Setup Main Account*/
+.confirm-button {
+    display: none;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-xs {
+    --vz-btn-font-size: 0.8975rem;
+    --vz-btn-border-radius: var(--vz-border-radius-lg)
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 1000; 
+    border: none;
+    outline: none; 
+    background-color: #874b7a;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+    
+}
+  
+#myBtn:hover {
+    background-color: #713d66;
+    animation: fade-up 1.5s infinite linear;
+}
+
+.m-card-flag-i-ftp {
+    bottom: 9rem;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-bottom-left-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #dd9731;
+    position: absolute;
+}
+
+.m-card-flag-i-ftp >i {
+    color: #fff;
+}
+
+.m-card-flag-i-ftp:hover {
+    background-color: #d18b22;
+    color: #fff;
+}
+
+
+.m-card-flag-ftp {
+    bottom: 5rem;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-bottom-left-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #dd9731;
+    position: absolute;
+}
+
+.m-card-flag-ftp >i {
+    color: #fff;
+}
+
+.m-card-flag-ftp:hover {
+    background-color: #d18b22;
+    color: #fff;
+}
+
+.m-card-flag-tp {
+    top: 0;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #dd9731;
+    position: absolute;
+}
+
+.m-card-flag-tp >i {
+    color: #fff;
+}
+
+.m-card-flag-tp:hover {
+    background-color: #d18b22;
+    color: #fff;
+}
+
+
+.m-card-flag-bt {
+    bottom: 0;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-bottom-right-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+}
+
+.m-card-flag-bt >i {
+    color: #818181;
+}
+
+.m-card-flag-bt:hover {
+    background-color: #ebebeb;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh"
+      data-layout="horizontal"
+      data-layout-style="detached"
+      data-sidebar="light"
+      data-topbar="light"
+      data-sidebar-size="lg"  
+      data-preloader="disable">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兆豐證券｜分戶帳</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/img/megafavicon.ico">
+    
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />  
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/ledge.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container" style="margin-top: 20px;">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h2 class="mb-sm-0 fw-semibold fs-32">出入金帳戶管理</h2>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item">
+                                <a href="#">兆豐專區</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="MegaArea-ledger.html">分戶帳總覽</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                出入金帳戶管理
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        
+
+        <!--頁首 Cards-->
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card">
+                    <div class="card-header align-items-center d-flex p-4">
+                        <h4 class="card-title mb-0 flex-grow-1 fs-20">證-營業部0108496 錢多多</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body p-0">
+                        <div class="p-2 bg-soft-primary">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm flex-shrink-0 ms-3">
+                                    <span class="avatar-title bg-soft-primary text-primary rounded-circle fs-3">
+                                        <i class="ri-money-dollar-circle-fill align-middle"></i>
+                                    </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="fs-16 mb-0 text-primary">分戶帳帳號</h6>
+                                </div>
+                                <div class="float-end me-3">
+                                    <h6 class="fs-16 text-primary mb-0">95301001670011</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body mt-3 px-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-info text-light rounded-circle align-middle fs-20">
+                                    <i class="ri-wallet-3-line"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 gap-2 ms-2">
+                                <h4 class="mb-1">主要出入金帳戶</h4>
+                                <p class="badge badge-outline-info fs-14 mb-0">提供出金與入金功能</p>
+                            </div>
+                        </div>
+                        <div class="m-card-flag-ftp">
+                            <button class="btn text-white"><i class="ri-pencil-line align-middle fs-20"></i></button>
+                        </div>
+                        <div class="d-flex gap-2 mt-0 mx-auto align-items-center">
+                            <div class="flex-grow-1 mt-3 fs-16">
+                                <h5 class="mb-1">兆豐銀行017-28883645978256</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body mt-3 px-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-soft-primary text-light rounded-circle align-bottom fs-20">
+                                    <i class="bx bx-archive-in text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-2">
+                                <h4 class="mb-1">入金帳戶二</h4>
+                                <p class="badge badge-outline-primary fs-14 mb-0">僅提供入金功能</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 mt-0 mx-auto">
+                            <div class="flex-grow-1 mt-3 fs-16">
+                                <h5 class="mb-1">台新銀行812-0538526195</h5>
+                            </div>
+                        </div>
+                        <div class="m-card-flag-tp">
+                            <button class="btn text-white"><i class="ri-pencil-line align-middle fs-20"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body border-top px-4 pt-0 fs-16">
+                        <div class="form-check mt-3 mb-1">
+                            <input class="form-check-input dataCheckbox" type="checkbox" id="data1">
+                            <label class="form-check-label" for="data1">
+                                設定為主要出入金帳戶
+                                <div class="float-end">
+                                    <button type="button" id="confirmButton1" class="confirm-button btn btn-xs btn-primary ms-2">確認</button>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="m-card-flag-bt">
+                            <button class="btn"><i class="ri-delete-bin-line align-middle fs-18"></i></button>
+                        </div>
+                    </div><!-- end account_2 -->
+                </div>
+
+                <div class="card">
+                    <div class="card-body mt-3 px-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-soft-primary text-light rounded-circle align-bottom fs-20">
+                                    <i class="bx bx-archive-in text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-2">
+                                <h4 class="mb-1">入金帳戶三</h4>
+                                <p class="badge badge-outline-primary fs-14 mb-0">僅提供入金功能</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 mt-0 mx-auto">
+                            <div class="flex-grow-1 mt-3 fs-16">
+                                <h5 class="mb-1">兆豐銀行017-28883645978256</h5>
+                            </div>
+                        </div>
+                        <div class="m-card-flag-tp">
+                            <button class="btn text-white"><i class="ri-pencil-line align-middle fs-20"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body border-top  px-4 pt-0 fs-16">
+                        <div class="form-check mt-3 mb-1">
+                            <input class="form-check-input dataCheckbox" type="checkbox" id="data2">
+                            <label class="form-check-label" for="data2">
+                                設定為主要出入金帳戶
+                                <div class="float-end">
+                                    <button type="button" id="confirmButton2" class="confirm-button btn btn-xs btn-primary ms-2">確認</button>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="m-card-flag-bt">
+                            <button class="btn"><i class="ri-delete-bin-line align-middle fs-18"></i></button>
+                        </div>
+                    </div><!-- end account_3 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+    </style>
+    
+    <script>
+        const dataCheckboxes = document.querySelectorAll(".dataCheckbox");
+        const confirmButtons = document.querySelectorAll(".confirm-button");
+
+        dataCheckboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener("change", function () {
+                // 取消其他复选框的选择并隐藏其确认按钮
+                dataCheckboxes.forEach((cb, i) => {
+                    if (i !== index) {
+                        cb.checked = false;
+                        confirmButtons[i].style.display = "none";
+                    }
+                });
+
+                if (checkbox.checked) {
+                    confirmButtons[index].style.display = "inline-block";
+                } else {
+                    confirmButtons[index].style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
